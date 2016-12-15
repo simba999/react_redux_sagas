@@ -7,22 +7,37 @@
  *
  * NOTE: while this component should technically be a stateless functional
  * component (SFC), hot reloading does not currently support SFCs. If hot
- * reloading is not a necessity for you then you can refactor it and remove
+ * reloading is not a neccessity for you then you can refactor it and remove
  * the linting exception.
  */
+import React from "react";
+export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    console.log('app constructor')
+    super(props);
+    // Set up initial state
+    // Functions must be bound manually with ES6 classes
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-import React from 'react';
-
-export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    });
+  }
 
   static propTypes = {
     children: React.PropTypes.node,
   };
 
   render() {
+    console.log('app render')
     return (
-      <div>
-        {React.Children.toArray(this.props.children)}
+      <div id="root">
+        {this.props.uploads}
+        {this.props.notifications}
+        {this.props.page}
+        {this.props.modals}
       </div>
     );
   }

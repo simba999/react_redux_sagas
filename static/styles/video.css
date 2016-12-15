@@ -1,0 +1,144 @@
+/* -------------------------------------------
+
+	Name: 		MyStream
+	Date:		2016/07/08
+	Author:		http://psdhtml.me
+		   		   
+---------------------------------------------  */
+
+
+/*! Modules --------- */
+.movie.a { }
+	.movie.a .video-js .vjs-control-bar { padding: 0 0 0 1022px; line-height: 93px; }
+		.mobile .movie.a .video-js .vjs-control-bar { padding-left: 922px; }
+	.movie.a .video-js .vjs-progress-holder { left: 68px; right: 205px; top: 50%; height: 5px; margin: -2.5px 0 0; }
+		.movie.a .video-js .vjs-progress-holder .vjs-play-progress { height: 5px; }
+		.mobile .movie.a .video-js .vjs-progress-holder { right: 305px; }
+	.movie.a .video-js .vjs-play-control { left: 0; top: 0; width: 68px; height: 93px; }
+		.movie.a .video-js .vjs-play-control:before { width: 100%; font-size: 25px; }
+	.movie.a .vjs-volume-menu-button { overflow: hidden; position: absolute; right: 5px; top: 50%; z-index: 9; margin: -42px 0 0; background: #101423; }
+		.movie.a .vjs-volume-menu-button:before { font-size: 24px; }
+		.movie.a .video-js .vjs-volume-bar { height: 5px; margin-top: -2.5px; }
+			.movie.a .video-js .vjs-volume-bar .vjs-volume-level:before { width: 13px; height: 13px; margin: -7px 0 0 -6.5px; }
+	
+.video-js, .movie { display: block; overflow: hidden; position: relative; z-index: 3; background: #101423; font-size: 16px; font-weight: 400; }
+	.movie > video.video-js { z-index: 2; }
+	.video-js video, .video-js { display: block; position: relative; width: 100% !important; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+	.video-js { height: auto !important; }
+	.video-js video { position: relative; z-index: 999; }
+	.video-js .vjs-big-play-button { display: block; position: absolute; left: 0; top: 0; right: 0; bottom: 93px; z-index: 9999; width: 100%; margin: 0; padding: 0; border-radius: 0; border: 0; background: rgba(0,0,0,.55); color: #fff; font-size: 107px; font-weight: 400; text-align: left; text-indent: -3000em; cursor: pointer; }
+		.video-js .vjs-big-play-button:before, .video-js .vjs-big-play-button .inner:before { content: "\e917"; display: block; position: absolute; left: 0; top: 50%; width: 100%; margin: -100px 0 0; font-family: i; line-height: 200px; text-align: center; text-indent: 0; }
+		.video-js.vjs-has-started .vjs-big-play-button .inner { visibility: visible; opacity: 1; }
+		.video-js.vjs-playing .vjs-big-play-button, .video-js.vjs-playing.vjs-has-started .vjs-big-play-button .inner, .video-js.vjs-has-started .vjs-big-play-button:before { visibility: hidden; opacity: 0; }
+		.video-js .vjs-big-play-button .inner { display: block; visibility: visible; position: absolute; left: 0; top: 50%; right: 0; font-size: 18px; font-weight: 300; text-indent: 0; text-align: center; opacity: 0; }
+			.video-js .vjs-big-play-button .inner .or { display: block; overflow: hidden; width: 394px; margin: 0 auto 31px; font-size: 24px; font-weight: 400; text-transform: uppercase; }
+				.video-js .vjs-big-play-button .inner .or span { display: inline-block; position: relative; padding: 0 20px; }
+					.video-js .vjs-big-play-button .inner .or span:before, .video-js .vjs-big-play-button .inner .or span:after { content: ""; display: block; position: absolute; top: 50%; width: 1000px; height: 2px; margin: -1px 0 0; background: #fff; }
+						.video-js .vjs-big-play-button .inner .or span:before { left: 100%; }
+						.video-js .vjs-big-play-button .inner .or span:after { right: 100%; }
+			.video-js .vjs-big-play-button .inner .link { display: inline-block; padding: 12px 32px 13px; border-radius: 25px; background: #d61459; text-align: center; }
+			.video-js .vjs-big-play-button .inner:before { position: relative; left: 0; top: 0; margin: 0 0 19px; font-size: 107px; line-height: 107px; }
+	.no-mobile .video-js.vjs-playing .vjs-control-bar { visibility: hidden; opacity: 0; }
+	.no-mobile .video-js.vjs-playing .vjs-control-bar { -moz-transition-delay: 1s; -webkit-transition-delay: 1s; -o-transition-delay: 1s; -ms-transition-delay: 1s; transition-delay: 1s; }
+	.no-mobile .video-js.vjs-playing:hover .vjs-control-bar { visibility: visible; opacity: 1; }
+	.no-mobile .video-js.vjs-playing:hover .vjs-control-bar { -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; -ms-transition-delay: 0s; transition-delay: 0s; }
+	.video-js .vjs-control-bar { display: block; position: absolute; left: 0; bottom: 0; right: 0; z-index: 99999; width: 100%; height: 93px; padding: 9px 200px 0 94px; background: #101423; line-height: 82px; }
+		.video-js .vjs-control-bar:before { content: "\e965"; display: block; position: absolute; right: 176px; top: 9px; bottom: 0; width: 160px; background: url(../images/logo.svg) 100% center no-repeat; background-size: auto 25px; color: #34b984; font-size: 25px; font-family: i; font-weight: 400; line-height: 78px; text-align: left; }
+		.video-js .vjs-play-control, .video-js .vjs-fullscreen-control { display: block; overflow: visible; position: absolute; top: 9px; float: none; width: 60px; height: 84px; margin: 0; padding: 0; border-radius: 0; border: 0; background: none; font-weight: 400; line-height: 80px; text-align: left; text-indent: -3000em; }
+			.video-js .vjs-play-control { left: 30px; }
+			.video-js .vjs-fullscreen-control { right: 24px; z-index: 9; }
+			.video-js .vjs-play-control:before, .video-js .vjs-play-control:after, .video-js .vjs-fullscreen-control:before, .video-js .vjs-volume-menu-button:before, .video-js .vjs-captions-button:before { display: block; position: absolute; left: 0; top: 50%; width: 100%; margin: -40px 0 0; font-family: i; text-align: center; text-indent: 0; }
+				.video-js.vjs-playing .vjs-play-control:before { content: "\e983"; }
+				.video-js .vjs-play-control { width: 60px; }
+				.video-js .vjs-play-control:before { content: "\e917"; width: 60px; font-size: 33px; }
+				/*.video-js .vjs-play-control:after { content: "\e907"; left: 60px; width: 60px; font-size: 33px; }*/
+
+				.video-js .vjs-fullscreen-control:before { content: "\e90d"; font-size: 28px; }
+				.video-js .vjs-fullscreen-control:before { -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+				.video-js .vjs-captions-button:before { content: "\e935"; font-size: 18px; }
+		.video-js .vjs-control-bar > * { float: left; }
+		.video-js .vjs-captions-button { display: block; position: absolute; left: auto; top: 50%; bottom: auto; right: 90px; width: 58px; height: 38px; margin: -15px 0 0; border-radius: 4px; background: #1e2438; cursor: pointer; }
+			.video-js .vjs-captions-button .vjs-menu { visibility: hidden; position: absolute; right: -12px; bottom: 100%; padding: 0; border-radius: 2px; background: #1e2438; color: #fff; line-height: 1.2; text-align: center; text-indent: 0; white-space: nowrap; opacity: 0; }
+			.video-js .vjs-captions-button[aria-expanded="true"] .vjs-menu { visibility: visible; opacity: 1; }
+			.video-js .vjs-captions-button .vjs-menu { -moz-transform: translateY(-38px); -webkit-transform: translateY(-38px); -o-transform: translateY(-38px); -ms-transform: translateY(-38px); transform: translateY(-38px); }
+			.video-js .vjs-captions-button .vjs-menu ul { list-style: none; margin: 0; padding: 0; }
+			.video-js .vjs-captions-button .vjs-menu ul li { padding: 15px 12px; border-top: 1px solid #2a3046; cursor: pointer; }
+			.video-js .vjs-captions-button .vjs-menu ul li:first-child { border: 0; }
+		.video-js .vjs-time-divider { padding: 0 4px; }
+		.video-js .vjs-volume-menu-button { display: block; position: relative; width: 60px; height: 84px; margin: 0 1px 0 0; line-height: 80px; text-align: left; text-indent: -3000em; }
+			.video-js .vjs-volume-menu-button:before { content: "\e928"; width: 60px; font-size: 29px; }
+			.video-js .vjs-volume-menu-button.vjs-vol-0:before { content: "\e966"; }
+			.video-js .vjs-volume-menu-button.vjs-vol-1:before { content: "\e963"; }
+			.video-js .vjs-volume-menu-button.vjs-vol-2:before { content: "\e964"; }
+			.video-js .vjs-volume-menu-button.vjs-vol-3:before { content: "\e928"; }
+		.video-js .vjs-volume-bar { position: absolute; right: 10px; top: 50%; width: 0; height: 7px; margin: -3.5px 0 0; background: #2e354f; opacity: 0; }
+			.video-js .vjs-volume-bar .vjs-volume-level { display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #d61459; }
+				.video-js .vjs-volume-bar .vjs-volume-level:before { content: ""; display: block; position: absolute; left: 100%; top: 50%; width: 15px; height: 15px; margin: -7px 0 0 -7.5px; border-radius: 10px; border: 1px solid #2e354f; background: #d61459; }
+			.video-js .vjs-volume-menu-button:hover, .mobile .video-js .vjs-volume-menu-button { width: 150px; }
+			.video-js .vjs-volume-menu-button:hover .vjs-volume-bar, .mobile .video-js .vjs-volume-menu-button .vjs-volume-bar { width: 80px; opacity: 1; }
+		.video-js .vjs-progress-holder { overflow: hidden; position: absolute; left: 0; top: 0; right: 0; float: none; height: 9px; background: #2e354f; }
+			.video-js .vjs-progress-holder .vjs-play-progress { display: block; position: absolute; left: 0; top: 0; float: left; height: 9px; background: #d61459; }
+	.video-js:-moz-full-screen { position: absolute; }
+	.video-js:-webkit-full-screen { width: 100% !important; height: 100% !important; }
+	body.vjs-full-window { padding: 0; margin: 0; height: 100%; overflow-y: auto; }
+	.vjs-full-window .video-js.vjs-fullscreen { position: fixed; overflow: hidden; z-index: 1000; left: 0; top: 0; bottom: 0; right: 0; }
+	.video-js.vjs-fullscreen { width: 100% !important; height: 100% !important; padding-top: 0 !important; }
+	.video-js.vjs-fullscreen .vjs-tech { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+	.vjs-hidden { display: none; }
+	.video-js, .video-js * { outline: none; }
+	.vjs-seeking:after, .vjs-waiting:after { content: ""; display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 90000000; background: #000; opacity: .75; }
+	.vjs-seeking:before, .vjs-waiting:before { content: ""; display: block; position: absolute; left: 50%; top: 50%; z-index: 90000001; width: 100px; height: 100px; margin: -50px 0 0 -50px; border-radius: 100px; border: 2px solid rgba(255,255,255,.2); border-left-color: #fff; }
+	.vjs-seeking:before, .vjs-waiting:before { -moz-transform: translateZ(0); -webkit-transform: translateZ(0); -o-transform: translateZ(0); -ms-transform: translateZ(0); -moz-animation: buffering 1.1s infinite linear; -webkit-animation: buffering 1.1s infinite linear; -o-animation: buffering 1.1s infinite linear; -ms-animation: buffering 1.1s infinite linear; animation: buffering 1.1s infinite linear; } 
+	
+.video-error { position: relative; }
+	.video-error:before, .video-error:after { content: ""; display: block; position: absolute; left: 0; top: 0; right: 0; }
+		.video-error:before { bottom: 93px; z-index: 10002; background: url(../images/noise.png); }
+		.video-error:after { bottom: 0; z-index: 10001; }
+	.video-error .error { display: block; position: absolute; left: 0; top: 50%; right: 0; z-index: 10005; padding: 0 20px 93px; font-size: 22px; line-height: 1.2; text-align: center; }	
+		.video-error .error i { display: block; margin: 0 0 21px; font-size: 84px; line-height: 84px; }
+
+	
+/* Responsive --------- */
+@media only screen and (max-width: 62.5em) { /* 1000 */
+.video-js { font-size: 10px; }
+	.video-js .vjs-big-play-button { bottom: 33px; font-size: 50px; }
+		.video-js .vjs-big-play-button .inner:before { margin: 0; font-size: 50px; line-height: 50px; }
+	.video-js .vjs-control-bar, .mobile .movie.a .video-js .vjs-control-bar, .movie.a .video-js .vjs-control-bar { height: 33px; padding: 3px 0 0 40px; line-height: 30px; }
+		.video-js .vjs-progress-holder, .video-js .vjs-progress-holder .vjs-play-progress, .movie.a .video-js .vjs-progress-holder { overflow: hidden; left: 0; right: 0; top: 0; height: 3px; margin: 0; }
+	.video-js .vjs-play-control, .video-js .vjs-fullscreen-control, .movie.a .video-js .vjs-play-control { top: 3px; width: 30px; height: 30px; }
+		.video-js .vjs-play-control { left: 0; }
+			.video-js .vjs-play-control:after, .movie.a .video-js .vjs-play-control:after { content: "\e921"; left: 0; top: 50%; width: 100%; margin: -40px 0 0; font-size: 12px; line-height: 80px; }
+			.video-js.vjs-playing .vjs-play-control:after, .movie.a .video-js.vjs-playing .vjs-play-control:after { content: "\e96a"; }
+			.video-js .vjs-play-control:before { display: none; }
+		.video-js .vjs-fullscreen-control { right: 0; }
+			.video-js .vjs-fullscreen-control:before { font-size: 14px; }
+		.video-js .vjs-captions-button { right: 30px; top: 3px; width: 30px; height: 30px; margin: 0; border-radius: 0; background: none; }	
+			.video-js .vjs-captions-button:before { font-size: 10px; line-height: 80px; }
+			.video-js .vjs-captions-button .vjs-menu { right: 0; }
+			.video-js .vjs-captions-button .vjs-menu { -moz-transform: translateY(-5px); -webkit-transform: translateY(-5px); -o-transform: translateY(-5px); -ms-transform: translateY(-5px); transform: translateY(-5px); }
+			.video-js .vjs-captions-button .vjs-menu ul li { padding: 10px; font-size: 12px; }
+	#root .video-js .vjs-volume-menu-button, .movie.a .vjs-volume-menu-button { position: relative; right: 0; top: 0; margin: 0; width: 110px; height: 30px; }
+		.video-js .vjs-volume-menu-button:before, .movie.a .vjs-volume-menu-button:before { width: 30px; font-size: 12px; }
+		#root .video-js .vjs-volume-bar, .movie.a .video-js .vjs-volume-bar { right: 20px; width: 50px; height: 3px; margin: -1.5px 0 0; opacity: 1; }
+		.video-js .vjs-volume-bar .vjs-volume-level:before, .movie.a .video-js .vjs-volume-bar .vjs-volume-level:before { width: 9px; height: auto; top: -3px; bottom: -3px; margin: 0 0 0 -4.5px; }
+		.video-js .vjs-control-bar { line-height: 30px; }
+			.video-js .vjs-volume-menu-button:before { content: "\e968"; }
+			.video-js .vjs-volume-menu-button.vjs-vol-0:before { content: "\e969"; }
+			.video-js .vjs-volume-menu-button.vjs-vol-1:before { content: "\e96b"; }
+			.video-js .vjs-volume-menu-button.vjs-vol-2:before { content: "\e967"; }
+			.video-js .vjs-volume-menu-button.vjs-vol-3:before { content: "\e968"; }
+	.vjs-seeking:before, .vjs-waiting:before { width: 50px; height: 50px; margin: -25px 0 0 -25px; }
+.video-error { }
+	.video-error:before { bottom: 33px; }
+	.video-error .error { padding-bottom: 33px; font-size: 16px; }
+		.video-error .error i { margin-bottom: 15px; font-size: 58px; line-height: 58px; }
+}
+@media only screen and (max-width: 25em) { /* 400 */
+.video-js { }
+	.video-js .vjs-big-play-button { font-size: 35px; }
+		.video-js .vjs-big-play-button .inner:before { font-size: 35px; line-height: 35px; }
+	.video-js .vjs-control-bar { padding-left: 25px; }
+	.video-js .vjs-captions-button { right: 25px; }
+	#root .video-js .vjs-volume-menu-button { width: 85px; }
+		#root .video-js .vjs-volume-bar { right: 15px; width: 30px; }
+}
