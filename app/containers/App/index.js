@@ -34,10 +34,9 @@ export default class App extends React.Component { // eslint-disable-line react/
     console.log('app render')
     return (
       <div id="root">
-        {this.props.uploads}
-        {this.props.notifications}
+   
         {this.props.page}
-        {this.props.modals}
+
       </div>
     );
   }

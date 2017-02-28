@@ -13,7 +13,7 @@ function modalsContainerReducer(state = initialState, action) {
     case LOADED_ACTION:
       return state.set('loading', false);
     case LOADING_ACTION:
-      return state.set('loading', true);
+      return state.set('loading', false);
     default:
       return state;
   }

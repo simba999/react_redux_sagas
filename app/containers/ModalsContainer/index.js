@@ -24,7 +24,7 @@ export class ModalsContainer extends React.Component { // eslint-disable-line re
 
   getLoaderClasses() {
     if (this.props.loading) {
-      return cx('loading');
+      return cx('loading', 'hidden_loader');
     } else {
       return cx('loading', 'hidden_loader');
     }

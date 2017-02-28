@@ -1,7 +1,12 @@
-import expect from "expect";
-import {defaultAction} from "../actions";
-import {DEFAULT_ACTION} from "../constants";
-describe('DashboardPage actions', () => {
+import expect from 'expect';
+import {
+  defaultAction,
+} from '../actions';
+import {
+  DEFAULT_ACTION,
+} from '../constants';
+
+describe('SettingsPlayerPage actions', () => {
   describe('Default Action', () => {
     it('has a type of DEFAULT_ACTION', () => {
       const expected = {

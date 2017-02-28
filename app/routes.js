@@ -3,7 +3,7 @@
 // See http://blog.mxstbr.com/2016/01/react-apps-with-pages for more information
 // about the code splitting business
 import {getAsyncInjectors} from "utils/asyncInjectors";
-import {getVideoManagerAction} from "containers/VideoManagerPage/actions";
+// import {getVideoManagerAction} from "containers/VideoManagerPage/actions";
 import {loadingAction, loadedAction} from "containers/ModalsContainer/actions";
 const errorLoading = (err) => {
   console.error('Dynamic page loading failed', err); // eslint-disable-line no-console
@@ -19,7 +19,7 @@ export default function createRoutes(store) {
       path: '/',
       name: 'indexPage',
       indexRoute: {
-        onEnter: (nextState, replace) => replace('/dashboard')
+        onEnter: (nextState, replace) => replace('/login')
       },
       getComponents(nextState, cb) {
         const importModules = Promise.all([
@@ -55,281 +55,145 @@ export default function createRoutes(store) {
             notifications: notifications_component.default,
             page: page_component.default
           })
-          store.dispatch(loadedAction());
+          // store.dispatch(loadedAction());
         });
         importModules.catch(errorLoading);
       },
       childRoutes: [
         {
+            path: '/login',
+            name: 'loginPage',
+            onEnter() {
+              console.log('loading')
+              // store.dispatch(loadingAction());
+            },
+            getComponent(nextState, cb) {
+              const importModules = Promise.all([
+                System.import('containers/LoginPage/reducer'),
+                System.import('containers/LoginPage/sagas'),
+                System.import('containers/LoginPage'),
+              ]);
+              const renderRoute = loadModule(cb);
+              importModules.then(([reducer, sagas, component]) => {
+                injectReducer('loginPage', reducer.default);
+                injectSagas(sagas.default);
+                renderRoute(component);
+                // store.dispatch(loadedAction());
+              });
+              importModules.catch(errorLoading);
+            },
+        },
+        {
+          path: '/signup',
+          name: 'signupPage',
+          onEnter() {
+            console.log("loading")
+            // store.dispatch(loadingAction());
+          },
+          getComponent(nextState, cb) {
+            const importModules = Promise.all([
+              System.import('containers/SignupPage/reducer'),
+              System.import('containers/SignupPage/sagas'),
+              System.import('containers/SignupPage'),
+            ]);
+            const renderRoute = loadModule(cb);
+            importModules.then(([reducer, sagas, component]) => {
+              injectReducer('signupPage', reducer.default);
+              injectSagas(sagas.default);
+              renderRoute(component);
+              // store.dispatch(loadedAction());
+            });
+            importModules.catch(errorLoading);
+          },
+        },
+        {
+          path: '/signin',
+          name: 'signinPage',
+          onEnter() {
+            // store.dispatch(loadingAction());
+          },
+          getComponent(nextState, cb) {
+            const importModules = Promise.all([
+              System.import('containers/SigninPage/reducer'),
+              System.import('containers/SigninPage/sagas'),
+              System.import('containers/SigninPage'),
+            ]);
+            const renderRoute = loadModule(cb);
+            importModules.then(([reducer, sagas, component]) => {
+              injectReducer('signinPage', reducer.default);
+              injectSagas(sagas.default);
+              renderRoute(component);
+              //store.dispatch(loadedAction());
+            });
+            importModules.catch(errorLoading);
+          },
+        },
+        {
           path: '/dashboard',
           name: 'dashboardPage',
           onEnter() {
             console.log('loading')
-            store.dispatch(loadingAction());
+            // store.dispatch(loadingAction());
           },
           getComponent(nextState, cb) {
             const importModules = Promise.all([
-              System.import('containers/DashboardPage/reducer'),
-              System.import('containers/DashboardPage/sagas'),
-              System.import('containers/DashboardPage'),
+            System.import('containers/DashboardPage/reducer'),
+            System.import('containers/DashboardPage/sagas'),
+            System.import('containers/DashboardPage'),
             ]);
             const renderRoute = loadModule(cb);
             importModules.then(([reducer, sagas, component]) => {
-              injectReducer('dashboardPage', reducer.default);
-              injectSagas(sagas.default);
-              renderRoute(component);
-              store.dispatch(loadedAction());
-            });
-            importModules.catch(errorLoading);
-          },
-        }, {
-          path: '/video-manager(/:folder_id)',
-          name: 'videoManagerPage',
-          ignoreScrollBehavior: true,
-          onEnter() {
-            store.dispatch(loadingAction());
-          },
-          getComponent(nextState, cb) {
-            const importModules = Promise.all([
-              System.import('containers/VideoManagerPage/reducer'),
-              System.import('containers/VideoManagerPage/sagas'),
-              System.import('containers/VideoManagerPage'),
-            ]);
-            const renderRoute = loadModule(cb);
-            importModules.then(([reducer, sagas, component]) => {
-              injectReducer('videoManagerPage', reducer.default);
-              injectSagas(sagas.default);
-              renderRoute(component);
-              let folder_id = 0;
-              if (nextState.params.folder_id) {
-                folder_id = nextState.params.folder_id;
-              }
-              store.dispatch(getVideoManagerAction(folder_id));
-            });
-            importModules.catch(errorLoading);
-          },
-        }, {
-          path: '/remote-upload',
-          name: 'remoteUploadPage',
-          onEnter() {
-            store.dispatch(loadingAction());
-          },
-          getComponent(nextState, cb) {
-            const importModules = Promise.all([
-              System.import('containers/RemoteUploadPage/reducer'),
-              System.import('containers/RemoteUploadPage/sagas'),
-              System.import('containers/RemoteUploadPage'),
-            ]);
-            const renderRoute = loadModule(cb);
-            importModules.then(([reducer, sagas, component]) => {
-              injectReducer('remoteUploadPage', reducer.default);
-              injectSagas(sagas.default);
-              renderRoute(component);
-              store.dispatch(loadedAction());
-            });
-            importModules.catch(errorLoading);
-          },
-        }, {
-          path: '/multiple-upload',
-          name: 'multipleUploadPage',
-          onEnter() {
-            store.dispatch(loadingAction());
-          },
-          getComponent(nextState, cb) {
-            const importModules = Promise.all([
-              System.import('containers/MultipleUploadPage/reducer'),
-              System.import('containers/MultipleUploadPage/sagas'),
-              System.import('containers/MultipleUploadPage'),
-            ]);
-            const renderRoute = loadModule(cb);
-            importModules.then(([reducer, sagas, component]) => {
-              injectReducer('multipleUploadPage', reducer.default);
-              injectSagas(sagas.default);
-              renderRoute(component);
-              store.dispatch(loadedAction());
-            });
-            importModules.catch(errorLoading);
-          },
-        }, {
-          path: '/upload-success',
-          name: 'uploadSuccessPage',
-          onEnter() {
-            store.dispatch(loadingAction());
-          },
-          getComponent(nextState, cb) {
-            const importModules = Promise.all([
-              System.import('containers/UploadSuccessPage/reducer'),
-              System.import('containers/UploadSuccessPage/sagas'),
-              System.import('containers/UploadSuccessPage'),
-            ]);
-            const renderRoute = loadModule(cb);
-            importModules.then(([reducer, sagas, component]) => {
-              injectReducer('uploadSuccessPage', reducer.default);
-              injectSagas(sagas.default);
-              renderRoute(component);
-              store.dispatch(loadedAction());
+            injectReducer('dashboardPage', reducer.default);
+            injectSagas(sagas.default);
+            renderRoute(component);
+            // store.dispatch(loadedAction());
             });
             importModules.catch(errorLoading);
           },
         }
-        , {
-          path: '/settings',
-          name: 'settingsPage',
-          name: 'statisticsPage',
-          indexRoute: {
-            onEnter: (nextState, replace) => replace('/settings/account')
-          },
-          getComponent(nextState, cb) {
-            const importModules = Promise.all([
-              System.import('containers/SettingsPage/reducer'),
-              System.import('containers/SettingsPage/sagas'),
-              System.import('containers/SettingsPage'),
-            ]);
-            const renderRoute = loadModule(cb);
-            importModules.then(([reducer, sagas, component]) => {
-              injectReducer('settingsPage', reducer.default);
-              injectSagas(sagas.default);
-              renderRoute(component);
-              store.dispatch(loadedAction());
-            });
-            importModules.catch(errorLoading);
-          },
-          childRoutes: [
-            {
-              path: '/settings/account',
-              name: 'SettingsAccountPage',
-              onEnter() {
-                store.dispatch(loadingAction());
-              },
-              getComponent(nextState, cb) {
-                const importModules = Promise.all([
-                  System.import('containers/SettingsAccountPage/reducer'),
-                  System.import('containers/SettingsAccountPage/sagas'),
-                  System.import('containers/SettingsAccountPage'),
-                ]);
-                const renderRoute = loadModule(cb);
-                importModules.then(([reducer, sagas, component]) => {
-                  injectReducer('settingsAccountPage', reducer.default);
-                  injectSagas(sagas.default);
-                  renderRoute(component);
-                  store.dispatch(loadedAction());
-                });
-                importModules.catch(errorLoading);
-              },
+      ],
+    },	  
+    { // Layout 
+      // path: '/newone',
+      name: 'PageContainer1',
+      // indexRoute: {
+      //   onEnter: (nextState, replace) => replace('/')
+      // },
+      getComponents(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/PageContainer1/reducer'),
+          System.import('containers/PageContainer1/sagas'),
+          System.import('containers/PageContainer1'),
+        ]);
+        
+        // importModules.catch(errorLoading);
+      },
+      childRoutes: [
+        {
+            path: '/log',
+            name: 'loginPage1',
+            onEnter() {
+              console.log('loading')
+              // store.dispatch(loadingAction());
             },
-            {
-              path: '/settings/affiliation',
-              name: 'SettingsAffiliationPage',
-              onEnter() {
-                store.dispatch(loadingAction());
-              },
-              getComponent(nextState, cb) {
-                const importModules = Promise.all([
-                  System.import('containers/SettingsAffiliationPage/reducer'),
-                  System.import('containers/SettingsAffiliationPage/sagas'),
-                  System.import('containers/SettingsAffiliationPage'),
-                ]);
-                const renderRoute = loadModule(cb);
-                importModules.then(([reducer, sagas, component]) => {
-                  injectReducer('settingsAffiliationPage', reducer.default);
-                  injectSagas(sagas.default);
-                  renderRoute(component);
-                  store.dispatch(loadedAction());
-                });
-                importModules.catch(errorLoading);
-              },
+            getComponent(nextState, cb) {
+              const importModules = Promise.all([
+                System.import('containers/LoginPage/reducer'),
+                System.import('containers/LoginPage/sagas'),
+                System.import('containers/LoginPage'),
+              ]);
+              const renderRoute = loadModule(cb);
+              importModules.then(([reducer, sagas, component]) => {
+                injectReducer('loginPage', reducer.default);
+                injectSagas(sagas.default);
+                renderRoute(component);
+                // store.dispatch(loadedAction());
+              });
+              importModules.catch(errorLoading);
             },
-            {
-              path: '/settings/player',
-              name: 'SettingsPlayerPage',
-              onEnter() {
-                store.dispatch(loadingAction());
-              },
-              getComponent(nextState, cb) {
-                const importModules = Promise.all([
-                  System.import('containers/SettingsPlayerPage/reducer'),
-                  System.import('containers/SettingsPlayerPage/sagas'),
-                  System.import('containers/SettingsPlayerPage'),
-                ]);
-                const renderRoute = loadModule(cb);
-                importModules.then(([reducer, sagas, component]) => {
-                  injectReducer('settingsPlayerPage', reducer.default);
-                  injectSagas(sagas.default);
-                  renderRoute(component);
-                  store.dispatch(loadedAction());
-                });
-                importModules.catch(errorLoading);
-              },
-            }
-          ],
-        }, {
-          path: '/statistics',
-          name: 'statisticsPage',
-          indexRoute: {
-            onEnter: (nextState, replace) => replace('/statistic/income')
-          },
-          getComponent(nextState, cb) {
-            const importModules = Promise.all([
-              System.import('containers/StatisticsPage/reducer'),
-              System.import('containers/StatisticsPage/sagas'),
-              System.import('containers/StatisticsPage'),
-            ]);
-            const renderRoute = loadModule(cb);
-            importModules.then(([reducer, sagas, component]) => {
-              injectReducer('statisticsPage', reducer.default);
-              injectSagas(sagas.default);
-              renderRoute(component);
-              store.dispatch(loadedAction());
-            });
-            importModules.catch(errorLoading);
-          },
-          childRoutes: [
-            {
-              path: '/statistics/income',
-              name: 'statisticsIncome',
-              onEnter() {
-                store.dispatch(loadingAction());
-              },
-              getComponent(nextState, cb) {
-                const importModules = Promise.all([
-                  System.import('containers/StatisticsIncome/reducer'),
-                  System.import('containers/StatisticsIncome/sagas'),
-                  System.import('containers/StatisticsIncome'),
-                ]);
-                const renderRoute = loadModule(cb);
-                importModules.then(([reducer, sagas, component]) => {
-                  injectReducer('statisticsIncome', reducer.default);
-                  injectSagas(sagas.default);
-                  renderRoute(component);
-                  store.dispatch(loadedAction());
-                });
-                importModules.catch(errorLoading);
-              },
-            }, {
-              path: '/statistics/by_country',
-              name: 'statisticsByCountry',
-              onEnter() {
-                store.dispatch(loadingAction());
-              },
-              getComponent(nextState, cb) {
-                const importModules = Promise.all([
-                  System.import('containers/StatisticsByCountry/reducer'),
-                  System.import('containers/StatisticsByCountry/sagas'),
-                  System.import('containers/StatisticsByCountry'),
-                ]);
-                const renderRoute = loadModule(cb);
-                importModules.then(([reducer, sagas, component]) => {
-                  injectReducer('statisticsByCountry', reducer.default);
-                  injectSagas(sagas.default);
-                  renderRoute(component);
-                  store.dispatch(loadedAction());
-                });
-                importModules.catch(errorLoading);
-              },
-            },
-          ]
         }
-      ]
+      ],
     }
+
   ];
 }

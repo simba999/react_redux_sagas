@@ -1,8 +1,10 @@
-// import { selectDashboardPageDomain } from '../selectors';
+// import { selectSettingsPlayerPageDomain } from '../selectors';
 // import { fromJS } from 'immutable';
-import expect from "expect";
-// const selector = selectDashboardPageDomain();
-describe('selectDashboardPageDomain', () => {
+import expect from 'expect';
+
+// const selector = selectSettingsPlayerPageDomain();
+
+describe('selectSettingsPlayerPageDomain', () => {
   it('Expect to have unit tests specified', () => {
     expect('Test case').toEqual(false);
   });

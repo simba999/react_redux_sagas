@@ -1,8 +1,9 @@
-import expect from "expect";
-import dashboardPageReducer from "../reducer";
-import {fromJS} from "immutable";
-describe('dashboardPageReducer', () => {
+import expect from 'expect';
+import settingsPlayerPageReducer from '../reducer';
+import { fromJS } from 'immutable';
+
+describe('settingsPlayerPageReducer', () => {
   it('returns the initial state', () => {
-    expect(dashboardPageReducer(undefined, {})).toEqual(fromJS({}));
+    expect(settingsPlayerPageReducer(undefined, {})).toEqual(fromJS({}));
   });
 });
