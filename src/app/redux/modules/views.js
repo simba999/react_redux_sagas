@@ -13,6 +13,8 @@ const ENTER_ABOUT_VIEW        = 'ENTER_ABOUT_VIEW';
 const LEAVE_ABOUT_VIEW        = 'LEAVE_ABOUT_VIEW';
 const ENTER_OPENCASE_VIEW     = 'ENTER_OPENCASE_VIEW';
 const LEAVE_OPENCASE_VIEW     = 'LEAVE_OPENCASE_VIEW';
+const ENTER_CLOSECASE_VIEW    = 'ENTER_CLOSECASE_VIEW';
+const LEAVE_CLOSECASE_VIEW    = 'LEAVE_CLOSECASE_VIEW';
 
 
 // /////////////////////
@@ -31,6 +33,7 @@ export default function (state = initialState, action) {
   case ENTER_COMPONENTS_VIEW:
   case ENTER_ABOUT_VIEW:
   case ENTER_OPENCASE_VIEW:
+  case ENTER_CLOSECASE_VIEW:
     // can't enter if you are already inside
     if (state.currentView !== action.currentView) {
       return {
@@ -46,6 +49,7 @@ export default function (state = initialState, action) {
   case LEAVE_COMPONENTS_VIEW:
   case LEAVE_ABOUT_VIEW:
   case LEAVE_OPENCASE_VIEW:
+  case LEAVE_CLOSECASE_VIEW:
     // can't leave if you aren't already inside
     if (state.currentView === action.currentView) {
       return {
@@ -133,6 +137,24 @@ export function leaveOpenCase(time = moment().format(dateFormat)) {
   return {
     type:         LEAVE_OPENCASE_VIEW,
     currentView:  'opencase',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterCloseClaim(time = moment().format(dateFormat)) {
+  return {
+    type:         ENTER_CLOSECASE_VIEW,
+    currentView:  'closeclaim',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveCloseClaim(time = moment().format(dateFormat)) {
+  return {
+    type:         LEAVE_CLOSECASE_VIEW,
+    currentView:  'closeclaim',
     enterTime:    null,
     leaveTime:    time
   };

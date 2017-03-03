@@ -87,13 +87,14 @@
 
 
   var menu                      = null;
-  console.log("MENU: ", menu);
+  
   var menuItems                 = null;
 
   setTimeout(function(){
     menu        = document.querySelector("#context-menu");
+    console.log("MENU: ", menu);
     menuItems   = menu.querySelectorAll(".context-menu__item");  
-  }, 300);
+  }, 900);
   var menuState                 = 0;
   var menuWidth;
   var menuHeight;
@@ -238,10 +239,12 @@
    */
   init();
 
+  $('ul.nav li.dropdown').hover(function() {
+    console.log("hover");
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+  }, function() {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+  });
+
 })();
 
-$('ul.nav li.dropdown').hover(function() {
-  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-}, function() {
-  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-});

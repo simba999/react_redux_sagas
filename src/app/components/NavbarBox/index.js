@@ -106,7 +106,7 @@ class NavbarBox extends React.Component {
             <ul className="nav navbar-nav" id="selectElement">
               <li className="active" onClick={this.setActive.bind(this)}><Link to="/">Home</Link></li>
               <li onClick={this.setActive.bind(this)}><Link to="opencase">Open Claims</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link>Closed Claims</Link></li>
+              <li onClick={this.setActive.bind(this)}><Link to="closeclaim">Closed Claims</Link></li>
               <li onClick={this.setActive.bind(this)}><Link>Reports</Link></li>
             </ul>
           </div>

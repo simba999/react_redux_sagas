@@ -1,5 +1,15 @@
 // varialble
 @import "./_vars";
+
+@font-face {
+    font-family: Hind-Regular;
+    src: url('fonts/Hind-Regular.ttf');
+}
+
+@font-face {
+    font-family: Hind-SemiBold;
+    src: url('/fonts/Hind-SemiBold.ttf');
+}
 // common:
 @import "./common";
 
