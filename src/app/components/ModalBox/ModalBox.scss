@@ -1,0 +1,30 @@
+.modal {
+	display: block;
+	top: 6%;
+	left: 10%;
+	right: 5%;
+	bottom: 10%;
+}
+
+.modal-content {
+	  border-radius: 0px;
+}
+
+.modal-backdrop {
+	background-color: #f4efef;
+}
+
+#ModalHeader {
+	.header_text {
+		padding-top: 30px;
+	}
+}
+.modal-body {
+	.footer_text {
+		padding: 1% 0% 10% 0%;
+	}
+}
+
+button.close {
+		display: none;
+	}

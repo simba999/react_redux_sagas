@@ -16,7 +16,7 @@ class Home extends PureComponent {
     super(props, context);
 
     this.state = {
-      openModalState: true
+      openModalState: false
     }
   }
 
@@ -31,8 +31,12 @@ class Home extends PureComponent {
   }
 
   openModal() {
-    this.setState({openModalState: false});
+    this.setState({openModalState: true});
     console.log("Open modal pressed");
+  }
+
+  removeModal() {
+    this.setState({openModalState : false});
   }
 
   render() {
@@ -46,8 +50,10 @@ class Home extends PureComponent {
             <div className="col-sm-4">
               <RightSideBox></RightSideBox>
             </div>
-          </div>          
+          </div>  
+          
         </div>
+
 
     );
   }

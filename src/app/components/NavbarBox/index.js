@@ -6,6 +6,7 @@ import React, {
 }                                 from 'react';
 import {Motion, spring, presets}  from 'react-motion';
 import { Link }                   from 'react-router';
+import '../../../js/main.js';
 
 class NavbarBox extends React.Component {
 
@@ -21,6 +22,10 @@ class NavbarBox extends React.Component {
 
   componentWillMount() {
     // window.addEventListener('scroll', this.handleWindowScroll);
+    contextListener();
+    clickListener();
+    keyupListener();
+    resizeListener();
   }
 
   componentWillUnmount() {
@@ -42,11 +47,13 @@ class NavbarBox extends React.Component {
     el.target.parentNode.setAttribute("class", "active");
   }
 
+
+
   render() {
 
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
-        <div className="top_header">
+      <nav className="navbar navbar-default navbar-fixed-top tasks" id="task">
+        <div className="top_header task">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nabvbar" 
             aria-expanded="false" aria-controls="navbar">
@@ -57,13 +64,13 @@ class NavbarBox extends React.Component {
             <a className="navbar-brand brand-image" href="#"></a>
           </div>
           <div id="navbar" className="navbar-collapse collapse" aria-expanded="false">
-            <ul className="nav navbar-nav navbar-right white_nav">
+            <ul className="nav navbar-nav navbar-right white_nav task">
               <li><a>My Account</a></li> 
               <li><a>Contact</a></li>
             </ul>
           </div>
         </div>
-        <div className="below_header">
+        <div className="below_header  task">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nabvbar" 
             aria-expanded="false" aria-controls="navbar">
@@ -82,7 +89,19 @@ class NavbarBox extends React.Component {
             </ul>
           </div>
         </div>
-        
+        <nav id="context-menu" className="context-menu">
+          <ul className="context-menu__items">
+            <li className="context-menu__item">
+              <a href="#" className="context-menu__link" data-action="View"><i className="fa fa-eye"></i> View Task</a>
+            </li>
+            <li className="context-menu__item">
+              <a href="#" className="context-menu__link" data-action="Edit"><i className="fa fa-edit"></i> Edit Task</a>
+            </li>
+            <li className="context-menu__item">
+              <a href="#" className="context-menu__link" data-action="Delete"><i className="fa fa-times"></i> Delete Task</a>
+            </li>
+          </ul>
+        </nav>
       </nav>
     );
   }

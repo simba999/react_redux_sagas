@@ -3,8 +3,9 @@
 import React, {
   Component,
   PropTypes
-}                       from 'react';
-import {Motion, spring, presets} from 'react-motion';
+}                                     from 'react';
+import {Motion, spring, presets}      from 'react-motion';
+import ModalBox                       from '../../components/ModalBox';
 
 class RightSideBox extends React.Component {
 
@@ -12,7 +13,7 @@ class RightSideBox extends React.Component {
     super(props, context);
 
     this.state = {
-
+      openModalState : false
     }
   }
 
@@ -24,8 +25,12 @@ class RightSideBox extends React.Component {
     // window.removeEventListener('scroll', this.handleWindowScroll);
   }
 
-  alertMessage() {
-    console.log("About pressed");
+  openModal() {
+    this.setState({openModalState : true});
+  }
+
+  removeModal() {
+    this.setState({openModalState : false});
   }
 
   render() {
@@ -37,10 +42,11 @@ class RightSideBox extends React.Component {
         </div>
         
         <div className="text_align_center">
-          <a className="padding_left" href="#" onClick={this.alertMessage.bind(this)}>about</a>
+          <a className="padding_left" href="#" onClick={this.openModal.bind(this)}>about</a>
         </div>
         
         <div className="content_text"></div>
+        <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)}></ModalBox>        
       </div>
     );
   }
