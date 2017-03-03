@@ -1,0 +1,23 @@
+#appContainer {
+    background-color: #b9b9b9;
+}
+
+.container {
+    width: 100%;
+    background-color: #b9b9b9;
+}
+
+.content {
+    margin-top: 80px;
+}
+
+.opencase_margin {
+    padding: 3% 6%;
+    margin-top: 6%;
+}
+
+@media (max-width: 800px) {
+    .opencase_margin {
+        padding: 1% 2%;
+    }
+}

@@ -1,0 +1,33 @@
+.top_header {
+	background-color: #0082C3;
+	padding: 1.5% 5%;
+
+	.navbar-nav>li>a {
+		color: white;
+	}
+}
+
+.below_header {
+	.navbar-nav>.active>a {
+		background-color: #ffffff;
+	}
+
+}
+
+.below_header {
+	background-color: #ffffff;
+	padding: 0% 5%;
+}
+
+.brand-image {
+	background: url('../images/Logo.png') 0 center no-repeat;
+	background-size: auto 58px; 
+	width: 125px;
+}
+
+.submenu {
+	li.active {
+		border-bottom: 4px solid #ff9900;
+	}
+}
+

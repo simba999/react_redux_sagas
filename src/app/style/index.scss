@@ -1,0 +1,24 @@
+// varialble
+@import "./_vars";
+// common:
+@import "./common";
+// containers:
+@import "../containers/app/app";
+// views:
+
+// components-Header:
+@import "./header";
+
+// NavbarBox Css
+@import "../components/NavbarBox/NavbarBox";
+
+// ChartBox Css
+@import "../components/ChartBox/ChartBox";
+
+// CliameTableBox Css
+@import "../components/ClaimTableBox/ClaimTableBox";
+
+// RightBox Css
+@import "../components/RightSideBox/index";
+
+

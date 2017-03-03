@@ -1,151 +1,135 @@
-<img src="https://raw.githubusercontent.com/mxstbr/react-boilerplate-brand/master/assets/banner-metal-optimized.jpg" alt="react boilerplate banner" align="center" />
+Full ES2015+ React + React-Router + Redux + Bootstrap with Hot Reload and redux-devtools STARTER
+==========
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/MacKentoch/react-redux-bootstrap-webpack-starter)
+[![Build Status](https://travis-ci.org/MacKentoch/react-redux-bootstrap-webpack-starter.svg?branch=master)](https://travis-ci.org/MacKentoch/react-redux-bootstrap-webpack-starter)
+[![Coverage Status](https://coveralls.io/repos/github/MacKentoch/react-redux-bootstrap-webpack-starter/badge.svg?branch=master)](https://coveralls.io/github/MacKentoch/react-redux-bootstrap-webpack-starter?branch=master)
 
-<br />
+#### full ES2015+
 
-<div align="center"><strong>Start your next react project in seconds</strong></div>
-<div align="center">A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</div>
+> My best React + redux project starter.
 
-<br />
+- *webpack is as simple as possible*
+- *ReactJS is written with `optimization tricks` (stateless, pure render...).*
+- *`pure front-end` = server independant (use whatever you want as server: NodeJS, Rails, .NET...)*
 
-<div align="center">
-  <!-- Dependency Status -->
-  <a href="https://david-dm.org/mxstbr/react-boilerplate">
-    <img src="https://david-dm.org/mxstbr/react-boilerplate.svg" alt="Dependency Status" />
-  </a>
-  <!-- devDependency Status -->
-  <a href="https://david-dm.org/mxstbr/react-boilerplate#info=devDependencies">
-    <img src="https://david-dm.org/mxstbr/react-boilerplate/dev-status.svg" alt="devDependency Status" />
-  </a>
-  <!-- Build Status -->
-  <a href="https://travis-ci.org/mxstbr/react-boilerplate">
-    <img src="https://travis-ci.org/mxstbr/react-boilerplate.svg" alt="Build Status" />
-  </a>
-  <!-- Test Coverage -->
-  <a href="https://coveralls.io/r/mxstbr/react-boilerplate">
-    <img src="https://coveralls.io/repos/github/mxstbr/react-boilerplate/badge.svg" alt="Test Coverage" />
-  </a>
-</div>
-<div align="center">
-    <!-- Backers -->
-  <a href="#backers">
-    <img src="https://opencollective.com/react-boilerplate/backers/badge.svg" alt="Backers" />
-  </a>
-      <!-- Sponsors -->
-  <a href="#sponsors">
-    <img src="https://opencollective.com/react-boilerplate/sponsors/badge.svg" alt="Sponsors" />
-  </a>
-  <a href="http://thinkmill.com.au/?utm_source=github&utm_medium=badge&utm_campaign=react-boilerplate">
-    <img alt="Supported by Thinkmill" src="https://thinkmill.github.io/badge/heart.svg" />
-  </a>
-  <!-- Gitter -->
-  <a href="https://gitter.im/mxstbr/react-boilerplate">
-    <img src="https://camo.githubusercontent.com/54dc79dc7da6b76b17bc8013342da9b4266d993c/68747470733a2f2f6261646765732e6769747465722e696d2f6d78737462722f72656163742d626f696c6572706c6174652e737667" alt="Gitter Chat" />
-  </a>
-</div>
+*Concept behind:* same as [react-bootstrap-webpack-starter](https://github.com/MacKentoch/react-bootstrap-webpack-starter) **but added `Redux` and amazing and helpful `redux-devtools`.**
 
-<br />
+## Breaking changes since v0.5.0
+ReactJS v15.4.x required react-hot-loader to be v3+ (*previous react-hot-loader was v1.x and v1.3.1 came too late*). So This starter had to include breaking changes to follow all of that.
 
-<div align="center">
-  <sub>Made with ❤︎ by <a href="https://twitter.com/mxstbr">Max Stoiber</a> and <a href="https://github.com/mxstbr/react-boilerplate/graphs/contributors">contributors</a>. <i>If you're using this boilerplate, we'd love to <a href="https://github.com/mxstbr/react-boilerplate/issues/115">hear from you</a>!</i></sub>
-</div>
+## Detailed Content
 
-## Features
+**Front:**
+- React JS (15.x - [github :link:](https://github.com/facebook/react))
+- Redux (*as you application grows managing state will be a serious concern, save pain with Redux*)
+- React-Redux (*Redux is not specific to ReactJS, you could easily use it with Angular2 for instance*)
+- Redux-devtools (*want to time travel your application State?*)
+- React-Router-Redux (*previously named react-simple-router*)
+- react-router (2.x- [github :link:](https://github.com/reactjs/react-router))
+- Bootstrap (3.x - [github :link:](https://github.com/twbs/bootstrap))
+- React-Bootstrap ([github :link:](https://github.com/react-bootstrap/react-bootstrap))
+- font-awesome ([github :link:](https://github.com/FortAwesome/Font-Awesome))
+- animate.css ([github :link:](https://github.com/daneden/animate.css))
+- classnames ([github :link:](https://github.com/JedWatson/classnames))
+- react-motion ([github :link:](https://github.com/chenglou/react-motion))
+- Webpack ([github :link:](https://github.com/webpack/webpack))
+- babel 6+ ([github :link:](https://github.com/babel/babel))
+- react-addons-shallow-compare (*pure render mixin equivalent for ES6*)
+- whatwg-fetch (*Why: because it is a fetch `Web API` polyfill*)
 
-<dl>
-  <dt>Quick scaffolding</dt>
-  <dd>Create components, containers, routes, selectors and sagas - and their tests - right from the CLI!</dd>
+**Tool chain:**
+- babel 6+
+- eslint
+- hot reload
+- loaders
+  - `js` / `jsx`
+  - sass
+  - css
+  - json
+  - images formats
+  - svg and fonts formats
+- autoprefixer (css and sass)
 
-  <dt>Instant feedback</dt>
-  <dd>Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes to the CSS and JS are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code!</dd>
+**tests:**
+- Mocha
+- Chai (*+ dirty-chai*)
+- enzyme
+- Sinon
+- nyc
 
-  <dt>Predictable state management</dt>
-  <dd>Unidirectional data flow allows for change logging and time travel debugging.</dd>
 
-  <dt>Next generation JavaScript</dt>
-  <dd>Use template strings, object destructuring, arrow functions, JSX syntax and more, today.</dd>
+## Usage
 
-  <dt>Next generation CSS</dt>
-  <dd>Write composable CSS that's co-located with your components for complete modularity. Unique generated class names keep the specificity low while eliminating style clashes. Ship only the styles that are on the page for the best performance.</dd>
+### Install
 
-  <dt>Industry-standard routing</dt>
-  <dd>It's natural to want to add pages (e.g. `/about`) to your application, and routing makes this possible.</dd>
+```bash
+npm install
+```
+### bundle dev mode (*+ redux-devtools*)
 
-  <dt>Industry-standard i18n internationalization support</dt>
-  <dd>Scalable apps need to support multiple languages, easily add and support multiple languages with `react-intl`.</dd>
+*General case:*
+```bash
+npm run dev
+```
 
-  <dt>Offline-first</dt>
-  <dd>The next frontier in performant web apps: availability without a network connection from the instant your users load the app.</dd>
+*Windows - particular - case:*
+```bash
+npm run dev-win
+```
 
-  <dt>SEO</dt>
-  <dd>We support SEO (document head tags management) for search engines that support indexing of JavaScript content. (eg. Google)</dd>
-</dl>
+##### Note : redux-devtools shortcuts
+- `ctrl+h`: to toggle devtools panel
+- `ctrl+q`: to change devtools panel position (*by default: on the right*)
 
-But wait... there's more!
+### dev : hot reload mode (*+ redux-devtools*)
 
-  - *The best test setup:* Automatically guarantee code quality and non-breaking
-    changes. (Seen a react app with 99% test coverage before?)
-  - *Native web app:* Your app's new home? The home screen of your users' phones.
-  - *The fastest fonts:* Say goodbye to vacant text.
-  - *Stay fast*: Profile your app's performance from the comfort of your command
-    line!
-  - *Catch problems:* AppVeyor and TravisCI setups included by default, so your
-    tests get run automatically on Windows and Unix.
+*General case:*
 
-There’s also a <a href="https://vimeo.com/168648012">fantastic video</a> on how to structure your React.js apps with scalability in mind. It provides rationale for the majority of boilerplate's design decisions.
+```bash
+npm run start
+```
 
-<sub><i>Keywords: React.js, Redux, Hot Reloading, ESNext, Babel, react-router, Offline First, ServiceWorker, `styled-components`, redux-saga, FontFaceObserver, PageSpeed Insights</i></sub>
+*Windows - particular - case:*
+```bash
+npm run start-win
+```
 
-## Quick start
+##### Note : redux-devtools shortcuts
+- `ctrl+h`: to toggle devtools panel
+- `ctrl+q`: to change devtools panel position (*by default: on the right*)
 
-1. Clone this repo using `git clone --depth=1 https://github.com/mxstbr/react-boilerplate.git`
-1. Run `npm run setup` to install dependencies and clean the git repo.<br />
-   *We auto-detect `yarn` for installing packages by default, if you wish to force `npm` usage do: `USE_YARN=false npm run setup`*<br />
-   *At this point you can run `npm start` to see the example app at `http://localhost:3000`.*
-1. Run `npm run clean` to delete the example app.
+### tests
 
-Now you're ready to rumble!
+*General case:*
+```bash
+npm run test
+```
 
-> Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
+*Windows - particular - case:*
+```bash
+npm run test-win
+```
 
-## Documentation
+### bundle production mode
 
-- [Intro](docs/general): What's included and why
-- [**Commands**](docs/general/commands.md): Getting the most out of this boilerplate
-- [Testing](docs/testing): How to work with the built-in test harness
-- [Styling](docs/css): How to work with the CSS tooling
-- [Your app](docs/js): Supercharging your app with Routing, Redux, simple
-  asynchronicity helpers, etc.
+*General case:*
+```bash
+npm run prod
+```
 
-## Supporters
-
-This project would not be possible without the support by these amazing folks. [**Become a sponsor**](https://opencollective.com/react-boilerplate) to get your company in front of thousands of engaged react developers and help us out!
-
-<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/0/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/1/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/2/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/3/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/4/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/5/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/6/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/7/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/8/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/9/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/9/avatar.svg"></a>
-
-----
-
-<a href="https://opencollective.com/react-boilerplate/backer/0/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/0/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/backer/1/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/1/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/backer/2/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/2/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/backer/3/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/3/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/backer/4/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/4/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/backer/5/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/5/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/backer/6/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/6/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/backer/7/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/7/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/backer/8/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/8/avatar.svg"></a>
-<a href="https://opencollective.com/react-boilerplate/backer/9/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/9/avatar.svg"></a>
-
+*Windows - particular - case:*
+```bash
+npm run prod-win
+```
 
 ## License
 
-This project is licensed under the MIT license, Copyright (c) 2016 Maximilian
-Stoiber. For more information see `LICENSE.md`.
+The MIT License (MIT)
+
+Copyright (c) 2016 Erwan DATIN
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

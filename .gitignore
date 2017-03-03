@@ -1,10 +1,10 @@
-# Don't check auto-generated stuff into git
-coverage
-build
-node_modules
-stats.json
+node_modules/
+.vscode/
+.idea/
+*.log
 
-# Cruft
-.DS_Store
-npm-debug.log
-.idea
+build/
+dist/
+public/assets/
+/coverage
+/.nyc_output
