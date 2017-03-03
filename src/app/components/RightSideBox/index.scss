@@ -1,6 +1,10 @@
 .right_header_text {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 50px;
+
+    .btn:active {
+    	background-color: #bdbdbd;
+    }
 }
 
 .padding_left {

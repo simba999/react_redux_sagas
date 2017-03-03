@@ -73,21 +73,28 @@
   /**
    * Variables.
    */
-  var contextMenuClassName = "context-menu";
-  var contextMenuItemClassName = "context-menu__item";
-  var contextMenuLinkClassName = "context-menu__link";
-  var contextMenuActive = "context-menu--active";
+  var contextMenuClassName      = "context-menu";
+  var contextMenuItemClassName  = "context-menu__item";
+  var contextMenuLinkClassName  = "context-menu__link";
+  var contextMenuActive         = "context-menu--active";
 
-  var taskItemClassName = "task";
+  var taskItemClassName         = "task";
   var taskItemInContext;
 
   var clickCoords;
   var clickCoordsX;
   var clickCoordsY;
 
-  var menu = document.querySelector("#context-menu");
-  var menuItems = menu.querySelectorAll(".context-menu__item");
-  var menuState = 0;
+
+  var menu                      = null;
+  console.log("MENU: ", menu);
+  var menuItems                 = null;
+
+  setTimeout(function(){
+    menu        = document.querySelector("#context-menu");
+    menuItems   = menu.querySelectorAll(".context-menu__item");  
+  }, 300);
+  var menuState                 = 0;
   var menuWidth;
   var menuHeight;
   var menuPosition;
@@ -113,14 +120,14 @@
   function contextListener() {
     document.addEventListener( "contextmenu", function(e) {
       console.log("contextListener Start: ");
-      taskItemInContext = clickInsideElement( e, taskItemClassName );
+      taskItemInContext         = clickInsideElement( e, taskItemClassName );
 
       if ( taskItemInContext ) {
         e.preventDefault();
         toggleMenuOn();
         positionMenu(e);
       } else {
-        taskItemInContext = null;
+        taskItemInContext       = null;
         toggleMenuOff();
       }
     });
@@ -132,7 +139,7 @@
   function clickListener() {
     document.addEventListener( "click", function(e) {
       console.log("clickListener Start: ");
-      var clickeElIsLink = clickInsideElement( e, contextMenuLinkClassName );
+      var clickeElIsLink        = clickInsideElement( e, contextMenuLinkClassName );
 
       if ( clickeElIsLink ) {
         e.preventDefault();
@@ -193,26 +200,26 @@
    * @param {Object} e The event
    */
   function positionMenu(e) {
-    clickCoords = getPosition(e);
-    clickCoordsX = clickCoords.x;
-    clickCoordsY = clickCoords.y;
+    clickCoords           = getPosition(e);
+    clickCoordsX          = clickCoords.x;
+    clickCoordsY          = clickCoords.y;
 
-    menuWidth = menu.offsetWidth + 4;
-    menuHeight = menu.offsetHeight + 4;
+    menuWidth             = menu.offsetWidth + 4;
+    menuHeight            = menu.offsetHeight + 4;
 
-    windowWidth = window.innerWidth;
-    windowHeight = window.innerHeight;
+    windowWidth           = window.innerWidth;
+    windowHeight          = window.innerHeight;
 
     if ( (windowWidth - clickCoordsX) < menuWidth ) {
-      menu.style.left = windowWidth - menuWidth + "px";
+      menu.style.left     = windowWidth - menuWidth + "px";
     } else {
-      menu.style.left = clickCoordsX + "px";
+      menu.style.left     = clickCoordsX + "px";
     }
 
     if ( (windowHeight - clickCoordsY) < menuHeight ) {
-      menu.style.top = windowHeight - menuHeight + "px";
+      menu.style.top      = windowHeight - menuHeight + "px";
     } else {
-      menu.style.top = clickCoordsY + "px";
+      menu.style.top      = clickCoordsY + "px";
     }
   }
 
@@ -232,3 +239,9 @@
   init();
 
 })();
+
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});

@@ -8,6 +8,7 @@ import {
 }                             from '../../components';
 import NavbarBox              from '../../components/NavbarBox';
 import FooterBox              from '../../components/FooterBox';
+import ModalBox               from '../../components/ModalBox';
 import navigationModel        from '../../models/navigation.json';
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
@@ -25,11 +26,7 @@ class App extends Component {
     return (
       <div id="appContainer">
         <NavbarBox></NavbarBox>
-        <h1>
-        </h1>
-        // content
           {children}
-        //
         <FooterBox></FooterBox>
       </div>
     );

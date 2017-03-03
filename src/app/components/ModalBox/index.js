@@ -33,12 +33,12 @@ class ModalBox extends React.Component {
 
         <Modal.Body>
           <div className="header_text" >
-            <span className="">Notice</span>
+            <span className="">{this.props.title}</span>
             <span className="pull-right" onClick={this.props.closeModal}><i className="glyphicon glyphicon-remove"></i></span>
             <hr />
           </div>
           <div className="content_text">
-            Your invitation code is in-correct or in-valid. If you don’t have an invitation code, or need an updated code please <a> contact </a> us so we can provide you with one.
+            {this.props.content}
           </div>
 			
           <div className="footer_text">
@@ -55,7 +55,9 @@ class ModalBox extends React.Component {
 
 ModalBox.propTypes = {
   open            : React.PropTypes.bool.isRequired,
-  closeModal      : React.PropTypes.func.isRequired
+  closeModal      : React.PropTypes.func.isRequired,
+  title           : React.PropTypes.string.isRequired,
+  content         : React.PropTypes.string
 };
 
 export default ModalBox;

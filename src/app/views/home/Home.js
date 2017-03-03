@@ -47,11 +47,11 @@ class Home extends PureComponent {
             <div className="col-sm-8">
               <ChartBox title="Chart" content="Bodysadasdas"></ChartBox>
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-3">
               <RightSideBox></RightSideBox>
             </div>
+            <div className="col-sm-1"></div>
           </div>  
-          
         </div>
 
 

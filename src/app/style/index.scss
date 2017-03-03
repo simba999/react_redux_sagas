@@ -2,8 +2,7 @@
 @import "./_vars";
 // common:
 @import "./common";
-// containers:
-@import "../containers/app/app";
+
 // views:
 
 // components-Header:
@@ -23,5 +22,8 @@
 
 // ModalBox Css
 @import "../components/ModalBox/ModalBox";
+
+// containers:
+@import "../containers/app/app";
 
 

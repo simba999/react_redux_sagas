@@ -6,6 +6,7 @@ import React, {
 }                                 from 'react';
 import {Motion, spring, presets}  from 'react-motion';
 import { Link }                   from 'react-router';
+import ModalBox                   from '../ModalBox';
 import '../../../js/main.js';
 
 class NavbarBox extends React.Component {
@@ -14,18 +15,20 @@ class NavbarBox extends React.Component {
     super(props, context);
 
     this.state = {
-
+      openModalState : false,
+      title          : '',
+      content        : ''
     }
 
     this.setActive = this.setActive.bind(this);
   }
 
   componentWillMount() {
-    // window.addEventListener('scroll', this.handleWindowScroll);
-    contextListener();
-    clickListener();
-    keyupListener();
-    resizeListener();
+    this.setState({title : 'Contact'});
+    // this.setState({openModalState : true});
+    this.setState({content : 'Lorem ipsum dolor sit amet, ne pri hinc voluptatibus.\
+                              Eu eleifend eloquentiam sea. Duis soluta mei cu.\
+                               Sumo consul definitiones vis at, error soleat'});
   }
 
   componentWillUnmount() {
@@ -47,7 +50,17 @@ class NavbarBox extends React.Component {
     el.target.parentNode.setAttribute("class", "active");
   }
 
+  openContactModal() {
+    // this.setState({title : 'Contact'});
+    this.setState({openModalState : true});
+    // this.setState({content : 'Lorem ipsum dolor sit amet, ne pri hinc voluptatibus.\
+    //                           Eu eleifend eloquentiam sea. Duis soluta mei cu.\
+    //                            Sumo consul definitiones vis at, error soleat'});
+  }
 
+  removeModal() {
+    this.setState({openModalState : false});
+  }
 
   render() {
 
@@ -65,12 +78,21 @@ class NavbarBox extends React.Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse" aria-expanded="false">
             <ul className="nav navbar-nav navbar-right white_nav task">
-              <li><a>My Account</a></li> 
-              <li><a>Contact</a></li>
+              <li className="dropdown">
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown">My Account</a>
+                <ul className="dropdown-menu">
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Password</a></li>
+                  <li><a href="#">Payment</a></li>
+                  <li><a href="#">Users</a></li>
+                  <li><a href="#">Sign out</a></li>
+                </ul>
+              </li> 
+              <li><a href="#" onClick={this.openContactModal.bind(this)}>Contact</a></li>
             </ul>
           </div>
         </div>
-        <div className="below_header  task">
+        <div className="below_header task">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nabvbar" 
             aria-expanded="false" aria-controls="navbar">
@@ -102,6 +124,7 @@ class NavbarBox extends React.Component {
             </li>
           </ul>
         </nav>
+        <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>
       </nav>
     );
   }

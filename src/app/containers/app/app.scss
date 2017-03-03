@@ -12,12 +12,55 @@
 }
 
 .opencase_margin {
-    padding: 3% 6%;
+    padding: 5% 0 0 6%;
     margin-top: 6%;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 1710px) {
     .opencase_margin {
-        padding: 1% 2%;
+        padding: 2% 0% 0% 8%;
+        font-size: 24px;
+
+        .right_header_text {
+		    	padding-top: 60px;
+		    	
+		    	.btn {
+		    		font-size: 24px;
+		    	}
+				}
+    }
+
+    
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+    .opencase_margin {
+        padding: 8% 0 0 6%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .opencase_margin {
+        padding: 10% 0 0 8%;
+    }
+
+    .header_text {
+        padding: 10% 6.5% 0% 6.5%;
+        font-size: 24px;
+    }
+
+    .right_header_text .btn {
+    	font-size: 12px;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .opencase_margin {
+        padding: 25% 2% 3% 2%;
+    }
+    .header_text {
+        font-size: 20px;
     }
 }

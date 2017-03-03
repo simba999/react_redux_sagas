@@ -13,16 +13,22 @@ class RightSideBox extends React.Component {
     super(props, context);
 
     this.state = {
-      openModalState : false
+      openModalState : false,
+      title          : '',
+      content        : ''
     }
   }
 
   componentWillMount() {
-    // window.addEventListener('scroll', this.handleWindowScroll);
+    this.setState({title : "About"});
+    this.setState({content : 
+      "Lorem ipsum dolor sit amet, ne pri hinc voluptatibus.\
+       Eu eleifend eloquentiam sea. Duis soluta mei cu.\
+        Sumo consul definitiones vis at, error soleat"});
   }
 
   componentWillUnmount() {
-    // window.removeEventListener('scroll', this.handleWindowScroll);
+
   }
 
   openModal() {
@@ -38,7 +44,7 @@ class RightSideBox extends React.Component {
     return (
       <div className="white-panel">
         <div className="right_header_text">
-          <button className="btn btn-warning">Open New Matter</button>          
+          <a className="btn btn-warning">Open New Matter</a>          
         </div>
         
         <div className="text_align_center">
@@ -46,7 +52,7 @@ class RightSideBox extends React.Component {
         </div>
         
         <div className="content_text"></div>
-        <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)}></ModalBox>        
+        <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>        
       </div>
     );
   }
