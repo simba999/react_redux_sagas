@@ -55,7 +55,7 @@ ModalBox.propTypes = {
   open            : React.PropTypes.bool.isRequired,
   closeModal      : React.PropTypes.func.isRequired,
   title           : React.PropTypes.string.isRequired,
-  content         : React.PropTypes.string
+  content         : React.PropTypes.string.isRequired
 };
 
 export default ModalBox;

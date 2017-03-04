@@ -5,6 +5,7 @@ import { Home }               from '../../views';
 
 
 const mapStateToProps = (state) => {
+  console.log("state: ", state.views.currentView);
   return {
     currentView:  state.views.currentView
   };
@@ -14,7 +15,8 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
     {
       enterHome: viewsActions.enterHome,
-      leaveHome: viewsActions.leaveHome
+      leaveHome: viewsActions.leaveHome,
+      clickMenu: viewsActions.clickMenu
     },
     dispatch
   );

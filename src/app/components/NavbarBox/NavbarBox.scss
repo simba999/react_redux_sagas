@@ -10,7 +10,7 @@
 }
 
 .below_header {
-    box-shadow: 0px 6px 0px #888888;
+    box-shadow: 0px 3px 0px #888888;
     background-color: white;
     .navbar-nav>.active>a {
         background-color: #ffffff;
@@ -83,13 +83,34 @@
     li a:hover {
         background-color: #ff9900;
     }
-
     // .navbar-default .navbar-nav>.open>a,
     .navbar-default .navbar-nav>.open>a:focus,
     {
         background-color: $blue_color;
         color: #ffffff;
     }
+}
+
+#selectElement {
+    padding-left: 3%;
+}
+
+@media (min-width: 2400px) {
+    #selectElement {
+        padding-left: 90px;
+    }  
+}
+
+@media (min-width: 1440px) and (max-width: 2399px) {
+    #selectElement {
+        padding-left: 30px;
+    }  
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+    #selectElement {
+        padding-left: 0px;
+    }  
 }
 
 

@@ -7,7 +7,7 @@ import React, {
 import {Motion, spring, presets}  from 'react-motion';
 import { Link }                   from 'react-router';
 import ModalBox                   from '../ModalBox';
-import '../../../js/main.js';
+// import '../../../js/main.js';
 
 class NavbarBox extends React.Component {
 

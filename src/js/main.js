@@ -94,7 +94,7 @@
     menu        = document.querySelector("#context-menu");
     console.log("MENU: ", menu);
     menuItems   = menu.querySelectorAll(".context-menu__item");  
-  }, 1200);
+  }, 3000);
   var menuState                 = 0;
   var menuWidth;
   var menuHeight;

@@ -180,3 +180,11 @@ export function leaveReports(time = moment().format(dateFormat)) {
     leaveTime:    time
   };
 }
+
+export function clickMenu() {
+  return {
+    type:         'CLICK_MENU',
+    currentView:  'home',
+    value:        'profile'
+  };
+}

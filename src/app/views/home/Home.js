@@ -21,8 +21,10 @@ class Home extends PureComponent {
   }
 
   componentDidMount() {
-    const { enterHome } = this.props;
+    const { enterHome, clickMenu } = this.props;
+    console.log("Home: ", clickMenu);
     enterHome();
+    // clickMenu();
   }
 
   componentWillUnmount() {
@@ -33,6 +35,7 @@ class Home extends PureComponent {
   openModal() {
     this.setState({openModalState: true});
     console.log("Open modal pressed");
+    // this.props.clickMenu();
   }
 
   removeModal() {
@@ -44,13 +47,12 @@ class Home extends PureComponent {
  
         <div className="container">
           <div className="opencase_margin">
-            <div className="col-sm-8">
+            <div className="col-sm-9">
               <ChartBox title="Chart" content="Bodysadasdas"></ChartBox>
             </div>
             <div className="col-sm-3">
               <RightSideBox></RightSideBox>
             </div>
-            <div className="col-sm-1"></div>
           </div>  
         </div>
 
