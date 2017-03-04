@@ -5,11 +5,13 @@ import {
  }                              from 'react-router';
 import {
   App,
+  User,
+  LayoutContainer,
   ConnectedHome,
   ConnectedAbout,
   ConnectedOpenCase,
   ConnectedCloseClaim,
-  ConnectedReports
+  ConnectedReports,
 }                               from '../containers';
 import {
   PageNotFound
@@ -17,13 +19,18 @@ import {
 
 const Routes = () => {
   return (
-    <Route path="/" component={App} >
-    <IndexRoute component={ConnectedHome} onEnter={scrollToTop} />
-    <Route path="/about" component={ConnectedAbout} onEnter={scrollToTop} />
-    <Route path="/opencase" component={ConnectedOpenCase} onEnter={scrollToTop} />
-    <Route path="/closeclaim" component={ConnectedCloseClaim} onEnter={scrollToTop} />
-    <Route path="/reports" component={ConnectedReports} onEnter={scrollToTop} />
-    <Route path="*" component={PageNotFound} onEnter={scrollToTop} />
+    <Route component={LayoutContainer}>
+      <Route path="/" component={App} >
+        <IndexRoute component={ConnectedHome} onEnter={scrollToTop} />
+        <Route path="/about" component={ConnectedAbout} onEnter={scrollToTop} />
+        <Route path="/opencase" component={ConnectedOpenCase} onEnter={scrollToTop} />
+        <Route path="/closeclaim" component={ConnectedCloseClaim} onEnter={scrollToTop} />
+        <Route path="/reports" component={ConnectedReports} onEnter={scrollToTop} />
+        <Route path="*" component={PageNotFound} onEnter={scrollToTop} />
+      </Route>
+      <Route component={User}>
+        <Route path="/user" component={ConnectedHome} onEnter={scrollToTop} />
+      </Route>
     </Route>
   );
 };

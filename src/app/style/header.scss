@@ -8,6 +8,14 @@ body {
     box-shadow: 3px 6px 0px #888888;
 }
 
+@media (min-width: 1600px) {
+    .white-panel {
+        background-color: #ffffff;
+        height: 750px;
+        box-shadow: 3px 6px 0px #888888;
+    }
+}
+
 .footer_text {
     padding: 1% 4%;
 }
@@ -31,7 +39,9 @@ body {
     margin-bottom: 20px;
 }
 
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
     background-color: $blue_color;
     color: #ffffff;
 }

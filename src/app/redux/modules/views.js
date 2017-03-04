@@ -24,7 +24,8 @@ const LEAVE_REPORTS_VIEW      = 'LEAVE_REPORTS_VIEW';
 const initialState = {
   currentView:  'not set',
   enterTime:    null,
-  leaveTime:    null
+  leaveTime:    null,
+  value:       ''
 };
 
 export default function (state = initialState, action) {
@@ -42,7 +43,8 @@ export default function (state = initialState, action) {
         ...state,
         currentView:  action.currentView,
         enterTime:    action.enterTime,
-        leaveTime:    action.leaveTime
+        leaveTime:    action.leaveTime,
+        value:        action.value
       };
     }
     return state;
@@ -185,6 +187,8 @@ export function clickMenu() {
   return {
     type:         'CLICK_MENU',
     currentView:  'home',
+    enterTime:    time,
+    leaveTime:    null,
     value:        'profile'
   };
 }
