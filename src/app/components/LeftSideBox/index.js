@@ -52,7 +52,7 @@ class LeftSideBox extends React.Component {
         <div className="content_text">
           <div className="menu_text"><span href="#" className="active">Personal Info</span></div>
           <ul className="submenu_text">
-            <li><Link to="/user/adoption">Adoption</Link></li>
+            <li className="active"><Link to="/user/adoption">Adoption</Link></li>
             <li><Link to="/user/aliases">Aliases</Link></li>
             <li><Link to="/user/activities">Activities</Link></li>
             <li><Link to="/user/awards">Awards</Link></li>
