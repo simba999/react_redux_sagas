@@ -6,15 +6,16 @@ import {
   NavigationBar,
   BackToTop
 }                             from '../../components';
-import NavbarBox1              from '../../components/NavbarBox1';
-import FooterBox              from '../../components/FooterBox';
+import { Link }               from 'react-router';
+import ChartBox               from '../../components/ChartBox';
+import LeftSideBox            from '../../components/LeftSideBox';
 import ModalBox               from '../../components/ModalBox';
 import navigationModel        from '../../models/navigation.json';
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
 import * as viewsActions      from '../../redux/modules/views';
 
-class UserLayout extends Component {
+class SubInfo extends Component {
 
   state = {
     navModel : navigationModel
@@ -24,11 +25,16 @@ class UserLayout extends Component {
     const { navModel } = this.state;
     const { children } = this.props;
     return (
-      <div id="appContainer">
-        <NavbarBox1></NavbarBox1>
-          {children}
-        <FooterBox></FooterBox>
-      </div>
+      <div className="container info_page">
+          <div className="opencase_margin">
+            <div className="col-sm-3">
+              <LeftSideBox></LeftSideBox>
+            </div>
+            <div className="col-sm-9">
+              {children}
+            </div>
+          </div>  
+        </div>
     );
   }
 
@@ -42,7 +48,7 @@ class UserLayout extends Component {
 }
 
 // statics :
-UserLayout.propTypes = {
+SubInfo.propTypes = {
   children:   PropTypes.node,
   history:    PropTypes.object,
   location:   PropTypes.object,
@@ -69,4 +75,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(UserLayout);
+)(SubInfo);

@@ -4,6 +4,7 @@ import ConnectedAbout       from './about/About';
 import ConnectedOpenCase		from './opencase/OpenCase';
 import ConnectedCloseClaim 	from './closeclaim/CloseClaim';
 import ConnectedReports			from './reports/Reports';
+import ConnectedInfo				from './info/Info';
 
 export {
   App,
@@ -11,5 +12,6 @@ export {
   ConnectedAbout,
   ConnectedOpenCase,
   ConnectedCloseClaim,
-  ConnectedReports
+  ConnectedReports,
+  ConnectedInfo,
 };
