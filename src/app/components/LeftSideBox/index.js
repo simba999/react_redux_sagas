@@ -40,6 +40,21 @@ class LeftSideBox extends React.Component {
     this.setState({openModalState : false});
   }
 
+  setActive(el) {
+    console.log("INDEX: ", el.target.parentNode.parentNode.childNodes);
+    var allSiblings = el.target.parentNode.parentNode.childNodes;
+    var count = 0
+    while ( count < allSiblings.length) {
+      console.log("TET: ", allSiblings[count].getAttribute("class"));
+      if (allSiblings[count].getAttribute("class") == 'active') {
+        allSiblings[count].setAttribute("class", "");
+      } 
+      count ++;
+    }
+
+    el.target.parentNode.setAttribute("class", "active");
+  }
+
   render() {
 
     return (
@@ -52,16 +67,16 @@ class LeftSideBox extends React.Component {
         <div className="content_text">
           <div className="menu_text"><span href="#" className="active">Personal Info</span></div>
           <ul className="submenu_text">
-            <li className="active"><Link to="/user/adoption">Adoption</Link></li>
-            <li><Link to="/user/aliases">Aliases</Link></li>
-            <li><Link to="/user/activities">Activities</Link></li>
-            <li><Link to="/user/awards">Awards</Link></li>
-            <li><Link to="/user/affliations">Affiliations</Link></li>
-            <li><Link to="/user/familiy_history">Familiy history</Link></li>
-            <li><Link to="/user/education_history">Education history</Link></li>
-            <li><Link to="/user/employment_history">Employment history</Link></li>
-            <li><Link to="/user/residental">Residental history</Link></li>
-            <li><Link to="/user/military_history">Military services</Link></li>
+            <li className="active" onClick={this.setActive.bind(this)}><Link to="/user/adoption">Adoption</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="/user/aliases">Aliases</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="/user/activities">Activities</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="/user/awards">Awards</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="/user/affliations">Affiliations</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="/user/familiy_history">Familiy history</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="/user/education_history">Education history</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="/user/employment_history">Employment history</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="/user/residental">Residental history</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="/user/military_history">Military services</Link></li>
           </ul>
         </div>
         <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>        

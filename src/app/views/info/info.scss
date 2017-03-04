@@ -13,10 +13,19 @@
         li {
             padding-top: 5px;
             list-style-image: url('../images/inactive-icon.png');
+
+            a {
+            	color: #b9b9b9;
+            }
+
         }
 
         li.active {
         	list-style-image: url('../images/active-icon.png');
+
+        	a {
+        		color: #000000;
+        	}
         }
     }
 
