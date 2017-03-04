@@ -8,7 +8,8 @@ import {
   ConnectedHome,
   ConnectedAbout,
   ConnectedOpenCase,
-  ConnectedCloseClaim
+  ConnectedCloseClaim,
+  ConnectedReports
 }                               from '../containers';
 import {
   PageNotFound
@@ -21,6 +22,7 @@ const Routes = () => {
     <Route path="/about" component={ConnectedAbout} onEnter={scrollToTop} />
     <Route path="/opencase" component={ConnectedOpenCase} onEnter={scrollToTop} />
     <Route path="/closeclaim" component={ConnectedCloseClaim} onEnter={scrollToTop} />
+    <Route path="/reports" component={ConnectedReports} onEnter={scrollToTop} />
     <Route path="*" component={PageNotFound} onEnter={scrollToTop} />
     </Route>
   );

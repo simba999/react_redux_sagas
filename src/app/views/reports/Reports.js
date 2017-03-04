@@ -3,9 +3,9 @@ import React, {
   PropTypes
 }                             from 'react';
 import AnimatedView           from '../../components/animatedView/AnimatedView';
-import ClaimTableBox          from '../../components/ClaimTableBox';
+import ReportsBox             from '../../components/ReportsBox';
 
-class OpenCase extends React.Component {
+class Reports extends React.Component {
 
   constructor(props, next) {
     super(props, next);
@@ -16,13 +16,13 @@ class OpenCase extends React.Component {
   }
 
   componentDidMount() {
-    const { enterOpenCase } = this.props;
-    enterOpenCase();
+    const { enterReports } = this.props;
+    enterReports();
   }
 
   componentWillUnmount() {
-    const { leaveOpenCase } = this.props;
-    leaveOpenCase();
+    const { leaveReports } = this.props;
+    leaveReports();
   }
 
   openModal() {
@@ -33,9 +33,9 @@ class OpenCase extends React.Component {
   render() {
     return(
 
-        <div className="container opencase_page">
+        <div className="container">
           <div className="opencase_margin">
-              <ClaimTableBox></ClaimTableBox>
+              <ReportsBox></ReportsBox>
             </div>    
           </div>          
 
@@ -43,10 +43,10 @@ class OpenCase extends React.Component {
   }
 }
 
-OpenCase.propTypes = {
-  currentView     : PropTypes.string.isRequired,
-  enterOpenCase   : PropTypes.func.isRequired,
-  leaveOpenCase   : PropTypes.func.isRequired
+Reports.propTypes = {
+  currentView       : PropTypes.string.isRequired,
+  enterReports      : PropTypes.func.isRequired,
+  leaveReports      : PropTypes.func.isRequired
 };
 
-export default OpenCase;
+export default Reports;

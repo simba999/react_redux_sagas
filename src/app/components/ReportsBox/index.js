@@ -7,7 +7,7 @@ import React, {
 import {Motion, spring, presets}  from 'react-motion';
 import ModalBox                   from '../../components/ModalBox';
 
-class ClaimTableBox extends React.Component {
+class ReportsBox extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -40,7 +40,7 @@ class ClaimTableBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = '/';
+    window.location = "/";
   }
 
   render() {
@@ -57,47 +57,12 @@ class ClaimTableBox extends React.Component {
           <table className="table table-striped">
             <thead className="blue_header">
               <tr>
-                <th> Incident </th>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Number</th>
-                <th>Statue</th>
-                <th>Phase</th>
-                <th>Value</th>
+                <th>Report</th>
+                <th>Description</th>   
               </tr> 
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Andrey</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Andrey</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Andrey</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-              </tr>
+              <tr></tr>
             </tbody>
           </table>
         </div>
@@ -115,4 +80,4 @@ class ClaimTableBox extends React.Component {
 
 }
 
-export default ClaimTableBox;
+export default ReportsBox;

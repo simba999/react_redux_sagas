@@ -29,8 +29,6 @@ class ModalBox extends React.Component {
         onHide={this.props.closeModal}
         aria-labelledby="ModalHeader">
 
-        
-
         <Modal.Body>
           <div className="header_text" >
             <span className="">{this.props.title}</span>

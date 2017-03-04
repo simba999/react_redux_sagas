@@ -7,7 +7,7 @@ import React, {
 import {Motion, spring, presets}  from 'react-motion';
 import ModalBox                   from '../../components/ModalBox';
 
-class ClaimTableBox extends React.Component {
+class CloseClaimTableBox extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -48,7 +48,7 @@ class ClaimTableBox extends React.Component {
     return (
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
-          <span className="">Open Claims</span>
+          <span className="">Close Claims</span>
           <span className="pull-right"><a href="#" className="padding-div-right" onClick={this.openModal.bind(this)}>About</a><i className="glyphicon glyphicon-remove"></i></span>
           <hr />
         </div>
@@ -57,7 +57,7 @@ class ClaimTableBox extends React.Component {
           <table className="table table-striped">
             <thead className="blue_header">
               <tr>
-                <th> Incident </th>
+                <th>Incident</th>
                 <th>Name</th>
                 <th>Phone</th>
                 <th>Email</th>
@@ -69,35 +69,9 @@ class ClaimTableBox extends React.Component {
             </thead>
             <tbody>
               <tr>
-                <td>1</td>
-                <td>Andrey</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
+                
               </tr>
-              <tr>
-                <td>1</td>
-                <td>Andrey</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Andrey</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-                <td>29</td>
-              </tr>
+              
             </tbody>
           </table>
         </div>
@@ -115,4 +89,4 @@ class ClaimTableBox extends React.Component {
 
 }
 
-export default ClaimTableBox;
+export default CloseClaimTableBox;

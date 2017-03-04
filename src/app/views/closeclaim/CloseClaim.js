@@ -3,7 +3,7 @@ import React, {
   PropTypes
 }                             from 'react';
 import AnimatedView           from '../../components/animatedView/AnimatedView';
-import ClaimTableBox          from '../../components/ClaimTableBox';
+import CloseClaimTableBox     from '../../components/CloseClaimTableBox';
 
 class CloseClaim extends React.Component {
 
@@ -33,9 +33,9 @@ class CloseClaim extends React.Component {
   render() {
     return(
 
-        <div className="container">
+        <div className="container closeclaim_page">
           <div className="opencase_margin">
-              <ClaimTableBox></ClaimTableBox>
+              <CloseClaimTableBox></CloseClaimTableBox>
             </div>    
           </div>          
 

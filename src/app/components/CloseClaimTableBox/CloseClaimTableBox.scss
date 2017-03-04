@@ -1,0 +1,36 @@
+.blue_header {
+    background-color: $blue_color;
+    th {
+        height: 40px;
+        color: #ffffff;
+        padding-left: 15px;
+    }
+
+    td {
+    	padding-left: 15px;
+    }
+}
+
+.footer_text {
+    a {
+        color: $grey_color;
+    }
+    a.active {
+        color: $blue_color;
+    }
+}
+
+.blue_content {
+    color: $blue_color;
+}
+
+.blue_background {
+    background-color: $blue_color;
+    color: #ffffff;
+    width: 90px;
+    height: 40px;
+}
+
+.padding-div-right {
+    margin-right: 30px;
+}

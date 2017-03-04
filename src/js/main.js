@@ -94,7 +94,7 @@
     menu        = document.querySelector("#context-menu");
     console.log("MENU: ", menu);
     menuItems   = menu.querySelectorAll(".context-menu__item");  
-  }, 900);
+  }, 1200);
   var menuState                 = 0;
   var menuWidth;
   var menuHeight;
@@ -113,8 +113,39 @@
     clickListener();
     keyupListener();
     resizeListener();
-  }
+    // hoverListener();
+    contextHoverListener();
 
+  }
+  
+  /**
+  * Listens for hover
+  */
+  // function hoverListener() {
+  //   console.log("hover");
+  //   $('ul.nav li.dropdown').hover(function() {
+  //     console.log("hover21312312");
+  //     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+  //   }, function() {
+  //     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+  //   });
+  // }
+
+  function contextHoverListener() {
+    document.addEventListener( "mouseover", function(e) {
+      console.log("MOUSEOVER: ");
+      taskItemInContext         = clickInsideElement( e, "dropdown" );
+
+      if ( taskItemInContext ) {
+        e.preventDefault();
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+      } else {
+        taskItemInContext       = null;
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+      }
+        
+    });
+  }
   /**
    * Listens for contextmenu events.
    */
@@ -239,12 +270,7 @@
    */
   init();
 
-  $('ul.nav li.dropdown').hover(function() {
-    console.log("hover");
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-  }, function() {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-  });
+
 
 })();
 
