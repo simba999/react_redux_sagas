@@ -1,0 +1,29 @@
+.dev .modal-dialog {
+	width: 90%;
+}
+
+#myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white; 
+}
+
+#myProgress {
+    width: 70%;
+    background-color: grey;
+}
+
+.progress {
+	width: 60%;
+	display: inline-block;
+	margin: 10px 1% 0 1%;
+}
+
+.progress_content {
+	display: inline;
+	text-align: center;
+	margin-left: 55px; 
+}
