@@ -6,11 +6,10 @@ import {Jumbotron}            from '../../components';
 import AnimatedView           from '../../components/animatedView/AnimatedView';
 import { Link }               from 'react-router';
 import ChartBox               from '../../components/ChartBox';
-import LeftSideBox            from '../../components/LeftSideBox';
-import ModalBox               from '../../components/ModalBox';
-import InfoContentBox         from '../../components/InfoContentBox';    
+import RightSideBox           from '../../components/RightSideBox';
+import ModalBox               from '../../components/ModalBox';       
 
-class Info extends PureComponent {
+class Users extends PureComponent {
 
   constructor(props, context) {
 
@@ -19,11 +18,13 @@ class Info extends PureComponent {
     this.state = {
       openModalState: false
     }
+
+    const { enterHome, clickMenu } = this.props;
   }
 
   componentDidMount() {
     const { enterHome, clickMenu } = this.props;
-    console.log("Home: ", clickMenu);
+    // console.log("Home: ", clickMenu);
     enterHome();
     // clickMenu();
   }
@@ -36,7 +37,7 @@ class Info extends PureComponent {
   openModal() {
     this.setState({openModalState: true});
     console.log("Open modal pressed");
-    // this.props.clickMenu();
+    clickMenu();
   }
 
   removeModal() {
@@ -45,17 +46,27 @@ class Info extends PureComponent {
 
   render() {
     return(
+ 
+        <div className="container">
+          <div className="opencase_margin">
+            <div className="col-sm-9">
+              <ChartBox title="Users" content=""></ChartBox>
+            </div>
+            <div className="col-sm-3">
+              <RightSideBox></RightSideBox>
+            </div>
+          </div>  
+        </div>
 
-        <InfoContentBox title="Adoption" content="Were you adopted?"></InfoContentBox>
 
     );
   }
 }
 
-Info.propTypes= {
+Users.propTypes= {
   currentView:  PropTypes.string.isRequired,
   enterHome:    PropTypes.func.isRequired,
   leaveHome:    PropTypes.func.isRequired
 };
 
-export default Info;
+export default Users;

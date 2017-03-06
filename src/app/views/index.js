@@ -4,6 +4,11 @@ import OpenCase     from './opencase/OpenCase';
 import PageNotFound from './pageNotFound/PageNotFound';
 import Info					from './info/Info';
 import SubInfo			from './subinfo/SubInfo';
+import InfoIndex		from './infoIndex/InfoIndex';
+import InfoAliase		from './infoAliase/InfoAliase';
+import Profile 			from './profile/Profile';
+import Password			from './password/Password';
+import Users				from './users/Users';
 
 export {
   About,
@@ -11,5 +16,10 @@ export {
   OpenCase,
   PageNotFound,
   Info,
-  SubInfo
+  SubInfo,
+  InfoIndex,
+  InfoAliase,
+  Profile,
+  Password,
+  Users
 };

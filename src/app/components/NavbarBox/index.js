@@ -81,8 +81,8 @@ class NavbarBox extends React.Component {
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">My Account</a>
                 <ul className="dropdown-menu">
-                  <li><a href="#">Profile</a></li>
-                  <li><a href="#">Password</a></li>
+                  <li><a href="/profile">Profile</a></li>
+                  <li><a href="/password">Password</a></li>
                   <li><a href="#">Payment</a></li>
                   <li><a href="#">Users</a></li>
                   <li><a href="#">Sign out</a></li>

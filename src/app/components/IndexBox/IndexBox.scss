@@ -1,0 +1,17 @@
+.yellow_squre_text_decoration {
+
+	ul {
+		list-style-type: square;
+	}
+
+	ul li {
+		color: $dark_yellow_color;
+		padding-bottom: 5px;
+	}
+
+	ul li a {
+		text-decoration: underline;
+		color: #000000;
+	}
+	
+}

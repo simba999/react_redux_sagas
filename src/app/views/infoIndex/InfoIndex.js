@@ -8,9 +8,10 @@ import { Link }               from 'react-router';
 import ChartBox               from '../../components/ChartBox';
 import LeftSideBox            from '../../components/LeftSideBox';
 import ModalBox               from '../../components/ModalBox';
-import InfoContentBox         from '../../components/InfoContentBox';    
+import InfoContentBox         from '../../components/InfoContentBox';
+import IndexBox               from '../../components/IndexBox';   
 
-class Info extends PureComponent {
+class InfoIndex extends PureComponent {
 
   constructor(props, context) {
 
@@ -45,17 +46,17 @@ class Info extends PureComponent {
 
   render() {
     return(
-
-        <InfoContentBox title="Adoption" content="Were you adopted?"></InfoContentBox>
-
+      <div className="container" style={{padding: '10% 3% 0'}}>
+        <IndexBox></IndexBox>
+      </div>
     );
   }
 }
 
-Info.propTypes= {
+InfoIndex.propTypes= {
   currentView:  PropTypes.string.isRequired,
   enterHome:    PropTypes.func.isRequired,
   leaveHome:    PropTypes.func.isRequired
 };
 
-export default Info;
+export default InfoIndex;

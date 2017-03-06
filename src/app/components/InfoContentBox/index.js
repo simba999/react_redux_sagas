@@ -5,6 +5,8 @@ import React, {
   PropTypes
 }                                 from 'react';
 import {Motion, spring, presets}  from 'react-motion';
+import {Link}                     from 'react-router';
+import ModalBox                   from '../ModalBox';
 
 class InfoContentBox extends React.Component {
 
@@ -12,15 +14,23 @@ class InfoContentBox extends React.Component {
     super(props, context);
 
     this.state = {
-      isForm : true,
-      isSummary : false
+      openModalState  : false,
+      title           : '',
+      content         : '',
+      isForm          : true,
+      isSummary       : false,
+      isFolder        : false
     }
 
     this.setActive = this.setActive.bind(this);
   }
 
   componentWillMount() {
-    // window.addEventListener('scroll', this.handleWindowScroll);
+    this.setState({title : "About"});
+    this.setState({content : 
+      "Lorem ipsum dolor sit amet, ne pri hinc voluptatibus.\
+       Eu eleifend eloquentiam sea. Duis soluta mei cu.\
+        Sumo consul definitiones vis at, error soleat"});
   }
 
   componentWillUnmount() {
@@ -40,20 +50,24 @@ class InfoContentBox extends React.Component {
     }
 
     el.target.parentNode.setAttribute("class", "active");
+
+    console.log("Form: ", this.state.isForm);
+    console.log("Folder:", this.state.isFolder);
+    console.log("Summary: ", this.state.isSummary);
   }
 
   showSummary(el) {
-    this.setState({isForm     : false});
-    this.setState({isFoler    : false});
+    this.setState({isFolder    : false});
+    this.setState({isForm     : false});  
     this.setState({isSummary  : true});
 
     this.setActive(el);
   }
 
   showForm(el) {
-    this.setState({isForm     : true});
     this.setState({isSummary  : false});
     this.setState({isFolder   : false});
+    this.setState({isForm     : true});
 
     this.setActive(el);
   }
@@ -66,6 +80,18 @@ class InfoContentBox extends React.Component {
     this.setActive(el);
   }
 
+  openContactModal() {
+    // this.setState({title : 'Contact'});
+    this.setState({openModalState : true});
+    // this.setState({content : 'Lorem ipsum dolor sit amet, ne pri hinc voluptatibus.\
+    //                           Eu eleifend eloquentiam sea. Duis soluta mei cu.\
+    //                            Sumo consul definitiones vis at, error soleat'});
+  }
+
+  removeModal() {
+    this.setState({openModalState : false});
+  }
+
   render() {
 
     return (
@@ -73,10 +99,10 @@ class InfoContentBox extends React.Component {
         <div className="form-horizontal header_text">
           <span className="">{this.props.title}</span>
           <span className="pull-right"><i className="glyphicon glyphicon-remove"></i></span> 
-            <ul className=" list-inline header_menu pull-right" id="selecetElementInfo">
-              <li><a href="#" onClick={this.showForm.bind(this)}>Form</a></li>
-              <li><a href="#" onClick={this.showFolder.bind(this)}>Folder</a></li>
-              <li><a href="#" onClick={this.showSummary.bind(this)}>Summary</a></li>             
+            <ul className=" list-inline header_menu pull-right" id="selectElementInfo">
+              <li className="active" style={{margin: '0 10px 0 0'}}><a href="#" onClick={this.showForm.bind(this)}>Form</a></li>
+              <li style={{margin: '0 10px 0 0'}}><a href="#" onClick={this.showFolder.bind(this)}>Folder</a></li>
+              <li style={{margin: '0 5px 0 0'}}><a href="#" onClick={this.showSummary.bind(this)}>Summary</a></li>             
             </ul>
             <hr />
         </div>
@@ -97,17 +123,16 @@ class InfoContentBox extends React.Component {
                 </div>
               </div>
               <div>
-                <a>about</a>
+                <a href="#" onClick={this.openContactModal.bind(this)}>about</a>
               </div>
               
             </div>
           :
             ''
         }
-
         {
           this.state.isSummary ?
-            <div className="content_text">
+            <div className="form-horizontal content_text">
               <table className="table table-striped">
                 <thead>
                   <tr>
@@ -120,10 +145,9 @@ class InfoContentBox extends React.Component {
           :
             ''
         }
-
         {
           this.state.isFolder ?
-            <div className="content_text">
+            <div className="form-horizontal content_text">
               <table className="table table-striped">
                 <thead>
                   <tr>
@@ -137,8 +161,7 @@ class InfoContentBox extends React.Component {
           :
             ''
         }
-
-        
+        <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>
       </div>
     );
   }

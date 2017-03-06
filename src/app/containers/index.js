@@ -5,6 +5,11 @@ import ConnectedOpenCase		from './opencase/OpenCase';
 import ConnectedCloseClaim 	from './closeclaim/CloseClaim';
 import ConnectedReports			from './reports/Reports';
 import ConnectedInfo				from './info/Info';
+import ConnectedInfoIndex		from './infoIndex/InfoIndex';
+import ConnectedInfoAliase	from './infoAliase/index';
+import ConnectedProfile			from './profile/Profile';
+import ConnectedPassword		from './password/Password';
+import ConnectedUsers				from './users/Users';
 
 export {
   App,
@@ -14,4 +19,9 @@ export {
   ConnectedCloseClaim,
   ConnectedReports,
   ConnectedInfo,
+  ConnectedInfoIndex,
+  ConnectedInfoAliase,
+  ConnectedProfile,
+  ConnectedPassword,
+  ConnectedUsers,
 };

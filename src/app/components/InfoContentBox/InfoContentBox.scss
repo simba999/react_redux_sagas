@@ -14,15 +14,18 @@ ul.radiogroup li label {
 #selectElementInfo {
      li > a {
         color: #b9b9b9;
+        text-decoration: none;
     }
+    
     li.active {
         border-bottom: 4px solid #ff9900;
         background-color: #ffffff;
+        color: red;
     }
     li.active a {
         color: #000000;
     }
-    li a:hover {
+    li:hover {
         color: #000000;
         border-bottom: 4px solid #ff9900;
     }

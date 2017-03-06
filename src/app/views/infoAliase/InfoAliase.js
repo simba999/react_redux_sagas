@@ -10,7 +10,7 @@ import LeftSideBox            from '../../components/LeftSideBox';
 import ModalBox               from '../../components/ModalBox';
 import InfoContentBox         from '../../components/InfoContentBox';    
 
-class Info extends PureComponent {
+class InfoAliase extends PureComponent {
 
   constructor(props, context) {
 
@@ -46,16 +46,16 @@ class Info extends PureComponent {
   render() {
     return(
 
-        <InfoContentBox title="Adoption" content="Were you adopted?"></InfoContentBox>
+        <InfoContentBox title="Aliase" content="Were you adopted?"></InfoContentBox>
 
     );
   }
 }
 
-Info.propTypes= {
+InfoAliase.propTypes= {
   currentView:  PropTypes.string.isRequired,
   enterHome:    PropTypes.func.isRequired,
   leaveHome:    PropTypes.func.isRequired
 };
 
-export default Info;
+export default InfoAliase;
