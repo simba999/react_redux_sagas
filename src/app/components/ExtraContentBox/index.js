@@ -8,7 +8,7 @@ import {Motion, spring, presets}  from 'react-motion';
 import {Link}                     from 'react-router';
 import ModalBox                   from '../ModalBox';
 
-class InfoContentBox extends React.Component {
+class ExtraContentBox extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -126,9 +126,6 @@ class InfoContentBox extends React.Component {
                 </ul>
                 </div>
               </div>
-              <div>
-                <a href="#" onClick={this.openContactModal.bind(this)}>about</a>
-              </div>
               
             </div>
           :
@@ -175,9 +172,9 @@ class InfoContentBox extends React.Component {
 
 }
 
-InfoContentBox.propTypes = {
+ExtraContentBox.propTypes = {
   title       : React.PropTypes.string.isRequired,
   content     : React.PropTypes.string
 }
 
-export default InfoContentBox;
+export default ExtraContentBox;

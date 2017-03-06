@@ -17,11 +17,16 @@ import {
   ConnectedProfile,
   ConnectedPassword,
   ConnectedUsers,
-  ConnectedPayment
+  ConnectedPayment,
 }                               from '../containers';
 
 import UserLayout               from '../containers/user/User';
 import SubInfo                  from '../containers/subinfo/SubInfo';
+import ConncetedResearch        from '../containers/research/Research';
+import ConncetedReview          from '../containers/review/Review';
+import ConncetedAgreement       from '../containers/agreement/index';
+import ConncetedClaimReport     from '../containers/ClaimReport/index';
+
 import {
   PageNotFound
 }                               from '../views';
@@ -54,6 +59,10 @@ const Routes = () => {
           <Route path="/user/military_history" component={ConnectedInfo} onEnter={scrollToTop} />
         </Route>
         <Route path="/index" component={ConnectedInfoIndex} />
+        <Route path="/review" component={ConncetedReview} />
+        <Route path="/research" component={ConncetedResearch} />
+        <Route path="/agreement" component={ConncetedAgreement} />
+        <Route path="/claimreport" component={ConncetedClaimReport} />
       </Route>
       <Route>
         <Route path="*" component={PageNotFound} onEnter={scrollToTop} />

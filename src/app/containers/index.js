@@ -11,6 +11,10 @@ import ConnectedProfile			from './profile/Profile';
 import ConnectedPassword		from './password/Password';
 import ConnectedUsers				from './users/Users';
 import ConnectedPayment			from './payment/Payment';
+import ConnectedResearch		from './research/Research';
+import ConnectedReview			from './review/Review';
+import ConnectedAgreement		from './agreement/index';
+import ConnectedClaimReport from './ClaimReport/index';
 
 export {
   App,
@@ -25,5 +29,9 @@ export {
   ConnectedProfile,
   ConnectedPassword,
   ConnectedUsers,
-  ConnectedPayment
+  ConnectedPayment,
+  ConnectedResearch,
+  ConnectedAgreement,
+  ConnectedReview,
+  ConnectedClaimReport,
 };
