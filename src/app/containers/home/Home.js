@@ -5,32 +5,32 @@ import { Home }               from '../../views';
 
 
 const mapStateToProps = (state) => {
-  console.log("state: ", state.views.currentView);
   return {
     currentView:  state.views.currentView
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators(
-    {
-      enterHome: viewsActions.enterHome,
-      leaveHome: viewsActions.leaveHome,
-      clickMenu: viewsActions.clickMenu
-    },
-    dispatch
-  );
-};
+// const mapDispatchToProps = (dispatch) => {
+//   return bindActionCreators(
+//     {
+//       enterHome: viewsActions.enterHome,
+//       leaveHome: viewsActions.leaveHome,
+//       clickMenu: viewsActions.clickMenu
+//     },
+//     dispatch
+//   );
+// };
 
 /*
   without bindActionCreators:
  */
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     enterHome: () => dispatch(viewsActions.enterHome()),
-//     leaveHome: () => dispatch(viewsActions.leaveHome())
-//   };
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    enterHome: () => dispatch(viewsActions.enterHome()),
+    leaveHome: () => dispatch(viewsActions.leaveHome()),
+    clickMenu: () => dispatch(viewsActions.clickMenu())
+  };
+};
 
 export default connect(
   mapStateToProps,

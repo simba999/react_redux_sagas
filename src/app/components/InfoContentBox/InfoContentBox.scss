@@ -1,3 +1,33 @@
 .header_menu {
 	padding-right: 15px;
 }
+
+ul.radiogroup li label {
+    color: $blue_color;
+}
+
+.table thead {
+    background-color: $blue_color;
+    color: #ffffff;
+}
+
+#selectElementInfo {
+     li > a {
+        color: #b9b9b9;
+    }
+    li.active {
+        border-bottom: 4px solid #ff9900;
+        background-color: #ffffff;
+    }
+    li.active a {
+        color: #000000;
+    }
+    li a:hover {
+        color: #000000;
+        border-bottom: 4px solid #ff9900;
+    }
+    .navbar-default {
+        background-color: #ffffff;
+    }
+}
+

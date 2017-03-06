@@ -15,6 +15,8 @@ class InfoContentBox extends React.Component {
       isForm : true,
       isSummary : false
     }
+
+    this.setActive = this.setActive.bind(this);
   }
 
   componentWillMount() {
@@ -24,14 +26,44 @@ class InfoContentBox extends React.Component {
   componentWillUnmount() {
     // window.removeEventListener('scroll', this.handleWindowScroll);
   }
-  showSummary() {
-    this.setState({isForm : false});
-    this.setState({isSummary : true});
+
+  setActive(el) {
+    console.log("INDEX: ", el.target.parentNode.parentNode.childNodes);
+    var allSiblings = el.target.parentNode.parentNode.childNodes;
+    var count = 0
+    while ( count < allSiblings.length) {
+      console.log("TET: ", allSiblings[count].getAttribute("class"));
+      if (allSiblings[count].getAttribute("class") == 'active') {
+        allSiblings[count].setAttribute("class", "");
+      } 
+      count ++;
+    }
+
+    el.target.parentNode.setAttribute("class", "active");
   }
 
-  showForm() {
-    this.setState({isForm : true});
-    this.setState({isSummary : false});
+  showSummary(el) {
+    this.setState({isForm     : false});
+    this.setState({isFoler    : false});
+    this.setState({isSummary  : true});
+
+    this.setActive(el);
+  }
+
+  showForm(el) {
+    this.setState({isForm     : true});
+    this.setState({isSummary  : false});
+    this.setState({isFolder   : false});
+
+    this.setActive(el);
+  }
+
+  showFolder(el) {
+    this.setState({isForm     : false});
+    this.setState({isSummary  : false});
+    this.setState({isFolder   : true});
+
+    this.setActive(el);
   }
 
   render() {
@@ -40,33 +72,29 @@ class InfoContentBox extends React.Component {
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
           <span className="">{this.props.title}</span>
-          <span className="pull-right"><i className="glyphicon glyphicon-remove"></i></span>
-          <span className="pull-right">
-            <div className="header_menu">
-              <a href="#" onClick={this.showSummary.bind(this)}>Summary</a>
-            </div>
-          </span>
-          <span className="pull-right">
-            <div className="header_menu">
-              <a href="#">Folder</a>
-            </div>
-          </span>
-          <span className="pull-right">
-            <div className="header_menu">
-              <a href="#" onClick={this.showForm.bind(this)}>Form</a>
-            </div>
-          </span>
-          <hr />
+          <span className="pull-right"><i className="glyphicon glyphicon-remove"></i></span> 
+            <ul className=" list-inline header_menu pull-right" id="selecetElementInfo">
+              <li><a href="#" onClick={this.showForm.bind(this)}>Form</a></li>
+              <li><a href="#" onClick={this.showFolder.bind(this)}>Folder</a></li>
+              <li><a href="#" onClick={this.showSummary.bind(this)}>Summary</a></li>             
+            </ul>
+            <hr />
         </div>
         {
           this.state.isForm ?
             <div className="form-horizontal content_text">
-              <div>
+              <div style={{padding: '0px 0px 25px 0px'}}>
                 <span>{this.props.content}</span>
-                <span className="pull-right">
-                  <input type="radio" value="Yes" /><label>Yes</label>
-                  <input type="radio" value="Yes" /><label>No</label>
-                </span>
+                <div className="pull-right">
+                <ul className="radiogroup list-inline">
+                  <li>
+                    <input type="radio" name="adoption_check" value="Yes"/>&nbsp;<label>Yes</label>&nbsp;
+                  </li>
+                  <li>
+                    <input type="radio" name="adoption_check" value="Yes" />&nbsp;<label>No</label>&nbsp;
+                  </li>
+                </ul>
+                </div>
               </div>
               <div>
                 <a>about</a>
@@ -79,11 +107,28 @@ class InfoContentBox extends React.Component {
 
         {
           this.state.isSummary ?
-            <div>
+            <div className="content_text">
               <table className="table table-striped">
                 <thead>
                   <tr>
                     <th>Summary</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          :
+            ''
+        }
+
+        {
+          this.state.isFolder ?
+            <div className="content_text">
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Posted File</th>
+                    <th>Saved File</th>
                   </tr>
                 </thead>
                 <tbody></tbody>

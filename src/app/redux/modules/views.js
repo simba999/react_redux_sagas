@@ -76,6 +76,7 @@ export default function (state = initialState, action) {
 // action creators
 // /////////////////////
 export function enterHome(time = moment().format(dateFormat)) {
+  console.log("EnterHoome Clicked");
   return {
     type:         ENTER_HOME_VIEW,
     currentView:  'home',
@@ -183,7 +184,8 @@ export function leaveReports(time = moment().format(dateFormat)) {
   };
 }
 
-export function clickMenu() {
+export function clickMenu(time = moment().format(dateFormat)) {
+  console.log("clickMenu Clicked");
   return {
     type:         'CLICK_MENU',
     currentView:  'home',
