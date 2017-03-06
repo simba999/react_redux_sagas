@@ -83,8 +83,8 @@ class NavbarBox extends React.Component {
                 <ul className="dropdown-menu">
                   <li><a href="/profile">Profile</a></li>
                   <li><a href="/password">Password</a></li>
-                  <li><a href="#">Payment</a></li>
-                  <li><a href="#">Users</a></li>
+                  <li><a href="/payment">Payment</a></li>
+                  <li><a href="/users">Users</a></li>
                   <li><a href="#">Sign out</a></li>
                 </ul>
               </li> 

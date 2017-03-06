@@ -10,6 +10,7 @@ import ConnectedInfoAliase	from './infoAliase/index';
 import ConnectedProfile			from './profile/Profile';
 import ConnectedPassword		from './password/Password';
 import ConnectedUsers				from './users/Users';
+import ConnectedPayment			from './payment/Payment';
 
 export {
   App,
@@ -24,4 +25,5 @@ export {
   ConnectedProfile,
   ConnectedPassword,
   ConnectedUsers,
+  ConnectedPayment
 };

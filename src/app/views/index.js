@@ -9,6 +9,7 @@ import InfoAliase		from './infoAliase/InfoAliase';
 import Profile 			from './profile/Profile';
 import Password			from './password/Password';
 import Users				from './users/Users';
+import Payment			from './payment/Payment';
 
 export {
   About,
@@ -21,5 +22,6 @@ export {
   InfoAliase,
   Profile,
   Password,
-  Users
+  Users,
+  Payment
 };

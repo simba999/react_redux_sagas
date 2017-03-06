@@ -16,7 +16,8 @@ import {
   ConnectedInfoAliase,
   ConnectedProfile,
   ConnectedPassword,
-  ConnectedUsers
+  ConnectedUsers,
+  ConnectedPayment
 }                               from '../containers';
 
 import UserLayout               from '../containers/user/User';
@@ -36,6 +37,7 @@ const Routes = () => {
         <Route path="/reports" component={ConnectedReports} onEnter={scrollToTop} />
         <Route path="/profile" component={ConnectedProfile} onEnter={scrollToTop} />
         <Route path="/password" component={ConnectedPassword} onEnter={scrollToTop} />
+        <Route path="/payment" component={ConnectedPayment} onEnter={scrollToTop} />
         <Route path="/users" component={ConnectedUsers} onEnter={scrollToTop} />
       </Route>
       <Route component={UserLayout}>

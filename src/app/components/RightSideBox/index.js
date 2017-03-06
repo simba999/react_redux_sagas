@@ -44,7 +44,7 @@ class RightSideBox extends React.Component {
     return (
       <div className="white-panel">
         <div className="right_header_text">
-          <a className="btn btn-warning">Open New Matter</a>          
+          <a className="btn btn-warning" onClick={this.openModal.bind(this)}>Open New Matter</a>          
         </div>
         
         <div className="text_align_center">
@@ -53,6 +53,7 @@ class RightSideBox extends React.Component {
         
         <div className="content_text"></div>
         <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>        
+        <Step1Box open={this.state.openModalState} title={this.state.title}></Step1Box>
       </div>
     );
   }
