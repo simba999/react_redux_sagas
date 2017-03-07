@@ -185,6 +185,7 @@ class ExtraContentBox extends React.Component {
         }
         <div className="footer_text">
           <button className="btn blue_background pull-right" onClick={this.gotoHome.bind(this)}>Close</button>
+          <a href="#" className="pull-right edit_link" style={{color: '#66cfff'}}>Edit</a>
         </div>
         <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>
       </div>

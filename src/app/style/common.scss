@@ -1,28 +1,26 @@
-
 @import "./_vars";
-
 .containersCustom {
-  padding-left: $CONTAINER_CUSTOM_PADDING_LEFT;
-  padding-right: $CONTAINER_CUSTOM_PADDING_RIGHT;
+    padding-left: $CONTAINER_CUSTOM_PADDING_LEFT;
+    padding-right: $CONTAINER_CUSTOM_PADDING_RIGHT;
 }
 
 .invisible {
-  opacity: 0;
+    opacity: 0;
 }
 
 .blue_color {
-	color: $blue-color;
+    color: $blue-color;
 }
 
 ul li a {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .grey_background {
-	background-color: $grey_color;
-	color: #ffffff;
-	width: 90px;
-	height: 40px;
+    background-color: #f0f0f0;
+    color: #ffffff;
+    width: 90px;
+    height: 40px;
 }
 
 .blue_background {
@@ -33,18 +31,51 @@ ul li a {
 }
 
 .center_text {
-	text-align: center;
+    text-align: center;
 }
 
 .glyphicon-remove {
-	color: $grey_color;
+    color: $grey_color;
 }
 
 .homepage .glyphicon-remove {
-	display: none;
+    display: none;
 }
 
 .username_text {
     padding: 15px 5% 0 0;
     color: $blue_color;
+}
+
+#appContainer {
+    height: 100%;
+}
+
+.footer_text hr {
+    margin-bottom: 60px;
+}
+
+#appContainer {
+    letter-spacing: 0.4px;
+}
+
+li:active,
+li:focus,
+a:active,
+a:hover,
+a:focus,
+button:active,
+button:focus {
+    font-family: Hind-Semibold;
+}
+
+.text_footer_color {
+    color: #7d7d7d;
+    a {
+        color: #7d7d7d;
+    }
+}
+
+a {
+	color: #66cfff;
 }

@@ -15,7 +15,7 @@
             list-style-image: url('../images/inactive-icon.png');
 
             a {
-            	color: #b9b9b9;
+            	color: #bdbdbd;
             }
 
         }
@@ -44,7 +44,7 @@
 
     .container {
         width: 100%;
-        background-color: #b9b9b9;
+        background-color: #bdbdbd;
     }
     .content {
         margin-top: 80px;
@@ -111,6 +111,10 @@
         }
         .col-sm-3 .white-panel {
             margin-right: 0;
+        }
+
+        .footer_text {
+            padding-top: 6%;
         }
     }
     @media only screen and (min-width: 1024px) and (max-width: 1439px) {

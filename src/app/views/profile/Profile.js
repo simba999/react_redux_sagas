@@ -47,7 +47,7 @@ class Profile extends PureComponent {
   render() {
     return(
  
-        <div className="container">
+        <div className="container account_page">
           <div className="opencase_margin">
             <div className="col-sm-9">
               <ChartBox title="Profile" content=""></ChartBox>

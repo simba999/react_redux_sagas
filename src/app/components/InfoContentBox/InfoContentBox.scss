@@ -11,9 +11,13 @@ ul.radiogroup li label {
     color: #ffffff;
 }
 
+.edit_link {
+    color: #66cfff;
+}
+
 #selectElementInfo {
     li > a {
-        color: #b9b9b9;
+        color: #bdbdbd;
         text-decoration: none;
     }
     li.active {
@@ -64,5 +68,13 @@ ul.radiogroup li label {
     }
 
     
+}
+
+.info_page {
+    margin-bottom: 1%;
+}
+
+#yesAndNo label {
+    color: #66cfff;
 }
 
