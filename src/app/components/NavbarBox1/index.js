@@ -104,13 +104,13 @@ class NavbarBox1 extends React.Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse submenu" aria-expanded="false">
             <ul className="nav navbar-nav" id="selectElement">
-              <li className="active" onClick={this.setActive.bind(this)}><Link to="/index">Info</Link></li>
+              <li className="active" onClick={this.setActive.bind(this)}><Link to="/user">Info</Link></li>
               <li onClick={this.setActive.bind(this)}><Link to="/agreement">Agreements</Link></li>
               <li onClick={this.setActive.bind(this)}><Link to="/research">Research</Link></li>
               <li onClick={this.setActive.bind(this)}><Link to="/review">Review</Link></li>
               <li onClick={this.setActive.bind(this)}><Link to="/claimreport">Reports</Link></li>
             </ul>
-            <div className="pull-right"><Link to="#">Username</Link></div>
+            <div className="pull-right username_text">Doe, John P</div>
           </div>
         </div>
         <nav id="context-menu" className="context-menu">

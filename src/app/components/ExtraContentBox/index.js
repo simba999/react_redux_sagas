@@ -115,13 +115,17 @@ class ExtraContentBox extends React.Component {
     }
   }
 
+  gotoIndex() {
+    window.location = '/index';
+  }
+
   render() {
 
     return (
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
           <span className="">{this.props.title}</span>
-          <span className="pull-right"><i className="glyphicon glyphicon-remove"></i></span> 
+          <span className="pull-right"><i className="glyphicon glyphicon-remove" onClick={this.gotoIndex.bind(this)}></i></span> 
             <ul className=" list-inline header_menu pull-right" id="selectElementInfo">
               <li className="active" style={{margin: '0 10px 0 0'}}><a href="#" onClick={this.showForm.bind(this)}>Form</a></li>
               <li style={{margin: '0 10px 0 0'}}><a href="#" onClick={this.showFolder.bind(this)}>Folder</a></li>

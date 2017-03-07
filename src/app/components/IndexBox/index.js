@@ -24,13 +24,17 @@ class IndexBox extends React.Component {
     // window.removeEventListener('scroll', this.handleWindowScroll);
   }
 
+  gotoOpenClaim() {
+    window.location = '/opencase';
+  }
+
   render() {
 
     return (
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
           <span className="">Claim Index</span>
-          <span className="pull-right"><i className="glyphicon glyphicon-remove"></i></span>
+          <span className="pull-right"><i className="glyphicon glyphicon-remove" onClick={this.gotoOpenClaim.bind(this)}></i></span>
           <hr />
         </div>
 
@@ -110,7 +114,7 @@ class IndexBox extends React.Component {
 }
 
 IndexBox.propTypes = {
-  title       : React.PropTypes.string.isRequired,
+  title       : React.PropTypes.string,
   content     : React.PropTypes.string
 }
 

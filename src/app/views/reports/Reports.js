@@ -33,7 +33,7 @@ class Reports extends React.Component {
   render() {
     return(
 
-        <div className="container">
+        <div className="container report_page">
           <div className="opencase_margin">
               <ReportsBox></ReportsBox>
             </div>    

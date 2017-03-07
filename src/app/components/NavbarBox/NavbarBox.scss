@@ -30,7 +30,9 @@
     }
 }
 
-.submenu {
+.submenu.navbar-collapse {
+    padding-left: 4%;
+
     #selectElement li > a {
         color: #b9b9b9;
     }
