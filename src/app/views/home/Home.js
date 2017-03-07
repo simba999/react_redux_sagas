@@ -49,7 +49,7 @@ class Home extends PureComponent {
  
         <div className="container">
           <div className="opencase_margin">
-            <div className="col-sm-9">
+            <div className="col-sm-9 homepage">
               <ChartBox title="Chart" content="Body"></ChartBox>
             </div>
             <div className="col-sm-3">

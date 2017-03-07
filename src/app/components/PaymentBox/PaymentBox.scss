@@ -1,0 +1,20 @@
+.payment_page {
+	ul li {
+		color: #b9b9b9;
+	}
+
+	ul li.active a {
+		background-color: #ffffff;
+		color: #0082C3;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+	
+	li {float: left;}
+
+	.blue_color {
+		color: $blue_color;
+	}
+}

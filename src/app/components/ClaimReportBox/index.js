@@ -49,7 +49,6 @@ class ClaimReportBox extends React.Component {
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
           <span className="">Reports</span>
-          <span className="pull-right"><a href="#" className="padding-div-right" onClick={this.openModal.bind(this)}>About</a><i className="glyphicon glyphicon-remove"></i></span>
           <hr />
         </div>
 

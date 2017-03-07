@@ -46,8 +46,10 @@ class ClaimReport extends PureComponent {
 
   render() {
     return(
-      <div clasName="container claim_report">
+      <div className="container claim_report">
+
         <ClaimReportBox></ClaimReportBox>
+
       </div>
     );
   }

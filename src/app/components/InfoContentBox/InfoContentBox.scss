@@ -1,5 +1,5 @@
 .header_menu {
-	padding-right: 15px;
+    padding-right: 15px;
 }
 
 ul.radiogroup li label {
@@ -12,11 +12,10 @@ ul.radiogroup li label {
 }
 
 #selectElementInfo {
-     li > a {
+    li > a {
         color: #b9b9b9;
         text-decoration: none;
     }
-    
     li.active {
         border-bottom: 4px solid #ff9900;
         background-color: #ffffff;
@@ -32,5 +31,38 @@ ul.radiogroup li label {
     .navbar-default {
         background-color: #ffffff;
     }
+}
+
+.radiogroup {
+    display: flex-column;
+    display: webkit-flex-column;
+
+    input[type="radio"] {
+        opacity: 0;
+
+        float: left;
+        width: 18px;
+    }
+
+    label {
+        color: $blue_color;
+    }
+    
+    input[type="radio"] + label {
+        background-color: yellow;
+        cursor: pointer;
+        margin: 0;
+        clear: none;
+
+        /* Left padding makes room for image */
+        padding: 5px 0 4px 24px;
+        background: url('../images/inactive-radio.png') left center no-repeat;
+    }
+
+    input[type="radio"]:checked + label {
+        background: url('../images/active-radio.png') left center no-repeat;
+    }
+
+    
 }
 

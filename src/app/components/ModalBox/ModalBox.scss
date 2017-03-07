@@ -10,10 +10,6 @@
 	  border-radius: 0px;
 }
 
-.modal-backdrop {
-	background-color: #f4efef;
-}
-
 #ModalHeader {
 	.header_text {
 		padding-top: 30px;
@@ -23,6 +19,14 @@
 	.footer_text {
 		padding: 1% 0% 10% 0%;
 	}
+}
+
+.modal-backdrop {
+	background-color: #fdfdfd;
+}
+
+.modal-backdrop.in {
+	opacity: 0.75;
 }
 
 button.close {

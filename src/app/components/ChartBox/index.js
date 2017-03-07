@@ -24,13 +24,17 @@ class ChartBox extends React.Component {
     // window.removeEventListener('scroll', this.handleWindowScroll);
   }
 
+  gotoHome() {
+    window.location = '/';
+  }
+
   render() {
 
     return (
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
           <span className="">{this.props.title}</span>
-          <span className="pull-right"><i className="glyphicon glyphicon-remove"></i></span>
+          <span className="pull-right"><i className="glyphicon glyphicon-remove" onClick={this.gotoHome.bind(this)}></i></span>
           <hr />
         </div>
 

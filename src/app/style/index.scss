@@ -18,6 +18,8 @@
 // components-Header:
 @import "./header";
 
+@import "../components/PaymentBox/PaymentBox";
+
 // NavbarBox Css
 @import "../components/NavbarBox/NavbarBox";
 
@@ -50,5 +52,7 @@
 
 // Claim Report
 @import "../components/ClaimReportBox/ClaimReportBox";
+
+
 
 

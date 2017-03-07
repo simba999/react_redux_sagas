@@ -43,6 +43,21 @@ class CloseClaimTableBox extends React.Component {
     window.location = '/';
   }
 
+  setActive(el) {
+    console.log("INDEX: ", el.target.parentNode.parentNode.childNodes);
+    var allSiblings = el.target.parentNode.parentNode.childNodes;
+    var count = 0
+    while ( count < allSiblings.length) {
+      console.log("TET: ", allSiblings[count].getAttribute("class"));
+      if (allSiblings[count].getAttribute("class") == 'active') {
+        allSiblings[count].setAttribute("class", "");
+      } 
+      count ++;
+    }
+
+    el.target.parentNode.setAttribute("class", "active");
+  }
+
   render() {
 
     return (
@@ -75,11 +90,13 @@ class CloseClaimTableBox extends React.Component {
             </tbody>
           </table>
         </div>
-        <div className="footer_text">
+        <div className="footer_text payment_page">
           <hr />
-          <span>
-            <a className="active"> My claims </a><span className="blue_content">&nbsp;|&nbsp;</span> <a> All claims </a>
-          </span>
+          <ul className="inline-list">
+            <li className="active"><a onClick={this.setActive.bind(this)}> My claims </a></li>
+            <li className="blue_color">&nbsp;|&nbsp;</li> 
+            <li><a href="#" onClick={this.setActive.bind(this)}> All claims </a></li>
+          </ul>
           <button className="btn blue_background pull-right" onClick={this.gotoHome.bind(this)}>Close</button>
         </div>
         <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>

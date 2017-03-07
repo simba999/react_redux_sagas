@@ -96,6 +96,25 @@ class ExtraContentBox extends React.Component {
     window.location = "/index";
   }
 
+  setActive1(e) {
+    var myElement = document.getElementById("yesAndNo");
+    if ( myElement.getElementsByTagName("input")[0].checked == false ) {
+      myElement.getElementsByTagName("input")[0].checked = true;
+      myElement.getElementsByTagName("input")[1].checked = false;
+    } 
+    
+  }
+
+  setActive2(e) {
+    var myElement = document.getElementById("yesAndNo");
+    console.log("DFDFdfd: ", myElement.getElementsByTagName("input")[1].checked);
+    if (myElement.getElementsByTagName("input")[1].checked == false) {
+      myElement.getElementsByTagName("input")[0].checked = false;
+      myElement.getElementsByTagName("input")[1].checked = true;
+      console.log("DFDFdfd: ", myElement.getElementsByTagName("input")[1].checked);
+    }
+  }
+
   render() {
 
     return (
@@ -116,14 +135,12 @@ class ExtraContentBox extends React.Component {
               <div style={{padding: '0px 0px 25px 0px'}}>
                 <span>{this.props.content}</span>
                 <div className="pull-right">
-                <ul className="radiogroup list-inline">
-                  <li>
-                    <input type="radio" name="adoption_check" value="Yes"/>&nbsp;<label>Yes</label>&nbsp;
-                  </li>
-                  <li>
-                    <input type="radio" name="adoption_check" value="Yes" />&nbsp;<label>No</label>&nbsp;
-                  </li>
-                </ul>
+                <div className="radiogroup" id="yesAndNo">
+                    <input type="radio" name="adoption_check" value="Yes" checked />&nbsp;
+                    <label onClick={this.setActive1.bind(this)}>Yes</label>&nbsp;
+                    <input type="radio" name="adoption_check" value="No" />&nbsp;
+                    <label onClick={this.setActive2.bind(this)}>No</label>&nbsp;
+                </div>
                 </div>
               </div>
               
