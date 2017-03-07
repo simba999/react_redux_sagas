@@ -47,9 +47,9 @@ class Home extends PureComponent {
   render() {
     return(
  
-        <div className="container">
+        <div className="container homepage">
           <div className="opencase_margin">
-            <div className="col-sm-9 homepage">
+            <div className="col-sm-9 ">
               <ChartBox title="Chart" content="Body"></ChartBox>
             </div>
             <div className="col-sm-3">

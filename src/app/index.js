@@ -4,6 +4,7 @@ import injectTpEventPlugin  from 'react-tap-event-plugin';
 import { AppContainer }     from 'react-hot-loader';
 import Root                 from './Root';
 import routes               from './routes/Routes';
+import 'bootstrap';
 
 import 'babel-polyfill';
 import 'animate.css';

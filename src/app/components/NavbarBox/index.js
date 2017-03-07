@@ -68,7 +68,7 @@ class NavbarBox extends React.Component {
       <nav className="navbar navbar-default navbar-fixed-top tasks" id="task">
         <div className="top_header task">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nabvbar" 
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nabvbar1" 
             aria-expanded="false" aria-controls="navbar">
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
@@ -76,7 +76,7 @@ class NavbarBox extends React.Component {
             </button>
             <a className="navbar-brand brand-image" href="#"></a>
           </div>
-          <div id="navbar" className="navbar-collapse collapse" aria-expanded="false">
+          <div id="navbar1" className="navbar-collapse collapse" aria-expanded="false">
             <ul className="nav navbar-nav navbar-right white_nav task">
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">My Account</a>

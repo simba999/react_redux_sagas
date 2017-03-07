@@ -55,6 +55,16 @@ ul li a {
     margin-bottom: 60px;
 }
 
+@media (max-height: 1550px) and (min-width: 1220px) {
+    .footer_text hr {
+        margin-bottom: 40px;
+    }
+
+    .white-panel {
+    	height: 700px;
+    }
+}
+
 #appContainer {
     letter-spacing: 0.4px;
 }
@@ -77,5 +87,5 @@ button:focus {
 }
 
 a {
-	color: #66cfff;
+    color: #66cfff;
 }
