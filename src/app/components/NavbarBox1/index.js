@@ -24,14 +24,12 @@ class NavbarBox1 extends React.Component {
 
   componentWillMount() {
     this.setState({title : 'Contact'});
-    // this.setState({openModalState : true});
     this.setState({content : 'Lorem ipsum dolor sit amet, ne pri hinc voluptatibus.\
                               Eu eleifend eloquentiam sea. Duis soluta mei cu.\
                                Sumo consul definitiones vis at, error soleat'});
   }
 
   componentWillUnmount() {
-    // window.removeEventListener('scroll', this.handleWindowScroll);
   }
 
   setActive(el) {
@@ -50,11 +48,7 @@ class NavbarBox1 extends React.Component {
   }
 
   openContactModal() {
-    // this.setState({title : 'Contact'});
     this.setState({openModalState : true});
-    // this.setState({content : 'Lorem ipsum dolor sit amet, ne pri hinc voluptatibus.\
-    //                           Eu eleifend eloquentiam sea. Duis soluta mei cu.\
-    //                            Sumo consul definitiones vis at, error soleat'});
   }
 
   removeModal() {
@@ -67,7 +61,7 @@ class NavbarBox1 extends React.Component {
       <nav className="navbar navbar-default navbar-fixed-top tasks" id="task">
         <div className="top_header task">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nabvbar" 
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" 
             aria-expanded="false" aria-controls="navbar">
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
@@ -75,7 +69,7 @@ class NavbarBox1 extends React.Component {
             </button>
             <a className="navbar-brand brand-image" href="#"></a>
           </div>
-          <div id="navbar" className="navbar-collapse collapse" aria-expanded="false">
+          <div id="navbar1" className="navbar-collapse collapse" aria-expanded="false">
             <ul className="nav navbar-nav navbar-right white_nav task">
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">My Account</a>
@@ -93,7 +87,7 @@ class NavbarBox1 extends React.Component {
         </div>
         <div className="below_header task">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nabvbar" 
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" 
             aria-expanded="false" aria-controls="navbar">
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>

@@ -111,12 +111,10 @@ class InfoContentBox extends React.Component {
     if (myElement.getElementsByTagName("input")[1].checked == false) {
       myElement.getElementsByTagName("input")[0].checked = false;
       myElement.getElementsByTagName("input")[1].checked = true;
-      console.log("DFDFdfd: ", myElement.getElementsByTagName("input")[1].checked);
     }
   }
 
   gotoIndexPage() {
-    console.log("fdfdf");
     window.location = '/index';
   }
 
@@ -142,7 +140,7 @@ class InfoContentBox extends React.Component {
                 <div className="pull-right">
                 <div className="radiogroup" id="yesAndNo">
                   
-                    <input type="radio" name="adoption_check" value="Yes" checked />&nbsp;
+                    <input type="radio" name="adoption_check" value="Yes" defaultChecked="true" />&nbsp;
                     <label onClick={this.setActive1.bind(this)}>Yes</label>&nbsp;
                  
                     <input type="radio" name="adoption_check" value="No" />&nbsp;

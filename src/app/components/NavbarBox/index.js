@@ -36,11 +36,9 @@ class NavbarBox extends React.Component {
   }
 
   setActive(el) {
-    console.log("INDEX: ", el.target.parentNode.parentNode.childNodes);
     var allSiblings = el.target.parentNode.parentNode.childNodes;
     var count = 0
     while ( count < allSiblings.length) {
-      console.log("TET: ", allSiblings[count].getAttribute("class"));
       if (allSiblings[count].getAttribute("class") == 'active') {
         allSiblings[count].setAttribute("class", "");
       } 
@@ -51,11 +49,7 @@ class NavbarBox extends React.Component {
   }
 
   openContactModal() {
-    // this.setState({title : 'Contact'});
     this.setState({openModalState : true});
-    // this.setState({content : 'Lorem ipsum dolor sit amet, ne pri hinc voluptatibus.\
-    //                           Eu eleifend eloquentiam sea. Duis soluta mei cu.\
-    //                            Sumo consul definitiones vis at, error soleat'});
   }
 
   removeModal() {
@@ -68,7 +62,7 @@ class NavbarBox extends React.Component {
       <nav className="navbar navbar-default navbar-fixed-top tasks" id="task">
         <div className="top_header task">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nabvbar1" 
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" 
             aria-expanded="false" aria-controls="navbar">
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
@@ -94,7 +88,7 @@ class NavbarBox extends React.Component {
         </div>
         <div className="below_header task">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nabvbar" 
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" 
             aria-expanded="false" aria-controls="navbar">
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>

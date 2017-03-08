@@ -85,7 +85,7 @@ class ReportsBox extends React.Component {
           <hr />
           <ul className="inline-list">
             <li className="active"><a onClick={this.setActive.bind(this)}> My claims </a></li>
-            <li className="blue_color">&nbsp;|&nbsp;</li> 
+            <li style={{color: '66cfff'}}>&nbsp;|&nbsp;</li> 
             <li><a href="#" onClick={this.setActive.bind(this)}> All claims </a></li>
           </ul>
           <button className="btn blue_background pull-right" onClick={this.gotoHome.bind(this)}>Close</button>

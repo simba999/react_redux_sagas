@@ -35,9 +35,6 @@
 // ModalBox Css
 @import "../components/ModalBox/ModalBox";
 
-// containers:
-@import "../containers/app/app";
-
 // Info VIew
 @import "../views/info/info";
 
@@ -54,6 +51,9 @@
 @import "../components/ClaimReportBox/ClaimReportBox";
 
 @import "../components/Wizard/Wizard";
+
+// containers:
+@import "../containers/app/app";
 
 
 

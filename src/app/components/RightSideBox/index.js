@@ -103,11 +103,11 @@ class RightSideBox extends React.Component {
     return (
       <div className="white-panel">
         <div className="right_header_text">
-          <a className="btn btn-warning" onClick={this.openStep1Modal.bind(this)}>Open New Matter</a>          
+          <a className="btn btn-warning" onClick={this.openWizard.bind(this)}>Open New Matter</a>          
         </div>
         
         <div className="text_align_center">
-          <a className="padding_left" href="#" onClick={this.openWizard.bind(this)}>about</a>
+          <a className="padding_left" href="#" onClick={this.openModal.bind(this)}>about</a>
         </div>
         
         <div className="content_text"></div>
