@@ -60,9 +60,9 @@ class AgreementLeftSideBox extends React.Component {
     return (
       <div className="white-panel panel-margin">
         <div className="header_text">
-          <span className="">Agreements</span>
+          <span className="padding-left-little">Agreements</span>
           <hr />
-          <span className="pull-right"><a href="/index">index</a></span>          
+          <span className="pull-right padding-right-little"><a href="/index">index</a></span>          
         </div>
         <div className="content_text">
           <div className="menu_text"><span href="#" className="active">Agreements</span></div>

@@ -1,0 +1,88 @@
+.ProgressStepBox {
+    position: relative;
+    z-index: 1050;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px #888888;
+    opacity: 1;
+    background-clip: padding-box;
+    width: 80%;
+    height: 800px;
+}
+
+.ProgressStepBox thead tr th {
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.modal-backdrop {
+    z-index: 1040;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fdfdfd;
+}
+
+.modal-backdrop .in {}
+
+.fade .in {
+    opacity: 1;
+}
+
+.fade {
+    transition: opacity 1;
+}
+
+.dev .modal-dialog {
+    width: 90%;
+}
+
+#myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center;
+    /* To center it horizontally (if you want) */
+    line-height: 30px;
+    /* To center it vertically */
+    color: white;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+
+.progress {
+    width: 80%;
+    display: inline-block;
+    margin: 10px 15px 0 15px;
+}
+
+@media (min-width: 1900px) {
+    .wizard_form {
+        .col-sm-1.prev_button {
+            padding-left: 15px;
+        }
+    }
+}
+
+@media (max-width: 1899px) {
+    .wizard_form {
+        .col-sm-10 {
+            // width: 75%;
+        }
+        .col-sm-1.next_button {
+            padding-right: 15px;
+            padding-left: 0;
+        }
+        .col-sm-1.prev_button {
+            padding-left: 0px;
+        }
+
+        .col-sm-1 button {
+        	width: 80px;
+        }
+    }
+}

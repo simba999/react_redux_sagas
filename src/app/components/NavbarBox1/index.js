@@ -7,7 +7,6 @@ import React, {
 import {Motion, spring, presets}  from 'react-motion';
 import { Link }                   from 'react-router';
 import ModalBox                   from '../ModalBox';
-// import '../../../js/main.js';
 
 class NavbarBox1 extends React.Component {
 
@@ -81,10 +80,10 @@ class NavbarBox1 extends React.Component {
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">My Account</a>
                 <ul className="dropdown-menu">
-                  <li><a href="#">Profile</a></li>
-                  <li><a href="#">Password</a></li>
-                  <li><a href="#">Payment</a></li>
-                  <li><a href="#">Users</a></li>
+                  <li><a href="/profile">Profile</a></li>
+                  <li><a href="/password">Password</a></li>
+                  <li><a href="/payment">Payment</a></li>
+                  <li><a href="/users">Users</a></li>
                   <li><a href="#">Sign out</a></li>
                 </ul>
               </li> 

@@ -60,12 +60,12 @@ class ResearchLeftSideBox extends React.Component {
     return (
       <div className="white-panel panel-margin">
         <div className="header_text">
-          <span className="">Research</span>
+          <span className="padding-left-little">Research</span>
           <hr />
           <span className="pull-right"><a href="/index">index</a></span>          
         </div>
         <div className="content_text">
-          <div className="menu_text"><span href="#" className="active">Research</span></div>
+          <div className="menu_text padding-right-little"><span href="#" className="active">Research</span></div>
           <ul className="submenu_text">
             <li className="active" onClick={this.setActive.bind(this)}><Link to="">Adoption</Link></li>
             <li onClick={this.setActive.bind(this)}><Link to="">Research</Link></li>

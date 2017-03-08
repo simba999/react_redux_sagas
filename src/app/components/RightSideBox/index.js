@@ -11,6 +11,7 @@ import Step2Box                       from '../../components/OpenMatter/StepBox/
 import Step3Box                       from '../../components/OpenMatter/StepBox/Step3Box';
 import Step4Box                       from '../../components/OpenMatter/StepBox/Step4Box';
 import Step5Box                       from '../../components/OpenMatter/StepBox/Step5Box';
+import WizardForm                     from '../../components/Wizard/WizardForm';
 
 class RightSideBox extends React.Component {
 
@@ -18,6 +19,7 @@ class RightSideBox extends React.Component {
     super(props, context);
 
     this.state = {
+      flag: false,
       openModalState : false,
       title          : '',
       content        : '',
@@ -83,6 +85,10 @@ class RightSideBox extends React.Component {
     window.location = '/opencase';
   }
 
+  openWizard() {
+    this.setState({flag : true});
+  }
+
   removeStep1Modal() {
     this.setState({openStep1State : false});
     this.setState({openStep2State : false});
@@ -101,10 +107,18 @@ class RightSideBox extends React.Component {
         </div>
         
         <div className="text_align_center">
-          <a className="padding_left" href="#" onClick={this.openModal.bind(this)}>about</a>
+          <a className="padding_left" href="#" onClick={this.openWizard.bind(this)}>about</a>
         </div>
         
         <div className="content_text"></div>
+
+        {
+          this.state.flag == true?
+            <WizardForm></WizardForm>
+          : 
+            ''
+        }
+
         <StepBox open={this.state.openStep1State} closeModal={this.removeStep1Modal.bind(this)} nextOpen={this.openStep2Modal.bind(this)}  title={this.state.titleStep1}></StepBox>
         <Step2Box open={this.state.openStep2State} closeModal={this.removeStep1Modal.bind(this)} prevOpen={this.openStep1Modal.bind(this)} nextOpen={this.openStep3Modal.bind(this)} title="step2"></Step2Box>
         <Step3Box open={this.state.openStep3State} closeModal={this.removeStep1Modal.bind(this)} prevOpen={this.openStep2Modal.bind(this)} nextOpen={this.openStep4Modal.bind(this)} title="step3"></Step3Box>

@@ -49,14 +49,14 @@ const Routes = () => {
         <Route path="/user" component={SubInfo} onEnter={scrollToTop}>
           <IndexRoute component={ConnectedInfo} onEnter={scrollToTop} />
           <Route path="/user/adoption" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/user/aliases" component={ConnectedInfoAliase} onEnter={scrollToTop} />
-          <Route path="/user/activities" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/user/awards" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/user/affiliations" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/user/family_history" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/user/education_history" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/user/residental_history" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/user/military_history" component={ConnectedInfo} onEnter={scrollToTop} />
+          <Route path="/aliases" component={ConnectedInfoAliase} onEnter={scrollToTop} />
+          <Route path="/activities" component={ConnectedInfo} onEnter={scrollToTop} />
+          <Route path="/awards" component={ConnectedInfo} onEnter={scrollToTop} />
+          <Route path="/affiliations" component={ConnectedInfo} onEnter={scrollToTop} />
+          <Route path="/family_history" component={ConnectedInfo} onEnter={scrollToTop} />
+          <Route path="/education_history" component={ConnectedInfo} onEnter={scrollToTop} />
+          <Route path="/residental_history" component={ConnectedInfo} onEnter={scrollToTop} />
+          <Route path="/military_history" component={ConnectedInfo} onEnter={scrollToTop} />
         </Route>
         <Route path="/index" component={ConnectedInfoIndex} />
         <Route path="/review" component={ConncetedReview} />

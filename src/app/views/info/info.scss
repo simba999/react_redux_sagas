@@ -5,13 +5,16 @@
     .header_menu {
         padding-right: 15px;
         font-size: 20px;
+        margin: 20px 20px 0 0;
     }
     .submenu_text {
         font-size: 16px;
-        padding-top: 5px;
+        padding-top: 20px;
+        padding-left: 70px;
 
         li {
-            padding-top: 5px;
+            padding-top: 20px;
+            text-decoration: underline;
             list-style-image: url('../images/inactive-icon.png');
 
             a {
@@ -29,8 +32,12 @@
         }
     }
 
+    .edit_link {
+        margin: 10px 30px 0 0;
+    }
+
     .menu_text {
-    	padding: 10px 0 6px 5px;
+    	padding: 40px 0 10px 25px;
 
     	span.active {
     		border-bottom: 4px solid #ff9900;
@@ -58,46 +65,17 @@
             padding: 5% 4% 0 4%;
             margin-top: 6%;
         }
-        @media (min-width: 1710px) {
-            .opencase_margin {
-                padding: 2% 5% 0% 5%;
-                font-size: 24px;
-                .right_header_text {
-                    padding-top: 60px;
-                    .btn {
-                        font-size: 24px;
-                    }
-                }
-            }
-            .header_text {
-                padding: 2% 3.5% 0% 3.5%;
-            }
-        }
     }
     .closeclaim_page {
         .opencase_margin {
             padding: 5% 5% 0 5%;
             margin-top: 6%;
-        }
-        @media (min-width: 1710px) {
-            .opencase_margin {
-                padding: 2% 5% 0% 5%;
-                font-size: 24px;
-                .right_header_text {
-                    padding-top: 60px;
-                    .btn {
-                        font-size: 24px;
-                    }
-                }
-            }
-            .header_text {
-                padding: 2% 3.5% 0% 3.5%;
-            }
-        }
+        }     
     }
+
     @media (min-width: 1710px) {
         .opencase_margin {
-            padding: 2% 0% 0% 4%;
+            padding: 3% 0% 0% 4%;
             font-size: 24px;
             .right_header_text {
                 padding-top: 30px;
@@ -107,7 +85,7 @@
             }
         }
         .header_text {
-            padding: 2% 3.5% 0% 3.5%;
+            padding: 3.4% 3.5% 0% 3.5%;
         }
         .col-sm-3 .white-panel {
             margin-right: 0;
