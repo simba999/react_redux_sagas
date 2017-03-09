@@ -62,21 +62,21 @@ class LeftSideBox extends React.Component {
         <div className="header_text">
           <span className="padding-left-little">Personal Info</span>
           <hr />
-          <span className="pull-right padding-right-little"><a href="/index">index</a></span>          
+          <span className="pull-right padding-right-little"><a href="index">index</a></span>          
         </div>
         <div className="content_text">
           <div className="menu_text"><span href="#" className="active">Personal Info</span></div>
           <ul className="submenu_text">
-            <li className="active" onClick={this.setActive.bind(this)}><Link to="/user/adoption">Adoption</Link></li>
-            <li onClick={this.setActive.bind(this)}><Link to="/aliases">Aliases</Link></li>
+            <li className="active" onClick={this.setActive.bind(this)}><Link to="adoption">Adoption</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="aliases">Aliases</Link></li>
             <li onClick={this.setActive.bind(this)}><Link to="activities">Activities</Link></li>
-            <li onClick={this.setActive.bind(this)}><Link to="/awards">Awards</Link></li>
-            <li onClick={this.setActive.bind(this)}><Link to="/affliations">Affiliations</Link></li>
-            <li onClick={this.setActive.bind(this)}><Link to="/familiy_history">Familiy history</Link></li>
-            <li onClick={this.setActive.bind(this)}><Link to="/education_history">Education history</Link></li>
-            <li onClick={this.setActive.bind(this)}><Link to="/employment_history">Employment history</Link></li>
-            <li onClick={this.setActive.bind(this)}><Link to="/residental">Residental history</Link></li>
-            <li onClick={this.setActive.bind(this)}><Link to="/military_history">Military services</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="awards">Awards</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="affliations">Affiliations</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="familiy_history">Familiy history</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="education_history">Education history</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="employment_history">Employment history</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="residental">Residental history</Link></li>
+            <li onClick={this.setActive.bind(this)}><Link to="military_history">Military services</Link></li>
           </ul>
         </div>
         <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>        

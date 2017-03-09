@@ -6,6 +6,7 @@ import React, {
 }                                 from 'react';
 import {Motion, spring, presets}  from 'react-motion';
 import ModalBox                   from '../../components/ModalBox';
+import $                          from 'jquery';
 
 class ClaimTableBox extends React.Component {
 
@@ -34,9 +35,7 @@ class ClaimTableBox extends React.Component {
   }
 
   linkIndex() {
-    $("td").click(function() {
-      console.log("TD Clicked");
-    });
+    window.location = 'index';
   }
 
   openModal() {
@@ -52,11 +51,9 @@ class ClaimTableBox extends React.Component {
   }
 
   setActive(el) {
-    console.log("INDEX: ", el.target.parentNode.parentNode.childNodes);
     var allSiblings = el.target.parentNode.parentNode.childNodes;
     var count = 0
     while ( count < allSiblings.length) {
-      console.log("TET: ", allSiblings[count].getAttribute("class"));
       if (allSiblings[count].getAttribute("class") == 'active') {
         allSiblings[count].setAttribute("class", "");
       } 
@@ -91,7 +88,7 @@ class ClaimTableBox extends React.Component {
               </tr> 
             </thead>
             <tbody>
-              <tr>
+              <tr onClick={this.linkIndex}>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -101,7 +98,7 @@ class ClaimTableBox extends React.Component {
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr onClick={this.linkIndex}>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -111,7 +108,7 @@ class ClaimTableBox extends React.Component {
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr onClick={this.linkIndex}>
                 <td></td>
                 <td></td>
                 <td></td>

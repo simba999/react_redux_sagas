@@ -9,7 +9,7 @@ import { Link }                   from 'react-router';
 import ModalBox                   from '../ModalBox';
 // import '../../../js/main.js';
 
-class NavbarBox extends React.Component {
+class HeaderBox extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -73,51 +73,20 @@ class NavbarBox extends React.Component {
           <div id="navbar1" className="navbar-collapse collapse" aria-expanded="false">
             <ul className="nav navbar-nav navbar-right white_nav task">
               <li className="dropdown">
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown">My Account</a>
-                <ul className="dropdown-menu">
-                  <li><a href="/profile">Profile</a></li>
-                  <li><a href="/password">Password</a></li>
-                  <li><a href="/payment">Payment</a></li>
-                  <li><a href="/users">Users</a></li>
-                  <li><a href="#">Sign out</a></li>
-                </ul>
+                <a href="signup">Sign up</a>
               </li> 
-              <li><a href="#" onClick={this.openContactModal.bind(this)}>Contact</a></li>
+              <li><a href="signin">Sign in</a></li>
             </ul>
           </div>
         </div>
         <div className="below_header task">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" 
-            aria-expanded="false" aria-controls="navbar">
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
             <a className="navbar-brand" href="#"></a>
           </div>
           <div id="navbar" className="navbar-collapse collapse submenu" aria-expanded="false">
-            <ul className="nav navbar-nav" id="selectElement">
-              <li className="active" onClick={this.setActive.bind(this)}><Link to="/">Home</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="opencase">Open Claims</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="closeclaim">Closed Claims</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="reports">Reports</Link></li>
-            </ul>
+           
           </div>
         </div>
-        <nav id="context-menu" className="context-menu">
-          <ul className="context-menu__items">
-            <li className="context-menu__item">
-              <a href="#" className="context-menu__link" data-action="View"><i className="fa fa-eye"></i> View Task</a>
-            </li>
-            <li className="context-menu__item">
-              <a href="#" className="context-menu__link" data-action="Edit"><i className="fa fa-edit"></i> Edit Task</a>
-            </li>
-            <li className="context-menu__item">
-              <a href="#" className="context-menu__link" data-action="Delete"><i className="fa fa-times"></i> Delete Task</a>
-            </li>
-          </ul>
-        </nav>
         <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>
       </nav>
     );
@@ -125,4 +94,4 @@ class NavbarBox extends React.Component {
 
 }
 
-export default NavbarBox;
+export default HeaderBox;

@@ -62,7 +62,7 @@ class ResearchLeftSideBox extends React.Component {
         <div className="header_text">
           <span className="padding-left-little">Research</span>
           <hr />
-          <span className="pull-right"><a href="/index">index</a></span>          
+          <span className="pull-right"><a href="index">index</a></span>          
         </div>
         <div className="content_text">
           <div className="menu_text padding-right-little"><span href="#" className="active">Research</span></div>

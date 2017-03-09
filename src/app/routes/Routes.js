@@ -18,6 +18,9 @@ import {
   ConnectedPassword,
   ConnectedUsers,
   ConnectedPayment,
+  Index,
+  Signin,
+  Signup
 }                               from '../containers';
 
 import UserLayout               from '../containers/user/User';
@@ -33,23 +36,26 @@ import {
 
 const Routes = () => {
   return (
-    <Route component={LayoutContainer}>
-      <Route path="/" component={App} >
-        <IndexRoute component={ConnectedHome} onEnter={scrollToTop} />
-        <Route path="/about" component={ConnectedAbout} onEnter={scrollToTop} />
-        <Route path="/opencase" component={ConnectedOpenCase} onEnter={scrollToTop} />
-        <Route path="/closeclaim" component={ConnectedCloseClaim} onEnter={scrollToTop} />
-        <Route path="/reports" component={ConnectedReports} onEnter={scrollToTop} />
-        <Route path="/profile" component={ConnectedProfile} onEnter={scrollToTop} />
-        <Route path="/password" component={ConnectedPassword} onEnter={scrollToTop} />
-        <Route path="/payment" component={ConnectedPayment} onEnter={scrollToTop} />
-        <Route path="/users" component={ConnectedUsers} onEnter={scrollToTop} />
+    <Route path="/" component={LayoutContainer}>
+      <IndexRoute component={Index} onEnter={scrollToTop} />
+      <Route path="signup" component={Signup} onEnter={scrollToTop} />
+      <Route path="signin" component={Signin} onEnter={scrollToTop} />
+      <Route component={App} >
+        <Route path="home" component={ConnectedHome} onEnter={scrollToTop} />
+        <Route path="about" component={ConnectedAbout} onEnter={scrollToTop} />
+        <Route path="opencase" component={ConnectedOpenCase} onEnter={scrollToTop} />
+        <Route path="closeclaim" component={ConnectedCloseClaim} onEnter={scrollToTop} />
+        <Route path="reports" component={ConnectedReports} onEnter={scrollToTop} />
+        <Route path="profile" component={ConnectedProfile} onEnter={scrollToTop} />
+        <Route path="password" component={ConnectedPassword} onEnter={scrollToTop} />
+        <Route path="payment" component={ConnectedPayment} onEnter={scrollToTop} />
+        <Route path="users" component={ConnectedUsers} onEnter={scrollToTop} />
       </Route>
       <Route component={UserLayout}>
-        <Route path="/user" component={SubInfo} onEnter={scrollToTop}>
-          <IndexRoute component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/user/adoption" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/aliases" component={ConnectedInfoAliase} onEnter={scrollToTop} />
+        <Route path="" component={SubInfo} onEnter={scrollToTop}>
+          <Route path="user" component={ConnectedInfo} onEnter={scrollToTop} />
+          <Route path="adoption" component={ConnectedInfo} onEnter={scrollToTop} />
+          <Route path="aliases" component={ConnectedInfoAliase} onEnter={scrollToTop} />
           <Route path="/activities" component={ConnectedInfo} onEnter={scrollToTop} />
           <Route path="/awards" component={ConnectedInfo} onEnter={scrollToTop} />
           <Route path="/affiliations" component={ConnectedInfo} onEnter={scrollToTop} />

@@ -1,4 +1,5 @@
 import App                  from './app/App';
+import Index                from './index/index';
 import ConnectedHome        from './home/Home';
 import ConnectedAbout       from './about/About';
 import ConnectedOpenCase		from './opencase/OpenCase';
@@ -15,6 +16,8 @@ import ConnectedResearch		from './research/Research';
 import ConnectedReview			from './review/Review';
 import ConnectedAgreement		from './agreement/index';
 import ConnectedClaimReport from './ClaimReport/index';
+import Signin               from './signin/index';
+import Signup               from './signup/index';
 
 export {
   App,
@@ -34,4 +37,7 @@ export {
   ConnectedAgreement,
   ConnectedReview,
   ConnectedClaimReport,
+  Index,
+  Signup,
+  Signin,
 };

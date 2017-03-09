@@ -57,7 +57,7 @@ class IndexBox extends React.Component {
           </div>
           <div className="col-sm-3">
             <div className="form-horizontal">
-              <a className="blue_color" href="/user">Personal Info</a>
+              <a className="blue_color" href="user">Personal Info</a>
               <hr />
             </div>
             <div className="yellow_squre_text_decoration">

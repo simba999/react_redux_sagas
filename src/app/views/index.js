@@ -14,6 +14,9 @@ import Research			from './research/Research';
 import Review				from './review/Review';
 import Agreement 		from './agreement/Agreement';
 import ClaimReport  from './ClaimReport/index';
+import Index        from './index/index';
+import Signin       from './signin/index';
+import Signup       from './signup/index';
 
 export {
   About,
@@ -31,5 +34,8 @@ export {
   Research,
   Agreement,
   Review,
-  ClaimReport
+  ClaimReport,
+  Index,
+  Signup,
+  Signin,
 };
