@@ -19,14 +19,14 @@ class Signin extends PureComponent {
 
   constructor(props, context) {
 
-      super();
+      super(props, context);
 
       this.state = {
         open                      : false,
         first_name                : '',
         btnActive                 : false,
         checkValidation           : false,
-        isValid                   : true,
+        isValid                   : false,
         passwordValue             : '',
         emailValue                : '',
         openPasswordDialog        : false,
@@ -48,21 +48,19 @@ class Signin extends PureComponent {
       console.log("listener",this.listener)
     }
 
-  componentDidMount() {
-      elementClass(document.documentElement).add('a');
-      elementClass(document.documentElement).add('b');
-      elementClass(document.documentElement).add('c');
+    componentDidMount() {
+     
     }
 
     componentWillUnmount() {
-      elementClass(document.documentElement).remove('a');
-      elementClass(document.documentElement).remove('b');
-      elementClass(document.documentElement).remove('c');
+    
     }
 
     componentWillMount() {
       this.setState({emailValue: ''});
       this.setState({passwordValue: ''});
+      this.setState({isValid: true});
+      this.setState({checkValidation: true});
     }
 
     inputName(event) {
@@ -112,7 +110,7 @@ class Signin extends PureComponent {
     }
 
     goToLogin() {
-      window.location             = '/login';
+      window.location             = '/';
     }
 
     handleSignin() {
@@ -125,7 +123,7 @@ class Signin extends PureComponent {
         this.setState({isValid: true});
 
         if (this.state.passwordValue == '111111111' && this.state.emailValue == 'a@a.com')  {
-          window.location         = '/dashboard';
+          window.location         = 'home';
           // this.setState({open: false});
         } else  {
             this.setState({open: true});
@@ -140,7 +138,7 @@ class Signin extends PureComponent {
 
     //Modal Dialog Handler
     handleCancel() {
-      window.location             = '/login';
+      window.location             = '/';
     }
 
     closeModal() {
@@ -201,7 +199,7 @@ class Signin extends PureComponent {
 
                 <div className="form-group">
                 {
-                  this.state.isValid == false ?
+                  !this.state.isValid ?
                     <div className="alert_form">
                       <div className="col-md-2"></div>
                       <div className="col-md-4 alert_vaild">
@@ -226,26 +224,20 @@ class Signin extends PureComponent {
               onHide={this.closeModal}
               aria-labelledby="ModalHeader">
 
-              <Modal.Header closeButton>
-                <Modal.Title id='ModalHeader'>
-                  <div className="form-horizontal title_header">
+              <Modal.Body>
+                <div className="header_text login_form" >
                   <span className="pull-left">Notice</span>
                   <span className="pull-right" onClick={this.closeModal}><i className="glyphicon glyphicon-remove"></i></span>
+                  <hr />
                 </div>
-                <hr />
-                </Modal.Title>
-              </Modal.Header>
+                <div className="content_text">
+                  <div className="textModal">Your invitation code is in-correct or in-valid. If you don’t have an invitation code, or need an updated code please <a> contact </a> us so we can provide you with one.</div> 
+                </div>
+                <div className="footer_text">
+                  <hr />
+                  <Modal.Dismiss className='btn btn-primary pull-right'>Close</Modal.Dismiss>
+                </div>
 
-              <Modal.Body>
-                <div className="box_width">
-                  <div className="paragraph">
-                    Your invitation code is in-correct or in-valid. If you don’t have an invitation code, or need an updated code please <a> contact </a> us so we can provide you with one.
-                  </div>
-                  <div className="closeButton pull-right">
-                    <Modal.Dismiss className='btn btn-primary'>Close</Modal.Dismiss>  
-                  </div>
-                </div>
-                
               </Modal.Body>
             </Modal>
 
