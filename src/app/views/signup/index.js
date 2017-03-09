@@ -4,7 +4,19 @@ import React, {
 }                             from 'react';
 import {Jumbotron}            from '../../components';
 import AnimatedView           from '../../components/animatedView/AnimatedView';
-import { Link }               from 'react-router';  
+import { Link }               from 'react-router';
+import validator          from 'validator';
+  import ValidateGroup      from './ValidateGroup';
+  import Validate           from './Validate';
+  import ErrorMessage       from './ErrorMessage';
+  import InputBox           from '../../components/InputBox';
+  import InputBox1          from '../../components/InputBox1';
+  import InputBox2          from '../../components/InputBox2';
+  import InputBox3          from '../../components/InputBox3';
+  import PasswordBox        from '../../components/PasswordBox';
+  import EmailBox           from '../../components/EmailBox';
+  import PhoneBox           from '../../components/PhoneBox';
+  import CustomEmitter      from "../../modules/emitter";  
 
 class Signup extends PureComponent {
 

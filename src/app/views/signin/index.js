@@ -155,6 +155,7 @@ class Signin extends PureComponent {
   render() {
     return(
  
+         <div id="appContainer">
          <article>
           <div className="container allForm">
             
@@ -277,7 +278,8 @@ class Signin extends PureComponent {
             </Modal>
 
           </div>
-      </article>
+        </article>
+      </div>
   
     );
   }
