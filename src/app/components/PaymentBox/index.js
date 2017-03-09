@@ -86,7 +86,7 @@ class PaymentBox extends React.Component {
           <hr />
         </div>
 
-        <div className="form-horizontal content_text table-responsive">
+        <div className="form-horizontal content_text">
           <div className="blue_color " style={{padding: '0 0 10px 0'}}>
             <div className="col-sm-6">
               <ul>

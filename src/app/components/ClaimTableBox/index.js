@@ -17,6 +17,8 @@ class ClaimTableBox extends React.Component {
       title          : '',
       content        : ''
     }
+
+    this.linkIndex = this.linkIndex.bind(this);
   }
 
   componentWillMount() {
@@ -28,7 +30,13 @@ class ClaimTableBox extends React.Component {
   }
 
   componentWillUnmount() {
-    // window.removeEventListener('scroll', this.handleWindowScroll);
+    linkIndex();
+  }
+
+  linkIndex() {
+    $("td").click(function() {
+      console.log("TD Clicked");
+    });
   }
 
   openModal() {
@@ -84,8 +92,35 @@ class ClaimTableBox extends React.Component {
             </thead>
             <tbody>
               <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
-            
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
             </tbody>
           </table>
         </div>

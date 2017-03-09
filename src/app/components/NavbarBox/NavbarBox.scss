@@ -11,6 +11,7 @@
 
 .below_header {
     box-shadow: 0px 3px 0px #888888;
+    padding-right: 5%;
     background-color: white;
     .navbar-nav>.active>a {
         background-color: #ffffff;
@@ -32,7 +33,6 @@
 
 .submenu.navbar-collapse {
     padding-left: 4%;
-
     #selectElement li > a {
         color: #b9b9b9;
     }
@@ -48,6 +48,10 @@
         border-bottom: 4px solid #ff9900;
     }
     .navbar-default {
+        background-color: #ffffff;
+    }
+
+    #selectElement li a:focus {
         background-color: #ffffff;
     }
 }
@@ -91,13 +95,12 @@
         background-color: $blue_color;
         color: #ffffff;
     }
+
 }
 
 #selectElement {
     padding-left: 3%;
 }
-
-
 
 
 /* right click */

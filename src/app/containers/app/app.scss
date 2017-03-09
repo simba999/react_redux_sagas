@@ -1,227 +1,189 @@
-#appContainer {
-    background-color: #b9b9b9;
-}
-
-.container {
-    width: 100%;
-    background-color: #b9b9b9;
-}
-
-.content {
-    margin-top: 80px;
-}
-
-.opencase_page {
-    .opencase_margin {
-        padding: 5% 4% 0 4%;
-        margin-top: 7%;
+    #appContainer {
+        background-color: #b9b9b9;
     }
-}
-
-.account_page {
-    margin-bottom: 1%;
-    .col-sm-9 {
-        width: 75%;
+    
+    .container {
+        width: 100%;
+        background-color: #b9b9b9;
     }
-}
-
-@media (min-width: 1440px) {
-    .opencase_margin {
-        padding: 2% 0% 0% 4%;
-        font-size: 24px;
-        .right_header_text {
-            padding-top: 30px;
-            .btn {
-                font-size: 24px;
-            }
-        }
-        .col-sm-9 {
-            width: 71.5%;
+    
+    .content {
+        margin-top: 80px;
+    }
+    
+    .opencase_page {
+        .opencase_margin {
+            padding: 5% 4% 0 4%;
+            margin-top: 7%;
         }
     }
-    .header_text {
-        padding: 2% 3.5% 0% 3.5%;
-    }
-    .opencase_page .opencase_margin {
-        padding: 5% 0% 0% 4%;
-        font-size: 24px;
-        margin-top: 85px;
-    }
-    .closeclaim_page .opencase_margin {
-        padding: 5% 0% 0% 4%;
-        font-size: 24px;
-        margin-top: 85px;
-    }
-    .report_page .opencase_margin {
-        padding: 5% 4% 0% 4%;
-        margin-top: 85px;
-    }
-    .homepage .opencase_margin {
-        padding: 5% 0.3% 0% 4%;
-        margin-top: 85px;
-    }
+    
     .account_page {
         margin-bottom: 1%;
         .col-sm-9 {
             width: 75%;
         }
     }
-    .content_text {
-        height: 450px;
-    }
-    .footer_text hr {
-        margin-bottom: 3%;
-    }
-    .white-panel {
-        height: 700px;
-    }
-    .account_page .opencase_margin {
-        padding: 6% 3.5% 0% 4%;
-        font-size: 24px;
-        margin-top: 6%;
-    }
-    .account_page {
-        margin-bottom: 0px;
-    }
-    .info_page {
+    
+    @media (min-width: 1440px) {
         .opencase_margin {
-            padding: 6% 3.5% 0% 4%;
+            padding: 2% 0% 0% 4%;
             font-size: 24px;
-            margin-top: 4%;
+            .right_header_text {
+                padding-top: 65px;
+                .btn {
+                    font-size: 20px;
+                }
+            }
+            .col-sm-9 {
+                width: 71.5%;
+            }
+        }
+        .header_text {
+            padding: 45px 3.5% 0% 3.5%;
+        }
+        .opencase_page .opencase_margin {
+            padding: 5% 4% 0% 4%;
+            font-size: 24px;
+            margin-top: 125px;
+        }
+        .closeclaim_page .opencase_margin {
+            padding: 5% 4% 0% 4%;
+            font-size: 24px;
+            margin-top: 85px;
+        }
+        .report_page .opencase_margin {
+            padding: 5% 4% 0% 4%;
+            margin-top: 85px;
+        }
+        .homepage .opencase_margin {
+            padding: 5% 0.3% 0% 4%;
+            margin-top: 85px;
+            .padding_left {
+                padding-left: 110px;
+            }
+        }
+        .account_page {
+            margin-bottom: 1%;
+            .col-sm-9 {
+                width: 75%;
+            }
         }
         .content_text {
-            height: 480px;
+            height: 430px;
         }
-    }
-    .claim_report {
-        margin-top: 3%;
-        .opencase_margin {
+        .footer_text hr {
+            margin-bottom: 3%;
+        }
+        .white-panel {
+            height: 720px;
+        }
+        .account_page .opencase_margin {
+            padding: 5% 3.5% 0% 4%;
+            font-size: 24px;
+            margin-top: 85px;
+        }
+        .account_page {
+            margin-bottom: 0px;
+        }
+        .info_page {
+            .opencase_margin {
+                padding: 5% 0% 0% 4%;
+                font-size: 24px;
+                margin-top: 105px;
+            }
+            .content_text {
+                height: 500px;
+            }
+            .col-sm-3 .header_text {
+                padding-top: 46px;
+            }
+            .submenu_text {
+                padding-top: 0px;
+            }
+        }
+        .claim_report {
+            margin-top: 95px;
             .panel-margin {
-                margin: 12% 4.7% 2% 4.7%;
+                margin: 114px 4.7% 2% 4.7%;
             }
             .content_text {
                 height: 450px;
             }
         }
     }
-}
-
-@media (min-width: 1513px) {
-    .opencase_margin {
-        padding: 2% 0% 0% 4%;
-        font-size: 24px;
-        .right_header_text {
-            padding-top: 30px;
-            .btn {
-                font-size: 24px;
+    
+    @media (min-width: 1535px) {
+        .opencase_page .opencase_margin {
+            padding: 5% 4% 0% 4%;
+            font-size: 24px;
+            margin-top: 105px;
+        }
+        .closeclaim_page .opencase_margin {
+            padding: 5% 4% 0% 4%;
+            font-size: 24px;
+            margin-top: 105px;
+        }
+        .report_page .opencase_margin {
+            padding: 5% 4% 0% 4%;
+            margin-top: 105px;
+        }
+        .homepage .opencase_margin {
+            padding: 5% 0% 0% 4%;
+            margin-top: 105px;
+        }
+        .homepage .header_text {
+            padding: 50px 3.5% 0% 3.5%;
+        }
+        .account_page {
+            margin-bottom: 1%;
+            .col-sm-9 {
+                width: 75%;
             }
         }
-        .col-sm-9 {
-            width: 71.5%;
+        .content_text {
+            height: 510px;
         }
-    }
-    .header_text {
-        padding: 2% 3.5% 0% 3.5%;
-    }
-    .opencase_page .opencase_margin {
-        padding: 5% 0% 0% 4%;
-        font-size: 24px;
-        margin-top: 85px;
-    }
-    .closeclaim_page .opencase_margin {
-        padding: 5% 0% 0% 4%;
-        font-size: 24px;
-        margin-top: 85px;
-    }
-    .report_page .opencase_margin {
-        padding: 5% 4% 0% 4%;
-        margin-top: 85px;
-    }
-    .homepage .opencase_margin {
-        padding: 5% 0% 0% 4%;
-        margin-top: 85px;
-    }
-    .account_page {
-        margin-bottom: 1%;
-        .col-sm-9 {
-            width: 75%;
+        .footer_text hr {
+            margin-bottom: 3%;
         }
-    }
-    .content_text {
-        height: 510px;
-    }
-    .footer_text hr {
-        margin-bottom: 3%;
-    }
-    .white-panel {
-        height: 800px;
-    }
-    .account_page .opencase_margin {
-        padding: 6% 3.5% 0% 4%;
-        font-size: 24px;
-        margin-top: 4%;
-    }
-    .info_page {
         .white-panel {
-            height: 760px
+            height: 800px;
+        }
+        .account_page .opencase_margin {
+            padding: 6% 3.5% 0% 4%;
+            font-size: 24px;
+            margin-top: 70px;
         }
     }
-    .claim_report {
-        margin-top: 1%;
-        .white_panel {
-            height: 950px;
+    
+    @media (max-width: 1439px) {
+        .footer_text hr {
+            // margin-bottom: 80px;
         }
-        .content_text {
-            height: 530px;
-        }
-        .opencase_margin {
-            .panel-margin {
-                margin: 12% 4.7% 2% 4.7%;
+        .opencase_page .opencase_margin {
+            padding: 8% 4% 0% 4%;
+            font-size: 22px;
+            margin-top: 55px;
+            .context_text {
+                height: 400px;
             }
         }
-    }
-}
-
-@media (max-width: 1439px) {
-    .footer_text hr {
-        // margin-bottom: 80px;
-    }
-    .opencase_page .opencase_margin {
-        padding: 8% 0% 0% 0%;
-        font-size: 22px;
-        margin-top: 55px;
-        .context_text {
-            height: 400px;
+        .closeclaim_page .opencase_margin {
+            padding: 8% 4% 0% 4%;
+            font-size: 24px;
+            margin-top: 55px;
         }
-    }
-    .closeclaim_page .opencase_margin {
-        padding: 8% 0% 0% 4%;
-        font-size: 24px;
-        margin-top: 55px;
-    }
-    .report_page .opencase_margin {
-        padding: 8% 4% 0% 4%;
-        margin-top: 55px;
-    }
-    .homepage .opencase_margin {
-        padding: 8% 0.3% 0% 4%;
-        margin-top: 55px;
-    }
-    .content_text {
-        height: 500px;
-    }
-    .footer_text hr {
-        margin-bottom: 4%;
-    }
-    .white-panel {
-        height: 750px;
-    }
-    .account_page .opencase_margin {
-        padding: 3% 3.5% 0% 4%;
-        font-size: 24px;
-        margin-top: 4%;
+        .report_page .opencase_margin {
+            padding: 8% 4% 0% 4%;
+            margin-top: 55px;
+        }
+        .homepage .opencase_margin {
+            padding: 8% 0.3% 0% 4%;
+            margin-top: 55px;
+        }
         .content_text {
-            height: 550px;
+            height: 500px;
         }
         .footer_text hr {
             margin-bottom: 4%;
@@ -229,404 +191,564 @@
         .white-panel {
             height: 800px;
         }
-    }
-    .account_page {
-        margin-bottom: 0;
-    }
-    .account_page .opencase_margin {
-        padding: 8% 3.5% 0% 4%;
-        font-size: 24px;
-        margin-top: 4%;
-        .col-sm-9 {
-            padding-right: 0px;
-            padding-left: 0px;
+        .account_page .opencase_margin {
+            padding: 3% 3.5% 0% 4%;
+            font-size: 24px;
+            margin-top: 4%;
+            .content_text {
+                height: 510px;
+            }
+            .footer_text hr {
+                margin-bottom: 4%;
+            }
+            .white-panel {
+                height: 800px;
+            }
         }
-        .col-sm-3 {
-            padding-right: 0px;
+        .account_page {
+            margin-bottom: 0;
         }
-    }
-    .info_page {
-        .content_text {
-            height: 550px;
+        .account_page .opencase_margin {
+            padding: 8% 3.5% 0% 4%;
+            font-size: 24px;
+            margin-top: 4%;
+            .col-sm-9 {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+            .col-sm-3 {
+                padding-right: 0px;
+            }
         }
-        .header_text .padding-left-little {
-            margin-left: 0px;
+        .info_page {
+            .opencase_margin {
+                padding: 95px 0 0 6%;
+            }
+            .content_text {
+                height: 550px;
+            }
+            .header_text .padding-left-little {
+                margin-left: 0px;
+            }
+            .menu_text {
+                padding: 40px 0 5px 5px;
+            }
+            .submenu_text {
+                font-size: 16px;
+                padding-top: 10px;
+                padding-left: 35px;
+            }
+            .header_menu {
+                padding-right: 1px;
+            }
+            .col-sm-3 .header_text {
+                padding-top: 42px;
+            }
         }
-        .menu_text {
-            padding: 40px 0 5px 5px;
-        }
-        .submenu_text {
-            font-size: 16px;
-            padding-top: 10px;
-            padding-left: 35px;
-        }
-        .header_menu {
-            padding-right: 1px;
-        }
-    }
-    .claim_report {
-        margin-top: 6%;
-        .content_text {
-            height: 510px;
-        }
-        .opencase_margin {
+        .claim_report {
+            margin-top: 6%;
+            .content_text {
+                height: 510px;
+            }
             .panel-margin {
-                margin: 8% 4.7% 2% 4.7%;
+                margin: 95px 4.7% 2% 4.7%;
             }
         }
     }
-}
-
-@media (max-width: 1219px) {
-    .footer_text hr {
-        // margin-bottom: 80px;
+    
+    @media (max-width: 1360px) {
+        .opencase_page {
+            .opencase_margin {
+                margin-top: 75px;
+            }
+        }
+        .white-panel {
+            height: 800px;
+        }
     }
-    .opencase_page .opencase_margin {
-        padding: 8% 0% 0% 4%;
-        font-size: 22px;
-        margin-top: 70px;
-    }
-    .closeclaim_page .opencase_margin {
-        padding: 8% 0% 0% 4%;
-        font-size: 24px;
-        margin-top: 70px;
-    }
-    .report_page .opencase_margin {
-        padding: 8% 4% 0% 4%;
-        margin-top: 70px;
-    }
-    .homepage .opencase_margin {
-        padding: 8% 0.3% 0% 4%;
-        margin-top: 70px;
-    }
-    .content_text {
-        height: 500px;
-    }
-    .footer_text hr {
-        margin-bottom: 4%;
-    }
-    .white-panel {
-        height: 750px;
-    }
-    .account_page {
-        margin-bottom: 0;
-    }
-    .account_page .opencase_margin {
-        padding: 8% 3.5% 0% 4%;
-        font-size: 24px;
-        margin-top: 6%;
-    }
-}
-
-@media (max-width: 1023px) {
-    .footer_text hr {
-        // margin-bottom: 80px;
-    }
-    .container.opencase_page,
-    .container.homepage,
-    .container.closeclaim_page,
-    .container.report_page {
-        margin-top: 20px;
-    }
-    .opencase_page .opencase_margin {
-        padding: 8% 0% 0% 4%;
-        font-size: 22px;
-        margin-top: 9%;
-    }
-    .closeclaim_page .opencase_margin {
-        padding: 8% 0% 0% 4%;
-        font-size: 24px;
-        margin-top: 9%;
-    }
-    .report_page .opencase_margin {
-        padding: 8% 4% 0% 4%;
-        margin-top: 9%;
-    }
-    .homepage {
-        margin-top: 70px;
-        .opencase_margin {
+    
+    @media (max-width: 1219px) {
+        .footer_text hr {
+            // margin-bottom: 80px;
+        }
+        .opencase_page .opencase_margin {
+            padding: 8% 4% 0% 4%;
+            font-size: 22px;
+            margin-top: 80px;
+        }
+        .closeclaim_page .opencase_margin {
+            padding: 8% 4% 0% 4%;
+            font-size: 22px;
+            margin-top: 80px;
+        }
+        .report_page .opencase_margin {
+            padding: 8% 4% 0% 4%;
+            margin-top: 80px;
+            .payment_page {
+                ul li {
+                    font-size: 22px;
+                }
+            }
+        }
+        .homepage .opencase_margin {
             padding: 8% 0.3% 0% 4%;
-            margin-top: 9%;
-        }
-        .right_header_text .btn {
-            padding: 6px 2px;
-        }
-    }
-    .content_text {
-        height: 570px;
-    }
-    .footer_text hr {
-        margin-bottom: 4%;
-    }
-    .white-panel {
-        height: 750px;
-    }
-    .account_page {
-        margin-bottom: 0;
-    }
-    .account_page .opencase_margin {
-        padding: 10% 1% 0% 1%;
-        font-size: 24px;
-        margin-top: 8%;
-        .content_text {
-            height: 420px;
-        }
-        .footer_text hr {
-            margin-bottom: 6%;
-        }
-        .white-panel {
-            height: 650px;
-        }
-    }
-    .info_page {
-        .opencase_margin {
-            .col-sm-3 {
-                width: 35%;
-                .header_text {
-                    padding-top: 20%;
-                }
-            }
-            .col-sm-9 {
-                width: 65%;
+            margin-top: 80px;
+            .right_header_text {
+                padding-top: 80px;
             }
         }
-        hr {
-            margin-top: 20px;
-        }
-    }
-    .claim_report {
-        margin-top: 11%;
-        .content_text {
-            height: 510px;
-        }
-        .opencase_margin {
-            .panel-margin {
-                margin: 8% 2.7% 2% 2.7%;
-            }
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .footer_text hr {
-        // margin-bottom: 80px;
-    }
-    .opencase_page .opencase_margin {
-        padding: 18% 0% 0% 4%;
-        font-size: 22px;
-        margin-top: 8%;
-        .context_text {
-            height: 400px;
-        }
-    }
-    .closeclaim_page .opencase_margin {
-        padding: 18% 0% 0% 4%;
-        font-size: 24px;
-        margin-top: 8%;
-    }
-    .report_page .opencase_margin {
-        padding: 12% 4% 0% 4%;
-        margin-top: 14%;
-    }
-    .homepage .opencase_margin {
-        padding: 12% 0.3% 0% 4%;
-        margin-top: 14%;
-    }
-    .content_text {
-        height: 530px;
-    }
-    .white-panel {
-        height: 750px;
-    }
-    .table-responsive {
-        border: 0px;
-    }
-    .account_page .opencase_margin {
-        padding: 10% 3% 0% 3%;
-        font-size: 24px;
-        margin-top: 23%;
-        .content_text {
-            height: 420px;
-        }
-        .footer_text hr {
-            margin-bottom: 6%;
-        }
-        .white-panel {
-            height: 650px;
-        }
-        .col-sm-9 {
-            width: 100%;
-            .header_text {
-                padding-top: 20%;
-            }
-        }
-        .col-sm-3 {
-            width: 100%;
-            padding-left: 0px;
-            .header_text {
-                padding: 10% 4% 0% 4%;
-            }
-        }
-    }
-    .info_page {
-        .opencase_margin {
-            .col-sm-3 {
-                width: 100%;
-                // padding: 0 8%;
-                .header_menu {
-                    margin: 10px 10px 0 10px;
-                }
-                .menu_text {
-                    padding: 10px 0 5px 10px;
-                }
-            }
-            .col-sm-9 {
-                width: 100%;
-                hr {
-                    margin-top: 30px;
-                }
-            }
-            .content_text {
-                padding-top: 30px;
-            }
-            .content_text ul {
-                padding-top: 30px;
-            }
-            .content_text ul li {
-                padding-top: 10px;
-            }
-        }
-        .col-sm-9 .header_text {
-            padding: 15% 4% 0% 4%;
-        }
-        .opencase_margin .col-sm-3 .header_text {
-            padding-top: 15%;
-        }
-        .submenu_text {
-            font-size: 16px;
-            padding-left: 50px;
-        }
-    }
-    .claim_report {
-        margin-top: 20%;
-        margin-bottom: 3%;
-        .content_text {
-            height: 530px;
-        }
-        .white_panel {
-            height: 650px
-        }
-        .opencase_margin {
-            .panel-margin {
-                margin: 8% 4.7% 2% 4.7%;
-            }
-            .header_text {
-
-            }
-        }
-    }
-}
-
-@media (max-width: 375px) {
-    .footer_text hr {
-        // margin-bottom: 80px;
-    }
-    .opencase_page .opencase_margin {
-        padding: 8% 0% 0% 4%;
-        font-size: 22px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-    .closeclaim_page .opencase_margin {
-        padding: 8% 0% 0% 4%;
-        font-size: 24px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-    .report_page .opencase_margin {
-        padding: 2% 4% 0% 4%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-    .homepage .opencase_margin {
-        padding: 2% 0.3% 0% 4%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-    .content_text {
-        height: 500px;
-    }
-    .footer_text hr {
-        margin-bottom: 12%;
-    }
-    .white-panel {
-        height: 750px;
-    }
-    .table-responsive {
-        border: 0px;
-    }
-    .account_page .opencase_margin {
-        padding: 9% 1% 3% 1%;
-        font-size: 24px;
-        margin-top: 28%;
-    }
-    .info_page {
-        .header_menu {
-            margin: 20px 0px 0 0;
-        }
-        .header_text span.pull-right {
-            padding-bottom: 10px;
-        }
-        .opencase_margin {
-            .col-sm-3 {
-                width: 100%;
-                .header_text {
-                    padding-top: 60px;
-                }
-            }
-            .col-sm-9 {
-                width: 100%;
-                .header_text {
-                    padding-top: 50px;
-                }
-                hr {
-                    margin-top: 60px;
-                }
-            }
-            .content_text {
-                padding: 30px 15px 0 15px;
-
-            }
-            .content_text ul {
-                padding-top: 30px;
-            }
-            .content_text ul li {
-                padding-top: 10px;
-            }
-        }
-        .col-sm-9 .header_text {
-            padding: 10% 5% 0% 5%;
-        }
-        hr {
-            margin-top: 20px;
+        .header_text {
+            padding: 40px 3.5% 0% 3.5%;
         }
         .content_text {
             height: 500px;
         }
-    }
-    .claim_report {
-        margin-top: 30%;
-        margin-bottom: 3%;
-        .content_text {
-            height: 530px;
+        .footer_text hr {
+            margin-bottom: 4%;
         }
-        .white_panel {
-            height: 450px
+        .white-panel {
+            height: 750px;
         }
-        .opencase_margin {
+        .account_page {
+            margin-bottom: 0;
+        }
+        .account_page .opencase_margin {
+            padding: 8% 3.5% 0% 4%;
+            font-size: 24px;
+            margin-top: 80px;
+        }
+        .info_page {
+            .opencase_margin {
+                padding: 95px 0 0 6%;
+            }
+            .content_text {
+                height: 550px;
+            }
+            .header_text .padding-left-little {
+                margin-left: 0px;
+            }
+            .menu_text {
+                padding: 40px 0 5px 5px;
+            }
+            .submenu_text {
+                font-size: 16px;
+                padding-top: 10px;
+                padding-left: 35px;
+            }
+            .header_menu {
+                padding-right: 1px;
+            }
+            .col-sm-3 .header_text {
+                padding-top: 42px;
+            }
+        }
+        .claim_report {
+            margin-top: 6%;
+            .content_text {
+                height: 510px;
+            }
             .panel-margin {
-                margin: 8% 4.7% 2% 4.7%;
+                margin: 95px 4.7% 2% 4.7%;
             }
         }
     }
-}
+    
+    @media (max-width: 1023px) {
+        .footer_text hr {
+            // margin-bottom: 80px;
+        }
+        .container.opencase_page,
+        .container.homepage,
+        .container.closeclaim_page,
+        .container.report_page {
+            margin-top: 20px;
+        }
+        .opencase_page .opencase_margin {
+            padding: 5% 4% 0% 4%;
+            font-size: 22px;
+            margin-top: 120px;
+        }
+        .closeclaim_page .opencase_margin {
+            padding: 5% 4% 0% 4%;
+            font-size: 24px;
+            margin-top: 120px;
+        }
+        .report_page .opencase_margin {
+            padding: 8% 4% 0% 4%;
+            margin-top: 90px;
+        }
+        .homepage {
+            margin-top: 70px;
+            .opencase_margin {
+                padding: 8% 0.3% 0% 4%;
+                margin-top: 80px;
+            }
+            .right_header_text .btn {
+                padding: 6px 2px;
+            }
+        }
+        .content_text {
+            height: 500px;
+        }
+        .footer_text hr {
+            margin-bottom: 4%;
+        }
+        .white-panel {
+            height: 750px;
+        }
+        .account_page {
+            margin-bottom: 0;
+        }
+        .account_page .opencase_margin {
+            padding: 10% 1% 0% 1%;
+            font-size: 24px;
+            margin-top: 80px;
+            .content_text {
+                height: 420px;
+            }
+            .footer_text hr {
+                margin-bottom: 6%;
+            }
+            .white-panel {
+                height: 650px;
+            }
+        }
+        .info_page {
+            .opencase_margin {
+                padding: 110px 0 0 2%;
+                .col-sm-3 {
+                    width: 35%;
+                    .header_text {
+                        padding-top: 20%;
+                    }
+                }
+                .col-sm-9 {
+                    width: 65%;
+                }
+            }
+            hr {
+                margin-top: 20px;
+            }
+        }
+        .claim_report {
+            margin-top: 11%;
+            .content_text {
+                height: 510px;
+            }
+            .panel-margin {
+                margin: 70px 2.7% 2% 2.7%;
+            }
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .footer_text hr {
+            margin-bottom: 30px;
+        }
+        .opencase_page .opencase_margin {
+            padding: 80px 0% 0% 4%;
+            font-size: 22px;
+            margin-top: 8%;
+            .context_text {
+                height: 400px;
+            }
+            .content_text {
+                height: 500px;
+            }
+            .white-panel {
+                height: 750px;
+            }
+        }
+        .closeclaim_page .opencase_margin {
+            padding: 18% 0% 0% 4%;
+            font-size: 22px;
+            margin-top: 8%;
+            .context_text {
+                height: 400px;
+            }
+            .content_text {
+                height: 500px;
+            }
+            .white-panel {
+                height: 750px;
+            }
+        }
+        .report_page .opencase_margin {
+            padding: 12% 4% 0% 4%;
+            margin-top: 14%;
+            .content_text {
+                height: 500px;
+            }
+            .white-panel {
+                height: 750px;
+            }
+        }
+        .payment_page ul li a {
+            font-size: 16px;
+        }
+        .payment_page ul li {
+            font-size: 16px;
+        }
+        .homepage .opencase_margin {
+            padding: 12% 0.3% 0% 4%;
+            margin-top: 14%;
+        }
+        .payment_page ul {
+            padding-left: 9px;
+        }
+        .content_text {
+            height: 590px;
+        }
+        .white-panel {
+            height: 650px;
+        }
+        .table-responsive {
+            border: 0px;
+        }
+        .header_text {
+            font-size: 24px;
+        }
+        .account_page .opencase_margin {
+            padding: 10% 3% 0% 3%;
+            font-size: 24px;
+            margin-top: 23%;
+            .content_text {
+                height: 480px;
+            }
+            .footer_text hr {
+                margin-bottom: 6%;
+            }
+            .white-panel {
+                height: 750px;
+            }
+            .col-sm-9 {
+                width: 100%;
+                .header_text {
+                    padding-top: 20%;
+                }
+            }
+            .col-sm-3 {
+                width: 100%;
+                padding-left: 0px;
+                .header_text {
+                    padding: 10% 4% 0% 4%;
+                }
+            }
+        }
+        .info_page {
+            .opencase_margin {
+                padding: 110px 0px 0px 14%;
+                .col-sm-3 {
+                    width: 90%;
+                    ;
+                }
+                .col-sm-9 {
+                    width: 90%;
+                    hr {
+                        margin-top: 60px;
+                    }
+                }
+                .menu_text {
+                    padding: 0px 0 5px 5px;
+                }
+                .content_text {
+                    padding-top: 30px;
+                    height: 400px;
+                }
+                .content_text ul {
+                    padding-top: 10px;
+                }
+                .content_text ul li {
+                    padding-top: 10px;
+                }
+            }
+            .col-sm-9 .header_text {
+                padding: 15% 4% 0% 4%;
+            }
+            .opencase_margin .col-sm-3 .header_text {
+                padding-top: 15%;
+            }
+            .submenu_text {
+                padding-left: 50px;
+            }
+            .white_panel {
+                height: 650px
+            }
+        }
+        .claim_report {
+            margin-top: 20%;
+            margin-bottom: 3%;
+            .content_text {
+                height: 530px;
+            }
+            .white_panel {
+                height: 650px
+            }
+            .panel-margin {
+                margin: 95px 4.7% 2% 4.7%;
+            }
+        }
+    }
+    
+    @media (max-width: 424px) {
+        .footer_text hr {
+            margin-bottom: 10px;
+        }
+        .footer_text {
+            padding-top: 0;
+        }
+        .payment_page ul {
+            width: 100%;
+            padding-left: 79px;
+            padding-bottom: 45px;
+        }
+        .payment_page button {
+            margin-right: 100px;
+            padding-right: 0;
+        }
+        .info_page {
+            .opencase_margin {
+                padding: 110px 0px 0px 1%;
+                .col-sm-3,
+                .col-sm-9 {
+                    width: 100%;
+                }
+            }
+        }
+        .account_page {
+            .payment_page ul {
+                padding-bottom: 25px;
+                padding-left: 65px;
+            }
+        }
+    }
+    
+    @media (max-width: 374px) {
+        .footer_text hr {
+            margin-bottom: 0;
+        }
+        .opencase_page .opencase_margin {
+            padding: 90px 0% 0% 4%;
+            font-size: 18px;
+            margin-top: 40px;
+            margin-bottom: 5%;
+            .content_text {
+                height: 450px;
+            }
+            .white-panel {
+                height: 750px;
+            }
+        }
+        .closeclaim_page .opencase_margin {
+            padding: 100px 0% 0% 4%;
+            font-size: 22px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            .content_text {
+                height: 450px;
+            }
+        }
+        .report_page .opencase_margin {
+            padding: 2% 4% 0% 4%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            .content_text {
+                height: 450px;
+            }
+        }
+        .homepage .opencase_margin {
+            padding: 90px 0.3% 0% 4%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            .content_text {
+                height: 450px;
+            }
+        }
+        .content_text {
+            height: 520px;
+        }
+        .footer_text hr {
+            margin-bottom: 20px;
+        }
+        .white-panel {
+            height: 830px;
+        }
+        .table-responsive {
+            border: 0px;
+        }
+        .payment_page ul {
+            width: 100%;
+            padding-left: 50px;
+            padding-bottom: 50px;
+        }
+        .payment_page button {
+            margin-right: 80px;
+        }
+        .header_text {}
+        .account_page .opencase_margin {
+            padding: 9% 1% 3% 1%;
+            font-size: 24px;
+            margin-top: 28%;
+            .content_text {
+                height: 450px;
+            }
+        }
+        .info_page {
+            .header_menu {
+                margin: 20px 0px 0 0;
+            }
+            .header_text span.pull-right {
+                padding-bottom: 10px;
+            }
+            .opencase_margin {
+                .col-sm-3 {
+                    width: 100%;
+                    .header_text {
+                        padding-top: 60px;
+                    }
+                }
+                .col-sm-9 {
+                    width: 100%;
+                    .header_text {
+                        padding-top: 50px;
+                    }
+                    hr {
+                        margin-top: 60px;
+                    }
+                }
+                .content_text {
+                    padding: 30px 15px 0 15px;
+                }
+                .content_text ul {
+                    padding-top: 30px;
+                }
+                .content_text ul li {
+                    padding-top: 10px;
+                }
+            }
+            .col-sm-9 .header_text {
+                padding: 10% 5% 0% 5%;
+            }
+            hr {
+                margin-top: 20px;
+            }
+            .content_text {
+                height: 500px;
+            }
+        }
+        .claim_report {
+            margin-top: 30%;
+            margin-bottom: 3%;
+            .content_text {
+                height: 530px;
+            }
+            .white_panel {
+                height: 450px
+            }
+            .opencase_margin {
+                .panel-margin {
+                    margin: 8% 4.7% 2% 4.7%;
+                }
+            }
+        }
+    }

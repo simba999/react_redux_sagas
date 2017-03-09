@@ -109,12 +109,18 @@
    * Initialise our application's code.
    */
   function init() {
-    contextListener();
-    clickListener();
-    keyupListener();
-    resizeListener();
+    // contextListener();
+    // clickListener();
+    // keyupListener();
+    // resizeListener();
     // hoverListener();
     contextHoverListener();
+    // linkIndex();
+
+  }
+
+  function linkIndex() {
+   
 
   }
   
