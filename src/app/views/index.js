@@ -1,5 +1,6 @@
 import About        from './about/About';
 import Home         from './home/Home';
+import Licence      from './licence/index';
 import OpenCase     from './opencase/OpenCase';
 import PageNotFound from './pageNotFound/PageNotFound';
 import Info					from './info/Info';
@@ -38,4 +39,5 @@ export {
   Index,
   Signup,
   Signin,
+  Licence,
 };

@@ -4,6 +4,7 @@
         .navbar-nav>li>a {
             padding-top: 10px;
             padding-bottom: 0px;
+            color: #ffffff;
         }
         // .col-sm-3 .header_text
     }
@@ -156,6 +157,10 @@
                 hr {
                     margin-top: 0px;
                 }
+
+                .remove_icon {
+                    display: none;
+                }
             }
             .footer_text {
                 padding: 0;
@@ -185,6 +190,9 @@
             padding: 26px 20px 0 20px;
             hr {
                 margin-top: 10px;
+            }
+            a.about_link:focus {
+                color: #65ccff;
             }
         }
         .footer_text {

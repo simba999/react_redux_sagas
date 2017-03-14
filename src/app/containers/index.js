@@ -18,6 +18,7 @@ import ConnectedAgreement		from './agreement/index';
 import ConnectedClaimReport from './ClaimReport/index';
 import Signin               from './signin/index';
 import Signup               from './signup/index';
+import Licence              from './licence/index';
 
 export {
   App,
@@ -40,4 +41,5 @@ export {
   Index,
   Signup,
   Signin,
+  Licence,
 };

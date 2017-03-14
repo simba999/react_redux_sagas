@@ -20,7 +20,8 @@ import {
   ConnectedPayment,
   Index,
   Signin,
-  Signup
+  Signup,
+  Licence,
 }                               from '../containers';
 
 import UserLayout               from '../containers/user/User';
@@ -50,6 +51,7 @@ const Routes = () => {
         <Route path="password" component={ConnectedPassword} onEnter={scrollToTop} />
         <Route path="payment" component={ConnectedPayment} onEnter={scrollToTop} />
         <Route path="users" component={ConnectedUsers} onEnter={scrollToTop} />
+        <Route path="licence" component={Licence} onEnter={scrollToTop} />
       </Route>
       <Route component={UserLayout}>
         <Route path="" component={SubInfo} onEnter={scrollToTop}>

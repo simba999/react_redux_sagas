@@ -24,7 +24,7 @@ ul li a {
 }
 
 .blue_background {
-    background-color: $blue_color;
+    background-color: #65ccff;
     color: #ffffff;
     width: 96px;
     height: 40px;
@@ -122,6 +122,10 @@ a.about_link {
 }
 
 a.about_link:hover {
+    color: #66cfff;
+    text-decoration: underline;
+}
+a.about_link:focus {
     color: #66cfff;
     text-decoration: underline;
 }

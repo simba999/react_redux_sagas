@@ -83,7 +83,7 @@ class NavbarBox extends React.Component {
                 </ul>
               </li>
               <li style={{'padding-top': '10px', 'color':'#ffffff'}}>&nbsp; | &nbsp;</li> 
-              <li style={{'padding-left': '8px'}}><a href="#" className="dropdown-toggle heading_link" onClick={this.openContactModal.bind(this)} style={{'font-size' : '15px'}}>Contact</a></li>
+              <li style={{'padding-left': '8px'}}><a href="#" className="dropdown-toggle heading_link" onClick={this.openContactModal.bind(this)}>Contact</a></li>
             </ul>
           </div>
         </div>

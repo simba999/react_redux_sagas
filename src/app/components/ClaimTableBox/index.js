@@ -47,7 +47,7 @@ class ClaimTableBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = '/';
+    window.location = '/home';
   }
 
   setActive(el) {
