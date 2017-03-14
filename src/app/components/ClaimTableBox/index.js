@@ -69,7 +69,7 @@ class ClaimTableBox extends React.Component {
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
           <span className="">Open Claims</span>
-          <span className="pull-right"><a href="#" className="padding-div-right" onClick={this.openModal.bind(this)}>About</a><i className="glyphicon glyphicon-remove"></i></span>
+          <span className="pull-right remove_group"><a href="#" className="padding-div-right about_link" onClick={this.openModal.bind(this)}>About</a><label className="remove_icon" onClick={this.gotoHome.bind(this)}></label></span>
           <hr />
         </div>
 

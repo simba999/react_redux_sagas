@@ -125,7 +125,7 @@ class ExtraContentBox extends React.Component {
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
           <span className="">{this.props.title}</span>
-          <span className="pull-right"><i className="glyphicon glyphicon-remove" onClick={this.gotoIndex.bind(this)}></i></span> 
+          <span className="pull-right"><label className="remove_icon padding_inner_box" onClick={this.gotoHome.bind(this)}></label></span> 
             <ul className=" list-inline header_menu pull-right" id="selectElementInfo">
               <li className="active" style={{margin: '0 10px 0 0'}}><a href="#" onClick={this.showForm.bind(this)}>Form</a></li>
               <li style={{margin: '0 10px 0 0'}}><a href="#" onClick={this.showFolder.bind(this)}>Folder</a></li>

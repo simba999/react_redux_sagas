@@ -9,11 +9,11 @@
     }
     .submenu_text {
         font-size: 16px;
-        padding-top: 20px;
+        padding-top: 5px;
         padding-left: 70px;
 
         li {
-            padding-top: 20px;
+            padding-top: 10px;
             text-decoration: underline;
             list-style-image: url('../images/inactive-icon.png');
 
@@ -37,7 +37,7 @@
     }
 
     .menu_text {
-    	padding: 40px 0 10px 25px;
+    	padding: 30px 0 10px 25px;
 
     	span.active {
     		border-bottom: 4px solid #ff9900;

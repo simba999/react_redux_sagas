@@ -27,7 +27,7 @@ class SubInfo extends Component {
     return (
       <div className="container info_page">
           <div className="opencase_margin">
-            <div className="col-sm-3">
+            <div className="col-sm-3 left_side_box">
               <LeftSideBox></LeftSideBox>
             </div>
             <div className="col-sm-9">

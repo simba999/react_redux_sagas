@@ -1,11 +1,22 @@
 .payment_page {
-	ul li {
-		color: #b9b9b9;
+	font-size: 11px;
+	ul li a {
+		color: #bfbfbf;
 	}
 
 	ul li.active a {
 		background-color: #ffffff;
-		color: #66cfff;
+		color: #0082c3;
+		text-decoration: none;
+	}
+
+	ul li:hover a {
+		color: #7f7f7f;
+	}
+
+	ul li:focus a {
+		color: #0082c3;
+		text-decoration: none;
 	}
 
 	ul {

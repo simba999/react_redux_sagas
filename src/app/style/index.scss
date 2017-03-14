@@ -10,6 +10,11 @@
     font-family: Hind-SemiBold;
     src: url('/fonts/Hind-SemiBold.ttf');
 }
+
+@font-face {
+		font-family: Hind-Medium;
+		src: url('/fonts/Hind-Medium.ttf');
+}
 // common:
 @import "./common";
 
@@ -17,8 +22,6 @@
 
 // components-Header:
 @import "./header";
-
-@import "../components/PaymentBox/PaymentBox";
 
 // NavbarBox Css
 @import "../components/NavbarBox/NavbarBox";
@@ -31,9 +34,6 @@
 
 // RightBox Css
 @import "../components/RightSideBox/index";
-
-// ModalBox Css
-@import "../components/ModalBox/ModalBox";
 
 // Info VIew
 @import "../views/info/info";
@@ -55,8 +55,13 @@
 // containers:
 @import "../containers/app/app";
 
+// ModalBox Css
+@import "../components/ModalBox/ModalBox";
+
 //Sign and Login
-@import "./login"
+@import "./login";
+
+@import "../components/PaymentBox/PaymentBox";
 
 
 

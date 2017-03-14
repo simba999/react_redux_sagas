@@ -58,7 +58,7 @@ class PaymentBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = '/';
+    window.location = '/home';
   }
 
   setActive(el) {
@@ -79,10 +79,10 @@ class PaymentBox extends React.Component {
   render() {
 
     return (
-      <div className="white-panel panel-margin">
+      <div className="white-panel panel-margin payment_detail_page">
         <div className="form-horizontal header_text">
           <span className="">Payment</span>
-          <span className="pull-right"><i className="glyphicon glyphicon-remove" onClick={this.gotoHome.bind(this)}></i></span>
+          <span className="pull-right"><label className="remove_icon padding_inner_box" onClick={this.gotoHome.bind(this)}></label></span>
           <hr />
         </div>
 
@@ -111,13 +111,6 @@ class PaymentBox extends React.Component {
                 <th>Claim</th>
                 <th>Date</th>
                 <th>Name</th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
                 <th>Card</th>
                 <th>Total</th>
               </tr> 
@@ -135,7 +128,7 @@ class PaymentBox extends React.Component {
           <ul className="inline-list">
             <li className="active"><a onClick={this.setActive.bind(this)}> My claims </a></li>
             <li className="blue_color">&nbsp;|&nbsp;</li> 
-            <li><a href="#" onClick={this.setActive.bind(this)}> All claims </a></li>
+            <li><a onClick={this.setActive.bind(this)}> All claims </a></li>
           </ul>
           <button className="btn blue_background pull-right" onClick={this.gotoHome.bind(this)}>Close</button>
         </div>

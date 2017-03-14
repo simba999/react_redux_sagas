@@ -416,3 +416,12 @@ article {
         }
     }
 }
+a.about_link {
+    font-size: 12px;
+}
+
+@media (min-width: 1535px) {
+    a.about_link {
+        font-size: 16px;
+    }
+}

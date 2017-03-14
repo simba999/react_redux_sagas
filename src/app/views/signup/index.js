@@ -230,7 +230,7 @@ class Signup extends PureComponent {
 
         if (this.state.isInvitation == true) {
 
-          window.location        = '/dashboard';
+          window.location        = '/home';
 
         } else {
           console.log("Dialog");

@@ -49,7 +49,7 @@ class ClaimReportBox extends React.Component {
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
           <span className="">Reports</span>
-          <span className="pull-right"><i className="glyphicon glyphicon-remove" onClick={this.gotoHome.bind(this)}></i></span>
+          <span className="pull-right remove_group"><label className="remove_icon" onClick={this.gotoHome.bind(this)}></label></span>
           <hr />
         </div>
 

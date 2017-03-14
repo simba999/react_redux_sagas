@@ -89,7 +89,7 @@ class FooterBox extends React.Component {
       <div className="container text_footer_color">
         <div className="row">
               <div className="text-center"><a href="#" onClick={this.openDialogLicence}>Software Licence Agreements</a>&nbsp;|&nbsp;<a href="#" onClick={this.openDialogPrivacy}>Privacy Statement</a>&nbsp;|&nbsp;<a href="#" onClick={this.openDialogSecurity}>Security</a></div>
-              <div className="text-center">©2017 Claimzen, Inc. All rights reserved.</div>
+              <div className="text-center ">©2017 Claimzen, Inc. All rights reserved.</div>
         </div>
      
         <ModalBox open={this.state.openModalLicence} closeModal={this.removeModalLicence} title={this.state.titleLicence} content={this.state.contentLicence}></ModalBox>

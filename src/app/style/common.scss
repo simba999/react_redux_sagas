@@ -26,7 +26,7 @@ ul li a {
 .blue_background {
     background-color: $blue_color;
     color: #ffffff;
-    width: 90px;
+    width: 96px;
     height: 40px;
 }
 
@@ -66,13 +66,18 @@ a:hover,
 a:focus,
 button:active,
 button:focus {
-    font-family: Hind-Semibold;
+    font-family: Hind-Medium;
 }
 
 .text_footer_color {
-    color: #7d7d7d;
+    color: #bfbfbf;
+    font-size: 11px;
     a {
-        color: #7d7d7d;
+        color: #bfbfbf;
+    }
+    a:hover {
+        color: #7f7f7f;
+        font-family: Hind-Medium;
     }
 }
 
@@ -81,13 +86,59 @@ a {
 }
 
 hr {
-	border-top : 3px solid #eee;
+    border-top: 3px solid #f8f8f8;
 }
 
 .padding-right-little {
-	margin-right: 20px;
+    margin-right: 20px;
 }
 
 .padding-left-little {
-	margin-left: 20px;
+    // margin-left: 2`0px;
+}
+
+label.remove_icon {
+    background: url('../images/remove_icon.png') left center no-repeat;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 0px;
+    // margin-top: 10px;
+}
+
+.remove_group {
+    padding-top: 5px;
+    padding-right: 15px;
+}
+
+.report_page .remove_group,
+.opencase_page .remove_group,
+.claim_report .remove_group,
+.closeclaim_page .remove_group {
+    padding-top: 0px;
+}
+
+a.about_link {
+    font-size: 12px;
+}
+
+a.about_link:hover {
+    color: #66cfff;
+    text-decoration: underline;
+}
+
+a.btn {
+    width: 96px;
+    height: 40px;
+}
+
+.header_text span:first-child {
+    padding-left: 15px;
+}
+
+.left_side_box .header_text span:first-child {
+    padding-left: 0px;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f8f8f8;
 }

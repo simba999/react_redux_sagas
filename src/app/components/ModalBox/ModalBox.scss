@@ -8,17 +8,47 @@
 
 .modal-content {
 	  border-radius: 0px;
+	  width: 580px;
+	  height: 580px;
 }
 
-#ModalHeader {
+.modal {
 	.header_text {
-		padding-top: 30px;
+		padding-top: 25px;
+		padding-bottom: 0px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
+
+	.header_text hr {
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+
+	.content_text {
+		height: 380px;
+		font-size: 13px;
+		color: #7f7f7f;
+	}
+
+	.footer_text hr {
+		width: 540px;
+		padding: 0;
+		margin-top: 10px;
+		margin-bottom: 20px; 
+	}
+
+	.footer_text {
+		padding: 0px;
+	}
+
+	.footer_text .blue_background {
+		margin-right: 40px;
+	}
+
 }
 .modal-body {
-	.footer_text {
-		padding: 1% 0% 10% 0%;
-	}
+	padding: 0;
 }
 
 .modal-backdrop {
@@ -32,3 +62,7 @@
 button.close {
 		display: none;
 	}
+
+.padding-div-right {
+	// padding-right: 5px;
+}

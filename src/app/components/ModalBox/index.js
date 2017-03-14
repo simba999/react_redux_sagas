@@ -32,7 +32,7 @@ class ModalBox extends React.Component {
         <Modal.Body>
           <div className="header_text" >
             <span className="">{this.props.title}</span>
-            <span className="pull-right" onClick={this.props.closeModal}><i className="glyphicon glyphicon-remove"></i></span>
+            <span className="pull-right remove_group" onClick={this.props.closeModal}><label className="remove_icon"></label></span>
             <hr />
           </div>
           <div className="content_text">

@@ -28,7 +28,7 @@ class RightSideBox extends React.Component {
       openStep3State : false,
       openStep4State : false,
       openStep5State : false,
-      titleStep1          : '',
+      titleStep1     : '',
     }
   }
 
@@ -107,7 +107,7 @@ class RightSideBox extends React.Component {
         </div>
         
         <div className="text_align_center">
-          <a className="padding_left" href="#" onClick={this.openModal.bind(this)}>about</a>
+          <a className="padding_left about_link" href="#" onClick={this.openModal.bind(this)}>About</a>
         </div>
         
         <div className="content_text"></div>
@@ -125,7 +125,7 @@ class RightSideBox extends React.Component {
         <Step4Box open={this.state.openStep4State} closeModal={this.removeStep1Modal.bind(this)} prevOpen={this.openStep3Modal.bind(this)} nextOpen={this.openStep5Modal.bind(this)} title="step4"></Step4Box>
         <Step5Box open={this.state.openStep5State} closeModal={this.removeStep1Modal.bind(this)} prevOpen={this.openStep3Modal.bind(this)} nextOpen={this.openOpenClaimModal.bind(this)} title="step5"></Step5Box>
 
-        <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)}  title={this.state.title} content="Abot"></ModalBox>
+        <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)}  title={this.state.title} content={this.state.content}></ModalBox>
 
       </div>
     );

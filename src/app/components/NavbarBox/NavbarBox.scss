@@ -1,20 +1,33 @@
 .top_header {
     background-color: #0082C3;
     padding: 1% 5%;
+    height: 72px;
+    
     .navbar-nav>li>a {
         color: white;
+        font-family: Hind-Regular;
     }
     .navbar-nav>li>a:hover {
-        color: #b9b9b9;
+        color: #ffffff;
+        font-family: Hind-Regular;
+        text-decoration: underline;
+    }
+    .dropdown-menu {
+        top: 140%
     }
 }
 
 .below_header {
     box-shadow: 0px 3px 0px #888888;
     padding-right: 5%;
+    height: 40px;
     background-color: white;
     .navbar-nav>.active>a {
         background-color: #ffffff;
+    }
+
+    a.navbar-brand {
+        height: 40px;
     }
 }
 
@@ -34,25 +47,35 @@
 .submenu.navbar-collapse {
     padding-left: 4%;
     #selectElement li > a {
-        color: #b9b9b9;
-    }
-    #selectElement li.active {
-        border-bottom: 4px solid #ff9900;
-        background-color: #ffffff;
+        color: #bfbfbf;
+        font-size: 16px;
+        //padding-top: 6px;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin: 0 10px;
+        border-bottom: 4px solid #ffffff;
+        // border-spacing: 5px;
     }
     #selectElement li.active a {
-        color: #000000;
-    }
-    #selectElement li a:hover {
-        color: #000000;
         border-bottom: 4px solid #ff9900;
+        background-color: #ffffff;
+        font-family: Hind-Medium;
+    }
+   
+    #selectElement li:hover a {
+        color: #7f7f7f;
+        //border-bottom: 4px solid #7f7f7f;
+        // padding-bottom: 5px;
+        font-family: Hind-Regular;
     }
     .navbar-default {
-        background-color: #ffffff;
+        // background-color: #ffffff;
     }
-
-    #selectElement li a:focus {
+    #selectElement li:focus a {
         background-color: #ffffff;
+        border-bottom: 4px solid #ff9900;
+
+        // padding-bottom: 5px;
     }
 }
 
@@ -69,7 +92,8 @@
     }
     li a:hover {
         background-color: #ff9900;
-        font-family: Hind-SemiBold;
+        color: #ffffff;
+        font-family: Hind-Regular;
     }
 }
 
@@ -81,13 +105,23 @@
     }
 }
 
+.heading_link {
+    font-size: 15px;
+}
+.heading_link:hover {
+    font-size: 15px;
+    font-family: Hind-Medium;
+}
+
 .white_nav {
     li a {
         color: $blue_color;
         // padding: 10px 3px;
     }
-    li a:hover {
-        background-color: #ff9900;
+    .dropdown-menu {
+        li:hover {
+            background-color: #ff9900;
+        }
     }
     // .navbar-default .navbar-nav>.open>a,
     .navbar-default .navbar-nav>.open>a:focus,
@@ -95,12 +129,14 @@
         background-color: $blue_color;
         color: #ffffff;
     }
-
 }
 
 #selectElement {
     padding-left: 3%;
+    height: 40px;
 }
+
+
 
 
 /* right click */
