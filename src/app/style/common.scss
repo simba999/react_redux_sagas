@@ -135,15 +135,11 @@ a.about_link {
 a.about_link:hover {
     color: #66cfff;
     text-decoration: underline;
+    outline: none;
 }
 a.about_link:focus {
     color: #66cfff;
     text-decoration: underline;
-}
-
-a.btn {
-    width: 96px;
-    height: 40px;
 }
 
 .header_text span:first-child {
@@ -160,18 +156,35 @@ a.btn {
 
 .btn {
     background-color: #65ccff;
+    border-color: #65ccff;
     height: 45px;
-    line-height: 1.52;
+    width: 96px;
     color: #ffffff;
-    border-radius: 4px;
+    border-radius: 8px;
+    outline: none;
+    border: 0;
 }
-
 .btn:hover {
     background-color: #b3e6ff;
+    border: 0;
     color: #ffffff;
+    outline: none;
+    border: 0;
 }
 
 .btn:active {
     background-color: #0082c3;
     color: #ffffff;
+    outline: none;
+    border: 0;
+   
 }
+
+.btn:focus {
+    color: #ffffff;
+}
+
+.close_button {
+    padding-top: 12px;
+}
+

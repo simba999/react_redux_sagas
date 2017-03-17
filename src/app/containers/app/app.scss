@@ -28,6 +28,12 @@ body {
     padding-top: 10px;
 }
 
+.footer_text {
+	.btn {
+		color: #ffffff;
+	}
+}
+
 .padding_inner_box {
     margin-right: 15px;
 }
@@ -86,17 +92,18 @@ body {
         //margin-top: 40px;
         font-size: 11px;
         height: 90%;
+        padding-bottom: 10px;
         min-height: 738px;
 
         .header_text {
             font-size: 30px;
         }
         .content_text {
-            height: calc(100vh - 440px);
-            min-height: 390px;
+            height: calc(100vh - 450px);
+            min-height: 380px;
         }
         .white-panel {
-            min-height: 590px;
+            min-height: 450px;
             height: 100%;
         }
         .footer_text.payment_page {
@@ -113,13 +120,14 @@ body {
         padding: 140px 98px 0% 98px;
         font-size: 11px;
         height: 90%;
+        padding-bottom: 10px;
         min-height: 738px;
 
         .header_text {
             font-size: 30px;
         }
         .content_text {
-            height: calc(100vh - 440px);
+            height: calc(100vh - 450px);
             min-height: 390px;
         }
         .white-panel {
@@ -138,10 +146,11 @@ body {
         
     }
     .homepage .opencase_margin {
-        padding: 140px 84px 0 84px;
+        padding: 140px 83px 0 83px;
         font-size: 11px;
         width: 100%;
-        height: calc(100vh - 90px);
+        height: 90%;
+        padding-bottom: 10px;
         min-height: 738px;
 
         .text_color .padding_left {
@@ -200,13 +209,14 @@ body {
         //margin-top: 45px;
         font-size: 11px;
         height: 90%;
+        padding-bottom: 10px;
         min-height: 738px;
 
         .header_text {
             font-size: 30px;
         }
         .content_text {
-            height: calc(100vh - 440px);
+            height: calc(100vh - 450px);
             min-height: 400px;
         }
         .white-panel {
@@ -292,24 +302,24 @@ body {
     .account_page {
         margin-bottom: 0px;
     }
+
     .info_page {
-        .opencase_margin {
-            padding: 5% 84px 0% 84px;
-            font-size: 22px;
-            margin-top: 45px;
-            height: 85%;
+        padding: 140px 98px 0% 98px;
+        font-size: 11px;
+        height: 90%;
+        padding-bottom: 10px;
+        min-height: 738px;
+
+        .header_text {
+            font-size: 30px;
         }
         .content_text {
-            height: 500px;
-        }
-        .submenu_text {
-            padding-top: 0px;
-        }
-        .content_text {
-            height: 70%;
+            height: calc(100vh - 450px);
+            min-height: 400px;
         }
         .white-panel {
             height: 100%;
+            min-height: 598px;
         }
         .header_text {
             padding: 40px 20px 0 20px;
@@ -318,35 +328,36 @@ body {
                 margin-top: 10px;
             }
         }
-        .footer_text {
+        .footer_text.payment_page {
+            font-size: 16px;
             padding: 0 40px;
-            hr {
-                margin-bottom: 2%;
+            .inline-list {
+                padding-top: 10px;
             }
         }
+        
     }
     .claim_report {
-        margin-top: 45px;
-        height: 85%;
-        min-height: 790px;
+        min-height: 590px;
+        padding-bottom: 10px;
 
         .panel-margin {
-            margin: 5% 98px 0% 98px;
+            margin: 140px 98px 0% 98px;
         }
         .submenu_text {
             padding-top: 0px;
         }
 
         .content_text {
-            height: 500px;
-            min-height: 400px;
+            height: calc(100vh - 460px);
+            min-height: 380px;
         }
         .white-panel {
-        	min-height: 600px;
-            height: 700px;
+        	min-height: 568px;
+            height: 74%;
         }
         .header_text {
-            padding: 26px 20px 0 20px;
+            padding: 36px 20px 0 20px;
             hr {
                 margin-top: 10px;
             }
@@ -362,19 +373,25 @@ body {
     }
     .text_footer_color {
         padding-top: 20px;
+        padding-bottom: 15px;
     }
 }
 
 // larger
-@media (min-width: 1680px) {
+@media (min-width: 1690px) {
     .homepage .opencase_margin {
-        padding: 140px 84px 0% 84px;
-        height: 91%;
-        padding-bottom: 10px;
+        padding: 140px 83px 0% 83px;
+        height: 90%;
+        margin-bottom: 15px;
 
         .content_text {
-            height: calc(100vh - 390px);
-            min-height: 430px;
+            height: calc(100vh - 410px);
+            min-height: 380px;
+        }
+
+        .white_panel {
+        	min-height: 500px;
+        	height: 100%;
         }
 
         .dev {
@@ -411,8 +428,12 @@ body {
         margin-bottom: 15px;
 
         .content_text {
-            height: calc(100vh - 430px);
-            min-height: 400px;
+            height: calc(100vh - 445px);
+            min-height: 385px;
+        }
+        .white_panel {
+        	min-height: 600px;
+        	height: 100%;
         }
     }
     .closeclaim_page .opencase_margin {
@@ -421,7 +442,7 @@ body {
         margin-bottom: 15px;
 
         .content_text {
-            height: calc(100vh - 430px);
+            height: calc(100vh - 445px);
             min-height: 400px;
         }
     }
@@ -431,7 +452,7 @@ body {
         margin-bottom: 15px;
 
         .content_text {
-            height: calc(100vh - 430px);
+            height: calc(100vh - 445px);
             min-height: 400px;
         }
     }
@@ -459,21 +480,22 @@ body {
 
     .claim_report {
     	min-height: 790px;
+    	margin-bottom: 10px;
 
-    	.content_text {
-            height: 500px;
-            min-height: 420px;
+	    height: calc(100vh - 460px);
+            min-height: 380px;
         }
         .white-panel {
-            height: 85%;
-            min-height: 610px;
+        	min-height: 768px;
+            height: 80%;
         }
     }
 
     .text_footer_color {
         padding-top: 15px;
+        padding-bottom: 15px;
     }
-}
+
 
 // md device
 @media (max-width: 1439px) {
@@ -483,8 +505,9 @@ body {
     .footer_text hr {
         // margin-bottom: 80px;
     }
+
     .opencase_page .opencase_margin {
-       padding: 140px 84px 0px 84px;
+       padding: 140px 93px 0px 93px;
         font-size: 11px;
         width: 100%;
         height: calc(100vh - 90px);
@@ -502,16 +525,7 @@ body {
             min-height: 430px;
             height: 100%;
         }
-        .header_text {
-            padding: 35px 20px 0 20px;
-            font-size: 30px;
-            hr {
-                margin-top: 0px;
-            }
-            .remove_icon {
-                display: none;
-            }
-        }
+        
         .footer_text {
             padding: 0;
             font-size: 16px;
@@ -521,7 +535,7 @@ body {
         }
     }
     .closeclaim_page .opencase_margin {
-        padding: 140px 84px 0px 84px;
+        padding: 140px 93px 0px 93px;
         font-size: 11px;
         width: 100%;
         height: calc(100vh - 90px);
@@ -539,16 +553,7 @@ body {
             min-height: 430px;
             height: 100%;
         }
-        .header_text {
-            padding: 35px 20px 0 20px;
-            font-size: 30px;
-            hr {
-                margin-top: 0px;
-            }
-            .remove_icon {
-                display: none;
-            }
-        }
+        
         .footer_text {
             padding: 0;
             font-size: 16px;
@@ -558,7 +563,7 @@ body {
         }
     }
     .report_page .opencase_margin {
-        padding: 140px 84px 0px 84px;
+        padding: 140px 93px 0px 93px;
         font-size: 11px;
         width: 100%;
         height: calc(100vh - 90px);
@@ -576,16 +581,7 @@ body {
             min-height: 430px;
             height: 100%;
         }
-        .header_text {
-            padding: 35px 20px 0 20px;
-            font-size: 30px;
-            hr {
-                margin-top: 0px;
-            }
-            .remove_icon {
-                display: none;
-            }
-        }
+    
         .footer_text {
             padding: 0;
             font-size: 16px;
@@ -595,7 +591,7 @@ body {
         }
     }
     .homepage .opencase_margin {
-        padding: 140px 84px 0 84px;
+        padding: 140px 78px 0 78px;
         font-size: 11px;
         width: 100%;
         height: calc(100vh - 90px);
@@ -655,8 +651,9 @@ body {
     }
     .header_text {
         padding: 26px 20px 0 20px;
+        font-size: 30px;
         hr {
-            margin-top: 20px;
+            margin-top: 10px;
         }
     }
     .footer_text {

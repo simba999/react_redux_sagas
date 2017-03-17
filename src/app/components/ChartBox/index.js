@@ -55,11 +55,6 @@ class ChartBox extends React.Component {
           <span>{this.props.content}</span>
         </div>
         <div className="footer_text payment_page">
-          <ul className="inline-list">
-            <li className="active"><a onClick={this.setActive.bind(this)}> My claims </a></li>
-            <li className="" style={{color: '#66cfff'}}>&nbsp;|&nbsp;</li> 
-            <li><a href="#" onClick={this.setActive.bind(this)}> All claims </a></li>
-          </ul>
         </div>
       </div>
     );

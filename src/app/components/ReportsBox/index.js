@@ -98,12 +98,7 @@ class ReportsBox extends React.Component {
         </div>
         <div className="footer_text payment_page">
           <hr />
-          <ul className="inline-list col-sm-8">
-            <li className="active"><a onClick={this.setActive.bind(this)}> My claims </a></li>
-            <li style={{color: '66cfff'}}>&nbsp;|&nbsp;</li> 
-            <li><a href="#" onClick={this.setActive.bind(this)}> All claims </a></li>
-          </ul>
-          <button className="btn blue_background pull-right col-sm-4" onClick={this.gotoHome.bind(this)}>Close</button>
+          <a className="btn close_button pull-right" onClick={this.gotoHome.bind(this)}>Close</a>
         </div>
         <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>
       </div>

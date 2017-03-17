@@ -130,7 +130,7 @@ class PaymentBox extends React.Component {
             <li className="blue_color">&nbsp;|&nbsp;</li> 
             <li><a onClick={this.setActive.bind(this)}> All claims </a></li>
           </ul>
-          <button className="btn blue_background pull-right col-sm-4" onClick={this.gotoHome.bind(this)}>Close</button>
+          <a className="btn close_button pull-right col-sm-4" onClick={this.gotoHome.bind(this)}>Close</a>
         </div>
         <ModalBox open={this.state.openPaymentState} closeModal={this.removeModal.bind(this)} title={this.state.titlePayment} content={this.state.contentPayment}></ModalBox>
         <ModalBox open={this.state.openAccountState} closeModal={this.removeModal.bind(this)} title={this.state.titleAccount} content={this.state.contentAccount}></ModalBox>
