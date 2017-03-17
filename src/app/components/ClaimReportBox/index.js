@@ -50,6 +50,7 @@ class ClaimReportBox extends React.Component {
         <div className="form-horizontal header_text">
           <span className="">Reports</span>
           <span className="pull-right remove_group"><label className="remove_icon" onClick={this.gotoHome.bind(this)}></label></span>
+          <a href="#" className="padding-div-right about_link pull-right" onClick={this.openModal.bind(this)}>About</a>
           <hr />
         </div>
 

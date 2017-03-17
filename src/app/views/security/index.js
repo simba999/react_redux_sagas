@@ -9,7 +9,7 @@ import FooterDetailBox        from '../../components/FooterDetailBox';
 import RightSideBox           from '../../components/RightSideBox';
 import ModalBox               from '../../components/ModalBox';       
 
-class Licence extends PureComponent {
+class Security extends PureComponent {
 
   constructor(props, context) {
 
@@ -23,16 +23,15 @@ class Licence extends PureComponent {
   }
 
   componentDidMount() {
-    //const { enterHome, clickMenu } = this.props;
+    const { enterHome, clickMenu } = this.props;
     // console.log("Home: ", clickMenu);
-    //enterHome();
+    enterHome();
     // clickMenu();
   }
 
   componentWillUnmount() {
-    //const { leaveHome } = this.props;
-    //leaveHome();
-    console.log("Redux: ", this.props.currentView);
+    const { leaveHome } = this.props;
+    leaveHome();
   }
 
   openModal() {
@@ -51,7 +50,7 @@ class Licence extends PureComponent {
         <div className="container homepage">
           <div className="opencase_margin">
             <div className="col-sm-9 ">
-              <FooterDetailBox title="Software Licence Agreement" content="" sUrl={this.props.currentView}></FooterDetailBox>
+              <FooterDetailBox title="Security" content="" sUrl={this.props.current}></FooterDetailBox>
             </div>
             <div className="col-sm-3">
               <RightSideBox></RightSideBox>
@@ -64,10 +63,10 @@ class Licence extends PureComponent {
   }
 }
 
-Licence.propTypes= {
+Security.propTypes= {
   currentView:  PropTypes.string.isRequired,
-  enterHome:    PropTypes.func,
-  leaveHome:    PropTypes.func
+  enterHome:    PropTypes.func.isRequired,
+  leaveHome:    PropTypes.func.isRequired
 };
 
-export default Licence;
+export default Security;

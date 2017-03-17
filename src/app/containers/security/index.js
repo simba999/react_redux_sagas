@@ -1,36 +1,26 @@
 import { connect }            from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as viewsActions      from '../../redux/modules/views';
-import { Licence }            from '../../views';
+import { Security }           from '../../views';
 
 
 const mapStateToProps = (state) => {
-  console.log("Licence State: ", state.views.currentView);
+  console.log("Privacy State: ", state.views.currentView);
   return {
     currentView:  state.views.currentView
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
- 
   return bindActionCreators(
     {
-        
+      enterHome: viewsActions.enterHome,
+      leaveHome: viewsActions.leaveHome,
+      clickMenu: viewsActions.clickMenu
     },
     dispatch
   );
-  
 };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     actions : bindActionCreators(
-//       {
-//         ...viewsActions
-//       },
-//       dispatch)
-//   };
-// };
 
 /*
   without bindActionCreators:
@@ -45,4 +35,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Licence);
+)(Security);

@@ -1,7 +1,7 @@
 .top_header {
     background-color: #0082C3;
-    padding: 1% 5%;
-    height: 72px;
+    padding: 15px 80px;
+    height: 70px;
     
     .navbar-nav>li>a {
         color: #ffffff;
@@ -16,6 +16,10 @@
 
     .dropdown-menu {
         top: 140%
+    }
+
+    .white_nav {
+        margin-right: 0px;
     }
 }
 

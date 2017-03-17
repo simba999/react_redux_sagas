@@ -13,6 +13,7 @@ import navigationModel        from '../../models/navigation.json';
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
 import * as viewsActions      from '../../redux/modules/views';
+import * as eventActions      from '../../redux/modules/event';
 
 class App extends Component {
 
@@ -51,7 +52,8 @@ App.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    currentView:  state
+    currentView:  state,
+    filter: state,
   };
 };
 
@@ -60,7 +62,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     actions : bindActionCreators(
       {
-        ...viewsActions
+        ...viewsActions,
+        ...eventActions,
       },
       dispatch)
   };

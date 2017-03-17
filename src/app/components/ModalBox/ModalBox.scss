@@ -1,19 +1,13 @@
 .modal {
 	display: block;
-	top: 6%;
-	left: 10%;
-	right: 5%;
-	bottom: 10%;
-}
+	top: 4%;
+	left: 160px;
+	right:160px;
+	bottom: 5%;
+	//padding-left: 70px;
+    //padding-right: 70px;
 
-.modal-content {
-	  border-radius: 0px;
-	  width: 580px;
-	  height: 580px;
-}
-
-.modal {
-	.header_text {
+    .header_text {
 		padding-top: 25px;
 		padding-bottom: 0px;
 		padding-left: 20px;
@@ -26,13 +20,12 @@
 	}
 
 	.content_text {
-		height: 380px;
+		height: 70%;
 		font-size: 13px;
 		color: #7f7f7f;
 	}
 
 	.footer_text hr {
-		width: 540px;
 		padding: 0;
 		margin-top: 10px;
 		margin-bottom: 20px; 
@@ -45,8 +38,18 @@
 	.footer_text .blue_background {
 		margin-right: 40px;
 	}
-
 }
+
+.modal-content {
+	  border-radius: 0px;
+	  width: 580px;
+	  height: 580px;
+}
+
+@media (max-width:1599px) {
+	
+}
+
 .modal-body {
 	padding: 0;
 }

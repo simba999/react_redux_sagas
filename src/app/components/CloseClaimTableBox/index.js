@@ -64,7 +64,10 @@ class CloseClaimTableBox extends React.Component {
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
           <span className="">Close Claims</span>
-          <span className="pull-right remove_group"><a href="#" className="padding-div-right about_link" onClick={this.openModal.bind(this)}>About</a><label className="remove_icon" onClick={this.gotoHome.bind(this)}></label></span>
+          <span className="pull-right remove_group">
+            <label className="remove_icon" onClick={this.gotoHome.bind(this)}></label>
+          </span>
+          <a href="#" className="padding-div-right about_link pull-right" onClick={this.openModal.bind(this)}>About</a>
           <hr />
         </div>
 
@@ -83,21 +86,47 @@ class CloseClaimTableBox extends React.Component {
               </tr> 
             </thead>
             <tbody>
-              <tr>
-                
+              <tr onClick={this.linkIndex}>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
-              
+              <tr onClick={this.linkIndex}>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr onClick={this.linkIndex}>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
             </tbody>
           </table>
         </div>
         <div className="footer_text payment_page">
           <hr />
-          <ul className="inline-list">
+          <ul className="inline-list col-sm-8">
             <li className="active"><a onClick={this.setActive.bind(this)}> My claims </a></li>
             <li className="" style={{color: '66cfff'}}>&nbsp;|&nbsp;</li> 
             <li><a href="#" onClick={this.setActive.bind(this)}> All claims </a></li>
           </ul>
-          <button className="btn blue_background pull-right" onClick={this.gotoHome.bind(this)}>Close</button>
+          <button className="btn blue_background pull-right col-sm-4" onClick={this.gotoHome.bind(this)}>Close</button>
         </div>
         <ModalBox open={this.state.openModalState} closeModal={this.removeModal.bind(this)} title={this.state.title} content={this.state.content}></ModalBox>
       </div>

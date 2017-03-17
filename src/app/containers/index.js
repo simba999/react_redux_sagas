@@ -19,6 +19,8 @@ import ConnectedClaimReport from './ClaimReport/index';
 import Signin               from './signin/index';
 import Signup               from './signup/index';
 import Licence              from './licence/index';
+import Privacy              from './privacy/index';
+import Security             from './security/index';
 
 export {
   App,
@@ -42,4 +44,6 @@ export {
   Signup,
   Signin,
   Licence,
+  Privacy,
+  Security,
 };

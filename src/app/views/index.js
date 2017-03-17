@@ -18,6 +18,8 @@ import ClaimReport  from './ClaimReport/index';
 import Index        from './index/index';
 import Signin       from './signin/index';
 import Signup       from './signup/index';
+import Privacy      from './privacy/index';
+import Security     from './security/index';
 
 export {
   About,
@@ -40,4 +42,6 @@ export {
   Signup,
   Signin,
   Licence,
+  Privacy,
+  Security
 };

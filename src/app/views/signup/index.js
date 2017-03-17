@@ -16,6 +16,7 @@ import PhoneBox               from '../../components/PhoneBox';
 import ModalBox               from '../../components/ModalBox';
 import CustomEmitter          from "../../modules/emitter";
 import Modal                  from 'react-bootstrap-modal';
+import HeaderBox              from '../../components/HeaderBox';
   
 
 class Signup extends PureComponent {
@@ -262,110 +263,108 @@ class Signup extends PureComponent {
 
   render() {
     return(
- 
-        <div id="appContainer">
-          <article className="passwordDialog">
-          <div className="container allForm">
-            
-            <form  className="well form-horizontal" action="" method="post"  id="contact_form">
-                <div className="form-horizontal title_header">
-                  <span className="pull-left">Create your account</span>
-                  <span className="pull-right" onClick={this.goToLogin}><i className="glyphicon glyphicon-remove"></i></span>
-                </div>
-                <hr />
-                <div className="form-horizontal header_text">
-                  If you don’t have an invitation code, please <a href="#" className="soft_blue">contact</a> us so we can provide you with one.
-                </div>
-                <fieldset>                  
-                  <InputBox nameClass= "form-control" ref={(ref) => this._InputBox = ref } label="First Name" placeholder="First Name" change={this.firstNameChange.bind(this)}  check={this.state.checkValidation} />
-                  <InputBox1 ref={(ref) => this._InputBox1 = ref } label="Last Name" placeholder="Last Name" change={this.secondNameChange.bind(this)}  check={this.state.checkValidation} nameClass="form-control" />
-                  <InputBox2 ref={(ref) => this._InputBox2 = ref } label="Law Firm" placeholder="Law Firm" change={this.lawFirmChange.bind(this)}  check={this.state.checkValidation} nameClass="form-control" />
-                  <PhoneBox ref={(ref) => this._PhoneBox = ref } nameClass="form-control" label="Mobile Phone" placeholder="Mobile Phone" change={this.mobilePhoneChange.bind(this)}  check={this.state.checkValidation} />
-                  <EmailBox ref={(ref) => this._EmailBox = ref } label="Email" placeholder="Email" change={this.emailChange.bind(this)}  check={this.state.checkValidation} nameClass="form-control" />
-                  <InputBox3 ref={(ref) => this._InputBox3 = ref } label="Invitation code" placeholder="Invitation code" change={this.invitationCodeChange.bind(this)}  check={this.state.checkValidation} nameClass="form-control" />
-                  <PasswordBox ref={(ref) => this._PasswordBox = ref } nameClass="form-control" label="Passowrd" placeholder="Passowrd" change={this.passwordChange.bind(this)}  check={this.state.checkValidation} nameClass="form-control" />                  
-                </fieldset>
-                  
-                  <div><a href="#" className="pull-right signup_about" onClick={this.handleAbout.bind(this)}>About</a></div>
-
+          <div id="appContainer">
+            <article className="passwordDialog">
+            <div className="container allForm">
+              
+              <form  className="well form-horizontal" action="" method="post"  id="contact_form">
+                  <div className="form-horizontal title_header">
+                    <span className="pull-left">Create your account</span>
+                    <span className="pull-right" onClick={this.goToLogin}><i className="glyphicon glyphicon-remove"></i></span>
+                  </div>
                   <hr />
+                  <div className="form-horizontal header_text">
+                    If you don’t have an invitation code, please <a href="#" className="soft_blue">contact</a> us so we can provide you with one.
+                  </div>
+                  <fieldset>                  
+                    <InputBox nameClass= "form-control" ref={(ref) => this._InputBox = ref } label="First Name" placeholder="First Name" change={this.firstNameChange.bind(this)}  check={this.state.checkValidation} />
+                    <InputBox1 ref={(ref) => this._InputBox1 = ref } label="Last Name" placeholder="Last Name" change={this.secondNameChange.bind(this)}  check={this.state.checkValidation} nameClass="form-control" />
+                    <InputBox2 ref={(ref) => this._InputBox2 = ref } label="Law Firm" placeholder="Law Firm" change={this.lawFirmChange.bind(this)}  check={this.state.checkValidation} nameClass="form-control" />
+                    <PhoneBox ref={(ref) => this._PhoneBox = ref } nameClass="form-control" label="Mobile Phone" placeholder="Mobile Phone" change={this.mobilePhoneChange.bind(this)}  check={this.state.checkValidation} />
+                    <EmailBox ref={(ref) => this._EmailBox = ref } label="Email" placeholder="Email" change={this.emailChange.bind(this)}  check={this.state.checkValidation} nameClass="form-control" />
+                    <InputBox3 ref={(ref) => this._InputBox3 = ref } label="Invitation code" placeholder="Invitation code" change={this.invitationCodeChange.bind(this)}  check={this.state.checkValidation} nameClass="form-control" />
+                    <PasswordBox ref={(ref) => this._PasswordBox = ref } nameClass="form-control" label="Passowrd" placeholder="Passowrd" change={this.passwordChange.bind(this)}  check={this.state.checkValidation} nameClass="form-control" />                  
+                  </fieldset>
+                    
+                    <div><a href="#" className="pull-right signup_about" onClick={this.handleAbout.bind(this)}>About</a></div>
 
-                <div className="form-group">
-                {
-                  this.state.isValid == false ?
-                    <div className="alert_form">
-                      <div className="col-md-2"></div>
-                      <div className="col-md-4 alert_vaild">
-                        Please complete the missing information.
+                    <hr />
+
+                  <div className="form-group">
+                  {
+                    this.state.isValid == false ?
+                      <div className="alert_form">
+                        <div className="col-md-2"></div>
+                        <div className="col-md-4 alert_vaild">
+                          Please complete the missing information.
+                        </div>
+                        <div className="col-md-2"></div>
+                      </div>  
+                    :
+                      <div className="col-md-8 control-label"></div>
+                  }
+                    
+                    <div className="col-md-4">
+                      <div className="begin_right">
+                        <a href="/" className="link_soft_blue">Cancel</a>
+                        <button type="button" className={ this.state.btnActive ? 'btn btn-primary' : 'btn btn_grey' } disabled={!this.state.btnActive} onClick={this.handleSignup.bind(this)} >Sign up </button>
                       </div>
-                      <div className="col-md-2"></div>
-                    </div>  
-                  :
-                    <div className="col-md-8 control-label"></div>
-                }
-                  
-                  <div className="col-md-4">
-                    <div className="begin_right">
-                      <a href="/" className="link_soft_blue">Cancel</a>
-                      <button type="button" className={ this.state.btnActive ? 'btn btn-primary' : 'btn btn_grey' } disabled={!this.state.btnActive} onClick={this.handleSignup.bind(this)} >Sign up </button>
                     </div>
                   </div>
-                </div>
-            </form>
-            
-            <Modal
-              show={this.state.open}
-              onHide={this.closeModal}
-              aria-labelledby="ModalHeader">
+              </form>
+              
+              <Modal
+                show={this.state.open}
+                onHide={this.closeModal}
+                aria-labelledby="ModalHeader">
 
-              <Modal.Body>
-                <div className="header_text login_form" >
-                  <span className="pull-left">Notice</span>
-                  <span className="pull-right" onClick={this.closeModal}><i className="glyphicon glyphicon-remove"></i></span>
-                  <hr />
-                </div>
-                <div className="content_text">
-                  <div className="textModal">Your invitation code is in-correct or in-valid. If you don’t have an invitation code, or need an updated code please <a> contact </a> us so we can provide you with one.</div> 
-                </div>
-                <div className="footer_text">
-                  <hr />
-                  <Modal.Dismiss className='btn btn-primary pull-right'>Close</Modal.Dismiss>
-                </div>
-
-              </Modal.Body>
-            </Modal>
-
-            <Modal
-              show={this.state.openValid}
-              onHide={this.closeModal}
-              aria-labelledby="ModalHeader">
-
-              <Modal.Body>
-                <div className="header_text login_form" >
-                  <span className="pull-left">About</span>
-                  <span className="pull-right" onClick={this.closeModal}><i className="glyphicon glyphicon-remove"></i></span>
-                  <hr />
-                </div>
-                <div className="content_text">
-                  <div className="textModal">
-                    <div className="paragraph">Lorem ipsum dolor sit amet, ne pri hinc voluptatibus. Eu eleifend eloquentiam sea. Duis soluta mei cu. Sumo consul definitiones vis at, error soleat principes eu quo.</div>
-                    <ul className="paragraph">
-                      <li>Quodsi invenire ut vel, animal inimicus explicari ea duo, vidit dicant melius in mei.</li>
-                      <li>His ex semper intellegam. In mei augue sapientem. Mea cu option theophrastus. Ex labitur repudiare voluptatibus mel, copiosae urbanitas qui.</li>
-                    </ul>
-                    <div className="paragraph">Pro tation veritus, eu vel albucius expetenda, eu vis sale paulo adolescens. Et vel vidit nulla maluisset, et vis odio nulla doming. Ea consequat moderatius sit. Has natum error corpora in, liber aeque ridens</div>
+                <Modal.Body>
+                  <div className="header_text login_form" >
+                    <span className="pull-left">Notice</span>
+                    <span className="pull-right" onClick={this.closeModal}><i className="glyphicon glyphicon-remove"></i></span>
+                    <hr />
                   </div>
-                </div>
-                <div className="footer_text">
-                  <hr />
-                  <Modal.Dismiss className='btn btn-primary pull-right'>Close</Modal.Dismiss>
-                </div>
-              </Modal.Body>
-            </Modal>
-          </div>
-        </article>
-        </div>
+                  <div className="content_text">
+                    <div className="textModal">Your invitation code is in-correct or in-valid. If you don’t have an invitation code, or need an updated code please <a> contact </a> us so we can provide you with one.</div> 
+                  </div>
+                  <div className="footer_text">
+                    <hr />
+                    <Modal.Dismiss className='btn pull-right'>Close</Modal.Dismiss>
+                  </div>
 
+                </Modal.Body>
+              </Modal>
+
+              <Modal
+                show={this.state.openValid}
+                onHide={this.closeModal}
+                aria-labelledby="ModalHeader">
+
+                <Modal.Body>
+                  <div className="header_text login_form" >
+                    <span className="pull-left">About</span>
+                    <span className="pull-right" onClick={this.closeModal}><i className="glyphicon glyphicon-remove"></i></span>
+                    <hr />
+                  </div>
+                  <div className="content_text">
+                    <div className="textModal">
+                      <div className="paragraph">Lorem ipsum dolor sit amet, ne pri hinc voluptatibus. Eu eleifend eloquentiam sea. Duis soluta mei cu. Sumo consul definitiones vis at, error soleat principes eu quo.</div>
+                      <ul className="paragraph">
+                        <li>Quodsi invenire ut vel, animal inimicus explicari ea duo, vidit dicant melius in mei.</li>
+                        <li>His ex semper intellegam. In mei augue sapientem. Mea cu option theophrastus. Ex labitur repudiare voluptatibus mel, copiosae urbanitas qui.</li>
+                      </ul>
+                      <div className="paragraph">Pro tation veritus, eu vel albucius expetenda, eu vis sale paulo adolescens. Et vel vidit nulla maluisset, et vis odio nulla doming. Ea consequat moderatius sit. Has natum error corpora in, liber aeque ridens</div>
+                    </div>
+                  </div>
+                  <div className="footer_text">
+                    <hr />
+                    <Modal.Dismiss className='btn btn-primary pull-right'>Close</Modal.Dismiss>
+                  </div>
+                </Modal.Body>
+              </Modal>
+            </div>
+          </article>
+          </div>
 
     );
   }

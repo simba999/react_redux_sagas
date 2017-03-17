@@ -26,6 +26,7 @@ class Root extends Component {
           <Router history={syncedHistory}>
             {routes()}
           </Router>
+         
         </div>
       </Provider>
     );

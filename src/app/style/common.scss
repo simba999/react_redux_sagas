@@ -48,7 +48,9 @@ ul li a {
 }
 
 #appContainer {
-    height: 100%;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .footer_text hr {
@@ -99,8 +101,17 @@ hr {
 
 label.remove_icon {
     background: url('../images/remove_icon.png') left center no-repeat;
-    width: 15px;
-    height: 15px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0px;
+    // margin-top: 10px;
+}
+label.remove_icon1 {
+    background: url('../images/remove_icon.png') left center no-repeat;
+    width: 16px;
+    height: 16px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 0px;
     // margin-top: 10px;
 }
@@ -145,4 +156,22 @@ a.btn {
 
 .table-striped>tbody>tr:nth-of-type(odd) {
     background-color: #f8f8f8;
+}
+
+.btn {
+    background-color: #65ccff;
+    height: 45px;
+    line-height: 1.52;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #b3e6ff;
+    color: #ffffff;
+}
+
+.btn:active {
+    background-color: #0082c3;
+    color: #ffffff;
 }

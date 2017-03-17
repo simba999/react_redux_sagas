@@ -2,14 +2,18 @@
     text-align: center;
     padding-top: 30px;
 
-    .btn:active {
-    	background-color: #bdbdbd;
+    .btn:hover {
+    	background-color: #ffa74e;
+        color: #ffffff;
     }
 
     .btn {
         width: 190px;
+        color: #ffffff;
+        background-color: #ff8000;
+        border-radius: 4px;
     }
-    .btn-dark-yellow {
+    .btn:active {
         background-color: #c46200;
         color: #ffffff;
     }

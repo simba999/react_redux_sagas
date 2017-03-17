@@ -33,16 +33,16 @@ class WizardFormFirstPage extends React.Component {
     return (
       <form className="modal-dialog ProgressStepBox">
         <div className="header_text">
-          <span>Step1</span>
-          <span className="pull-right"><i className="glyphicon glyhicon-remove"></i></span>
+          <span>Open New Matter</span>
+          <span className="pull-right"><label className="remove_icon1 padding_inner_box" onClick={this.gotoHome.bind(this)}></label></span>
           <hr />
         </div>
-        <div className="content_text">
+        <div className="content_text" id="wizard_content">
           <table className="table table-responsive">
             <thead>
               <tr>
-                <th>Step</th>
-                <th><a className="pull-right" style={{cursor: 'pointer'}}> about </a></th>
+                <th style={{'paddingLeft': '20px'}}>Step1</th>
+                <th><a className="pull-right" style={{'cursor': 'pointer', 'paddingRight': '20px', 'color': '#ffffff'}}> about </a></th>
               </tr>
             </thead>
             <tbody></tbody>
@@ -52,8 +52,8 @@ class WizardFormFirstPage extends React.Component {
           <hr />
           <div className="col-sm-1 prev_button"><button href="#" className="btn grey_background" onClick={this.gotoHome.bind(this)}>&#10092; Prev</button></div>
           <div className="progress_content col-sm-10">
-            <div className="center_text">
-              <div style={{display: 'inline-block', margin: '0 0 0 2%'}}>0%</div>
+            <div className="center_text" >
+              <div style={{display: 'inline-block'}}>0%</div>
               <div className="progress">
                 <div className="progress-bar" role="progressbar" aria-valuenow="20"
                 aria-valuemin="0" aria-valuemax="100" style={{width:'20%'}}>

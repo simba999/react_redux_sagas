@@ -33,16 +33,16 @@ class WizardFormForthPage extends React.Component {
     return (
       <form className="modal-dialog ProgressStepBox">
         <div className="header_text">
-          <span>Step4</span>
-          <span className="pull-right"><i className="glyphicon glyhicon-remove"></i></span>
+          <span>Open New Matter</span>
+          <span className="pull-right"><label className="remove_icon1 padding_inner_box" onClick={this.gotoHome.bind(this)}></label></span>
           <hr />
         </div>
         <div className="content_text">
           <table className="table table-responsive">
             <thead>
               <tr>
-                <th>Step</th>
-                <th><a className="pull-right" style={{cursor: 'pointer'}}> about </a></th>
+                <th style={{'paddingLeft': '20px'}}>Step4</th>
+                <th><a className="pull-right" style={{'cursor': 'pointer', 'paddingRight': '20px', 'color': '#ffffff'}}> about </a></th>
               </tr>
             </thead>
             <tbody></tbody>

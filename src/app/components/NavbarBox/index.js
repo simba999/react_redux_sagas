@@ -72,7 +72,7 @@ class NavbarBox extends React.Component {
           </div>
           <div id="navbar1" className="navbar-collapse collapse" aria-expanded="false">
             <ul className="nav navbar-nav navbar-right white_nav task">
-              <li className="dropdown" style={{'padding-right': '8px'}}>
+              <li className="dropdown" style={{'paddingRight': '30px'}}>
                 <a href="#" className="dropdown-toggle heading_link" data-toggle="dropdown">My Account</a>
                 <ul className="dropdown-menu">
                   <li><a href="/profile">Profile</a></li>
@@ -82,8 +82,8 @@ class NavbarBox extends React.Component {
                   <li><a href="#">Sign out</a></li>
                 </ul>
               </li>
-              <li style={{'padding-top': '10px', 'color':'#ffffff'}}>&nbsp; | &nbsp;</li> 
-              <li style={{'padding-left': '8px'}}><a href="#" className="dropdown-toggle heading_link" onClick={this.openContactModal.bind(this)}>Contact</a></li>
+              <li style={{'paddingTop': '10px', 'color':'#ffffff'}}>&nbsp; | &nbsp;</li> 
+              <li style={{'paddingLeft': '30px'}}><a href="#" className="dropdown-toggle heading_link" onClick={this.openContactModal.bind(this)}>Contact</a></li>
             </ul>
           </div>
         </div>
@@ -99,8 +99,8 @@ class NavbarBox extends React.Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse submenu" aria-expanded="false">
             <ul className="nav navbar-nav" id="selectElement">
-              <li onClick={this.setActive.bind(this)} className="active"><Link to="home">Home</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="opencase">Open Claims</Link></li>
+              <li onClick={this.setActive.bind(this)}><Link to="home">Home</Link></li>
+              <li onClick={this.setActive.bind(this)} className="active"><Link to="opencase">Open Claims</Link></li>
               <li onClick={this.setActive.bind(this)}><Link to="closeclaim">Closed Claims</Link></li>
               <li onClick={this.setActive.bind(this)}><Link to="reports">Reports</Link></li>
             </ul>

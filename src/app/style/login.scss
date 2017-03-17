@@ -106,7 +106,9 @@ article {
         }
         .container {
             width: 60%;
+            height: 100%;
         }
+
     }
     @media (max-width: 767px) {
         .header_text {
@@ -119,7 +121,7 @@ article {
         color: #0081c2;
         font-size: 30px;
         font-family: Hind-Regular;
-        padding-left: 20px;
+        padding-left: 15px;
         padding-right: 20px;
         padding-top: 30px;
     }
@@ -196,7 +198,7 @@ article {
         padding: 0 40px 0 0;
     }
     .inputGroupContainer1 {
-        padding: 0 40px;
+        padding: 0 50px 0 50px;
     }
     @media (max-width: 767px) {
         .inputGroupContainer1 {
@@ -214,7 +216,7 @@ article {
     .begin_right {
         float: right;
         font-size: 14px;
-        padding-right: 25px;
+        padding-right: 35px;
     }
     @media (max-width: 767px) {
         .begin_right {
@@ -416,12 +418,18 @@ article {
         }
     }
 }
+
 a.about_link {
     font-size: 12px;
 }
 
-@media (min-width: 1535px) {
+@media (min-width: 1440px) {
     a.about_link {
-        font-size: 16px;
+        font-size: 14px;
+    }
+    .allForm {
+        .remove_icon1 {
+            width: 20px;
+        }
     }
 }

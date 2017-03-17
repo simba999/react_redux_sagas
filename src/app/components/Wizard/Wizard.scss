@@ -6,12 +6,11 @@
     opacity: 1;
     background-clip: padding-box;
     width: 80%;
-    height: 800px;
+    height: 93%;
 }
 
 .ProgressStepBox thead tr th {
-    padding-right: 1%;
-    padding-left: 1%;
+    padding: 1% 1%;
 }
 
 .modal-backdrop {
@@ -74,11 +73,11 @@
             // width: 75%;
         }
         .col-sm-1.next_button {
-            padding-right: 15px;
+            padding-right: 25px;
             padding-left: 0;
         }
         .col-sm-1.prev_button {
-            padding-left: 0px;
+            padding-left: 35px;
         }
 
         .col-sm-1 button {
@@ -86,3 +85,4 @@
         }
     }
 }
+
