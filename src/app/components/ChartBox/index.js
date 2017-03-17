@@ -5,6 +5,7 @@ import React, {
   PropTypes
 }                                 from 'react';
 import {Motion, spring, presets}  from 'react-motion';
+import $ from 'jquery';
 
 class ChartBox extends React.Component {
 
@@ -25,7 +26,7 @@ class ChartBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = '/home';
+    window.location = 'home';
   }
 
   setActive(el) {
@@ -53,6 +54,7 @@ class ChartBox extends React.Component {
 
         <div className="form-horizontal content_text">
           <span>{this.props.content}</span>
+          <div><button className="okBtn">Success</button></div>
         </div>
         <div className="footer_text payment_page">
         </div>

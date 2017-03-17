@@ -71,18 +71,18 @@ class NavbarBox1 extends React.Component {
           </div>
           <div id="navbar1" className="navbar-collapse collapse" aria-expanded="false">
             <ul className="nav navbar-nav navbar-right white_nav task">
-              <li className="dropdown">
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown">My Account</a>
+              <li className="dropdown" style={{'paddingRight': '20px'}}>
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown" s>My Account</a>
                 <ul className="dropdown-menu">
-                  <li><a href="/profile">Profile</a></li>
-                  <li><a href="/password">Password</a></li>
-                  <li><a href="/payment">Payment</a></li>
-                  <li><a href="/users">Users</a></li>
+                  <li><a href="profile">Profile</a></li>
+                  <li><a href="password">Password</a></li>
+                  <li><a href="payment">Payment</a></li>
+                  <li><a href="users">Users</a></li>
                   <li><a href="#">Sign out</a></li>
                 </ul>
               </li> 
-              <li style={{'padding-top': '10px', 'color':'#ffffff'}}>&nbsp; | &nbsp;</li> 
-              <li><a href="#" onClick={this.openContactModal.bind(this)} style={{'font-size': '15px'}}>Contact</a></li>
+              <li style={{'paddingTop': '10px', 'color':'#ffffff'}}>&nbsp; | &nbsp;</li> 
+              <li style={{'paddingLeft': '20px'}}><a href="#" onClick={this.openContactModal.bind(this)} style={{'font-size': '15px'}}>Contact</a></li>
             </ul>
           </div>
         </div>

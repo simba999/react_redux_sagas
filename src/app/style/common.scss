@@ -140,6 +140,7 @@ a.about_link:hover {
 a.about_link:focus {
     color: #66cfff;
     text-decoration: underline;
+    outline: none;
 }
 
 .header_text span:first-child {
@@ -163,6 +164,7 @@ a.about_link:focus {
     border-radius: 8px;
     outline: none;
     border: 0;
+    box-shadow: 5px 5px 5px #7f7f7f;
 }
 .btn:hover {
     background-color: #b3e6ff;
@@ -170,6 +172,7 @@ a.about_link:focus {
     color: #ffffff;
     outline: none;
     border: 0;
+    //box-shadow: 5px 5px 5px #7f7f7f;
 }
 
 .btn:active {

@@ -72,7 +72,7 @@ class NavbarBox extends React.Component {
           </div>
           <div id="navbar1" className="navbar-collapse collapse" aria-expanded="false">
             <ul className="nav navbar-nav navbar-right white_nav task">
-              <li className="dropdown" style={{'paddingRight': '30px'}}>
+              <li className="dropdown" style={{'paddingRight': '20px'}}>
                 <a href="#" className="dropdown-toggle heading_link" data-toggle="dropdown">My Account</a>
                 <ul className="dropdown-menu">
                   <li><a href="/profile">Profile</a></li>
@@ -83,7 +83,7 @@ class NavbarBox extends React.Component {
                 </ul>
               </li>
               <li style={{'paddingTop': '10px', 'color':'#ffffff'}}>&nbsp; | &nbsp;</li> 
-              <li style={{'paddingLeft': '30px'}}><a href="#" className="dropdown-toggle heading_link" onClick={this.openContactModal.bind(this)}>Contact</a></li>
+              <li style={{'paddingLeft': '20px'}}><a href="#" className="dropdown-toggle heading_link" onClick={this.openContactModal.bind(this)}>Contact</a></li>
             </ul>
           </div>
         </div>

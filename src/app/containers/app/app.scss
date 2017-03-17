@@ -1,5 +1,5 @@
 body {
-	background: #f1f1f1;	
+    background: #f1f1f1;
 }
 
 #appContainer {
@@ -29,15 +29,14 @@ body {
 }
 
 .footer_text {
-	.btn {
-		color: #ffffff;
-	}
+    .btn {
+        color: #ffffff;
+    }
 }
 
 .padding_inner_box {
     margin-right: 15px;
 }
-
 
 .account_page {
     .col-sm-9 {
@@ -61,7 +60,6 @@ body {
             font-size: 16px;
         }
     }
-
     .opencase_margin {
         font-size: 22px;
         min-height: 714px;
@@ -69,7 +67,7 @@ body {
             font-size: 14px;
         }
         .right_header_text {
-            padding-top: 33px;
+            padding-top: 47px;
             .btn {
                 font-size: 15px;
                 width: 180px;
@@ -77,12 +75,15 @@ body {
                 line-height: 1.52;
             }
             a.about_link {
-                font-size: 16px;
+                font-size: 15px;
             }
         }
-        .text_align_center a.about_link {
+        .text_align_center {
             font-size: 16px;
+            padding-top: 23px;
+            padding-left: 27px;
         }
+
     }
     .header_text {
         padding: 45px 3.5% 0% 3.5%;
@@ -94,13 +95,12 @@ body {
         height: 90%;
         padding-bottom: 10px;
         min-height: 738px;
-
         .header_text {
             font-size: 30px;
         }
         .content_text {
-            height: calc(100vh - 450px);
-            min-height: 380px;
+            height: calc(100vh - 470px);
+            min-height: 360px;
         }
         .white-panel {
             min-height: 450px;
@@ -112,7 +112,7 @@ body {
                 padding-top: 10px;
             }
             hr {
-            	margin-bottom: 20px;
+                margin-bottom: 20px;
             }
         }
     }
@@ -122,16 +122,15 @@ body {
         height: 90%;
         padding-bottom: 10px;
         min-height: 738px;
-
         .header_text {
             font-size: 30px;
         }
         .content_text {
-            height: calc(100vh - 450px);
-            min-height: 390px;
+            height: calc(100vh - 470px);
+            min-height: 360px;
         }
         .white-panel {
-        	min-height: 590px;
+            min-height: 450px;
             height: 100%;
         }
         .footer_text.payment_page {
@@ -140,10 +139,9 @@ body {
                 padding-top: 10px;
             }
             hr {
-            	margin-bottom: 20px;
+                margin-bottom: 20px;
             }
         }
-        
     }
     .homepage .opencase_margin {
         padding: 140px 83px 0 83px;
@@ -152,7 +150,6 @@ body {
         height: 90%;
         padding-bottom: 10px;
         min-height: 738px;
-
         .text_color .padding_left {
             padding-left: 110px;
         }
@@ -161,11 +158,11 @@ body {
             min-height: 415px;
         }
         .white-panel {
-            min-height: 590px;
+            min-height: 585px;
             height: inherit;
         }
         .header_text {
-            padding: 26px 20px 0 20px;
+            padding: 40px 20px 0 20px;
             font-size: 30px;
             hr {
                 margin-top: 10px;
@@ -181,29 +178,25 @@ body {
                 margin-bottom: 20px;
             }
         }
-        .col-sm-9 {
-            width: 75%;
+        .left_panel_one {
+            width: 77%;
             height: 100%;
         }
-        .col-sm-3 {
-            width: 25%;
+        .right_panel_one {
+            width: 23%;
             height: 100%;
         }
-
         .dev {
-        	top: 30px;
-        	bottom: 74px;
-
-        	.remove_icon1 {
-        		width: 34px;
-        	}
-
-        	#wizard_content {
-        		height: calc(100vh - 390px);
-        	}
+            top: 30px;
+            bottom: 74px;
+            .remove_icon1 {
+                width: 34px;
+            }
+            #wizard_content {
+                height: calc(100vh - 390px);
+            }
         }
     }
-    
     .report_page .opencase_margin {
         padding: 140px 98px 0% 98px;
         //margin-top: 45px;
@@ -211,17 +204,16 @@ body {
         height: 90%;
         padding-bottom: 10px;
         min-height: 738px;
-
         .header_text {
             font-size: 30px;
         }
         .content_text {
-            height: calc(100vh - 450px);
-            min-height: 400px;
+            height: calc(100vh - 470px);
+            min-height: 360px;
         }
         .white-panel {
             height: 100%;
-            min-height: 598px;
+            min-height: 450px;
         }
         .footer_text.payment_page {
             font-size: 16px;
@@ -230,7 +222,6 @@ body {
             }
         }
     }
-    
     .account_page {
         margin-bottom: 1%;
         .col-sm-9 {
@@ -238,11 +229,22 @@ body {
         }
     }
     .content_text {
-        padding: 0 20px;
+        padding: 0 30px;
         height: 70%;
+        .blue_header {
+            tr th {
+                padding-left: 17px;
+            }
+        }
+        tbody tr td {
+            border: none;
+        }
+        tbody {
+            border-bottom: 1px solid #ddd;
+        }
     }
     .header_text {
-        padding: 26px 20px 0 20px;
+        padding: 40px 30px 0 30px;
         hr {
             margin-top: 10px;
         }
@@ -251,7 +253,7 @@ body {
         }
     }
     .footer_text {
-        padding: 0 20px;
+        padding: 0 30px;
         hr {
             margin-bottom: 20px;
         }
@@ -263,22 +265,27 @@ body {
         height: 530px;
     }
     .account_page .opencase_margin {
-        padding: 8% 84px 0% 84px;
+        padding: 140px 98px 0% 98px;
         font-size: 22px;
-        margin-top: 30px;
-        width: 100%;
-        height: 85%;
-
-       .content_text {
+        height: 90%;
+        padding-bottom: 10px;
+        min-height: 738px;
+        .content_text {
             height: calc(100vh - 380px);
             min-height: 445px;
         }
         .white-panel {
-            min-height: 650px;
+            min-height: 600px;
             height: 100%;
         }
+        /*
+        .payment_detail_page {
+        	min-height: 650px;
+        	height: 100%;
+        }
+        */
         .header_text {
-            padding: 26px 20px 0 20px;
+            padding: 40px 20px 0 20px;
             font-size: 30px;
             hr {
                 margin-top: 10px;
@@ -295,27 +302,27 @@ body {
             }
         }
         .payment_detail_page .content_text {
-            height: calc(100vh - 500px);
-            min-height: 445px;
+            height: calc(100vh - 475px);
+            min-height: 370px;
         }
     }
     .account_page {
         margin-bottom: 0px;
     }
-
     .info_page {
         padding: 140px 98px 0% 98px;
         font-size: 11px;
         height: 90%;
         padding-bottom: 10px;
         min-height: 738px;
-
         .header_text {
             font-size: 30px;
         }
         .content_text {
             height: calc(100vh - 450px);
             min-height: 400px;
+            padding-left: 40px;
+            padding-right: 55px;
         }
         .white-panel {
             height: 100%;
@@ -335,26 +342,25 @@ body {
                 padding-top: 10px;
             }
         }
-        
     }
     .claim_report {
         min-height: 590px;
-        padding-bottom: 10px;
-
         .panel-margin {
             margin: 140px 98px 0% 98px;
         }
         .submenu_text {
             padding-top: 0px;
         }
-
+        label.remove_icon {
+            height: 30px;
+        }
         .content_text {
             height: calc(100vh - 460px);
             min-height: 380px;
         }
         .white-panel {
-        	min-height: 568px;
-            height: 74%;
+            min-height: 598px;
+            height: 75%;
         }
         .header_text {
             padding: 36px 20px 0 20px;
@@ -364,15 +370,14 @@ body {
         }
         .footer_text {
             padding: 0 20px;
-            hr {
-            }
+            hr {}
             .btn {
                 margin-right: 40px;
             }
         }
     }
     .text_footer_color {
-        padding-top: 20px;
+        padding-top: 10px;
         padding-bottom: 15px;
     }
 }
@@ -383,41 +388,33 @@ body {
         padding: 140px 83px 0% 83px;
         height: 90%;
         margin-bottom: 15px;
-
         .content_text {
             height: calc(100vh - 410px);
             min-height: 380px;
         }
-
         .white_panel {
-        	min-height: 500px;
-        	height: 100%;
+            min-height: 500px;
+            height: 100%;
         }
-
         .dev {
-        	top: 30px;
-        	bottom: 74px;
-
-        	.remove_icon1 {
-        		width: 34px;
-        	}
-
-        	#wizard_content {
-        		height: calc(100vh - 350px);
-        		min-height: 430px;
-        	}
+            top: 30px;
+            bottom: 74px;
+            .remove_icon1 {
+                width: 34px;
+            }
+            #wizard_content {
+                height: calc(100vh - 350px);
+                min-height: 430px;
+            }
         }
-
-        .wizard_form  {
-        	padding: 0 20px;
-
-        	.progress_content {
-        		width: 81.5%;
-        		text_align: center;
-        		padding-left: 1.5%;
-        	}
+        .wizard_form {
+            padding: 0 20px;
+            .progress_content {
+                width: 81.5%;
+                text_align: center;
+                padding-left: 1.5%;
+            }
         }
-        
     }
     .homepage .container {
         margin-top: 0px;
@@ -426,43 +423,38 @@ body {
         padding: 140px 98px 0% 98px;
         height: 90%;
         margin-bottom: 15px;
-
         .content_text {
             height: calc(100vh - 445px);
             min-height: 385px;
         }
         .white_panel {
-        	min-height: 600px;
-        	height: 100%;
+            min-height: 600px;
+            height: 100%;
         }
     }
     .closeclaim_page .opencase_margin {
-    	padding: 140px 98px 0% 98px;
+        padding: 140px 98px 0% 98px;
         height: 90%;
         margin-bottom: 15px;
-
         .content_text {
             height: calc(100vh - 445px);
             min-height: 400px;
         }
     }
     .report_page .opencase_margin {
-    	padding: 140px 98px 0% 98px;
+        padding: 140px 98px 0% 98px;
         height: 90%;
         margin-bottom: 15px;
-
         .content_text {
             height: calc(100vh - 445px);
             min-height: 400px;
         }
     }
-
     .account_page .opencase_margin {
-    	padding: 100px 98px 0% 98px;
-    	height: 85%;
-    	margin-top: 50px;
+        padding: 100px 98px 0% 98px;
+        height: 85%;
+        margin-top: 50px;
         margin-bottom: 15px;
-
         .content_text {
             height: calc(100vh - 420px);
             min-height: 420px;
@@ -475,27 +467,25 @@ body {
             height: calc(100vh - 460px);
             min-height: 445px;
         }
-
     }
-
     .claim_report {
-    	min-height: 790px;
-    	margin-bottom: 10px;
-
-	    height: calc(100vh - 460px);
-            min-height: 380px;
-        }
+        min-height: 890px;
+        margin-bottom: 10px;
+        height: 80%;
         .white-panel {
-        	min-height: 768px;
-            height: 80%;
+            min-height: 600px;
+            height: 83%;
+        }
+        .content_text {
+            height: calc(100vh - 455px);
+            min-height: 300px;
         }
     }
-
     .text_footer_color {
         padding-top: 15px;
         padding-bottom: 15px;
     }
-
+}
 
 // md device
 @media (max-width: 1439px) {
@@ -505,15 +495,13 @@ body {
     .footer_text hr {
         // margin-bottom: 80px;
     }
-
     .opencase_page .opencase_margin {
-       padding: 140px 93px 0px 93px;
+        padding: 140px 93px 0px 93px;
         font-size: 11px;
         width: 100%;
         height: calc(100vh - 90px);
         min-height: 678px;
         margin-bottom: 20px;
-
         .text_color .padding_left {
             padding-left: 110px;
         }
@@ -525,7 +513,6 @@ body {
             min-height: 430px;
             height: 100%;
         }
-        
         .footer_text {
             padding: 0;
             font-size: 16px;
@@ -541,7 +528,6 @@ body {
         height: calc(100vh - 90px);
         min-height: 678px;
         margin-bottom: 20px;
-
         .text_color .padding_left {
             padding-left: 110px;
         }
@@ -553,7 +539,6 @@ body {
             min-height: 430px;
             height: 100%;
         }
-        
         .footer_text {
             padding: 0;
             font-size: 16px;
@@ -569,7 +554,6 @@ body {
         height: calc(100vh - 90px);
         min-height: 678px;
         margin-bottom: 20px;
-
         .text_color .padding_left {
             padding-left: 110px;
         }
@@ -581,7 +565,6 @@ body {
             min-height: 430px;
             height: 100%;
         }
-    
         .footer_text {
             padding: 0;
             font-size: 16px;
@@ -596,7 +579,6 @@ body {
         width: 100%;
         height: calc(100vh - 90px);
         min-height: 608px;
-
         .text_color .padding_left {
             padding-left: 110px;
         }
@@ -631,18 +613,15 @@ body {
         .col-sm-3 {
             width: 25%;
         }
-
         .dev {
-        	top: 30px;
-        	bottom: 74px;
-
-        	.remove_icon1 {
-        		width: 34px;
-        	}
-
-        	#wizard_content {
-        		height: calc(100vh - 390px);
-        	}
+            top: 30px;
+            bottom: 74px;
+            .remove_icon1 {
+                width: 34px;
+            }
+            #wizard_content {
+                height: calc(100vh - 390px);
+            }
         }
     }
     .content_text {
@@ -722,7 +701,7 @@ body {
         }
     }
     .claim_report {
-        margin-top: 6%;
+        padding: 140px 78px 0 78px;
         .content_text {
             height: 510px;
         }
@@ -739,6 +718,7 @@ body {
         }
     }
 }
+
 
 /*
 @media (max-width: 1219px) {
@@ -870,6 +850,7 @@ body {
     }
 }
 */
+
 @media (max-width: 1023px) {
     .footer_text hr {
         // margin-bottom: 80px;
