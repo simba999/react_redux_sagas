@@ -153,11 +153,11 @@ class Signin extends PureComponent {
 
   render() {
     return(
-          <div id="appContainer">
+          <div>
            <article>
             <div className="container allForm">
               
-              <form  className="well form-horizontal" action="" method="post"  id="contact_form">
+              <form  className="well form-horizontal modal-dialog" action="" method="post"  id="contact_form">
                   <div className="form-horizontal title_header">
                     <span className="pull-left">Sign in</span>
                     <span className="right_end" onClick={this.goToLogin.bind(this)}><label className="remove_icon1 padding_inner_box"></label></span>

@@ -5,6 +5,7 @@ import {
  }                              from 'react-router';
 import {
   App,
+  LoginContainer,
   LayoutContainer,
   ConnectedHome,
   ConnectedAbout,
@@ -40,9 +41,11 @@ import {
 const Routes = () => {
   return (
     <Route path="/" component={LayoutContainer}>
-      <IndexRoute component={Index} onEnter={scrollToTop} />
-      <Route path="signup" component={Signup} onEnter={scrollToTop} />
-      <Route path="signin" component={Signin} onEnter={scrollToTop} />
+      <Route component={LoginContainer}>
+        <IndexRoute component={Index} onEnter={scrollToTop} />
+        <Route path="signup" component={Signup} onEnter={scrollToTop} />
+        <Route path="signin" component={Signin} onEnter={scrollToTop} />
+      </Route>
       <Route component={App} >
         <Route path="home" component={ConnectedHome} onEnter={scrollToTop} />
         <Route path="about" component={ConnectedAbout} onEnter={scrollToTop} />

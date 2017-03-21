@@ -21,9 +21,11 @@ import Signup               from './signup/index';
 import Licence              from './licence/index';
 import Privacy              from './privacy/index';
 import Security             from './security/index';
+import LoginContainer       from './LoginContainer/index';
 
 export {
   App,
+  LoginContainer,
   ConnectedHome,
   ConnectedAbout,
   ConnectedOpenCase,

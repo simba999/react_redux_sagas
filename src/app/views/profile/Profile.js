@@ -5,7 +5,7 @@ import React, {
 import {Jumbotron}            from '../../components';
 import AnimatedView           from '../../components/animatedView/AnimatedView';
 import { Link }               from 'react-router';
-import ChartBox               from '../../components/ChartBox';
+import ProfileBox             from '../../components/ProfileBox';
 import RightSideBox           from '../../components/RightSideBox';
 import ModalBox               from '../../components/ModalBox';       
 
@@ -50,7 +50,7 @@ class Profile extends PureComponent {
         <div className="container account_page">
           <div className="opencase_margin">
             <div className="col-sm-9">
-              <ChartBox title="Profile" content=""></ChartBox>
+              <ProfileBox title="Profile" content=""></ProfileBox>
             </div>
             <div className="col-sm-3">
               <RightSideBox></RightSideBox>

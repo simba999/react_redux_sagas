@@ -1,11 +1,11 @@
 .top_header {
     background-color: #0082C3;
-    padding: 15px 80px;
-    height: 70px;
+    padding: 1rem 7rem;
+    height: 4.4rem;
     
     .navbar-nav>li>a {
         color: #ffffff;
-        font-size: 18px;
+        font-size: 0.875rem;
         font-family: Hind-Regular;
     }
     .navbar-nav>li>a:hover {
@@ -18,49 +18,44 @@
         top: 140%
     }
 
-    .white_nav {
-        margin-right: 0px;
-    }
 }
 
 .below_header {
-    box-shadow: 0px 3px 0px #888888;
-    padding-right: 5%;
-    height: 40px;
-    background-color: white;
+    box-shadow: 5px 5px 5px #7f7f7f;
+    padding: 0 4rem;
+    height: 2.5rem;
+    background-color: #ffffff;
     .navbar-nav>.active>a {
         background-color: #ffffff;
     }
 
     a.navbar-brand {
-        height: 40px;
+        height: 2.33rem;
+        font-size: 1.25em;
     }
 }
 
 .brand-image {
     background: url('../images/Logo.png') 0 center no-repeat;
-    background-size: auto 58px;
+    background-size: auto 60px;
     width: 125px;
 }
 
 @media (min-width: 1440px) {
     .brand-image {
-        background-size: auto 70px;
+        background-size: auto 60px;
         width: 165px;
     }
 }
 
 .submenu.navbar-collapse {
-    padding-left: 4%;
     #selectElement li > a {
         color: #bfbfbf;
-        font-size: 16px;
-        //padding-top: 6px;
+        font-size: 0.875rem;
         padding-right: 0px;
         padding-left: 0px;
         margin: 0 20px;
         border-bottom: 4px solid #ffffff;
-        // border-spacing: 5px;
     }
     #selectElement li.active a {
         color: #0d0d0d;
@@ -71,18 +66,14 @@
    
     #selectElement li:hover a {
         color: #7f7f7f;
-        //border-bottom: 4px solid #7f7f7f;
-        // padding-bottom: 5px;
         font-family: Hind-Medium;
     }
     .navbar-default {
-        // background-color: #ffffff;
     }
     #selectElement li:focus a {
         color: #0d0d0d;
         background-color: #ffffff;
         border-bottom: 4px solid #ff9900;
-        // padding-bottom: 5px;
     }
 }
 
@@ -123,7 +114,6 @@
 .white_nav {
     li a {
         color: $blue_color;
-        // padding: 10px 3px;
     }
     .dropdown-menu {
         li:hover {
@@ -137,14 +127,6 @@
         color: #ffffff;
     }
 }
-
-#selectElement {
-    padding-left: 3%;
-    height: 40px;
-}
-
-
-
 
 /* right click */
 

@@ -35,7 +35,7 @@ class WizardForm extends Component {
       case 4:
         return <WizardFormForthPage previousPage={this.previousPage} nextPage={this.nextPage} />
       case 5:
-        return <WizardFormFifthPage previousPage={this.previousPage} nextPage={this.nextPage} />
+        return <WizardFormFifthPage previousPage={this.previousPage} />
     }
   }
 

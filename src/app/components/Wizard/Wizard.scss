@@ -35,6 +35,24 @@
 
 .dev .modal-dialog {
     width: 90%;
+    
+    .wizard_form {
+        padding: 0 2.2rem;
+
+        .progress_from_to {
+            padding-top: 0.75rem;
+        }
+    }
+
+    #progress_box {
+        display: inline-flex;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .center_text {
+        font-size: 0.875rem;
+    }
 }
 
 #myBar {
@@ -54,7 +72,7 @@
 }
 
 .progress {
-    width: 80%;
+    width: 100%;
     display: inline-block;
     margin: 10px 15px 0 15px;
 }
@@ -67,22 +85,4 @@
     }
 }
 
-@media (max-width: 1899px) {
-    .wizard_form {
-        .col-sm-10 {
-            // width: 75%;
-        }
-        .col-sm-1.next_button {
-            padding-right: 25px;
-            padding-left: 0;
-        }
-        .col-sm-1.prev_button {
-            padding-left: 35px;
-        }
-
-        .col-sm-1 button {
-        	width: 80px;
-        }
-    }
-}
 

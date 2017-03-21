@@ -45,7 +45,6 @@ class Index extends PureComponent {
   render() {
     return(
       <div>
-        <HeaderBox></HeaderBox>
         <div id="appContainer">    
         </div>
       </div>

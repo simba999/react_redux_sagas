@@ -1,6 +1,6 @@
 .right_header_text {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 1.875rem;
 
     .btn:hover {
     	background-color: #ffa74e;
@@ -8,10 +8,11 @@
     }
 
     .btn {
-        width: 190px;
+        width: 10rem;
         color: #ffffff;
+        line-height: 2.4;
         background-color: #ff8000;
-        border-radius: 4px;
+        border-radius: 8px;
     }
     .btn:active {
         background-color: #c46200;

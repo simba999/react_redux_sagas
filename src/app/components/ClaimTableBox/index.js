@@ -124,7 +124,9 @@ class ClaimTableBox extends React.Component {
               </tr>
             </tbody>
           </table>
+          
         </div>
+        
         <div className="footer_text payment_page">
           <hr />
           <ul className="inline-list col-sm-8">

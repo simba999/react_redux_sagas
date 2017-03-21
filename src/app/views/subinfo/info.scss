@@ -1,128 +1,13 @@
 .info_page {
-
-	.col-sm-3 .header_text {
-		padding-top: 10%;
-	}
-
-	.submenu_text {
-		font-size: 16px;
-		padding-top: 5px;
-
-		li {
-			padding-top: 5px;
-		}
-	}
-
-	.container {
-    width: 100%;
-    background-color: #bdbdbd;
-}
-
-.content {
-    margin-top: 80px;
-}
-
-.opencase_margin {
-    padding: 5% 3% 0 3%;
-    margin-top: 6%;
-}
-
-.opencase_page {
-    .opencase_margin {
-        padding: 5% 4% 0 4%;
-        margin-top: 6%;
-    }
-    @media (min-width: 1710px) {
-        .opencase_margin {
-            padding: 2% 5% 0% 5%;
-            font-size: 24px;
-            .right_header_text {
-                padding-top: 60px;
-                .btn {
-                    font-size: 24px;
-                }
-            }
-        }
-        .header_text {
-            padding: 2% 3.5% 0% 3.5%;
+    .submenu_text {
+        font-size: 16px;
+        padding-top: 5px;
+        li {
+            padding-top: 5px;
         }
     }
-}
-
-.closeclaim_page {
-    .opencase_margin {
-        padding: 5% 5% 0 5%;
-        margin-top: 6%;
+    .container {
+        width: 100%;
+        background-color: #bdbdbd;
     }
-    
-    @media (min-width: 1710px) {
-        .opencase_margin {
-            padding: 2% 5% 0% 5%;
-            font-size: 24px;
-            .right_header_text {
-                padding-top: 60px;
-                .btn {
-                    font-size: 24px;
-                }
-            }
-        }
-        .header_text {
-            padding: 2% 3.5% 0% 3.5%;
-        }
-    }
-}
-
-@media (min-width: 1710px) {
-    .opencase_margin {
-        padding: 2% 0% 0% 4%;
-        font-size: 24px;
-
-        .right_header_text {
-            padding-top: 30px;
-            
-            .btn {
-                font-size: 24px;
-            }
-        }
-    }
-    .header_text {
-        padding: 2% 3.5% 0% 3.5%;
-    }
-
-    .col-sm-3 .white-panel {
-        margin-right: 0;
-    }
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1439px) {
-    .opencase_margin {
-        padding: 8% 0 0 6%;
-    }
-
-    .right_header_text{
-        padding-top: 30px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .opencase_margin {
-        padding: 14% 0 0 1%;
-    }
-    .header_text {
-        padding: 10% 6.5% 0% 6.5%;
-        font-size: 24px;
-    }
-    .right_header_text .btn {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 500px) {
-    .opencase_margin {
-        padding: 25% 2% 3% 2%;
-    }
-    .header_text {
-        font-size: 20px;
-    }
-}
 }

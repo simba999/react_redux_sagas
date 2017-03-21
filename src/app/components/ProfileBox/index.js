@@ -7,9 +7,9 @@ import React, {
 import {Motion, spring, presets}  from 'react-motion';
 import $                          from 'jquery';
 //import Accordion                  from 'react-accordion-component';
-import CustomAccordion                  from '../Accordion/index';
+import CustomAccordion            from '../Accordion/index';
 
-class ChartBox extends React.Component {
+class ProfileBox extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -60,6 +60,7 @@ class ChartBox extends React.Component {
 
         <div className="form-horizontal content_text">
           <span>{this.props.content}</span>
+          <div>SDFSDFDS</div>
         </div>
         <div className="footer_text payment_page">
         </div>
@@ -69,9 +70,9 @@ class ChartBox extends React.Component {
 
 }
 
-ChartBox.propTypes = {
+ProfileBox.propTypes = {
   title       : React.PropTypes.string.isRequired,
   content     : React.PropTypes.string
 }
 
-export default ChartBox;
+export default ProfileBox;

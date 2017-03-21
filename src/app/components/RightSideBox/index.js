@@ -103,7 +103,7 @@ class RightSideBox extends React.Component {
     return (
       <div className="white-panel">
         <div className="right_header_text">
-          <a className="btn btn-dark-yellow" onClick={this.openWizard.bind(this)} style={{'lineHeight': '1.82'}}>Open New Matter</a>          
+          <a className="btn btn-dark-yellow" onClick={this.openWizard.bind(this)}>Open New Matter</a>          
         </div>
         
         <div className="text_align_center">

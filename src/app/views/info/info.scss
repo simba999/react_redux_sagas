@@ -1,16 +1,13 @@
 .info_page {
-    .col-sm-3 .header_text {
-        padding-top: 10%;
-    }
     .header_menu {
         padding-right: 15px;
         font-size: 20px;
-        margin: 20px 20px 0 0;
+        margin: 10px 20px 0 0;
     }
     .submenu_text {
-        font-size: 16px;
+        font-size: 1rem;
         padding-top: 5px;
-        padding-left: 70px;
+        padding-left: 3rem;
 
         li {
             padding-top: 10px;
@@ -37,7 +34,7 @@
     }
 
     .menu_text {
-    	padding: 30px 0 10px 25px;
+    	padding: 30px 0 10px 5px;
 
     	span.active {
     		border-bottom: 4px solid #ff9900;

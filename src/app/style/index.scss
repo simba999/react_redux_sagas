@@ -52,14 +52,16 @@
 
 @import "../components/Wizard/Wizard";
 
+//Sign and Login
+@import "./login";
+
 // containers:
 @import "../containers/app/app";
 
 // ModalBox Css
 @import "../components/ModalBox/ModalBox";
 
-//Sign and Login
-@import "./login";
+
 
 @import "../components/PaymentBox/PaymentBox";
 

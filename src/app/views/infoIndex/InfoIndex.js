@@ -46,8 +46,10 @@ class InfoIndex extends PureComponent {
 
   render() {
     return(
-      <div className="container" style={{padding: '10% 3% 0'}}>
-        <IndexBox></IndexBox>
+      <div className="container">
+        <div className="index_page">
+          <IndexBox></IndexBox>
+        </div>
       </div>
     );
   }

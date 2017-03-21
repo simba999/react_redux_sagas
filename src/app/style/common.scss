@@ -48,9 +48,8 @@ ul li a {
 }
 
 #appContainer {
-    height: auto;
+    height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 .footer_text hr {
@@ -129,7 +128,7 @@ label.remove_icon1 {
 }
 
 a.about_link {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 a.about_link:hover {
@@ -144,7 +143,7 @@ a.about_link:focus {
 }
 
 .header_text span:first-child {
-    padding-left: 15px;
+    padding-left: 0.9375rem;
 }
 
 .left_side_box .header_text span:first-child {
@@ -155,11 +154,12 @@ a.about_link:focus {
     background-color: #f8f8f8;
 }
 
+
+
 .btn {
-    background-color: #65ccff;
-    border-color: #65ccff;
-    height: 45px;
-    width: 96px;
+    background-color: #0082c3;
+    height: 2.82rem;
+    width: 6rem;
     color: #ffffff;
     border-radius: 8px;
     outline: none;
@@ -176,6 +176,38 @@ a.about_link:focus {
 }
 
 .btn:active {
+    background-color: #65ccff;
+    color: #ffffff;
+    outline: none;
+    border: 0;
+   
+}
+
+.grey_background:focus {
+    color: #ffffff;
+}
+
+.close_button {
+    background-color: #65ccff;
+    border-color: #65ccff;
+    height: 45px;
+    width: 96px;
+    color: #ffffff;
+    border-radius: 8px;
+    outline: none;
+    border: 0;
+    box-shadow: 5px 5px 5px #7f7f7f;
+}
+.close_button:hover {
+    background-color: #b3e6ff;
+    border: 0;
+    color: #ffffff;
+    outline: none;
+    border: 0;
+    //box-shadow: 5px 5px 5px #7f7f7f;
+}
+
+.close_button:active {
     background-color: #0082c3;
     color: #ffffff;
     outline: none;
@@ -183,7 +215,7 @@ a.about_link:focus {
    
 }
 
-.btn:focus {
+.close_button:focus {
     color: #ffffff;
 }
 
@@ -191,3 +223,9 @@ a.about_link:focus {
     padding-top: 12px;
 }
 
+.grey_background {
+    background-color: #d9d9d9;
+}
+.grey_background:hover {
+    background-color: #7f7f7f;
+}
