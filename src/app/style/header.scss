@@ -5,14 +5,14 @@ body {
 .white-panel {
     background-color: #ffffff;
     height: 500px;
-    box-shadow: 3px 6px 0px #888888;
+    box-shadow: 5px 6px 5px #7f7f7f;
 }
 
 @media (min-width: 1600px) {
     .white-panel {
         background-color: #ffffff;
         height: 800px;
-        box-shadow: 3px 6px 0px #888888;
+        box-shadow: 5px 6px 5px #7f7f7f;
     }
 }
 

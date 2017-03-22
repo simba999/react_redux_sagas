@@ -63,7 +63,7 @@ class CloseClaimTableBox extends React.Component {
     return (
       <div className="white-panel panel-margin">
         <div className="form-horizontal header_text">
-          <span className="">Close Claims</span>
+          <span className="">Closed Claims</span>
           <span className="pull-right remove_group">
             <label className="remove_icon" onClick={this.gotoHome.bind(this)}></label>
           </span>
