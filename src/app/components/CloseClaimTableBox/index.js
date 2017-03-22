@@ -40,7 +40,7 @@ class CloseClaimTableBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = '/home';
+    browserHistory.replace('dashboard');
   }
 
   setActive(el) {

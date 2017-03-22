@@ -58,7 +58,7 @@ class PaymentBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = '/home';
+    browserHistory.push('dashboard');
   }
 
   setActive(el) {

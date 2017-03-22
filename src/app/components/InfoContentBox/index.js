@@ -5,7 +5,7 @@ import React, {
   PropTypes
 }                                 from 'react';
 import {Motion, spring, presets}  from 'react-motion';
-import {Link}                     from 'react-router';
+import {Link, browserHistory}     from 'react-router';
 import ModalBox                   from '../ModalBox';
 
 class InfoContentBox extends React.Component {
@@ -93,7 +93,7 @@ class InfoContentBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = "/index";
+    browserHistory.push('index');
   }
 
   setActive1(e) {
@@ -115,7 +115,7 @@ class InfoContentBox extends React.Component {
   }
 
   gotoIndexPage() {
-    window.location = '/index';
+    browserHistory.push('index');
   }
 
   render() {

@@ -4,6 +4,7 @@ import React, {
   Component,
   PropTypes
 }                                 from 'react';
+import {browserHistory}           from 'react-router';
 import {Motion, spring, presets}  from 'react-motion';
 import $                          from 'jquery';
 //import Accordion                  from 'react-accordion-component';
@@ -33,6 +34,7 @@ class ChartBox extends React.Component {
 
   gotoHome() {
     window.location = 'home';
+    //browserHistory.push('home');
   }
 
   setActive(el) {

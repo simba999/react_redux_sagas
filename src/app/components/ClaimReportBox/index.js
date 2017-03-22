@@ -4,6 +4,8 @@ import React, {
   Component,
   PropTypes
 }                                 from 'react';
+
+import {browserHistory}           from 'react-router';
 import {Motion, spring, presets}  from 'react-motion';
 import ModalBox                   from '../../components/ModalBox';
 
@@ -40,7 +42,7 @@ class ClaimReportBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = "/index";
+    browserHistory.push('index');
   }
 
   render() {

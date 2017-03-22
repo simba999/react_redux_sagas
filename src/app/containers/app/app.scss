@@ -8,11 +8,12 @@ body {
 
 #appContainer {
     background-color: #f1f1f1;
-    .navbar-nav>li>a {
-        padding-top: 0.625rem;
-        padding-bottom: 0px;
-        color: #ffffff;
-    }
+}
+
+.navbar-nav>li>a {
+    padding-top: 0.625rem;
+    padding-bottom: 0px;
+    color: #ffffff;
 }
 
 .container {
@@ -117,15 +118,12 @@ body {
                 margin-bottom: 1.4rem;
             }
         }
-
         //Open New Matter 
         .dev {
             bottom: 7%;
-
             .content_text {
                 height: calc(100% - 20em);
             }
-
             .header_text {
                 padding: 2.5rem 1.4rem 0 1.4rem;
                 font-size: 1.875rem;
@@ -177,17 +175,36 @@ body {
         }
     }
     .info_page .col-sm-9 .content_text {
-        padding: 1.875rem 3.4rem 0 2.3rem;  
+        padding: 1.875rem 3.4rem 0 2.3rem;
     }
-
     .index_page {
         padding: 8.75rem 5.2rem 0 5.2rem;
     }
 }
 
-
 // large device for 2560px
 @media (max-width: 180em) {
+    .top_header {
+        padding-left: 7rem;
+        padding-top: 1em;
+        height: 80px;
+        .navbar-nav > li > a {
+            font-size: 1.2rem;
+        }
+        .brand-image {
+            background-size: auto 60px;
+        }
+        .navbar-brand {
+            height: 50px;
+        }
+    }
+    .below_header {
+        height: 45px;
+        .submenu.navbar-collapse #selectElement li > a {
+            font-size: $FONT15;
+            //padding-top: 6.6%;
+        }
+    }
     .content_text {
         padding: 0 1.25rem;
         .blue_header {
@@ -297,11 +314,9 @@ body {
                 margin-bottom: 1.4rem;
             }
         }
-
         //Open New Matter 
         .dev {
             bottom: 7%;
-
             .content_text {
                 height: calc(100% - 20em);
             }
@@ -313,18 +328,28 @@ body {
         }
     }
     .info_page .col-sm-9 .content_text {
-        padding: 1.875rem 3.4rem 0 2.3rem;  
+        padding: 1.875rem 3.4rem 0 2.3rem;
     }
-
     .index_page {
         padding: 8.75rem 5.2rem 0 5.2rem;
     }
-    
     .text_footer_color {
         padding-top: 15px;
         padding-bottom: 15px;
     }
+    .account_page {
+
+        .panel_item {
+            padding: 0.5em 0.8em;
+        }
+        .panel_selectedItem {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
 }
+
+
 /*
 @media (max-width: 130em) {
     .opencase_margin {
@@ -344,8 +369,41 @@ body {
     }
 }
 */
+
 // normal device for 1920 below
 @media (max-width: 2020px) {
+    .top_header {
+        height: 70px;
+        .navbar-nav>li>a {
+            color: #ffffff;
+            font-size: $FONT15;
+            font-family: Hind-Regular;
+        }
+        .navbar-nav>li>a:hover {
+            color: #ffffff;
+            font-family: Hind-Medium;
+            text-decoration: underline;
+        }
+        .dropdown-menu {
+            top: 140%
+        }
+    }
+    .below_header {
+        box-shadow: 5px 5px 5px #7f7f7f;
+        padding: 0 4rem;
+        height: 2.5rem;
+        background-color: #ffffff;
+        .navbar-nav>.active>a {
+            background-color: #ffffff;
+        }
+        a.navbar-brand {
+            height: 2.33rem;
+            font-size: 1.25em;
+        }
+    }
+    .navbar-brand {
+        height: 40px;
+    }
     label.remove_icon {
         margin-top: 0px;
     }
@@ -435,7 +493,6 @@ body {
                 margin-bottom: 1.4rem;
             }
         }
-
         // Open New Matter dialog
         .dev {
             bottom: 6.8%;
@@ -484,14 +541,33 @@ body {
             height: 45px;
         }
     }
-    
-    
 }
 
 
 /* device for 1800px */
 
 @media (max-width: 1800px) {
+    .top_header {
+        height: 63.63px;
+        padding-left: 7rem;
+        padding-top: 1em;
+        .navbar-nav > li > a {
+            font-size: $FONT14;
+        }
+        .brand-image {
+            background-size: auto 50px;
+        }
+        .navbar-brand {
+            height: 40px;
+        }
+    }
+    .below_header {
+        height: 36.36px;
+        .submenu.navbar-collapse #selectElement li > a {
+            font-size: $FONT13;
+            //padding-top: 6.6%;
+        }
+    }
     .homepage .opencase_margin {
         height: 90%;
         //min-height: 30rem;
@@ -510,7 +586,6 @@ body {
         .footer_text_color {
             padding-top: 0.675rem;
         }
-
         // Open New Matter Dialog
         .dev {
             bottom: 7.6%;
@@ -548,6 +623,38 @@ body {
 /* device for 1536px */
 
 @media (max-width: 1536px) {
+    .top_header {
+        height: 55.63px;
+        padding-left: 7rem;
+        padding-top: 0.6em;
+        .navbar-nav > li > a {
+            font-size: $FONT13;
+        }
+        .brand-image {
+            background-size: auto 50px;
+        }
+        .navbar-brand {
+            height: 40px;
+        }
+    }
+    .below_header {
+        height: 32.36px;
+        .submenu.navbar-collapse {
+            #selectElement li > a {
+                font-size: $FONT13;
+                //padding-top: 8.6%;
+            }
+            /*
+            #selectElement li.active > a {
+                font-size: $FONT13;
+                //padding-top: 5.5%;
+            }
+            */
+        }
+        .navbar-nav > li > a {
+            padding-top: 0.425rem;
+        }
+    }
     .homepage .opencase_margin {
         height: 90%;
         //min-height: 30rem;
@@ -605,6 +712,38 @@ body {
 
 // md device
 @media (max-width: 1439px) {
+    .top_header {
+        height: 55.63px;
+        padding-left: 7rem;
+        padding-top: 0.6em;
+        .navbar-nav > li > a {
+            font-size: $FONT13;
+        }
+        .brand-image {
+            background-size: auto 50px;
+        }
+        .navbar-brand {
+            height: 40px;
+        }
+    }
+    .below_header {
+        height: 32.36px;
+        .submenu.navbar-collapse {
+            #selectElement li > a {
+                font-size: $FONT13;
+                //padding-top: 8.6%;
+            }
+            /*
+            #selectElement li.active > a {
+                font-size: $FONT13;
+                //padding-top: 5.5%;
+            }
+            */
+        }
+        .navbar-nav > li > a {
+            padding-top: 0.425rem;
+        }
+    }
     label.remove_icon {
         margin-top: 0px;
     }
@@ -649,7 +788,6 @@ body {
                 margin-bottom: 1.4rem;
             }
         }
-
         // Open New Matter Dialog
         .dev {
             bottom: 8.5%;
@@ -666,7 +804,7 @@ body {
             width: 100%;
         }
         .content_text {
-           // min-height: 15.5rem;
+            // min-height: 15.5rem;
             height: calc(100% - 210px);
         }
         .header_text {
@@ -685,23 +823,19 @@ body {
         .close_button {
             height: 2.5rem;
         }
-
         .blue_header tr th {
             font-size: 13px;
         }
     }
     .info_page .opencase_margin {
         padding: 8.75rem 6.125rem 0 6.125rem;
-
         .submenu_text {
             padding-top: 0px;
             font-size: 0.75rem;
         }
-
         .left_side_box {
             padding-left: 0px;
         }
-
     }
     .account_page .opencase_margin {
         padding: 8.75rem 6.125rem 0 6.125rem;
@@ -724,21 +858,53 @@ body {
             }
         }
     }
-    
 }
 
+
 /* device for 1296px */
+
 @media (max-width: 1296px) {
+    .top_header {
+        height: 46.63px;
+        padding-left: 7rem;
+        padding-top: 0.3em;
+        .navbar-nav > li > a {
+            font-size: $FONT12;
+        }
+        .brand-image {
+            background-size: auto 50px;
+        }
+        .navbar-brand {
+            height: 40px;
+        }
+    }
+    .below_header {
+        height: 28.36px;
+        .submenu.navbar-collapse {
+            #selectElement li > a {
+                font-size: $FONT10;
+                //padding-top: 8.6%;
+            }
+            /*
+            #selectElement li.active > a {
+                font-size: $FONT10;
+                //padding-top: 5.5%;
+            }
+            */
+        }
+        .navbar-nav > li > a {
+            padding-top: 0.125rem;
+        }
+    }
     .opencase_margin {
         height: auto;
-
         .white-panel {
             //min-height: 20rem;
             height: 100%;
             width: 100%;
         }
         .content_text {
-           // min-height: 15.5rem;
+            // min-height: 15.5rem;
             height: calc(100% - 210px);
         }
         .header_text {
@@ -766,13 +932,13 @@ body {
         margin-top: 20px;
     }
     */
-     .opencase_margin {
+    .opencase_margin {
         height: auto;
-       // min-height: 29rem;
+        // min-height: 29rem;
         margin-bottom: 0.5rem;
         padding-bottom: 0rem;
         .white-panel {
-       //    min-height: 20rem;
+            //    min-height: 20rem;
             height: 100%;
         }
         .content_text {
@@ -794,12 +960,10 @@ body {
         .close_button {
             height: 40px;
         }
-
         .blue_header tr th {
             font-size: 13px;
         }
     }
-    
     .homepage {
         margin-top: 70px;
         .opencase_margin {
@@ -836,37 +1000,30 @@ body {
     }
     .info_page .opencase_margin {
         padding: 8.75rem 6.125rem 0 6.125rem;
-
         .submenu_text {
             padding-top: 0px;
             font-size: 0.75rem;
         }
-
         .left_side_box {
             padding-left: 0px;
         }
-
         .menu_text {
             font-size: 1.2rem;
         }
-
         .col-sm-3 {
             width: 27%;
         }
         .col-sm-9 {
             width: 73%;
         }
-
         .header_text {
             hr {
                 margin-bottom: 0.5rem;
             }
         }
-
         .header_menu {
             margin-top: 5px;
         }
-
     }
     .account_page .opencase_margin {
         padding: 10% 1% 0% 1%;
@@ -882,6 +1039,4 @@ body {
             height: 650px;
         }
     }
-    
-    
 }

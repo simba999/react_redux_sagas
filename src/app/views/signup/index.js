@@ -2,6 +2,7 @@ import React, {
   PureComponent,
   PropTypes
 }                             from 'react';
+import {browserHistory}       from 'react-router';
 import {Jumbotron}            from '../../components';
 import AnimatedView           from '../../components/animatedView/AnimatedView';
 import { Link }               from 'react-router';
@@ -204,7 +205,7 @@ class Signup extends PureComponent {
     }
 
     goToLogin() {
-      window.location = '/';
+      browserHistory.replace('/');
     }
 
     handleSignup() {
@@ -230,8 +231,7 @@ class Signup extends PureComponent {
         this.setState({isValid: true})
 
         if (this.state.isInvitation == true) {
-
-          window.location        = '/home';
+          browserHistory.push('dashboard');
 
         } else {
           console.log("Dialog");

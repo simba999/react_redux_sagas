@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   Route,
-  IndexRoute
+  IndexRoute,
+  browserHistory
  }                              from 'react-router';
 import {
   App,
@@ -38,47 +39,65 @@ import {
   PageNotFound
 }                               from '../views';
 
+const requireAuth = () => {
+  //localStorage.setItem('user', 'mm');
+  let user = localStorage.getItem('user');
+  console.log("user", user);
+  if (user != 'andrey1') {
+    browserHistory.replace("/");
+  }
+  
+}
+
+const initialAuth = () => {
+  //localStorage.setItem('user', '');
+  console.log("initialAuth");
+}
+
 const Routes = () => {
   return (
-    <Route path="/" component={LayoutContainer}>
+    <Route path="/" component={LayoutContainer} onEnter={initialAuth}>
       <Route component={LoginContainer}>
         <IndexRoute component={Index} onEnter={scrollToTop} />
         <Route path="signup" component={Signup} onEnter={scrollToTop} />
         <Route path="signin" component={Signin} onEnter={scrollToTop} />
       </Route>
-      <Route component={App} >
-        <Route path="home" component={ConnectedHome} onEnter={scrollToTop} />
+      <Route path="/dashboard" component={App} onEnter={requireAuth}>
+        <IndexRoute component={ConnectedHome} onEnter={scrollToTop} />
         <Route path="about" component={ConnectedAbout} onEnter={scrollToTop} />
-        <Route path="opencase" component={ConnectedOpenCase} onEnter={scrollToTop} />
-        <Route path="closeclaim" component={ConnectedCloseClaim} onEnter={scrollToTop} />
-        <Route path="reports" component={ConnectedReports} onEnter={scrollToTop} />
-        <Route path="profile" component={ConnectedProfile} onEnter={scrollToTop} />
-        <Route path="password" component={ConnectedPassword} onEnter={scrollToTop} />
-        <Route path="payment" component={ConnectedPayment} onEnter={scrollToTop} />
-        <Route path="users" component={ConnectedUsers} onEnter={scrollToTop} />
-        <Route path="licence" component={Licence} onEnter={scrollToTop} />
-        <Route path="privacy" component={Privacy} onEnter={scrollToTop} />
-        <Route path="security" component={Security} onEnter={scrollToTop} />
-      </Route>
-      <Route component={UserLayout}>
-        <Route path="" component={SubInfo} onEnter={scrollToTop}>
-          <Route path="user" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="adoption" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="aliases" component={ConnectedInfoAliase} onEnter={scrollToTop} />
-          <Route path="/activities" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/awards" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/affiliations" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/family_history" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/education_history" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/residental_history" component={ConnectedInfo} onEnter={scrollToTop} />
-          <Route path="/military_history" component={ConnectedInfo} onEnter={scrollToTop} />
-        </Route>
+        <Route path="/opencase" component={ConnectedOpenCase} onEnter={scrollToTop} />
+        <Route path="/closeclaim" component={ConnectedCloseClaim} onEnter={scrollToTop} />
+        <Route path="/reports" component={ConnectedReports} onEnter={scrollToTop} />
+        <Route path="/profile" component={ConnectedProfile} onEnter={scrollToTop} />
+        <Route path="/password" component={ConnectedPassword} onEnter={scrollToTop} />
+        <Route path="/payment" component={ConnectedPayment} onEnter={scrollToTop} />
+        <Route path="/users" component={ConnectedUsers} onEnter={scrollToTop} />
+        <Route path="/licence" component={Licence} onEnter={scrollToTop} />
+        <Route path="/privacy" component={Privacy} onEnter={scrollToTop} />
+        <Route path="/security" component={Security} onEnter={scrollToTop} />
+      
+        //DetailPage
+        <Route component={UserLayout} onEnter={requireAuth}>
+          <Route component={SubInfo} onEnter={scrollToTop}>
+            <Route path="/user" component={ConnectedInfo} onEnter={scrollToTop} />
+            <Route path="/adoption" component={ConnectedInfo} onEnter={scrollToTop} />
+            <Route path="/aliases" component={ConnectedInfoAliase} onEnter={scrollToTop} />
+            <Route path="/activities" component={ConnectedInfo} onEnter={scrollToTop} />
+            <Route path="/awards" component={ConnectedInfo} onEnter={scrollToTop} />
+            <Route path="/affiliations" component={ConnectedInfo} onEnter={scrollToTop} />
+            <Route path="/family_history" component={ConnectedInfo} onEnter={scrollToTop} />
+            <Route path="/education_history" component={ConnectedInfo} onEnter={scrollToTop} />
+            <Route path="/residental_history" component={ConnectedInfo} onEnter={scrollToTop} />
+            <Route path="/military_history" component={ConnectedInfo} onEnter={scrollToTop} />
+          </Route>
         <Route path="/index" component={ConnectedInfoIndex} />
         <Route path="/review" component={ConncetedReview} />
         <Route path="/research" component={ConncetedResearch} />
         <Route path="/agreement" component={ConncetedAgreement} />
         <Route path="/claimreport" component={ConncetedClaimReport} />
       </Route>
+      </Route>
+      
       <Route>
         <Route path="*" component={PageNotFound} onEnter={scrollToTop} />
       </Route>

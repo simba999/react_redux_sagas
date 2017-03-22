@@ -21,6 +21,11 @@ class LoginContainer extends Component {
     navModel : navigationModel
   };
 
+  constructor() {
+    super();
+
+  }
+
   render() {
     const { navModel } = this.state;
     const { children } = this.props;

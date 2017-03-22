@@ -4,6 +4,7 @@ import React, {
   Component,
   PropTypes
 }                                 from 'react';
+import {browserHistory, Link}     from 'react-router';
 import {Motion, spring, presets}  from 'react-motion';
 import ModalBox                   from '../../components/ModalBox';
 import $                          from 'jquery';
@@ -35,7 +36,7 @@ class ClaimTableBox extends React.Component {
   }
 
   linkIndex() {
-    window.location = 'index';
+    browserHistory.push('index');
   }
 
   openModal() {
@@ -47,7 +48,7 @@ class ClaimTableBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = '/home';
+    browserHistory.push('dashboard');
   }
 
   setActive(el) {

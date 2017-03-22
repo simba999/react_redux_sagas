@@ -1,11 +1,11 @@
 .top_header {
     background-color: #0082C3;
     padding: 1rem 7rem;
-    height: 4.4rem;
+    height: 5em;
     
     .navbar-nav>li>a {
         color: #ffffff;
-        font-size: 0.875rem;
+        font-size: $FONT15;
         font-family: Hind-Regular;
     }
     .navbar-nav>li>a:hover {

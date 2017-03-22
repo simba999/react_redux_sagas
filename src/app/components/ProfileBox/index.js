@@ -4,6 +4,7 @@ import React, {
   Component,
   PropTypes
 }                                 from 'react';
+import {browserHistory}           from 'react-router';
 import {Motion, spring, presets}  from 'react-motion';
 import $                          from 'jquery';
 //import Accordion                  from 'react-accordion-component';
@@ -32,7 +33,7 @@ class ProfileBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = 'home';
+    browserHistory.push('home');
   }
 
   setActive(el) {
@@ -60,7 +61,7 @@ class ProfileBox extends React.Component {
 
         <div className="form-horizontal content_text">
           <span>{this.props.content}</span>
-          <div>SDFSDFDS</div>
+          <CustomAccordion />
         </div>
         <div className="footer_text payment_page">
         </div>

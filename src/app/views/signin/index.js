@@ -2,6 +2,7 @@ import React, {
   PureComponent,
   PropTypes
 }                             from 'react';
+import {Router, browserHistory}       from 'react-router';
 import {Jumbotron}            from '../../components';
 import AnimatedView           from '../../components/animatedView/AnimatedView';
 import { Link }               from 'react-router';
@@ -111,10 +112,12 @@ class Signin extends PureComponent {
     }
 
     goToLogin() {
-      window.location             = '/';
+      //window.location             = '/';
+      browserHistory.replace('/');
     }
 
     handleSignin() {
+      localStorage.setItem('user', '');
 
       console.log("CheckValidation: ", this.state.checkValidation);
       console.log("emailActive: ", this.state.emailActive);
@@ -124,7 +127,11 @@ class Signin extends PureComponent {
         this.setState({isValid: true});
 
         if (this.state.passwordValue == '111111111' && this.state.emailValue == 'a@a.com')  {
-          window.location         = 'home';
+          localStorage.setItem('user', 'andrey1');
+          //console.log(localStorage.getItem('user'));
+          //Router.push('/home');
+          browserHistory.push("/dashboard");
+          //window.location         = 'home';
           // this.setState({open: false});
         } else  {
             this.setState({open: true});
@@ -139,7 +146,7 @@ class Signin extends PureComponent {
 
     //Modal Dialog Handler
     handleCancel() {
-      window.location             = '/';
+      browserHistory.replace('/');
     }
 
     closeModal() {

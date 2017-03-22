@@ -1,13 +1,13 @@
 import React, {
   PureComponent,
   PropTypes
-}                             from 'react';
-import {Jumbotron}            from '../../components';
-import AnimatedView           from '../../components/animatedView/AnimatedView';
-import { Link }               from 'react-router';
-import ChartBox               from '../../components/ChartBox';
-import LeftSideBox            from '../../components/LeftSideBox';
-import ModalBox               from '../../components/ModalBox';       
+}                                   from 'react';
+import {Jumbotron}                  from '../../components';
+import AnimatedView                 from '../../components/animatedView/AnimatedView';
+import { Link, browserHistory }     from 'react-router';
+import ChartBox                     from '../../components/ChartBox';
+import LeftSideBox                  from '../../components/LeftSideBox';
+import ModalBox                     from '../../components/ModalBox';       
 
 class SubInfo extends PureComponent {
 

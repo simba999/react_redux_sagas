@@ -17,6 +17,8 @@ class Index extends PureComponent {
       openModalState: false
     }
 
+    localStorage.setItem('user', '');
+
     const { enterHome, clickMenu } = this.props;
   }
 

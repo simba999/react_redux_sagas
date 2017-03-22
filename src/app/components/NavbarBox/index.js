@@ -75,11 +75,11 @@ class NavbarBox extends React.Component {
               <li className="dropdown" style={{'paddingRight': '20px'}}>
                 <a href="#" className="dropdown-toggle heading_link" data-toggle="dropdown">My Account</a>
                 <ul className="dropdown-menu">
-                  <li><a href="/profile">Profile</a></li>
-                  <li><a href="/password">Password</a></li>
-                  <li><a href="/payment">Payment</a></li>
-                  <li><a href="/users">Users</a></li>
-                  <li><a href="#">Sign out</a></li>
+                  <li><Link to="/profile">Profile</Link></li>
+                  <li><Link to="/password">Password</Link></li>
+                  <li><Link to="/payment">Payment</Link></li>
+                  <li><Link to="/users">Users</Link></li>
+                  <li><Link to="">Sign out</Link></li>
                 </ul>
               </li>
               <li style={{'paddingTop': '10px', 'color':'#ffffff'}}>&nbsp; | &nbsp;</li> 
@@ -99,7 +99,7 @@ class NavbarBox extends React.Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse submenu" aria-expanded="false">
             <ul className="nav navbar-nav" id="selectElement">
-              <li onClick={this.setActive.bind(this)}><Link to="home">Home</Link></li>
+              <li onClick={this.setActive.bind(this)}><Link to="dashboard">Home</Link></li>
               <li onClick={this.setActive.bind(this)} className="active"><Link to="opencase">Open Claims</Link></li>
               <li onClick={this.setActive.bind(this)}><Link to="closeclaim">Closed Claims</Link></li>
               <li onClick={this.setActive.bind(this)}><Link to="reports">Reports</Link></li>

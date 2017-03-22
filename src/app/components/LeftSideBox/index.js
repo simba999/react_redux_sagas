@@ -62,7 +62,7 @@ class LeftSideBox extends React.Component {
         <div className="header_text">
           <span className="padding-left-little">Personal Info</span>
           <hr />
-          <span className="pull-right padding-right-little"><a href="index">index</a></span>          
+          <span className="pull-right padding-right-little"><Link to="index">index</Link></span>          
         </div>
         <div className="content_text">
           <div className="menu_text"><span href="#" className="active">Personal Info</span></div>

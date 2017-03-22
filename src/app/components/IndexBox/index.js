@@ -4,6 +4,7 @@ import React, {
   Component,
   PropTypes
 }                                 from 'react';
+import {browserHistory, Link}           from 'react-router';
 import {Motion, spring, presets}  from 'react-motion';
 
 class IndexBox extends React.Component {
@@ -25,7 +26,7 @@ class IndexBox extends React.Component {
   }
 
   gotoOpenClaim() {
-    window.location = '/opencase';
+    browserHistory.push('opencase');
   }
 
   render() {
@@ -57,7 +58,7 @@ class IndexBox extends React.Component {
           </div>
           <div className="col-sm-3">
             <div className="form-horizontal">
-              <a className="blue_color" href="user">Personal Info</a>
+              <Link className="blue_color" to="user">Personal Info</Link>
               <hr />
             </div>
             <div className="yellow_squre_text_decoration">
