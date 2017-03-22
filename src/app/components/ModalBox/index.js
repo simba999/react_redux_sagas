@@ -5,7 +5,7 @@ import React, {
   PropTypes
 }                                 from 'react';
 import {Motion, spring, presets}  from 'react-motion';
-import Modal                   from 'react-bootstrap-modal'
+import Modal                      from 'react-bootstrap-modal';
 
 class ModalBox extends React.Component {
 

@@ -52,7 +52,7 @@ class ProfileBox extends React.Component {
   render() {
 
     return (
-      <div className="white-panel panel-margin">
+      <div className="white-panel panel-margin profile_panel">
         <div className="form-horizontal header_text">
           <span className="">{this.props.title}</span>
           <span className="pull-right"><label className="remove_icon padding_inner_box" onClick={this.gotoHome.bind(this)}></label></span>
@@ -62,8 +62,6 @@ class ProfileBox extends React.Component {
         <div className="form-horizontal content_text">
           <span>{this.props.content}</span>
           <CustomAccordion />
-        </div>
-        <div className="footer_text payment_page">
         </div>
       </div>
     );
