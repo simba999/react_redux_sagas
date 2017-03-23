@@ -50,10 +50,10 @@ class Licence extends PureComponent {
  
         <div className="container homepage">
           <div className="opencase_margin">
-            <div className="col-sm-9 ">
+            <div className="col-sm-9 left_panel_one">
               <FooterDetailBox title="Software Licence Agreement" content="" sUrl={this.props.currentView}></FooterDetailBox>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-3 right_panel_one">
               <RightSideBox></RightSideBox>
             </div>
           </div>  

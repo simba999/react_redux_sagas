@@ -4,6 +4,7 @@ import React, {
   Component,
   PropTypes
 }                                 from 'react';
+import { Link, browserHistory }   from 'react-router';
 import {Motion, spring, presets}  from 'react-motion';
 import { connect }                from 'react-redux';
 import * as eventActions          from '../../redux/modules/event';
@@ -40,7 +41,7 @@ class FooterBox extends React.Component {
 
   removeModalLicence() {
     // this.setState({openModalLicence : false});
-    window.location = '/';
+    browserHistory.push('/');
   }
 
   openDialogPrivacy() {
@@ -49,11 +50,11 @@ class FooterBox extends React.Component {
   }
 
   removeModalPrivacy() {
-    window.location = '/';
+    browserHistory.push('/');
   }
 
   removeModalSecurity() {
-    window.location = '/';
+    browserHistory.push('/');
   }
 
   gotoLicence() {
@@ -67,7 +68,7 @@ class FooterBox extends React.Component {
     return (
       <div className="text_footer_color">
         <div className="row">
-              <div className="text-center"><a href="#" onClick={this.gotoLicence.bind(this)}>Software Licence Agreements</a>&nbsp;|&nbsp;<a href="privacy">Privacy Statement</a>&nbsp;|&nbsp;<a href="security">Security</a></div>
+              <div className="text-center"><Link to="/licence" onClick={this.gotoLicence.bind(this)}>Software Licence Agreements</Link>&nbsp;|&nbsp;<Link to="/privacy">Privacy Statement</Link>&nbsp;|&nbsp;<Link to="/security">Security</Link></div>
               <div className="text-center ">©2017 Claimzen, Inc. All rights reserved.</div>
         </div>        
       </div>

@@ -4,6 +4,7 @@ import React, {
   Component,
   PropTypes
 }                                 from 'react';
+import {Link, browserHistory}     from 'react-router';
 import {Motion, spring, presets}  from 'react-motion';
 import { connect }                from 'react-redux';
 import * as eventActions          from '../../redux/modules/event';
@@ -27,8 +28,9 @@ class FooterDetailBox extends React.Component {
   }
 
   gotoHome(e) {
-    console.log("Dom: ", e.target);
-    console.log("GoHome: ", e.target.attributes.getNamedItem('value').value);
+    browserHistory.push('dashboard');
+    // console.log("Dom: ", e.target);
+    // console.log("GoHome: ", e.target.attributes.getNamedItem('value').value);
     // window.location = this.props.sUrl;
   }
 
@@ -49,7 +51,7 @@ class FooterDetailBox extends React.Component {
 
     return (
       <div className="white-panel panel-margin">
-        <div className="form-horizontal header_text">
+        <div className="form-horizontal header_text footer_page">
           <span className="">{this.props.title}</span>
           <span className="pull-right"><label className="remove_icon1 padding_inner_box" onClick={this.gotoHome.bind(this)} value={this.props.sUrl}></label></span>
           <hr />
@@ -59,8 +61,9 @@ class FooterDetailBox extends React.Component {
           <span>{this.props.content}</span>
         </div>
         <div className="footer_text payment_page">
+            <hr />
             <div className="pull-right">
-              <a href="#" className="btn">Close</a> 
+              <a href="#" className="btn close_button">Close</a> 
             </div>
         </div>
       </div>

@@ -85,7 +85,7 @@ body {
         font-size: 0.6875rem;
     }
     .homepage .opencase_margin {
-        padding: 8.75rem 5.2rem 0 5.2rem;
+        padding: 4% 5.2rem 0 5.2rem;
         font-size: 0.6875rem;
         width: 100%;
         height: 90%;
@@ -96,7 +96,7 @@ body {
             width: 23%;
         }
         .content_text {
-            height: calc(100% - 470px);
+            height: calc(100% - 230px);
             //min-height: 360px;
         }
         .white-panel {
@@ -149,7 +149,7 @@ body {
             height: 100%;
         }
         .right_header_text {
-            padding-top: 2.5rem;
+            padding-top: 3rem;
         }
         .text_align_center {
             font-size: 0.9375rem;
@@ -246,7 +246,7 @@ body {
         font-size: 0.6875rem;
     }
     .opencase_margin {
-        padding: 8.75rem 6.125rem 0 6.125rem;
+        padding: 15% 6.125rem 0 6.125rem;
         font-size: 0.6875rem;
         width: 100%;
         height: 90%;
@@ -260,7 +260,7 @@ body {
             height: 100%;
         }
         .right_header_text {
-            padding-top: 2.5rem;
+            padding-top: 3rem;
         }
         .text_align_center {
             font-size: 0.9375rem;
@@ -292,7 +292,7 @@ body {
             width: 23%;
         }
         .content_text {
-            height: calc(100% - 470px);
+            height: calc(100% - 235px);
             //min-height: 360px;
         }
         .white-panel {
@@ -338,6 +338,10 @@ body {
         padding-bottom: 15px;
     }
     .account_page {
+        .col-sm-9 {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
         .panel_item {
             padding: 0.5em 0.8em;
         }
@@ -470,7 +474,7 @@ body {
             width: 23%;
         }
         .content_text {
-            height: calc(100% - 220px);
+            height: calc(100% - 230px);
             //min-height: 360px;
         }
         .white-panel {
@@ -550,8 +554,20 @@ body {
             .panel_selectedItem {
                 margin-left: 0;
                 margin-right: 0;
+                border-bottom: 2px solid #d9d9d9;
                 .subpanel_title {
-                    padding: 0 1.5em;
+                    padding: 1em 1.5em;
+                }
+            }
+            .subpanel_content {
+                .row {
+                    padding-bottom: 0.5em;
+                }
+                .banner_label {
+                    text-align: right;
+                }
+                .padding_right_middle {
+                    //padding-right: 4em;
                 }
             }
         }
@@ -585,15 +601,18 @@ body {
     }
     .homepage .opencase_margin {
         height: 90%;
+        padding: 8rem 5.2rem 0 5.2rem;
         //min-height: 30rem;
         .white-panel {
             //min-height: 20rem;
         }
         .content_text {
             //min-height: 10rem;
+            height: calc(100% - 215px);
         }
         .header_text {
-            padding: 2.5rem 1.4rem 0 1.4rem;
+            padding: 2.1rem 1.4rem 0 1.4rem;
+            font-size: 1.765rem;
         }
         .right_header_text {
             padding-top: 2.7rem;
@@ -604,6 +623,11 @@ body {
         // Open New Matter Dialog
         .dev {
             bottom: 7.6%;
+        }
+        .payment_page {
+            .close_button {
+                height: 42px;
+            }
         }
     }
     .opencase_margin {
@@ -626,7 +650,7 @@ body {
             }
         }
         .right_header_text {
-            padding-top: 2.7rem;
+            padding-top: 2.5rem;
         }
         .footer_text_color {
             padding-top: 0.675rem;
@@ -672,21 +696,32 @@ body {
     }
     .homepage .opencase_margin {
         height: 90%;
+        padding: 7rem 5.2rem 0 5.2rem;
         //min-height: 30rem;
         .white-panel {
             //min-height: 20rem;
         }
         .content_text {
             //min-height: 10rem;
+            height: calc(100% - 200px);
         }
         .header_text {
-            padding: 2.5rem 1.4rem 0 1.4rem;
+            padding: 2rem 1.4rem 0 1.4rem;
+            font-size: 1.475rem;
         }
         .right_header_text {
-            padding-top: 3rem;
+            padding-top: 2.1rem;
         }
         .footer_text_color {
-            padding-top: 0.675rem;
+            padding-top: 0.475rem;
+        }
+        .payment_page {
+            .close_button {
+                height: 40px;
+            }
+            hr {
+                margin-bottom: 16px;
+            }
         }
     }
     .opencase_margin {
@@ -763,7 +798,7 @@ body {
         margin-top: 0px;
     }
     .homepage .opencase_margin {
-        padding: 8.75rem 5.2rem 0 5.2rem;
+        padding: 7rem 5.2rem 0 5.2rem;
         //min-height: 25rem;
         height: 90%;
         .left_panel_one {
@@ -775,13 +810,13 @@ body {
         .right_header_text {
             padding-top: 2rem;
             .btn-dark-yellow {
-                width: 9rem;
-                font-size: 0.875rem;
-                height: 2.5rem;
+                width: 7rem;
+                font-size: 0.6875rem;
+                height: 2.2rem;
             }
         }
         .content_text {
-            height: calc(100% - 220px);
+            height: calc(100% - 190px);
             //min-height: 160px;
         }
         .white-panel {
@@ -790,22 +825,35 @@ body {
         }
         .header_text {
             padding: 1.5rem 1.4rem 0 1.4rem;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             hr {
-                margin-top: 0.625rem;
-            }
-            .remove_icon {
-                display: none;
+                margin-top: 0.325rem;
             }
         }
         .footer_text {
             hr {
-                margin-bottom: 1.4rem;
+                margin-bottom: 1rem;
             }
         }
         // Open New Matter Dialog
         .dev {
             bottom: 8.5%;
+        }
+        .payment_page {
+            .close_button {
+                height: 40px;
+            }
+        }
+        .footer_page {
+            padding: 1.8rem 1.4rem 0 1.4rem;
+            .remove_icon1 {
+                background: url('../images/small_remove_icon.png') left center no-repeat;
+                height: 30px;
+                width: 33px;
+            }
+            hr {
+                margin-top: 10px;
+            }
         }
     }
     .opencase_margin {
@@ -841,6 +889,12 @@ body {
         .blue_header tr th {
             font-size: 13px;
         }
+        .text_align_center {
+                font-size: 0.9375rem;
+                padding-top: 1.43rem;
+                padding-left: 2.8rem;
+                text-align: left;
+            }
     }
     .info_page .opencase_margin {
         padding: 8.75rem 6.125rem 0 6.125rem;
@@ -880,39 +934,107 @@ body {
 
 @media (max-width: 1296px) {
     .top_header {
-        height: 46.63px;
+        height: 46px;
         padding-left: 7rem;
-        padding-top: 0.3em;
+        padding-top: 0.6em;
         .navbar-nav > li > a {
-            font-size: $FONT12;
+            font-size: $FONT11;
         }
         .brand-image {
             background-size: auto 50px;
         }
         .navbar-brand {
-            height: 40px;
+            height: 30px;
         }
     }
     .below_header {
-        height: 28.36px;
+        height: 31px;
         .submenu.navbar-collapse {
             #selectElement li > a {
                 font-size: $FONT10;
                 //padding-top: 8.6%;
+
             }
-            /*
+            
             #selectElement li.active > a {
                 font-size: $FONT10;
                 //padding-top: 5.5%;
+                border-bottom: 3px solid #ff9900;
             }
-            */
+            
         }
         .navbar-nav > li > a {
-            padding-top: 0.125rem;
+            padding-top: 0.425rem;
+        }
+    }
+    label.remove_icon {
+        margin-top: 0px;
+    }
+    .homepage .opencase_margin {
+        padding: 6.05rem 5.2rem 0 5.2rem;
+        //min-height: 25rem;
+        height: 90%;
+        .left_panel_one {
+            width: 77%;
+        }
+        .right_panel_one {
+            width: 23%;
+        }
+        .right_header_text {
+            padding-top: 2rem;
+            .btn-dark-yellow {
+                width: 7rem;
+                font-size: 0.6875rem;
+                height: 2.2rem;
+            }
+        }
+        .content_text {
+            height: calc(100% - 180px);
+            //min-height: 160px;
+        }
+        .white-panel {
+            //min-height: 400px;
+            height: 100%;
+        }
+        .header_text {
+            padding: 1.5rem 1.4rem 0 1.4rem;
+            font-size: 1.2rem;
+            hr {
+                margin-top: 0.625rem;
+            }
+        }
+        .footer_text {
+            hr {
+                margin-bottom: 0.7rem;
+            }
+
+            .close_button {
+                height: 35px;
+                width: 85px;
+                font-size: $FONT11;
+            }
+        }
+        // Open New Matter Dialog
+        .dev {
+            bottom: 8.5%;
+        }
+        .footer_page {
+            padding: 1.8rem 1.4rem 0 1.4rem;
+            .remove_icon1 {
+                background: url('../images/small_remove_icon.png') left center no-repeat;
+                height: 30px;
+                width: 33px;
+            }
+            hr {
+                margin-top: 10px;
+            }
         }
     }
     .opencase_margin {
-        height: auto;
+        height: 90%;
+        //min-height: 29rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0rem;
         .white-panel {
             //min-height: 20rem;
             height: 100%;
@@ -923,14 +1045,60 @@ body {
             height: calc(100% - 210px);
         }
         .header_text {
-            padding: 2.5rem 1.4rem 0 1.4rem;
+            padding: 1.5rem 1.4rem 0 1.4rem;
             font-size: 1.575rem;
             hr {
                 margin-top: 0.3175rem;
             }
         }
-        .remove_icon {
-            height: 30px;
+        .right_header_text {
+            padding-top: 2rem;
+        }
+        .footer_text_color {
+            padding-top: 0.675rem;
+        }
+        .close_button {
+            height: 2.5rem;
+        }
+        .blue_header tr th {
+            font-size: 13px;
+        }
+        .text_align_center {
+                font-size: 0.9375rem;
+                padding-top: 1.43rem;
+                padding-left: 2.8rem;
+                text-align: left;
+            }
+    }
+    .info_page .opencase_margin {
+        padding: 8.75rem 6.125rem 0 6.125rem;
+        .submenu_text {
+            padding-top: 0px;
+            font-size: 0.75rem;
+        }
+        .left_side_box {
+            padding-left: 0px;
+        }
+    }
+    .account_page .opencase_margin {
+        padding: 8.75rem 6.125rem 0 6.125rem;
+        font-size: 0.875rem;
+        .col-sm-9 {
+            padding-right: 0px;
+            padding-left: 0px;
+            width: 790px;
+        }
+        .col-sm-3 {
+            padding-right: 0px;
+            width: 250px;
+        }
+        .right_header_text {
+            padding-top: 40px;
+        }
+        .header_text {
+            hr {
+                margin-top: 10px;
+            }
         }
     }
 }
