@@ -84,56 +84,6 @@ body {
         padding-top: 1rem;
         font-size: 0.6875rem;
     }
-    .homepage .opencase_margin {
-        padding: 4% 5.2rem 0 5.2rem;
-        font-size: 0.6875rem;
-        width: 100%;
-        height: 90%;
-        .left_panel_one {
-            width: 77%;
-        }
-        .right_panel_one {
-            width: 23%;
-        }
-        .content_text {
-            height: calc(100% - 230px);
-            //min-height: 360px;
-        }
-        .white-panel {
-            //min-height: 550px;
-            height: 100%;
-        }
-        .header_text {
-            padding: 2.5rem 1.4rem 0 1.4rem;
-            font-size: 1.875rem;
-            hr {
-                margin-top: 0.625rem;
-            }
-            .remove_icon {
-                display: none;
-            }
-        }
-        .footer_text {
-            hr {
-                margin-bottom: 1.4rem;
-            }
-        }
-        //Open New Matter 
-        .dev {
-            bottom: 7%;
-            .content_text {
-                height: calc(100% - 20em);
-            }
-            .header_text {
-                padding: 2.5rem 1.4rem 0 1.4rem;
-                font-size: 1.875rem;
-            }
-        }
-    }
-    .text_footer_color {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
     .opencase_margin {
         padding: 8.75rem 6.125rem 0 6.125rem;
         font-size: 0.6875rem;
@@ -149,7 +99,13 @@ body {
             height: 100%;
         }
         .right_header_text {
-            padding-top: 3rem;
+            padding-top: 3.8rem;
+            .btn-dark-yellow {
+                width: 13em;
+                height: 3.5em;
+                line-height: 3;
+                font-size: 1.5em;
+            }
         }
         .text_align_center {
             font-size: 0.9375rem;
@@ -168,6 +124,61 @@ body {
         .row {
             padding: 0;
         }
+    }
+    .homepage .opencase_margin {
+        padding: 10rem 5.2rem 0 5.2rem;
+        font-size: 0.6875rem;
+        width: 100%;
+        height: 90%;
+        .left_panel_one {
+            width: 77%;
+        }
+        .right_panel_one {
+            width: 23%;
+        }
+        .content_text {
+            height: calc(100% - 270px);
+            //min-height: 360px;
+        }
+        .white-panel {
+            //min-height: 550px;
+            height: 100%;
+        }
+        .header_text {
+            padding: 2.5rem 1.4rem 0 1.4rem;
+            font-size: 2.875rem;
+            hr {
+                margin-top: 0.625rem;
+            }
+            .remove_icon {
+                display: none;
+            }
+        }
+        .footer_text {
+            hr {
+                margin-bottom: 1.4rem;
+            }
+            .close_button {
+                height: 55px;
+                width: 120px;
+                font-size: 1.25em;
+            }
+        }
+        //Open New Matter 
+        .dev {
+            bottom: 7%;
+            .content_text {
+                height: calc(100% - 20em);
+            }
+            .header_text {
+                padding: 2.5rem 1.4rem 0 1.4rem;
+                font-size: 1.875rem;
+            }
+        }
+    }
+    .text_footer_color {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .info_page {
         .remove_icon {
@@ -246,7 +257,7 @@ body {
         font-size: 0.6875rem;
     }
     .opencase_margin {
-        padding: 15% 6.125rem 0 6.125rem;
+        padding: 10rem 6.125rem 0 6.125rem;
         font-size: 0.6875rem;
         width: 100%;
         height: 90%;
@@ -260,7 +271,13 @@ body {
             height: 100%;
         }
         .right_header_text {
-            padding-top: 3rem;
+            padding-top: 3.3rem;
+            .btn-dark-yellow {
+                width: 13em;
+                height: 3.5em;
+                line-height: 3;
+                font-size: 1.5em;
+            }
         }
         .text_align_center {
             font-size: 0.9375rem;
@@ -273,7 +290,7 @@ body {
                 padding-top: 0.8%;
             }
             hr {
-                margin-bottom: 20px;
+                margin-bottom: 1.2em;
             }
         }
         .row {
@@ -281,7 +298,7 @@ body {
         }
     }
     .homepage .opencase_margin {
-        padding: 8.75rem 5.2rem 0 5.2rem;
+        padding: 10rem 5.2rem 0 5.2rem;
         font-size: 0.6875rem;
         width: 100%;
         height: 90%;
@@ -292,7 +309,7 @@ body {
             width: 23%;
         }
         .content_text {
-            height: calc(100% - 235px);
+            height: calc(100% - 260px);
             //min-height: 360px;
         }
         .white-panel {
@@ -301,7 +318,7 @@ body {
         }
         .header_text {
             padding: 2.5rem 1.4rem 0 1.4rem;
-            font-size: 1.875rem;
+            font-size: 2.475rem;
             hr {
                 margin-top: 0.625rem;
             }
@@ -312,6 +329,12 @@ body {
         .footer_text {
             hr {
                 margin-bottom: 1.4rem;
+            }
+            .close_button {
+                height: 55px;
+                width: 120px;
+                line-height: 2;
+                font-size: 1.15em;
             }
         }
         //Open New Matter 
@@ -462,6 +485,55 @@ body {
         padding-top: 1rem;
         font-size: 0.6875rem;
     }
+    .opencase_margin {
+        padding: 8.75rem 6.125rem 0 6.125rem;
+        font-size: 0.6875rem;
+        height: 90%;
+        //padding-bottom: 0.625rem;
+        //min-height: 738px;
+        .header_text {
+            font-size: 1.875rem;
+        }
+        .content_text {
+            height: calc(100% - 230px);
+            //min-height: 360px;
+        }
+        .white-panel {
+            //min-height: 450px;
+            height: 100%;
+        }
+        .footer_text.payment_page {
+            font-size: 16px;
+            .inline-list {
+                padding-top: 0.8%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            hr {
+                margin-bottom: 20px;
+            }
+            .close_button {
+                line-height: 1.76;
+            }
+        }
+        .right_header_text {
+            padding-top: 3rem;
+            .btn-dark-yellow {
+                font-size: $FONT15;
+                width: 180px;
+                height: 45px;
+                line-height: 2.5;
+            }
+        }
+        .text_align_center {
+            font-size: 0.9375rem;
+            padding-top: 1.43rem;
+            padding-left: 1.47rem;
+        }
+        .close_button {
+            height: 45px;
+        }
+    }
     .homepage .opencase_margin {
         padding: 8.75rem 5.2rem 0 5.2rem;
         font-size: 0.6875rem;
@@ -493,7 +565,13 @@ body {
         }
         .footer_text {
             hr {
-                margin-bottom: 1.4rem;
+                margin-bottom: 1rem;
+            }
+            .close_button {
+                width: 96px;
+                height: 45px;
+                font-size: 1rem;
+                line-height: 1.6;
             }
         }
         // Open New Matter dialog
@@ -502,46 +580,6 @@ body {
             .content_text {
                 height: calc(100% - 20em);
             }
-        }
-    }
-    .opencase_margin {
-        padding: 8.75rem 6.125rem 0 6.125rem;
-        font-size: 0.6875rem;
-        height: 90%;
-        //padding-bottom: 0.625rem;
-        //min-height: 738px;
-        .header_text {
-            font-size: 1.875rem;
-        }
-        .content_text {
-            height: calc(100% - 230px);
-            //min-height: 360px;
-        }
-        .white-panel {
-            //min-height: 450px;
-            height: 100%;
-        }
-        .footer_text.payment_page {
-            font-size: 16px;
-            .inline-list {
-                padding-top: 0.8%;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            hr {
-                margin-bottom: 20px;
-            }
-        }
-        .right_header_text {
-            padding-top: 3rem;
-        }
-        .text_align_center {
-            font-size: 0.9375rem;
-            padding-top: 1.43rem;
-            padding-left: 1.47rem;
-        }
-        .close_button {
-            height: 45px;
         }
     }
     .account_page {
@@ -599,6 +637,40 @@ body {
             //padding-top: 6.6%;
         }
     }
+    .opencase_margin {
+        height: 90%;
+        //min-height: 40rem;
+        margin-bottom: 0.5rem;
+        padding: 8rem 6.125rem 0 6.125rem;
+        .white-panel {
+            //min-height: 30rem;
+        }
+        .content_text {
+            //min-height: 19rem;
+            height: calc(100% - 210px);
+        }
+        .header_text {
+            padding: 2.1rem 1.4rem 0 1.4rem;
+            font-size: 1.765rem;
+            hr {
+                margin-top: 0.3175rem;
+            }
+        }
+        .footer_text {
+            .close_button {
+                width: 90px;
+                height: 42.2px;
+                font-size: 0.875rem;
+                line-height: 1.46;
+            }
+        }
+        .right_header_text {
+            padding-top: 2.5rem;
+        }
+        .footer_text_color {
+            padding-top: 0.675rem;
+        }
+    }
     .homepage .opencase_margin {
         height: 90%;
         padding: 8rem 5.2rem 0 5.2rem;
@@ -615,7 +687,7 @@ body {
             font-size: 1.765rem;
         }
         .right_header_text {
-            padding-top: 2.7rem;
+            padding-top: 2.5rem;
         }
         .footer_text_color {
             padding-top: 0.675rem;
@@ -626,34 +698,11 @@ body {
         }
         .payment_page {
             .close_button {
-                height: 42px;
+                width: 6.5em;
+                height: 2.8em;
+                font-size: 1rem;
+                line-height: 1.6;
             }
-        }
-    }
-    .opencase_margin {
-        height: 90%;
-        //min-height: 40rem;
-        margin-bottom: 0.5rem;
-        padding-bottom: 0rem;
-        .white-panel {
-            //min-height: 30rem;
-        }
-        .content_text {
-            //min-height: 19rem;
-            height: calc(100% - 230px);
-        }
-        .header_text {
-            padding: 2.5rem 1.4rem 0 1.4rem;
-            font-size: 1.875rem;
-            hr {
-                margin-top: 0.3175rem;
-            }
-        }
-        .right_header_text {
-            padding-top: 2.5rem;
-        }
-        .footer_text_color {
-            padding-top: 0.675rem;
         }
     }
 }
@@ -694,6 +743,47 @@ body {
             padding-top: 0.425rem;
         }
     }
+    .opencase_margin {
+        height: 90%;
+        //min-height: 40rem;
+        margin-bottom: 0.5rem;
+        padding: 7rem 6.125rem 0 6.125rem;
+        .white-panel {
+            //min-height: 30rem;
+        }
+        .content_text {
+            //min-height: 19rem;
+            height: calc(100% - 180px);
+        }
+        .header_text {
+            padding: 2rem 1.4rem 0 1.4rem;
+            font-size: 1.475rem;
+            hr {
+                margin-top: 0.3175rem;
+            }
+            .remove_icon {
+                height: 30px;
+            }
+        }
+        .right_header_text {
+            padding-top: 3.1rem;
+        }
+        .footer_text_color {
+            padding-top: 0.675rem;
+        }
+        .footer_text.payment_page {
+            font-size: 13px;
+            .close_button {
+                width: 76.8px;
+                height: 37px;
+                font-size: 0.735rem;
+                line-height: 1.23;
+            }
+            hr {
+                margin-top: 5px;
+            }
+        }
+    }
     .homepage .opencase_margin {
         height: 90%;
         padding: 7rem 5.2rem 0 5.2rem;
@@ -710,47 +800,27 @@ body {
             font-size: 1.475rem;
         }
         .right_header_text {
-            padding-top: 2.1rem;
+            padding-top: 2.27rem;
+            .btn-dark-yellow {
+                font-size: $FONT14;
+                width: 160px;
+                height: 40px;
+                line-height: 2.3;
+            }
         }
         .footer_text_color {
             padding-top: 0.475rem;
         }
         .payment_page {
             .close_button {
-                height: 40px;
+                width: 6.4em;
+                height: 2.9em;
+                font-size: .875rem;
+                line-height: 1.33;
             }
             hr {
                 margin-bottom: 16px;
             }
-        }
-    }
-    .opencase_margin {
-        height: 90%;
-        //min-height: 40rem;
-        margin-bottom: 0.5rem;
-        padding-bottom: 0rem;
-        .white-panel {
-            //min-height: 30rem;
-        }
-        .content_text {
-            //min-height: 19rem;
-            height: calc(100% - 220px);
-        }
-        .header_text {
-            padding: 2.5rem 1.4rem 0 1.4rem;
-            font-size: 1.875rem;
-            hr {
-                margin-top: 0.3175rem;
-            }
-        }
-        .right_header_text {
-            padding-top: 3rem;
-        }
-        .footer_text_color {
-            padding-top: 0.675rem;
-        }
-        .footer_text.payment_page {
-            font-size: 13px;
         }
     }
     .account_page {
@@ -797,6 +867,46 @@ body {
     label.remove_icon {
         margin-top: 0px;
     }
+    .opencase_margin {
+        height: 90%;
+        //min-height: 29rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0rem;
+        .white-panel {
+            //min-height: 20rem;
+            height: 100%;
+            width: 100%;
+        }
+        .content_text {
+            // min-height: 15.5rem;
+            height: calc(100% - 210px);
+        }
+        .header_text {
+            padding: 1.5rem 1.4rem 0 1.4rem;
+            font-size: 1.575rem;
+            hr {
+                margin-top: 0.3175rem;
+            }
+        }
+        .right_header_text {
+            padding-top: 2rem;
+        }
+        .footer_text_color {
+            padding-top: 0.675rem;
+        }
+        .close_button {
+            height: 2.5rem;
+        }
+        .blue_header tr th {
+            font-size: 13px;
+        }
+        .text_align_center {
+            font-size: 0.9375rem;
+            padding-top: 1.43rem;
+            padding-left: 2.8rem;
+            text-align: left;
+        }
+    }
     .homepage .opencase_margin {
         padding: 7rem 5.2rem 0 5.2rem;
         //min-height: 25rem;
@@ -841,7 +951,10 @@ body {
         }
         .payment_page {
             .close_button {
-                height: 40px;
+                width: 6.2em;
+                height: 2.5em;
+                font-size: .875rem;
+                line-height: 1.33;
             }
         }
         .footer_page {
@@ -855,46 +968,6 @@ body {
                 margin-top: 10px;
             }
         }
-    }
-    .opencase_margin {
-        height: 90%;
-        //min-height: 29rem;
-        margin-bottom: 0.5rem;
-        padding-bottom: 0rem;
-        .white-panel {
-            //min-height: 20rem;
-            height: 100%;
-            width: 100%;
-        }
-        .content_text {
-            // min-height: 15.5rem;
-            height: calc(100% - 210px);
-        }
-        .header_text {
-            padding: 1.5rem 1.4rem 0 1.4rem;
-            font-size: 1.575rem;
-            hr {
-                margin-top: 0.3175rem;
-            }
-        }
-        .right_header_text {
-            padding-top: 2rem;
-        }
-        .footer_text_color {
-            padding-top: 0.675rem;
-        }
-        .close_button {
-            height: 2.5rem;
-        }
-        .blue_header tr th {
-            font-size: 13px;
-        }
-        .text_align_center {
-                font-size: 0.9375rem;
-                padding-top: 1.43rem;
-                padding-left: 2.8rem;
-                text-align: left;
-            }
     }
     .info_page .opencase_margin {
         padding: 8.75rem 6.125rem 0 6.125rem;
@@ -933,6 +1006,9 @@ body {
 /* device for 1296px */
 
 @media (max-width: 1296px) {
+    .table > tbody > tr {
+        height: 13px;
+    }
     .top_header {
         height: 46px;
         padding-left: 7rem;
@@ -953,15 +1029,12 @@ body {
             #selectElement li > a {
                 font-size: $FONT10;
                 //padding-top: 8.6%;
-
             }
-            
             #selectElement li.active > a {
                 font-size: $FONT10;
                 //padding-top: 5.5%;
                 border-bottom: 3px solid #ff9900;
             }
-            
         }
         .navbar-nav > li > a {
             padding-top: 0.425rem;
@@ -969,6 +1042,61 @@ body {
     }
     label.remove_icon {
         margin-top: 0px;
+    }
+    .opencase_margin {
+        height: 90%;
+        //min-height: 29rem;
+        margin-bottom: 0.5rem;
+        padding: 6.05rem 5.2rem 0 5.2rem;
+        .white-panel {
+            //min-height: 20rem;
+            height: 100%;
+            width: 100%;
+        }
+        .content_text {
+            // min-height: 15.5rem;
+            height: calc(100% - 155px);
+        }
+        .header_text {
+            padding: 1.5rem 1.4rem 0 1.4rem;
+            font-size: 1.2rem;
+            hr {
+                margin-top: 0.3175rem;
+            }
+            .remove_icon {
+                background: url('../images/small_remove_icon.png') left center no-repeat;
+            }
+        }
+        .right_header_text {
+            padding-top: 2rem;
+        }
+        .footer_text_color {
+            padding-top: 0.675rem;
+        }
+        .close_button {
+            height: 2.5rem;
+        }
+        .blue_header tr th {
+            font-size: 13px;
+        }
+        .text_align_center {
+            font-size: 0.9375rem;
+            padding-top: 1.43rem;
+            padding-left: 2.8rem;
+            text-align: left;
+        }
+        .footer_text.payment_page {
+            font-size: 10px;
+            .close_button {
+                width: 64.8px;
+                height: 31px;
+                font-size: 0.625rem;
+                line-height: 1.13;
+            }
+            hr {
+                margin-top: 5px;
+            }
+        }
     }
     .homepage .opencase_margin {
         padding: 6.05rem 5.2rem 0 5.2rem;
@@ -981,15 +1109,16 @@ body {
             width: 23%;
         }
         .right_header_text {
-            padding-top: 2rem;
+            padding-top: 1.995rem;
             .btn-dark-yellow {
-                width: 7rem;
+                width: 140px;
                 font-size: 0.6875rem;
-                height: 2.2rem;
+                height: 35px;
+                line-height: 2.4;
             }
         }
         .content_text {
-            height: calc(100% - 180px);
+            height: calc(100% - 175px);
             //min-height: 160px;
         }
         .white-panel {
@@ -1007,10 +1136,9 @@ body {
             hr {
                 margin-bottom: 0.7rem;
             }
-
             .close_button {
-                height: 35px;
-                width: 85px;
+                height: 33px;
+                width: 75px;
                 font-size: $FONT11;
             }
         }
@@ -1029,46 +1157,6 @@ body {
                 margin-top: 10px;
             }
         }
-    }
-    .opencase_margin {
-        height: 90%;
-        //min-height: 29rem;
-        margin-bottom: 0.5rem;
-        padding-bottom: 0rem;
-        .white-panel {
-            //min-height: 20rem;
-            height: 100%;
-            width: 100%;
-        }
-        .content_text {
-            // min-height: 15.5rem;
-            height: calc(100% - 210px);
-        }
-        .header_text {
-            padding: 1.5rem 1.4rem 0 1.4rem;
-            font-size: 1.575rem;
-            hr {
-                margin-top: 0.3175rem;
-            }
-        }
-        .right_header_text {
-            padding-top: 2rem;
-        }
-        .footer_text_color {
-            padding-top: 0.675rem;
-        }
-        .close_button {
-            height: 2.5rem;
-        }
-        .blue_header tr th {
-            font-size: 13px;
-        }
-        .text_align_center {
-                font-size: 0.9375rem;
-                padding-top: 1.43rem;
-                padding-left: 2.8rem;
-                text-align: left;
-            }
     }
     .info_page .opencase_margin {
         padding: 8.75rem 6.125rem 0 6.125rem;

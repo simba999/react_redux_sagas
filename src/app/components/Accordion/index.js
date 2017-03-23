@@ -29,35 +29,37 @@ class CustomAccordion extends React.Component{
 	toggle(id) {
 		switch(id) {
 			case 1: // When Name Field is activated
-				this.setState({ active : true });
-				this.setState({ positionActive : false });
-				this.setState({ firmActive : false });
-				this.setState({ addressActive : false});
-				this.setState({ phoneActive : false });
-				this.setState({ emailActive : false });
+				this.setState({ active 			: true });
+				this.setState({ positionActive 	: false });
+				this.setState({ firmActive 		: false });
+				this.setState({ addressActive 	: false});
+				this.setState({ phoneActive 	: false });
+				this.setState({ emailActive 	: false });
 				break;
 			case 2: // When Position Field is activated
-				this.setState({ positionActive : true });
-				this.setState({ active : false });
-				this.setState({ firmActive : false });
-				this.setState({ addressActive : false});
-				this.setState({ phoneActive : false });
-				this.setState({ emailActive : false });
+				this.setState({ positionActive 	: true });
+				this.setState({ active 			: false });
+				this.setState({ firmActive 		: false });
+				this.setState({ addressActive 	: false});
+				this.setState({ phoneActive 	: false });
+				this.setState({ emailActive 	: false });
 				break;
 			case 3: // When Firm Field is activated
-				this.setState({ firmActive : true });
-				this.setState({ active : false });
-				this.setState({ positionActive : false });
-				this.setState({ addressActive : false});
-				this.setState({ phoneActive : false });
-				this.setState({ emailActive : false });
+				this.setState({ firmActive 		: true });
+				this.setState({ active 			: false });
+				this.setState({ positionActive 	: false });
+				this.setState({ addressActive 	: false});
+				this.setState({ phoneActive 	: false });
+				this.setState({ emailActive 	: false });
+				break;
 			case 4: // // When Address Field is activated
-				this.setState({ addressActive : true});
-				this.setState({ firmActive : false });
-				this.setState({ active : false });
-				this.setState({ positionActive : false });
-				this.setState({ phoneActive : false });
-				this.setState({ emailActive : false });
+				this.setState({ addressActive 	: true});
+				this.setState({ firmActive 		: false });
+				this.setState({ active 			: false });
+				this.setState({ positionActive 	: false });
+				this.setState({ phoneActive 	: false });
+				this.setState({ emailActive 	: false });
+				break;
 			case 5: // When Phone Field is activated
 				this.setState({ phoneActive : true });
 				this.setState({ addressActive : false });
@@ -65,6 +67,7 @@ class CustomAccordion extends React.Component{
 				this.setState({ active : false });
 				this.setState({ positionActive : false });
 				this.setState({ emailActive : false });
+				break;
 			case 6: // When Phone Field is activated
 				this.setState({ emailActive : true });
 				this.setState({ phoneActive : false });
@@ -72,12 +75,13 @@ class CustomAccordion extends React.Component{
 				this.setState({ firmActive : false });
 				this.setState({ active : false });
 				this.setState({ positionActive : false });
+				break;
 			default:
 				break;
 		}
 	}
 
-	unToggole(id) {
+	unToggle(id) {
 		switch(id) {
 			case 1:
 				this.setState({ active: false });
@@ -103,6 +107,10 @@ class CustomAccordion extends React.Component{
 		
 	}
 
+	saveData() {
+
+	}
+
 	render() {
 		const stateStyle = this.state.active ? styles.active : styles.inactive;
 		console.log("style: ", stateStyle);
@@ -119,7 +127,7 @@ class CustomAccordion extends React.Component{
 						<div className="row panel_selectedItem">
 							<div className="row subpanel_title">
 								<div className="pull-left">Name</div>
-								<div className="pull-right" onClick={() => this.unToggole(1)}>Close</div>
+								<div className="pull-right cancel_link" onClick={() => this.unToggle(1)}>Close</div>
 							</div>
 							<div className="subpanel_content">
 								<div className="row">
@@ -140,7 +148,7 @@ class CustomAccordion extends React.Component{
 									</select>
 								</div>
 								<div className="row text-right col-sm-12">
-									<a className="about_link" style={{paddingRight : '2em'}}>cancel</a>
+									<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(1)}>cancel</a>
 									<a className="btn close_button">Save</a>
 								</div>
 							</div>
@@ -158,7 +166,11 @@ class CustomAccordion extends React.Component{
 						<div className="row panel_selectedItem">
 							<div className="row subpanel_title">
 								<div className="pull-left">Position</div>
-								<div className="pull-right" onClick={() => this.unToggole(2)}>Close</div>
+								<div>
+									<div className="cancel_link" onClick={() => this.unToggle(2)}>Close</div> &nbsp; | &nbsp;
+									<div className="cancel_link" onClick={() => this.unToggle(2)}>Close</div>
+								</div>
+								
 							</div>
 							<div className="subpanel_content">
 								<div className="row">
@@ -201,7 +213,7 @@ class CustomAccordion extends React.Component{
 									</select>
 								</div>
 								<div className="row text-right col-sm-12">
-									<a className="about_link" style={{paddingRight : '2em'}}>cancel</a>
+									<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(2)}>cancel</a>
 									<a className="btn close_button">Save</a>
 								</div>
 							</div>
@@ -219,7 +231,7 @@ class CustomAccordion extends React.Component{
 						<div className="row panel_selectedItem">
 							<div className="row subpanel_title">
 								<div className="pull-left">Firm</div>
-								<div className="pull-right" onClick={() => this.unToggole(3)}>Close</div>
+								<div className="pull-right cancel_link" onClick={() => this.unToggle(3)}>Close</div>
 							</div>
 							<div className="subpanel_content">
 								<div className="row">
@@ -227,7 +239,7 @@ class CustomAccordion extends React.Component{
 									<input type="text" className="col-sm-9" placeholder="Firm" />
 								</div>
 								<div className="row text-right col-sm-12">
-									<a className="about_link" style={{paddingRight : '2em'}}>cancel</a>
+									<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(3)}>cancel</a>
 									<a className="btn close_button">Save</a>
 								</div>
 							</div>
@@ -249,7 +261,7 @@ class CustomAccordion extends React.Component{
 						<div className="row panel_selectedItem">
 							<div className="row subpanel_title">
 								<div className="pull-left">Address</div>
-								<div className="pull-right" onClick={() => this.unToggole(4)}>Close</div>
+								<div className="pull-right cancel_link" onClick={() => this.unToggle(4)}>Close</div>
 							</div>
 							<div className="subpanel_content">
 								<div className="row">
@@ -276,7 +288,7 @@ class CustomAccordion extends React.Component{
 									</select>
 								</div>
 								<div className="row text-right col-sm-12">
-									<a className="about_link" style={{paddingRight : '2em'}}>cancel</a>
+									<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(4)}>cancel</a>
 									<a className="btn close_button">Save</a>
 								</div>
 							</div>
@@ -297,7 +309,7 @@ class CustomAccordion extends React.Component{
 						<div className="row panel_selectedItem">
 							<div className="row subpanel_title">
 								<div className="pull-left">Phone</div>
-								<div className="pull-right" onClick={() => this.unToggole(5)}>Close</div>
+								<div className="pull-right cancel_link" onClick={() => this.unToggle(5)}>Close</div>
 							</div>
 							<div className="subpanel_content">
 								<div className="row">
@@ -333,8 +345,8 @@ class CustomAccordion extends React.Component{
 									</select>
 								</div>
 								<div className="row text-right col-sm-12">
-									<a className="about_link" style={{paddingRight : '2em'}}>cancel</a>
-									<a className="btn close_button">Save</a>
+									<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(5)}>cancel</a>
+									<a className="btn close_button" onClick={() => this.saveData()}>Save</a>
 								</div>
 							</div>
 						</div>
@@ -352,13 +364,17 @@ class CustomAccordion extends React.Component{
 						<div className="row panel_selectedItem">
 							<div className="row subpanel_title">
 								<div className="pull-left">Email</div>
-								<div className="pull-right" onClick={() => this.unToggole(6)}>Close</div>
+								<div className="pull-right cancel_link" onClick={() => this.unToggle(6)}>Close</div>
 							</div>
 							<div className="subpanel_content">
 								<div className="row">
 									<label className="col-sm-3 banner_label">Phone type</label>
 									<input type="text" className="col-sm-9" placeholder="Phone type" />
 								</div>
+							</div>
+							<div className="row text-right col-sm-12">
+								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(6)}>cancel</a>
+								<a className="btn close_button">Save</a>
 							</div>
 						</div>
 				}
