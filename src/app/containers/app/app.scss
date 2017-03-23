@@ -630,6 +630,13 @@ body {
             height: 40px;
         }
     }
+    .top_header .dropdown-menu {
+        width: 11.5rem;
+        right: 0.625rem;
+        li a {
+            font-size: 14px;
+        }
+    }
     .below_header {
         height: 36.36px;
         .submenu.navbar-collapse #selectElement li > a {
@@ -659,13 +666,18 @@ body {
         .footer_text {
             .close_button {
                 width: 90px;
-                height: 42.2px;
-                font-size: 0.875rem;
-                line-height: 1.46;
+                height: 42px;
+                font-size: 0.75rem;
+                line-height: 1;
             }
         }
         .right_header_text {
-            padding-top: 2.5rem;
+            padding-top: 2.7rem;
+        }
+        .right_panel_one {
+            a.about_link {
+                font-size: $FONT13;
+            }
         }
         .footer_text_color {
             padding-top: 0.675rem;
@@ -687,7 +699,24 @@ body {
             font-size: 1.765rem;
         }
         .right_header_text {
-            padding-top: 2.5rem;
+            padding-top: 2.7rem;
+            .btn-dark-yellow {
+                font-size: $FONT14;
+                width: 160px;
+                height: 42px;
+                line-height: 2.4;
+            }
+        }
+        .footer_text {
+            hr {
+                margin-bottom: 1rem;
+            }
+            .close_button {
+                width: 96px;
+                height: 45px;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
         }
         .footer_text_color {
             padding-top: 0.675rem;
@@ -695,14 +724,6 @@ body {
         // Open New Matter Dialog
         .dev {
             bottom: 7.6%;
-        }
-        .payment_page {
-            .close_button {
-                width: 6.5em;
-                height: 2.8em;
-                font-size: 1rem;
-                line-height: 1.6;
-            }
         }
     }
 }
@@ -716,7 +737,7 @@ body {
         padding-left: 7rem;
         padding-top: 0.6em;
         .navbar-nav > li > a {
-            font-size: $FONT13;
+            font-size: $FONT12;
         }
         .brand-image {
             background-size: auto 50px;
@@ -725,19 +746,27 @@ body {
             height: 40px;
         }
     }
+    .top_header .dropdown-menu {
+        width: 10.5rem;
+        right: 0.625rem;
+        li a {
+            font-size: 12px;
+        }
+    }
     .below_header {
         height: 32.36px;
         .submenu.navbar-collapse {
             #selectElement li > a {
-                font-size: $FONT13;
+                font-size: $FONT11;
                 //padding-top: 8.6%;
             }
-            /*
+
             #selectElement li.active > a {
-                font-size: $FONT13;
+                font-size: $FONT11;
+                border-bottom: 3.5px solid #ff9900;
                 //padding-top: 5.5%;
             }
-            */
+
         }
         .navbar-nav > li > a {
             padding-top: 0.425rem;
@@ -753,7 +782,7 @@ body {
         }
         .content_text {
             //min-height: 19rem;
-            height: calc(100% - 180px);
+            height: calc(100% - 170px);
         }
         .header_text {
             padding: 2rem 1.4rem 0 1.4rem;
@@ -765,22 +794,34 @@ body {
                 height: 30px;
             }
         }
+        .padding-div-right {
+            padding-top: 10px;
+            font-size: $FONT12;
+        }
         .right_header_text {
             padding-top: 3.1rem;
         }
+        
+        .right_panel_one {
+            a.about_link {
+                font-size: $FONT10;
+            }
+        }
+
         .footer_text_color {
             padding-top: 0.675rem;
         }
         .footer_text.payment_page {
             font-size: 13px;
             .close_button {
-                width: 76.8px;
-                height: 37px;
-                font-size: 0.735rem;
-                line-height: 1.23;
+                width: 80px;
+                height: 36.5px;
+                font-size: 0.625rem;
+                line-height: 1.6;
             }
             hr {
                 margin-top: 5px;
+                margin-bottom: 15px;
             }
         }
     }
@@ -793,33 +834,42 @@ body {
         }
         .content_text {
             //min-height: 10rem;
-            height: calc(100% - 200px);
+            height: calc(100% - 180px);
         }
         .header_text {
-            padding: 2rem 1.4rem 0 1.4rem;
+            padding: 2.27rem 1.4rem 0 1.4rem;
             font-size: 1.475rem;
+            hr {
+                margin-top: 0.3125rem;
+            }
+        }
+        .footer_page {
+            .remove_icon1 {
+                background: url('../images/small_remove_icon.png') left center no-repeat;
+                height: 30px;
+            }
         }
         .right_header_text {
-            padding-top: 2.27rem;
+            padding-top: 2.43rem;
             .btn-dark-yellow {
-                font-size: $FONT14;
-                width: 160px;
-                height: 40px;
+                font-size: $FONT13;
+                width: 140px;
+                height: 38px;
                 line-height: 2.3;
             }
         }
         .footer_text_color {
             padding-top: 0.475rem;
         }
-        .payment_page {
-            .close_button {
-                width: 6.4em;
-                height: 2.9em;
-                font-size: .875rem;
-                line-height: 1.33;
-            }
+        .footer_text {
             hr {
-                margin-bottom: 16px;
+                margin-bottom: 1rem;
+            }
+            .close_button {
+                width: 86px;
+                height: 40px;
+                font-size: 0.875rem;
+                line-height: 1.31;
             }
         }
     }
@@ -1014,7 +1064,7 @@ body {
         padding-left: 7rem;
         padding-top: 0.6em;
         .navbar-nav > li > a {
-            font-size: $FONT11;
+            font-size: $FONT10;
         }
         .brand-image {
             background-size: auto 50px;
@@ -1023,15 +1073,23 @@ body {
             height: 30px;
         }
     }
+    .top_header .dropdown-menu {
+        width: 4.5rem;
+        right: 0.625rem;
+        li a {
+            font-size: 10px;
+            padding : 8px 3px;
+        }
+    }
     .below_header {
         height: 31px;
         .submenu.navbar-collapse {
             #selectElement li > a {
-                font-size: $FONT10;
+                font-size: 0.5625rem;
                 //padding-top: 8.6%;
             }
             #selectElement li.active > a {
-                font-size: $FONT10;
+                font-size: 0.5625rem;
                 //padding-top: 5.5%;
                 border-bottom: 3px solid #ff9900;
             }
@@ -1055,7 +1113,7 @@ body {
         }
         .content_text {
             // min-height: 15.5rem;
-            height: calc(100% - 155px);
+            height: calc(100% - 145px);
         }
         .header_text {
             padding: 1.5rem 1.4rem 0 1.4rem;
@@ -1073,28 +1131,35 @@ body {
         .footer_text_color {
             padding-top: 0.675rem;
         }
-        .close_button {
-            height: 2.5rem;
-        }
+       
         .blue_header tr th {
             font-size: 13px;
         }
         .text_align_center {
             font-size: 0.9375rem;
-            padding-top: 1.43rem;
-            padding-left: 2.8rem;
+            padding-top: 1rem;
+            padding-left: 2.6rem;
             text-align: left;
         }
         .footer_text.payment_page {
             font-size: 10px;
             .close_button {
-                width: 64.8px;
-                height: 31px;
-                font-size: 0.625rem;
-                line-height: 1.13;
+                width: 70px;
+                height: 32px;
+                font-size: 0.6rem;
+                line-height: 1.1;
             }
             hr {
                 margin-top: 5px;
+                margin-bottom: 10px;
+            }
+        }
+        a.about_link {
+                font-size: $FONT10;
+            }
+        .right_panel_one {
+            a.about_link {
+                font-size: $FONT10;
             }
         }
     }
@@ -1109,16 +1174,16 @@ body {
             width: 23%;
         }
         .right_header_text {
-            padding-top: 1.995rem;
+            padding-top: 2.1rem;
             .btn-dark-yellow {
-                width: 140px;
-                font-size: 0.6875rem;
-                height: 35px;
+                width: 110px;
+                font-size: 0.625rem;
+                height: 33px;
                 line-height: 2.4;
             }
         }
         .content_text {
-            height: calc(100% - 175px);
+            height: calc(100% - 160px);
             //min-height: 160px;
         }
         .white-panel {
@@ -1126,10 +1191,10 @@ body {
             height: 100%;
         }
         .header_text {
-            padding: 1.5rem 1.4rem 0 1.4rem;
+            padding: 2rem 1.4rem 0 1.4rem;
             font-size: 1.2rem;
             hr {
-                margin-top: 0.625rem;
+                margin-top: 0.3125rem;
             }
         }
         .footer_text {
@@ -1138,7 +1203,7 @@ body {
             }
             .close_button {
                 height: 33px;
-                width: 75px;
+                width: 70px;
                 font-size: $FONT11;
             }
         }

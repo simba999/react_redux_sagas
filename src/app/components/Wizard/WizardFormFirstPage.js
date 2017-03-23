@@ -4,6 +4,7 @@ import React, {
   Component,
   PropTypes
 }                                 from 'react';
+import {browserHistory, Link}     from 'react-router';
 import {Motion, spring, presets}  from 'react-motion';
 
 class WizardFormFirstPage extends React.Component {
@@ -25,7 +26,8 @@ class WizardFormFirstPage extends React.Component {
   }
 
   gotoHome() {
-    window.location = '/';
+    browserHistory.replace('/dashboard');
+    console.log("Clicke hererererere");
   }
 
   render() {
