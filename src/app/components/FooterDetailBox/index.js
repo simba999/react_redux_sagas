@@ -63,7 +63,7 @@ class FooterDetailBox extends React.Component {
         <div className="footer_text payment_page">
             <hr />
             <div className="pull-right">
-              <a href="#" className="btn close_button">Close</a> 
+              <a href="#" className="btn close_button" onClick={this.gotoHome.bind(this)}>Close</a> 
             </div>
         </div>
       </div>

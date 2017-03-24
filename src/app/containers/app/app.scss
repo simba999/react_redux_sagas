@@ -31,12 +31,6 @@ body {
     margin-right: 0.9375rem;
 }
 
-.account_page {
-    .col-sm-9 {
-        width: 75%;
-    }
-}
-
 .about_link {
     font-size: 0.875rem;
     color: #66cfff;
@@ -44,6 +38,12 @@ body {
 
 // larger than 2560px 
 @media (min-width: 180em) {
+    .seperate_line {
+        padding-top: 10px;
+    }
+    #navbar1 {
+        margin-top: 0.2em;
+    }
     .content_text {
         padding: 0 1.25rem;
         .blue_header {
@@ -191,6 +191,14 @@ body {
     .index_page {
         padding: 8.75rem 5.2rem 0 5.2rem;
     }
+    .account_page {
+        .left_panel_two {
+            width: 77%;
+        }
+        .right_panel_two {
+            width: 23%;
+        }
+    }
 }
 
 // large device for 2560px
@@ -203,17 +211,26 @@ body {
             font-size: 1.2rem;
         }
         .brand-image {
-            background-size: auto 60px;
+            background-size: auto 70px;
         }
         .navbar-brand {
             height: 50px;
+        }
+        #navbar1 {
+            margin-top: 0.6em;
+        }
+        .seperate_line {
+            padding-top: 10px;
         }
     }
     .below_header {
         height: 45px;
         .submenu.navbar-collapse #selectElement li > a {
-            font-size: $FONT15;
+            font-size: 1rem;
             //padding-top: 6.6%;
+        }
+        .navbar-nav > li > a {
+            padding-top: 0.9375rem;
         }
     }
     .content_text {
@@ -361,9 +378,13 @@ body {
         padding-bottom: 15px;
     }
     .account_page {
-        .col-sm-9 {
+        .left_panel_two {
             padding-left: 0px;
             padding-right: 0px;
+            width: 77%;
+        }
+        .right_panel_two {
+            width: 23%;
         }
         .panel_item {
             padding: 0.5em 0.8em;
@@ -375,27 +396,6 @@ body {
     }
 }
 
-
-/*
-@media (max-width: 130em) {
-    .opencase_margin {
-        padding: 8.75rem 6.125rem 0 6.125rem;
-        font-size: 0.6875rem;
-        width: 100%;
-        height: 90%;
-        margin-bottom: 0.9375rem;
-        .content_text {
-            height: calc(100% - 30rem);
-            //min-height: 385px;
-        }
-        .white_panel {
-            //min-height: 600px;
-            height: 100%;
-        }
-    }
-}
-*/
-
 // normal device for 1920 below
 @media (max-width: 2020px) {
     .top_header {
@@ -405,6 +405,9 @@ body {
             font-size: $FONT15;
             font-family: Hind-Regular;
         }
+        .brand-image {
+            background-size: auto 60px;
+        }
         .navbar-nav>li>a:hover {
             color: #ffffff;
             font-family: Hind-Medium;
@@ -412,6 +415,9 @@ body {
         }
         .dropdown-menu {
             top: 140%
+        }
+        #navbar1 {
+            margin-top: 0.1em;
         }
     }
     .below_header {
@@ -426,6 +432,11 @@ body {
             height: 2.33rem;
             font-size: 1.25em;
         }
+        .navbar-nav > li > a {
+            //padding-top: 0.6rem;
+            padding-top: 0.65em;
+            padding-bottom: 0.1em;
+        }
     }
     .navbar-brand {
         height: 40px;
@@ -438,11 +449,6 @@ body {
         right: 0.625rem;
         li a {
             font-size: 16px;
-        }
-    }
-    .account_page {
-        .col-sm-9 {
-            width: 75%;
         }
     }
     .content_text {
@@ -463,6 +469,7 @@ body {
         padding: 2.5rem 1.25rem 0 1.25rem;
         hr {
             margin-top: 0.625rem;
+            margin-bottom: 0.1em;
         }
         a.about_link:focus {
             color: #65ccff;
@@ -583,18 +590,25 @@ body {
         }
     }
     .account_page {
+        .content_text {
+            height: calc(100% - 200px);
+        }
         .profile_panel {
             .panel_item {
-                margin-left: 0;
-                margin-right: 0;
+                margin: 0 0.7em;
+                padding: 0.7em 0.85em;
                 border-bottom: 2px solid #d9d9d9;
             }
             .panel_selectedItem {
-                margin-left: 0;
-                margin-right: 0;
+                margin: 0 0.7em;
+                padding-bottom: 0.875em;
                 border-bottom: 2px solid #d9d9d9;
+                
                 .subpanel_title {
                     padding: 1em 1.5em;
+                }
+                .subpanel_footer {
+                    padding-top: 0.7em;
                 }
             }
             .subpanel_content {
@@ -607,6 +621,18 @@ body {
                 .padding_right_middle {
                     //padding-right: 4em;
                 }
+            }
+        }
+        .subpanel_title {
+            .pull-left {
+                font-weight: 600;
+                font-size: 1em;
+            }
+            
+        }
+        .subpanel_content {
+            label {
+                font-size: 0.75em;
             }
         }
     }
@@ -624,10 +650,13 @@ body {
             font-size: $FONT14;
         }
         .brand-image {
-            background-size: auto 50px;
+            background-size: auto 55px;
         }
         .navbar-brand {
             height: 40px;
+        }
+        #navbar1 {
+            margin-top: 0;
         }
     }
     .top_header .dropdown-menu {
@@ -640,8 +669,11 @@ body {
     .below_header {
         height: 36.36px;
         .submenu.navbar-collapse #selectElement li > a {
-            font-size: $FONT13;
+            font-size: $FONT14;
             //padding-top: 6.6%;
+        }
+        .navbar-nav > li > a {
+            padding-top: 0.5rem;
         }
     }
     .opencase_margin {
@@ -757,19 +789,18 @@ body {
         height: 32.36px;
         .submenu.navbar-collapse {
             #selectElement li > a {
-                font-size: $FONT11;
+                font-size: $FONT12;
                 //padding-top: 8.6%;
             }
-
             #selectElement li.active > a {
-                font-size: $FONT11;
+                font-size: $FONT12;
                 border-bottom: 3.5px solid #ff9900;
                 //padding-top: 5.5%;
             }
-
         }
         .navbar-nav > li > a {
-            padding-top: 0.425rem;
+            padding-top: 0.4rem;
+            padding-bottom: 0.06em;
         }
     }
     .opencase_margin {
@@ -801,13 +832,11 @@ body {
         .right_header_text {
             padding-top: 3.1rem;
         }
-        
         .right_panel_one {
             a.about_link {
                 font-size: $FONT10;
             }
         }
-
         .footer_text_color {
             padding-top: 0.675rem;
         }
@@ -1029,17 +1058,18 @@ body {
             padding-left: 0px;
         }
     }
+    /* Not Display
     .account_page .opencase_margin {
         padding: 8.75rem 6.125rem 0 6.125rem;
         font-size: 0.875rem;
-        .col-sm-9 {
+        .left_panel_two {
             padding-right: 0px;
             padding-left: 0px;
-            width: 790px;
+            width: 77%;
         }
-        .col-sm-3 {
+        .right_panel_two {
             padding-right: 0px;
-            width: 250px;
+            width: 23%;
         }
         .right_header_text {
             padding-top: 40px;
@@ -1050,6 +1080,7 @@ body {
             }
         }
     }
+    */
 }
 
 
@@ -1065,12 +1096,20 @@ body {
         padding-top: 0.6em;
         .navbar-nav > li > a {
             font-size: $FONT10;
+            padding-top: 0.5em;
+        }
+        .seperate_line {
+            font-size: $FONT10;
+            padding-top: 0.8em;
         }
         .brand-image {
-            background-size: auto 50px;
+            background-size: auto 40px;
         }
         .navbar-brand {
             height: 30px;
+        }
+        #navbar1 {
+            margin-top: 0;
         }
     }
     .top_header .dropdown-menu {
@@ -1078,24 +1117,28 @@ body {
         right: 0.625rem;
         li a {
             font-size: 10px;
-            padding : 8px 3px;
+            padding: 8px 3px;
         }
     }
     .below_header {
-        height: 31px;
+        height: 28px;
         .submenu.navbar-collapse {
             #selectElement li > a {
-                font-size: 0.5625rem;
+                font-size: 0.6rem;
                 //padding-top: 8.6%;
             }
             #selectElement li.active > a {
-                font-size: 0.5625rem;
+                font-size: 0.6rem;
                 //padding-top: 5.5%;
                 border-bottom: 3px solid #ff9900;
             }
         }
         .navbar-nav > li > a {
-            padding-top: 0.425rem;
+            padding-top: 0.265rem;
+            padding-bottom: 0em;
+        }
+        .navbar-header {
+            height: 28px;
         }
     }
     label.remove_icon {
@@ -1131,7 +1174,6 @@ body {
         .footer_text_color {
             padding-top: 0.675rem;
         }
-       
         .blue_header tr th {
             font-size: 13px;
         }
@@ -1155,8 +1197,8 @@ body {
             }
         }
         a.about_link {
-                font-size: $FONT10;
-            }
+            font-size: $FONT10;
+        }
         .right_panel_one {
             a.about_link {
                 font-size: $FONT10;
@@ -1233,17 +1275,18 @@ body {
             padding-left: 0px;
         }
     }
+    /*
     .account_page .opencase_margin {
         padding: 8.75rem 6.125rem 0 6.125rem;
         font-size: 0.875rem;
-        .col-sm-9 {
+        .left_panel_two {
             padding-right: 0px;
             padding-left: 0px;
-            width: 790px;
+            width: 77%;
         }
         .col-sm-3 {
             padding-right: 0px;
-            width: 250px;
+            width: 23%;
         }
         .right_header_text {
             padding-top: 40px;
@@ -1254,6 +1297,7 @@ body {
             }
         }
     }
+    */
 }
 
 @media (max-width: 1023px) {
@@ -1346,7 +1390,7 @@ body {
         .menu_text {
             font-size: 1.2rem;
         }
-        .col-sm-3 {
+        .left_side_box {
             width: 27%;
         }
         .col-sm-9 {

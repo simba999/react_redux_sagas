@@ -33,8 +33,7 @@ class ChartBox extends React.Component {
   }
 
   gotoHome() {
-    window.location = 'home';
-    //browserHistory.push('home');
+    browserHistory.push('dashboard');
   }
 
   setActive(el) {

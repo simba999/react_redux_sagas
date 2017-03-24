@@ -4,6 +4,7 @@ import React, {
   Component,
   PropTypes
 }                                 from 'react';
+import {browserHistory}           from 'react-router';
 import {Motion, spring, presets}  from 'react-motion';
 import ModalBox                   from '../../components/ModalBox';
 
@@ -40,7 +41,8 @@ class CloseClaimTableBox extends React.Component {
   }
 
   gotoHome() {
-    browserHistory.replace('dashboard');
+    console.log("Clicked Close Button");
+    browserHistory.push('/dashboard');
   }
 
   setActive(el) {

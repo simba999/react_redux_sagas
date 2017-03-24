@@ -33,7 +33,7 @@ class ProfileBox extends React.Component {
   }
 
   gotoHome() {
-    browserHistory.push('home');
+    browserHistory.push('dashboard');
   }
 
   setActive(el) {

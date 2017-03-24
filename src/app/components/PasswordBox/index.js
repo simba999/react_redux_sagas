@@ -3,8 +3,9 @@
  * Checkbox
  *
  */
-import React from "react";
-import CustomEmitter from "../../modules/emitter";
+import React              from "react";
+import {browserHistory}   from 'react-router';
+import CustomEmitter      from "../../modules/emitter";
 
 
 class PasswordBox extends React.Component { // eslint-disable-line react/prefer-stateless-function

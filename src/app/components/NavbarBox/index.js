@@ -37,6 +37,7 @@ class NavbarBox extends React.Component {
 
   setActive(el) {
     var allSiblings = el.target.parentNode.parentNode.childNodes;
+    console.log("LIDN: ", el.target.parentNode.parentNode.childNodes);
     var count = 0
     while ( count < allSiblings.length) {
       if (allSiblings[count].getAttribute("class") == 'active') {
@@ -72,7 +73,7 @@ class NavbarBox extends React.Component {
           </div>
           <div id="navbar1" className="navbar-collapse collapse" aria-expanded="false">
             <ul className="nav navbar-nav navbar-right white_nav task">
-              <li className="dropdown" style={{'paddingRight': '20px'}}>
+              <li className="dropdown" style={{'paddingRight': '1.5em'}}>
                 <a href="#" className="dropdown-toggle heading_link" data-toggle="dropdown">My Account</a>
                 <ul className="dropdown-menu">
                   <li><Link to="/profile">Profile</Link></li>
@@ -82,8 +83,8 @@ class NavbarBox extends React.Component {
                   <li><Link to="">Sign out</Link></li>
                 </ul>
               </li>
-              <li style={{'paddingTop': '10px', 'color':'#ffffff'}}>&nbsp; | &nbsp;</li> 
-              <li style={{'paddingLeft': '20px'}}><a href="#" className="dropdown-toggle heading_link" onClick={this.openContactModal.bind(this)}>Contact</a></li>
+              <li style={{'color':'#ffffff'}} className="seperate_line">&nbsp; | &nbsp;</li> 
+              <li style={{'paddingLeft': '1.5em'}}><a href="#" className="dropdown-toggle heading_link" onClick={this.openContactModal.bind(this)}>Contact</a></li>
             </ul>
           </div>
         </div>
@@ -99,10 +100,10 @@ class NavbarBox extends React.Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse submenu" aria-expanded="false">
             <ul className="nav navbar-nav" id="selectElement">
-              <li onClick={this.setActive.bind(this)} className="active"><Link to="dashboard">Home</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="opencase">Open Claims</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="closeclaim">Closed Claims</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="reports">Reports</Link></li>
+              <li className="active"><Link to="dashboard" onClick={this.setActive.bind(this)} >Home</Link></li>
+              <li><Link to="opencase" onClick={this.setActive.bind(this)}>Open Claims</Link></li>
+              <li><Link to="closeclaim" onClick={this.setActive.bind(this)}>Closed Claims</Link></li>
+              <li><Link to="reports" onClick={this.setActive.bind(this)}>Reports</Link></li>
             </ul>
           </div>
         </div>
