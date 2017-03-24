@@ -49,10 +49,10 @@ class Password extends PureComponent {
  
         <div className="container account_page">
           <div className="opencase_margin">
-            <div className="col-sm-9">
+            <div className="col-sm-9 left_panel_two">
               <ChartBox title="Password" content=""></ChartBox>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-3 right_panel_two">
               <RightSideBox></RightSideBox>
             </div>
           </div>  

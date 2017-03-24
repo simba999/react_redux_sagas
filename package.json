@@ -71,6 +71,7 @@
     "react-collapsible": "^1.4.0",
     "react-contextmenu": "^2.3.1",
     "react-dropdown-button": "^1.0.11",
+    "react-form-control": "^1.0.14",
     "react-split-button": "^1.0.1",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",

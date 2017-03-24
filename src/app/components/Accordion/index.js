@@ -1,6 +1,16 @@
 import React 			from 'react';
 //import SplitButton 		from 'react-split-button';
-import {MenuItem, SplitButton, ButtonToolbar}		from 'react-bootstrap';
+import 
+{
+	MenuItem, 
+	SplitButton,
+	ButtonToolbar,
+	Form,
+	FormGroup,
+	Col,
+	FormControl,
+	ControlLabel
+}						from 'react-bootstrap';
 //import {MenuItem} from 'rc-menu';
 //import 'rc-menu/assets/index.css';
 //import { ContextMenu, MenuItem} from "react-contextmenu";
@@ -160,35 +170,46 @@ class CustomAccordion extends React.Component{
 							<div className="col-sm-1 panel_link" onClick={() => this.toggle(1)}>Edit</div>
 						</div>
 					:
-						<div className="row panel_selectedItem">
-							<div className="row subpanel_title">
-								<div className="pull-left">Name</div>
-								<div className="pull-right cancel_link" onClick={() => this.unToggle(1)}>Close</div>
-							</div>
-							<div className="row subpanel_content">
-								<div className="row">
-									<label className="col-sm-3 banner_label">First name</label>
-									<input type="text" placeholder="First name" className="col-sm-9"/>
-								</div>
-								<div className="row">
-									<label className="col-sm-3 banner_label">Middle name</label>
-									<input type="text" placeholder="Middle name" className="col-sm-9" />
-								</div>
-								<div className="row">
-									<label className="col-sm-3 banner_label">Last name</label>
-									<input type="text" placeholder="Last name" className="col-sm-4 padding_right_middle" />
-									<label className="col-sm-1 banner_label">Suffix</label>
-									<select type="text" className="col-sm-4 padding_right_middle">
-										<option>Man</option>
-										<option>Woman</option>
-									</select>
-								</div>
-							</div>
-							<div className="row text-right subpanel_footer col-sm-12">
+						<Form horizontal className="panel_selectedItem">
+							<FormGroup controlId="subpanel_title" className="subpanel_title">
+								<ControlLabel className="pull-left">Name</ControlLabel>
+								<ControlLabel className="pull-right cancel_link" onClick={() => this.unToggle(1)}>Close</ControlLabel>
+							</FormGroup>
+
+							<FormGroup className="row subpanel_content">
+								<FormGroup>
+									<Col className="banner_label" sm={3}>First name</Col>
+									<Col sm={9}>
+										<FormControl type="text" placeholder="First name"/>
+									</Col>
+								</FormGroup>
+
+								<FormGroup>
+									<Col className="banner_label" sm={3}>Middle name</Col>
+									<Col sm={9}>
+										<FormControl type="text" placeholder="Middle name" className="" />
+									</Col>
+								</FormGroup>
+
+								<FormGroup>
+									<Col className="banner_label" sm={3}>Last name</Col>
+									<Col sm={4}>
+										<FormControl type="text" placeholder="Last name" className="padding_right_middle" />
+									</Col>
+									<Col className="banner_label" sm={1}>Suffix</Col>
+									<Col sm={4}>
+										<FormControl componentClass="select" className="padding_right_middle">
+											<option>Man</option>
+											<option>Woman</option>
+										</FormControl>
+									</Col>
+								</FormGroup>
+							</FormGroup>
+							<FormGroup className="row text-right subpanel_footer">
 								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(1)}>cancel</a>
 								<a className="btn close_button">Save</a>
-							</div>
-						</div>
+							</FormGroup>
+						</Form>
 				}
 
 				{
@@ -199,37 +220,46 @@ class CustomAccordion extends React.Component{
 							<div className="col-sm-1 panel_link" onClick={() => this.toggle(2)}>Edit</div>
 						</div>
 					:
-						<div className="row panel_selectedItem">
-							<div className="row subpanel_title">
-								<div className="pull-left">Position</div>
-								<div className="pull-right" style={{ 'display' : 'inline-flex' }}>
-									<div className="cancel_link" onClick={() => {this.setState({ addPosition : 'addPositionTrue' })}}>Add</div> 
-									<div>&nbsp; | &nbsp;</div>
-									<div className="cancel_link" onClick={() => this.unToggle(2)}>Close</div>
-								</div>
+						<Form className="row panel_selectedItem">
+							<FormGroup className="subpanel_title">
+								<ControlLabel className="pull-left">Position</ControlLabel>
+								<FormGroup className="pull-right" style={{ 'display' : 'inline-flex' }}>
+									<ControlLabel className="cancel_link" onClick={() => {this.setState({ addPosition : 'addPositionTrue' })}}>Add</ControlLabel> 
+									<ControlLabel>&nbsp; | &nbsp;</ControlLabel>
+									<ControlLabel className="cancel_link" onClick={() => this.unToggle(2)}>Close</ControlLabel>
+								</FormGroup>
 								
-							</div>
-							<div className="row subpanel_content">
-								<div className="row">
-									<label className="col-sm-3 banner_label">Position</label>
-									<select placeholder="Position" className="col-sm-9">
-										<option>Attorney</option>
-										<option>Seattle</option>
-									</select>
-								</div>
-								<div className="row">
-									<label className="col-sm-3 banner_label">Bar number</label>
-									<input type="text" className="col-sm-9" />
-								</div>
-								<div className="row">
-									<label className="col-sm-3 banner_label">State</label>
-									<select className="col-sm-3">
-										<option>WA</option>
-										<option>MA</option>
-									</select>
-									<label className="col-sm-2 text-right">Admit</label>
+							</FormGroup>
+							<FormGroup className="subpanel_content">
+								<FormGroup className="">
+									<Col className="banner_label" sm={3}>Position</Col>
+									<Col sm={9}>
+										<FormControl componentClass="select" placeholder="Position">
+											<option>Attorney</option>
+											<option>Seattle</option>
+										</FormControl>
+									</Col>
+								</FormGroup>
+
+								<FormGroup className="">
+									<Col className="banner_label" sm={3}>Bar number</Col>
+									<Col sm={9}>
+										<FormControl type="text" className="" />
+									</Col>
+									
+								</FormGroup>
+
+								<FormGroup className="">
+									<Col className="banner_label" sm={3}>State</Col>
+									<Col sm={3}>
+										<FormControl componentClass="select" placeholder="">
+											<option>WA</option>
+											<option>MA</option>
+										</FormControl>
+									</Col>
+									<Col className="text-right" sm={2}>Admit</Col>
 									<ButtonToolbar className="split_button_tool col-sm-4">
-										<SplitButton title="Dropdown right" className="split_button" bsStyle="combo" id="split_click">
+										<SplitButton title="Dropdown right" className="split_button" bsStyle="combo" pullRight id="split_click">
 										    <MenuItem eventKey="1">Action</MenuItem>
 										    <MenuItem eventKey="2">Another action</MenuItem>
 										    <MenuItem eventKey="3">Something else here</MenuItem>
@@ -237,40 +267,41 @@ class CustomAccordion extends React.Component{
 										    <MenuItem eventKey="4">Separated link</MenuItem>
 										 </SplitButton>
 									</ButtonToolbar>
-								</div>
-								<div className="row">
-									<FormControl
-									     // onChange={this.handleChange}
-									      value="innn"
-									      type="text"
-									      placeholder="Search" />
-								</div>
+								</FormGroup>
 
-								<div className={this.state.addPosition}>
-									<div className="row">
-										<label className="col-sm-3 banner_label">Bar number</label>
-										<input type="text" className="col-sm-8" placeholder="Bar number" />
-										<div className="about_link col-sm-1" onClick={() => {this.setState({ addPosition : 'addPositionFalse'})}}>Delete</div>
-									</div>
-									<div className="row">
-										<label className="col-sm-3 banner_label">State</label>
-										<select className="col-sm-3" placeholder="State">
-											<option></option>
-											<option></option>
-										</select>
-										<label className="col-sm-2 text-right">Admit</label>
-										<select className="col-sm-4" placeholder="Admit">
-											<option></option>
-											<option></option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div className="row text-right subpanel_footer col-sm-12">
+								<FormGroup className={this.state.addPosition}>
+									<FormGroup className="">
+										<Col className="banner_label" sm={3}>Bar number</Col>
+										<Col className="" sm={8}>
+											<FormControl type="text" className="" placeholder="Bar number" />
+										</Col>
+										
+										<ControlLabel className="about_link col-sm-1" onClick={() => {this.setState({ addPosition : 'addPositionFalse'})}}>Delete</ControlLabel>
+									</FormGroup>
+
+									<FormGroup className="">
+										<Col className="banner_label" sm={3}>State</Col>
+										<Col sm={3}>
+											<FormControl componentClass="select" placeholder="State">
+												<option></option>
+												<option></option>
+											</FormControl>
+										</Col>
+										<Col className="text-right" sm={2}>Admit</Col>
+										<Col sm={4}>
+											<FormControl componentClass="select" placeholder="Admit">
+												<option></option>
+												<option></option>
+											</FormControl>
+										</Col>
+									</FormGroup>
+								</FormGroup>
+							</FormGroup>
+							<FormGroup className="row text-right subpanel_footer">
 								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(2)}>cancel</a>
 								<a className="btn close_button">Save</a>
-							</div>
-						</div>
+							</FormGroup>
+						</Form>
 				}
 
 				{
@@ -281,22 +312,26 @@ class CustomAccordion extends React.Component{
 							<div className="col-sm-1 panel_link" onClick={() => this.toggle(3)}>Edit</div>
 						</div>
 					:
-						<div className="row panel_selectedItem">
-							<div className="row subpanel_title">
-								<div className="pull-left">Firm</div>
-								<div className="pull-right cancel_link" onClick={() => this.unToggle(3)}>Close</div>
-							</div>
-							<div className="row subpanel_content">
-								<div className="row">
-									<label className="col-sm-3 banner_label">Firm</label>
-									<input type="text" className="col-sm-9" placeholder="Firm" />
-								</div>
-							</div>
-							<div className="row text-right subpanel_footer col-sm-12">
+						<Form className="row panel_selectedItem">
+							<FormGroup className="subpanel_title">
+								<ControlLabel className="pull-left">Firm</ControlLabel>
+								<ControlLabel className="pull-right cancel_link" onClick={() => this.unToggle(3)}>Close</ControlLabel>
+							</FormGroup>
+
+							<FormGroup className="subpanel_content">
+								<FormGroup className="">
+									<Col className="banner_label" sm={3}>Firm</Col>
+									<Col sm={9}>
+										<FormControl type="text" placeholder="Firm" />
+									</Col>
+								</FormGroup>
+							</FormGroup>
+
+							<FormGroup className="text-right subpanel_footer">
 								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(3)}>cancel</a>
 								<a className="btn close_button">Save</a>
-							</div>
-						</div>
+							</FormGroup>
+						</Form>
 				}
 
 				{
@@ -311,41 +346,52 @@ class CustomAccordion extends React.Component{
 							<div className="col-sm-1 panel_link" onClick={() => this.toggle(4)}>Edit</div>
 						</div>
 					:
-						<div className="row panel_selectedItem">
-							<div className="row subpanel_title">
-								<div className="pull-left">Address</div>
-								<div className="pull-right cancel_link" onClick={() => this.unToggle(4)}>Close</div>
-							</div>
-							<div className="row subpanel_content">
-								<div className="row">
-									<label className="col-sm-3 banner_label">Address1</label>
-									<input type="text" className="col-sm-9" placeholder="Address1" />
-								</div>
-								<div className="row">
-									<label className="col-sm-3 banner_label">Address2</label>
-									<input type="text" className="col-sm-9" placeholder="Address2" />
-								</div>
-								<div className="row">
-									<label className="col-sm-3 banner_label">City</label>
-									<input type="text" className="col-sm-9" placeholder="City" />
-								</div>
-								<div className="row">
-									<label className="col-sm-3 banner_label">State</label>
-									<input type="text" className="col-sm-9" placeholder="City" />
-								</div>
-								<div className="row">
-									<label className="col-sm-3 banner_label">Zip</label>
-									<select className="col-sm-9" placeholder="Zip code">
-										<option>WA</option>
-										<option>MA</option>
-									</select>
-								</div>
-							</div>
-							<div className="row text-right subpanel_footer col-sm-12">
+						<Form className="row panel_selectedItem">
+							<FormGroup className="subpanel_title">
+								<ControlLabel className="pull-left">Address</ControlLabel>
+								<ControlLabel className="pull-right cancel_link" onClick={() => this.unToggle(4)}>Close</ControlLabel>
+							</FormGroup>
+							<FormGroup className="subpanel_content">
+								<FormGroup>
+									<Col className="banner_label" sm={3}>Address1</Col>
+									<Col sm={9}>
+										<FormControl type="text" placeholder="Address1" />
+									</Col>
+								</FormGroup>
+
+								<FormGroup>
+									<Col className="banner_label" sm={3}>Address2</Col><Col sm={9}>
+										<FormControl type="text" placeholder="Address2" />
+									</Col>
+								</FormGroup>
+
+								<FormGroup>
+									<Col className="banner_label" sm={3}>City</Col><Col sm={9}>
+										<FormControl type="text" placeholder="City" />
+									</Col>
+								</FormGroup>
+
+								<FormGroup>
+									<Col className="banner_label" sm={3}>State</Col><Col sm={9}>
+										<FormControl type="text" placeholder="State" />
+									</Col>
+								</FormGroup>
+
+								<FormGroup>
+									<Col className="banner_label" sm={3}>Zip</Col>
+									<Col sm={9}>
+										<FormControl componentClass="select" placeholder="Zip code">
+											<option>WA</option>
+											<option>MA</option>
+										</FormControl>
+									</Col>
+								</FormGroup>
+							</FormGroup>
+							<FormGroup className="text-right subpanel_footer">
 								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(4)}>cancel</a>
 								<a className="btn close_button">Save</a>
-							</div>
-						</div>
+							</FormGroup>
+						</Form>
 				}
 
 				{
@@ -359,57 +405,74 @@ class CustomAccordion extends React.Component{
 							<div className="col-sm-1 panel_link" onClick={() => this.toggle(5)}>Edit</div>
 						</div>
 					: 
-						<div className="row panel_selectedItem">
-							<div className="row subpanel_title">
-								<div className="pull-left">Phone</div>
-								<div className="pull-right" style={{'display' : 'inline-flex'}}>
-									<div className="cancel_link" onClick={() => {this.setState({ addPhone : 'addPhoneTrue' })}}>Add</div>
-									<div>&nbsp; | &nbsp;</div>
-									<div className="cancel_link" onClick={() => this.unToggle(5)}>Close</div>
-								</div>
-							</div>
-							<div className="row subpanel_content">
-								<div className="row">
-									<label className="col-sm-3 banner_label">Phone</label>
-									<input type="text" className="col-sm-9" placeholder="(206) 555-1234" />
-								</div>
-								<div className="row">
-									<label className="col-sm-3 banner_label">Phone type</label>
-									<select className="col-sm-6">
-										<option>Office</option>
-										<option>Home</option>
-									</select>
-									<label className="col-sm-1 banner_label">Ext</label>
-									<select className="col-sm-2">
-										<option>Office</option>
-										<option>Home</option>
-									</select>
-								</div>
-								<div className={this.state.addPhone}>
-									<div className="row">
-										<label className="col-sm-3 banner_label">Phone</label>
-										<input type="text" className="col-sm-8" placeholder="Phone" />
-										<div className="about_link col-sm-1" onClick={() => {this.setState({ addPhone : 'addPhoneFalse' })}}>Delete</div>
-									</div>
-									<div className="row">
-										<label className="col-sm-3 banner_label">Phone type</label>
-										<select className="col-sm-6" placeholder="Phone type">
+						<Form className="row panel_selectedItem">
+							<FormGroup className="subpanel_title">
+								<ControlLabel className="pull-left">Phone</ControlLabel>
+								<FormGroup className="pull-right" style={{'display' : 'inline-flex'}}>
+									<ControlLabel className="cancel_link" onClick={() => {this.setState({ addPhone : 'addPhoneTrue' })}}>Add</ControlLabel>
+									<ControlLabel>&nbsp; | &nbsp;</ControlLabel>
+									<ControlLabel className="cancel_link" onClick={() => this.unToggle(5)}>Close</ControlLabel>
+								</FormGroup>
+							</FormGroup>
+							<FormGroup className="subpanel_content">
+								<FormGroup>
+									<Col className="banner_label" sm={3}>Phone</Col>
+									<Col sm={9}>
+										<FormControl type="text" placeholder="(206) 555-1234" />
+									</Col>
+								</FormGroup>
+
+								<FormGroup>
+									<Col className="banner_label" sm={3}>Phone type</Col>
+									<Col sm={6}>
+										<FormControl componentClass="select" placeholder="">
 											<option>Office</option>
 											<option>Home</option>
-										</select>
-										<label className="col-sm-1 banner_label">Ext</label>
-										<select className="col-sm-2">
+										</FormControl>
+									</Col>
+									<Col className="banner_label" sm={1}>Ext</Col>
+									<Col sm={2}>
+										<FormControl componentClass="select" placeholder="">
 											<option>Office</option>
 											<option>Home</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div className="row text-right subpanel_footer col-sm-12">
+										</FormControl>
+									</Col>
+								</FormGroup>
+
+								<FormGroup className={this.state.addPhone}>
+									<FormGroup>
+										<Col className="banner_label" sm={3}>Phone</Col>
+										<Col sm={8}>
+											<FormControl type="text" className="col-sm-8" placeholder="Phone" />
+										</Col>
+										<Col sm={1}>
+											<ControlLabel className="about_link" onClick={() => {this.setState({ addPhone : 'addPhoneFalse' })}}>Delete</ControlLabel>
+										</Col>
+									</FormGroup>
+
+									<FormGroup>
+										<Col className="banner_label" sm={3}>Phone type</Col>
+										<Col sm={6}>
+											<FormControl componentClass="select" placeholder="Phone type">
+												<option>Office</option>
+												<option>Home</option>
+											</FormControl>
+										</Col>
+										<Col className="banner_label" sm={1}>Ext</Col>
+										<Col sm={2}>
+											<FormControl componentClass="select" className="">
+												<option>Office</option>
+												<option>Home</option>
+											</FormControl>
+										</Col>
+									</FormGroup>
+								</FormGroup>
+							</FormGroup>
+							<FormGroup className="text-right subpanel_footer">
 								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(5)}>cancel</a>
 								<a className="btn close_button" onClick={() => this.saveData()}>Save</a>
-							</div>
-						</div>
+							</FormGroup>
+						</Form>
 
 				}
 
@@ -421,22 +484,26 @@ class CustomAccordion extends React.Component{
 							<div className="col-sm-1 panel_link" onClick={() => this.toggle(6)}>Edit</div>
 						</div>
 					:
-						<div className="row panel_selectedItem">
-							<div className="row subpanel_title">
-								<div className="pull-left">Email</div>
-								<div className="pull-right cancel_link" onClick={() => this.unToggle(6)}>Close</div>
-							</div>
-							<div className="row subpanel_content">
-								<div className="row">
-									<label className="col-sm-3 banner_label">Phone type</label>
-									<input type="text" className="col-sm-9" placeholder="Phone type" />
-								</div>
-							</div>
-							<div className="row text-right subpanel_footer col-sm-12">
+						<Form className="row panel_selectedItem">
+							<FormGroup className="subpanel_title">
+								<ControlLabel className="pull-left">Email</ControlLabel>
+								<ControlLabel className="pull-right cancel_link" onClick={() => this.unToggle(6)}>Close</ControlLabel>
+							</FormGroup>
+
+							<FormGroup className="subpanel_content">
+								<FormGroup>
+									<Col className="banner_label" sm={3}>Phone type</Col>
+									<Col sm={9}>
+										<FormControl type="text" placeholder="Phone type" />
+									</Col>
+								</FormGroup>
+							</FormGroup>
+
+							<FormGroup className="text-right subpanel_footer">
 								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(6)}>cancel</a>
 								<a className="btn close_button">Save</a>
-							</div>
-						</div>
+							</FormGroup>
+						</Form>
 				}
 				
 				
