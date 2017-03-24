@@ -9,7 +9,8 @@ import
 	FormGroup,
 	Col,
 	FormControl,
-	ControlLabel
+	ControlLabel,
+	Button,
 }						from 'react-bootstrap';
 //import {MenuItem} from 'rc-menu';
 //import 'rc-menu/assets/index.css';
@@ -158,6 +159,10 @@ class CustomAccordion extends React.Component{
 
 	}
 
+	nameSave(e) {
+		alert("EVENT: ", this.refs.fistName.value);
+	}
+
 	render() {
 		//const stateStyle = this.state.active ? isGrey.active : isGrey.inactive;
 		return (
@@ -170,7 +175,7 @@ class CustomAccordion extends React.Component{
 							<div className="col-sm-1 panel_link" onClick={() => this.toggle(1)}>Edit</div>
 						</div>
 					:
-						<Form horizontal className="panel_selectedItem">
+						<Form horizontal className="panel_selectedItem" onSubmit={this.nameSave}>
 							<FormGroup controlId="subpanel_title" className="subpanel_title">
 								<ControlLabel className="pull-left">Name</ControlLabel>
 								<ControlLabel className="pull-right cancel_link" onClick={() => this.unToggle(1)}>Close</ControlLabel>
@@ -180,25 +185,25 @@ class CustomAccordion extends React.Component{
 								<FormGroup>
 									<Col className="banner_label" sm={3}>First name</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="First name"/>
+										<FormControl type="text" placeholder="First name" ref="firstName" name="firstName" />
 									</Col>
 								</FormGroup>
 
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Middle name</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="Middle name" className="" />
+										<FormControl type="text" placeholder="Middle name" ref="middleName" name="middleName" />
 									</Col>
 								</FormGroup>
 
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Last name</Col>
 									<Col sm={4}>
-										<FormControl type="text" placeholder="Last name" className="padding_right_middle" />
+										<FormControl type="text" placeholder="Last name" ref="lastName" name="lastName" />
 									</Col>
 									<Col className="banner_label" sm={1}>Suffix</Col>
 									<Col sm={4}>
-										<FormControl componentClass="select" className="padding_right_middle">
+										<FormControl componentClass="select" className="">
 											<option>Man</option>
 											<option>Woman</option>
 										</FormControl>
@@ -207,7 +212,7 @@ class CustomAccordion extends React.Component{
 							</FormGroup>
 							<FormGroup className="row text-right subpanel_footer">
 								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(1)}>cancel</a>
-								<a className="btn close_button">Save</a>
+								<Button className="btn close_button" type="submit">Save</Button>
 							</FormGroup>
 						</Form>
 				}
