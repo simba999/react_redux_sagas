@@ -1,8 +1,9 @@
 import React 			from 'react';
-import SplitButton 		from 'react-split-button';
+//import SplitButton 		from 'react-split-button';
+import {MenuItem, SplitButton, ButtonToolbar}		from 'react-bootstrap';
 //import {MenuItem} from 'rc-menu';
 //import 'rc-menu/assets/index.css';
-import { ContextMenu, MenuItem} from "react-contextmenu";
+//import { ContextMenu, MenuItem} from "react-contextmenu";
 import Accordion 		from 'react-responsive-accordion';
 
 const styles = {
@@ -227,19 +228,22 @@ class CustomAccordion extends React.Component{
 										<option>MA</option>
 									</select>
 									<label className="col-sm-2 text-right">Admit</label>
-									<select className="col-sm-4">
-										<option>12-01-85</option>
-										<option>11-09-06</option>
-									</select>
+									<ButtonToolbar className="split_button_tool col-sm-4">
+										<SplitButton title="Dropdown right" className="split_button" bsStyle="combo" id="split_click">
+										    <MenuItem eventKey="1">Action</MenuItem>
+										    <MenuItem eventKey="2">Another action</MenuItem>
+										    <MenuItem eventKey="3">Something else here</MenuItem>
+										    <MenuItem divider />
+										    <MenuItem eventKey="4">Separated link</MenuItem>
+										 </SplitButton>
+									</ButtonToolbar>
 								</div>
 								<div className="row">
-									<SplitButton title="Dropdown right" pullRight id="split-button-pull-right">
-									    <MenuItem eventKey="1">Action</MenuItem>
-									    <MenuItem eventKey="2">Another action</MenuItem>
-									    <MenuItem eventKey="3">Something else here</MenuItem>
-									    <MenuItem divider />
-									    <MenuItem eventKey="4">Separated link</MenuItem>
-									 </SplitButton>
+									<FormControl
+									     // onChange={this.handleChange}
+									      value="innn"
+									      type="text"
+									      placeholder="Search" />
 								</div>
 
 								<div className={this.state.addPosition}>

@@ -268,3 +268,39 @@
     color: black;
 }
 
+//Combobox Style
+.btn-group-combo {
+    width: 100%;   
+}
+.split_button {
+    width: 80%;
+    color: black;
+    background: white;
+    border-radius: 0;
+}
+
+.split_button:hover {
+    background: #ffffff;
+}
+
+#split_click {
+    width: 20%;
+    background: $LIGHT_GREY_COLOR;
+    border-radius: 0;
+}
+
+.drop_menu {
+    width: 80%;
+    background: #ffffff;
+}
+
+.drop_button {
+    width: 20%;
+    background: url('../images/remove_icon.png');
+}
+
+.split_button_tool {
+    .dropdown-menu {
+        width: 80%;
+    }
+}
