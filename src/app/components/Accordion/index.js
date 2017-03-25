@@ -63,6 +63,7 @@ class CustomAccordion extends React.Component{
 
 			presentName 						: 'Name',
 			presentPosition 					: 'Postion',
+			additionalPostion 					: '',
 			presentAddress1 					: 'Address1',
 			presentAddress2 					: 'Address2',
 			presentExtra	 					: 'City, State, Zip',
@@ -82,10 +83,21 @@ class CustomAccordion extends React.Component{
 
 		this.clearAllStyle 						= this.clearAllStyle.bind(this);
 		this.setStyle							= this.setStyle.bind(this);
+
+		this.handleChange 						= this.handleChange.bind(this);
+		this.getRequiredValidation 				= this.getRequiredValidation.bind(this);
 	}
 
 	componentWillMount() {
 		let style = ''; 
+		let nameData = {
+			'firstName' : 'Andrey',
+			'lastName'	: 'Korol'
+		}
+
+		this.state.nameData = nameData;
+
+		console.log("Current NamdData: ", this.state.nameData);
 
 		// Name Section
 		if (this.state.greyState == '' && this.state.nameData.firstName !== undefined) {
@@ -95,14 +107,26 @@ class CustomAccordion extends React.Component{
 			style = 'grey';
 		}
 
-		if (this.state.nameData.firstName !== undefined) {
-			for (const field in this.state.nameData) {
-				this.state.presentName 				+= this.state.nameData.field + " ";
+		this.setState({ presentName : 'Name' });
+
+		if (this.state.nameData.firstName != undefined) {
+			let tmpData = '';
+
+			for (let field in this.state.nameData) {
+				console.log("Field: ", field);
+				if (this.state.nameData[field] !== undefined) {
+					tmpData			+= this.state.nameData[field] + " ";
+					console.log("stepYes++: ", this.state.nameData[field]);
+				}
+				else {
+					console.log("step++: ", this.state.nameData.field);
+				}
 			}
+
+			this.setState({ presentName : tmpData });
 		}
-		else {
-			this.state.presentName 					= 'Name';
-		}
+
+		console.log("DD: ", this.state.presentName);
 
 		this.state.profileStyle.nameStyle 			= style;
 
@@ -137,6 +161,14 @@ class CustomAccordion extends React.Component{
 			this.state.profileStyle.addressStyle 	= 'grey'
 
 		//console.log("DD: ", sizeof(this.state.addressData));
+
+	}
+
+	getRequiredValidation() {
+
+	}
+
+	handleChange(e) {
 
 	}
 
@@ -298,6 +330,10 @@ class CustomAccordion extends React.Component{
 	    this.state.profileStyle.positionStyle 	= '';
 	    this.state.presentPosition 				= '';
 	    this.state.presentPosition 				= nameData['positionOrigin'] + " " + "Bar" + " " + nameData['positionStateOrigin'] + nameData['barNumberOrigin'];
+
+	    if (nameData['barNumberAdditional'] !== undefined) {
+	    	this.state.additionalPostion 		= "/" + nameData['barNumberAdditional'];
+	    }
 	    
 
 	    console.log("Data: ", nameData);
@@ -306,13 +342,9 @@ class CustomAccordion extends React.Component{
 	}
 
 	firmSave() {
-		e.preventDefault();
-		console.log("Firm Data");
 	    const nameData 							= {};
-	
-	    for (let field in this.refs) {
-		      nameData[field] 					= findDOMNode(this.refs[field]).value;
-	    }
+
+		nameData['firm'] 						= findDOMNode(this.refs.email).value;
 
 	    this.setState({ firmData: nameData});
 
@@ -359,34 +391,22 @@ class CustomAccordion extends React.Component{
 	    //this.state.presentMobilePhone			= nameData['phoneKind1'] + ": " + nameData['number1'];
 
 	    console.log("namdData1: ", nameData);
-
-	    // if (nameData['phoneExt1'] == '') {
-	    // 	this.stat.presentMobilePhone 		+= nameData['phoneExt1']; 
-	    // }
-
-	    // if (this.state.addPhoe === "addPhoneTrue")
-	    // 	this.state.presentOfficePhone		= nameData['phoneKind2'] + ": " + nameData['number2'];
-
-	    // if (nameData['phoneExt2'] == '') {
-	    // 	this.stat.presentOfficePhone 		+= nameData['phoneExt2']; 
-	    // }
-
-	    //this.state.phoneActive					= false;
 	    
 	    this.setStyle();
 	    this.setState({ phoneActive : false });
 	}
 
 	emailSave() {
-		e.preventDefault();
+		//e.preventDefault();
 
 		const nameData 							= {};
 	
-	    for (let field in this.refs) {
-		      nameData[field] 					= findDOMNode(this.refs[field]).value;
-	    }
+	    // for (let field in this.refs) {
+		   //    nameData[field] 					= findDOMNode(this.refs[field]).value;
+	    // }
+	    nameData['emailValue'] 					= findDOMNode(this.refs.emailValue).value;
 
-	    this.setState({ emailData: nameData});
+	    this.setState({ emailData: nameData });
 
 	    this.state.profileStyle.emailStyle 		= '';
 	    this.state.presentEmail	 				= nameData['emailValue'];
@@ -423,21 +443,21 @@ class CustomAccordion extends React.Component{
 								<FormGroup>
 									<Col className="banner_label" sm={3}>First name</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="First name" ref="firstName" name="firstName" />
+										<FormControl type="text" placeholder="First name" ref="firstName" name="firstName" value={this.state.nameData.firstName !== undefined ? this.state.nameData.firstName : ''} required />
 									</Col>
 								</FormGroup>
 
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Middle name</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="Middle name" ref="middleName" name="middleName"  />
+										<FormControl type="text" placeholder="Middle name" ref="middleName" name="middleName" value={this.state.nameData.middleName !== undefined ? this.state.nameData.middleName : ''} />
 									</Col>
 								</FormGroup>
 
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Last name</Col>
 									<Col sm={4}>
-										<FormControl type="text" placeholder="Last name" ref="lastName" name="lastName" />
+										<FormControl type="text" placeholder="Last name" ref="lastName" name="lastName" value={this.state.nameData.lastName !== undefined ? this.state.nameData.lastName : ''} required />
 									</Col>
 									<Col className="banner_label" sm={1}>Suffix</Col>
 									<Col sm={4}>
@@ -459,7 +479,7 @@ class CustomAccordion extends React.Component{
 					!this.state.positionActive ?
 						<div className={"row panel_item" + " " + this.state.profileStyle.positionStyle}>
 							<div className="col-sm-3">Position</div>
-							<div className="col-sm-8">{this.state.presentPosition}</div>
+							<div className="col-sm-8">{this.state.presentPosition + this.state.additionalPostion}</div>
 							<div className="col-sm-1 panel_link" onClick={() => this.toggle(2)}>Edit</div>
 						</div>
 					:
@@ -484,10 +504,10 @@ class CustomAccordion extends React.Component{
 									</Col>
 								</FormGroup>
 
-								<FormGroup className="">
+								<FormGroup className="" validationState={this.getRequiredValidation()}>
 									<Col className="banner_label" sm={3}>Bar number</Col>
 									<Col sm={9}>
-										<FormControl type="text" ref="barNumberOrigin" className="" />
+										<FormControl type="text" ref="barNumberOrigin" name="barNumberOrigin" className="" onChange={this.handleChange} required />
 									</Col>
 									
 								</FormGroup>
@@ -514,7 +534,7 @@ class CustomAccordion extends React.Component{
 									<FormGroup className="">
 										<Col className="banner_label" sm={3}>Bar number</Col>
 										<Col className="" sm={8}>
-											<FormControl type="text" className="" placeholder="Bar number" ref="barNumberAdditional" />
+											<FormControl type="text" className="" placeholder="Bar number" ref="barNumberAdditional" name="barNumberAdditional" />
 										</Col>
 										
 										<ControlLabel className="about_link col-sm-1" onClick={() => {this.setState({ addPosition : 'addPositionFalse'})}}>Delete</ControlLabel>
@@ -524,15 +544,16 @@ class CustomAccordion extends React.Component{
 										<Col className="banner_label" sm={3}>State</Col>
 										<Col sm={3}>
 											<FormControl componentClass="select" placeholder="State" ref="positionStateAdditional">
-												<option></option>
-												<option></option>
+												<option>Attorney</option>
+												<option>Seattle</option>
 											</FormControl>
 										</Col>
 										<Col className="text-right" sm={2}>Admit</Col>
 										<Col sm={4}>
 											<FormControl componentClass="select" placeholder="Admit" ref="positionAdmitAdditional">
-												<option></option>
-												<option></option>
+												<option>WA</option>
+												<option>OR</option>
+												<option>NV</option>
 											</FormControl>
 										</Col>
 									</FormGroup>
@@ -563,7 +584,7 @@ class CustomAccordion extends React.Component{
 								<FormGroup className="">
 									<Col className="banner_label" sm={3}>Firm</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="Firm" ref="firm"/>
+										<FormControl type="text" placeholder="Firm" ref="firm" required />
 									</Col>
 								</FormGroup>
 							</FormGroup>
@@ -596,25 +617,25 @@ class CustomAccordion extends React.Component{
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Address1</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="Address1" ref="address1" />
+										<FormControl type="text" placeholder="Address1" ref="address1" required />
 									</Col>
 								</FormGroup>
 
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Address2</Col><Col sm={9}>
-										<FormControl type="text" placeholder="Address2" ref="address2" />
+										<FormControl type="text" placeholder="Address2" ref="address2" required />
 									</Col>
 								</FormGroup>
 
 								<FormGroup>
 									<Col className="banner_label" sm={3}>City</Col><Col sm={9}>
-										<FormControl type="text" placeholder="City" ref="city" />
+										<FormControl type="text" placeholder="City" ref="city" required />
 									</Col>
 								</FormGroup>
 
 								<FormGroup>
 									<Col className="banner_label" sm={3}>State</Col><Col sm={9}>
-										<FormControl type="text" placeholder="State" ref="addressState" />
+										<FormControl type="text" placeholder="State" ref="addressState" required />
 									</Col>
 								</FormGroup>
 
@@ -659,7 +680,7 @@ class CustomAccordion extends React.Component{
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Phone</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="(206) 555-1234" ref="number1"/>
+										<FormControl type="text" placeholder="(206) 555-1234" ref="number1" required />
 									</Col>
 								</FormGroup>
 
@@ -681,7 +702,7 @@ class CustomAccordion extends React.Component{
 									<FormGroup>
 										<Col className="banner_label" sm={3}>Phone</Col>
 										<Col sm={8}>
-											<FormControl type="text" className="col-sm-8" placeholder="Phone" ref="number2" />
+											<FormControl type="text" className="col-sm-8" placeholder="Phone" ref="number2" required={this.state.addPhone ? true : false } />
 										</Col>
 										<Col sm={1}>
 											<ControlLabel className="about_link" onClick={() => {this.setState({ addPhone : 'addPhoneFalse' })}}>Delete</ControlLabel>
@@ -729,7 +750,7 @@ class CustomAccordion extends React.Component{
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Email</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="Email" ref="emailValue"/>
+										<FormControl type="email" placeholder="Email" ref="emailValue" name="emailValue" required />
 									</Col>
 								</FormGroup>
 							</FormGroup>
