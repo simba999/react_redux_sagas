@@ -48,6 +48,8 @@ class CustomAccordion extends React.Component{
 			firmActive							: false,
 			phoneActive							: false,
 			emailActive 						: false,
+			phoneNumber1 						: '',
+			phoneNumber2 						: '',
 
 			greyState							: '',
 			addPosition 						: 'addPositionFalse',
@@ -70,7 +72,9 @@ class CustomAccordion extends React.Component{
 			presentEmail 						: 'Email',
 			presentMobilePhone					: 'Mobile: (206) 555-1234',
 			presentOfficePhone 					: 'Office: (206) 555-1234 x 100',
-			presentFirm 						: 'Firm'
+			presentFirm 						: 'Firm',
+
+			phoneValidationFlag 				: '',
 		}
 
 		this.toggle 							= this.toggle.bind(this);
@@ -85,7 +89,10 @@ class CustomAccordion extends React.Component{
 		this.setStyle							= this.setStyle.bind(this);
 
 		this.handleChange 						= this.handleChange.bind(this);
+		this.handleNumber2Change 				= this.handleNumber2Change.bind(this);
 		this.getRequiredValidation 				= this.getRequiredValidation.bind(this);
+		this.handleFirstChange 					= this.handleFirstChange.bind(this);
+		///this.getPhoneValidation 				= this.getPhoneValidation.bind(this);
 	}
 
 	componentWillMount() {
@@ -96,8 +103,6 @@ class CustomAccordion extends React.Component{
 		}
 
 		this.state.nameData = nameData;
-
-		console.log("Current NamdData: ", this.state.nameData);
 
 		// Name Section
 		if (this.state.greyState == '' && this.state.nameData.firstName !== undefined) {
@@ -116,17 +121,11 @@ class CustomAccordion extends React.Component{
 				console.log("Field: ", field);
 				if (this.state.nameData[field] !== undefined) {
 					tmpData			+= this.state.nameData[field] + " ";
-					console.log("stepYes++: ", this.state.nameData[field]);
-				}
-				else {
-					console.log("step++: ", this.state.nameData.field);
 				}
 			}
 
 			this.setState({ presentName : tmpData });
 		}
-
-		console.log("DD: ", this.state.presentName);
 
 		this.state.profileStyle.nameStyle 			= style;
 
@@ -160,8 +159,20 @@ class CustomAccordion extends React.Component{
 		:
 			this.state.profileStyle.addressStyle 	= 'grey'
 
-		//console.log("DD: ", sizeof(this.state.addressData));
+	}
 
+	// Vaidation Check
+	getPhoneValidation() {
+		console.log("PhoneValidation");
+		let phoneNumber1 = this.state.phoneNumber1;
+		let re = /^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/;
+
+		if (re.test(phoneNumber1) == false) {
+			return 'error';
+		}
+		else {
+			return '';
+		}
 	}
 
 	getRequiredValidation() {
@@ -169,7 +180,16 @@ class CustomAccordion extends React.Component{
 	}
 
 	handleChange(e) {
+		console.log("HandleChange: ", e.target.value)
+		this.setState({ phoneNumber1 : e.target.value });
+	}
 
+	handleNumber2Change(e) {
+		this.setState({ phoneNumber2 : e.target.value });
+	}
+
+	handleFirstChange(e) {
+		this.state.nameData.firstName = e.target.value;
 	}
 
 	clearAllStyle() {
@@ -332,6 +352,7 @@ class CustomAccordion extends React.Component{
 	    this.state.presentPosition 				= nameData['positionOrigin'] + " " + "Bar" + " " + nameData['positionStateOrigin'] + nameData['barNumberOrigin'];
 
 	    if (nameData['barNumberAdditional'] !== undefined) {
+	    	console.log("DAta: ", nameData['barNumberAdditional']);	
 	    	this.state.additionalPostion 		= "/" + nameData['barNumberAdditional'];
 	    }
 	    
@@ -344,7 +365,7 @@ class CustomAccordion extends React.Component{
 	firmSave() {
 	    const nameData 							= {};
 
-		nameData['firm'] 						= findDOMNode(this.refs.email).value;
+		nameData['firm'] 						= findDOMNode(this.refs.firm).value;
 
 	    this.setState({ firmData: nameData});
 
@@ -357,8 +378,7 @@ class CustomAccordion extends React.Component{
 	}
 
 	addressSave() {
-		e.preventDefault();
-
+		console.log("Address: ");
 		const nameData 							= {};
 	
 	    for (let field in this.refs) {
@@ -377,7 +397,7 @@ class CustomAccordion extends React.Component{
 	}
 
 	phoneSave() {
-		e.preventDefault();
+		console.log("Phone SAVE");
 
 		const nameData 							= {};
 	
@@ -392,8 +412,35 @@ class CustomAccordion extends React.Component{
 
 	    console.log("namdData1: ", nameData);
 	    
-	    this.setStyle();
-	    this.setState({ phoneActive : false });
+	    this.setState({ phoneNumber1 : nameData['number1'] });
+	    this.setState({ phoneNumber2 : nameData['number2'] });
+
+	    this.setState({ phoneValidationFlag : this.getPhoneValidation() });
+
+	    if (this.state.phoneValidationFlag === 'error') {
+	    	this.setState({ phoneActive : true });
+	    }
+	    else {
+	    	this.state.presentMobilePhone		= nameData['phoneKind1'] + ": " + nameData['number1'];
+	    	if (nameData['phoneExt1'] != '') {
+	    		this.state.presentMobilePhone 	+= " X " + nameData['phoneExt1'];
+	    	}
+
+	    	if (nameData['number2'] != '') {
+	    		this.state.presentOfficePhone 	=  nameData['phoneKind2'] + ": " + nameData['number2'];
+
+	    		if (nameData['phoneExt2'] != '') {
+		    		this.state.presentOfficePhone 	+= " X " + nameData['phoneExt2'];
+		    	}
+	    	}
+	    	else {
+	    		this.state.presentOfficePhone = '';
+	    	}
+
+	    	this.setStyle();
+	    	this.setState({ phoneActive : false });
+	    }
+	    
 	}
 
 	emailSave() {
@@ -443,21 +490,21 @@ class CustomAccordion extends React.Component{
 								<FormGroup>
 									<Col className="banner_label" sm={3}>First name</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="First name" ref="firstName" name="firstName" value={this.state.nameData.firstName !== undefined ? this.state.nameData.firstName : ''} required />
+										<FormControl type="text" placeholder="First name" ref="firstName" name="firstName" value={this.state.nameData.firstName !== undefined ? this.state.nameData.firstName : ''} onChange={this.handleFirstChange} required />
 									</Col>
 								</FormGroup>
 
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Middle name</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="Middle name" ref="middleName" name="middleName" value={this.state.nameData.middleName !== undefined ? this.state.nameData.middleName : ''} />
+										<FormControl type="text" placeholder="Middle name" ref="middleName" name="middleName" value={this.state.nameData.middleName !== undefined ? this.state.nameData.middleName : ''} onChange={this.handleFirstChange}/>
 									</Col>
 								</FormGroup>
 
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Last name</Col>
 									<Col sm={4}>
-										<FormControl type="text" placeholder="Last name" ref="lastName" name="lastName" value={this.state.nameData.lastName !== undefined ? this.state.nameData.lastName : ''} required />
+										<FormControl type="text" placeholder="Last name" ref="lastName" name="lastName" value={this.state.nameData.lastName !== undefined ? this.state.nameData.lastName : ''} required onChange={this.handleFirstChange} />
 									</Col>
 									<Col className="banner_label" sm={1}>Suffix</Col>
 									<Col sm={4}>
@@ -504,10 +551,10 @@ class CustomAccordion extends React.Component{
 									</Col>
 								</FormGroup>
 
-								<FormGroup className="" validationState={this.getRequiredValidation()}>
+								<FormGroup className="">
 									<Col className="banner_label" sm={3}>Bar number</Col>
 									<Col sm={9}>
-										<FormControl type="text" ref="barNumberOrigin" name="barNumberOrigin" className="" onChange={this.handleChange} required />
+										<FormControl type="text" ref="barNumberOrigin" name="barNumberOrigin" className="" required />
 									</Col>
 									
 								</FormGroup>
@@ -584,7 +631,7 @@ class CustomAccordion extends React.Component{
 								<FormGroup className="">
 									<Col className="banner_label" sm={3}>Firm</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="Firm" ref="firm" required />
+										<FormControl type="text" placeholder="Firm" name="firm" ref="firm" value={this.state.firmData.firm} required />
 									</Col>
 								</FormGroup>
 							</FormGroup>
@@ -677,32 +724,32 @@ class CustomAccordion extends React.Component{
 								</FormGroup>
 							</FormGroup>
 							<FormGroup className="subpanel_content">
-								<FormGroup>
+								<FormGroup validationState={this.getPhoneValidation()}>
 									<Col className="banner_label" sm={3}>Phone</Col>
 									<Col sm={9}>
-										<FormControl type="text" placeholder="(206) 555-1234" ref="number1" required />
+										<FormControl type="text" placeholder="(206) 555-1234" ref="number1" value={this.state.phoneNumber1} name="number1" onChange={this.handleChange} required />
 									</Col>
 								</FormGroup>
 
 								<FormGroup>
 									<Col className="banner_label" sm={3}>Phone type</Col>
 									<Col sm={6}>
-										<FormControl componentClass="select" placeholder="" ref="phoneKind1">
+										<FormControl componentClass="select" placeholder="" ref="phoneKind1" name="phoneKind1">
 											<option>Office</option>
 											<option>Home</option>
 										</FormControl>
 									</Col>
 									<Col className="banner_label" sm={1}>Ext</Col>
 									<Col sm={2}>
-										<FormControl type="text" placeholder="" ref="phoneExt1" />
+										<FormControl type="text" placeholder="" ref="phoneExt1" name="phoneExt1" value={this.state.nameData.phoneExt1 !== undefined ? this.state.nameData.phoneExt1 : ''} />
 									</Col>
 								</FormGroup>
 
 								<FormGroup className={this.state.addPhone}>
-									<FormGroup>
+									<FormGroup validationState={this.getPhoneValidation()}>
 										<Col className="banner_label" sm={3}>Phone</Col>
 										<Col sm={8}>
-											<FormControl type="text" className="col-sm-8" placeholder="Phone" ref="number2" required={this.state.addPhone ? true : false } />
+											<FormControl type="text" className="col-sm-8" placeholder="(222) 222-2222" value={this.state.phoneNumber2} ref="number2" name="number2" onChange={this.handleNumber2Change} />
 										</Col>
 										<Col sm={1}>
 											<ControlLabel className="about_link" onClick={() => {this.setState({ addPhone : 'addPhoneFalse' })}}>Delete</ControlLabel>
@@ -712,14 +759,14 @@ class CustomAccordion extends React.Component{
 									<FormGroup>
 										<Col className="banner_label" sm={3}>Phone type</Col>
 										<Col sm={6}>
-											<FormControl componentClass="select" placeholder="Phone type" ref="phoneKind2">
+											<FormControl componentClass="select" placeholder="Phone type" name="phoneKind2" ref="phoneKind2">
 												<option>Office</option>
 												<option>Home</option>
 											</FormControl>
 										</Col>
 										<Col className="banner_label" sm={1}>Ext</Col>
 										<Col sm={2}>
-											<FormControl componentClass="select" className="" ref="phoneExt2" />
+											<FormControl type="text" className="" ref="phoneExt2" name="phoneExt2" value={this.state.nameData.phoneExt2 !== undefined ? this.state.nameData.phoneExt2 : ''} />
 										</Col>
 									</FormGroup>
 								</FormGroup>
