@@ -48,9 +48,11 @@ class CustomAccordion extends React.Component{
 			firmActive							: false,
 			phoneActive							: false,
 			emailActive 						: false,
+
 			greyState							: '',
 			addPosition 						: 'addPositionFalse',
 			addPhone 							: 'addPhoneFalse',
+
 			nameData							: {},
 			positionData						: {},
 			firmData							: {},
@@ -58,6 +60,7 @@ class CustomAccordion extends React.Component{
 			emailData							: {},
 			addressData							: {},
 			profileStyle						: {},
+
 			presentName 						: 'Name',
 			presentPosition 					: 'Postion',
 			presentAddress1 					: 'Address1',
@@ -94,44 +97,44 @@ class CustomAccordion extends React.Component{
 
 		if (this.state.nameData.firstName !== undefined) {
 			for (const field in this.state.nameData) {
-				this.state.presentName += this.state.nameData.field + " ";
+				this.state.presentName 				+= this.state.nameData.field + " ";
 			}
 		}
 		else {
-			this.state.presentName 				= 'Name';
+			this.state.presentName 					= 'Name';
 		}
 
-		this.state.profileStyle.nameStyle 		= style;
+		this.state.profileStyle.nameStyle 			= style;
 
 		// Position Section
 		!this.state.positionData ? 
-			this.state.profileStyle.positionStyle = ''
+			this.state.profileStyle.positionStyle 	= ''
 		:
-			this.state.profileStyle.positionStyle = 'grey'
+			this.state.profileStyle.positionStyle 	= 'grey'
 
 		// Firm Section
 		!this.state.firmData ? 
-			this.state.profileStyle.firmStyle = ''
+			this.state.profileStyle.firmStyle 		= ''
 		:
-			this.state.profileStyle.firmStyle = 'grey'
+			this.state.profileStyle.firmStyle 		= 'grey'
 
 		// Phone Section
 		!this.state.phoneData ? 
-			this.state.profileStyle.phoneStyle = ''
+			this.state.profileStyle.phoneStyle 		= ''
 		:
-			this.state.profileStyle.phoneStyle = 'grey'
+			this.state.profileStyle.phoneStyle 		= 'grey'
 
 		// Email Section
 		!this.state.emailData ? 
-			this.state.profileStyle.emailStyle = ''
+			this.state.profileStyle.emailStyle 		= ''
 		:
-			this.state.profileStyle.emailStyle = 'grey'
+			this.state.profileStyle.emailStyle 		= 'grey'
 
 		// Address Section
 		!this.state.addressData ? 
-			this.state.profileStyle.addressStyle = ''
+			this.state.profileStyle.addressStyle 	= ''
 		:
-			this.state.profileStyle.addressStyle = 'grey'
+			this.state.profileStyle.addressStyle 	= 'grey'
 
 		//console.log("DD: ", sizeof(this.state.addressData));
 
@@ -145,8 +148,15 @@ class CustomAccordion extends React.Component{
 	}
 
 	setStyle() {
-		if (Object.keys(this.state.nameData).length != 0) this.state.profileStyle.nameStyle = ''; else this.state.profileStyle.nameStyle = 'grey';
-		if (Object.keys(this.state.positionData).length != 0) this.state.profileStyle.positionStyle = ''; else this.state.profileStyle.positionStyle = 'grey';
+		if (Object.keys(this.state.nameData).length != 0) 
+			this.state.profileStyle.nameStyle = ''; 
+		else 
+			this.state.profileStyle.nameStyle = 'grey';
+		if (Object.keys(this.state.positionData).length != 0) 
+			this.state.profileStyle.positionStyle = ''; 
+		else 
+			this.state.profileStyle.positionStyle = 'grey';
+		
 		if (Object.keys(this.state.firmData).length != 0) this.state.profileStyle.firmStyle = '';
 		if (Object.keys(this.state.emailData).length != 0) this.state.profileStyle.emailStyle = '';
 		if (Object.keys(this.state.phoneData).length != 0) this.state.profileStyle.phoneStyle = '';
@@ -252,7 +262,7 @@ class CustomAccordion extends React.Component{
 	}
 
 	nameSave(e) {
-		//e.preventDefault();
+		e.preventDefault();
     
 	    const nameData 							= {};
 	
@@ -274,7 +284,7 @@ class CustomAccordion extends React.Component{
 	}
 
 	positionSave(e) {
-		//e.preventDefault();
+		e.preventDefault();
     	console.log("Position Data");
 	    const nameData 							= {};
 	
@@ -294,6 +304,7 @@ class CustomAccordion extends React.Component{
 	}
 
 	firmSave() {
+		e.preventDefault();
 		console.log("Firm Data");
 	    const nameData 							= {};
 	
@@ -311,6 +322,8 @@ class CustomAccordion extends React.Component{
 	}
 
 	addressSave() {
+		e.preventDefault();
+
 		const nameData 							= {};
 	
 	    for (let field in this.refs) {
@@ -322,13 +335,15 @@ class CustomAccordion extends React.Component{
 	    this.state.profileStyle.addressStyle	= '';
 	    this.state.presentAddress1 				= nameData['address1'];
 	    this.state.presentAddress2 				= nameData['address2'];
-	    this.state.presentExtra	 				= nameData['city'] + " , " + nameData['state'] + " , " + nameData['zip'];
+	    this.state.presentExtra	 				= nameData['city'] + " , " + nameData['addressState'] + " , " + nameData['zipcode'];
 
 	    this.state.addressActive				= false;
 	    this.setStyle();
 	}
 
 	phoneSave() {
+		e.preventDefault();
+
 		const nameData 							= {};
 	
 	    for (let field in this.refs) {
@@ -338,24 +353,29 @@ class CustomAccordion extends React.Component{
 	    this.setState({ phoneData: nameData});
 
 	    this.state.profileStyle.phoneStyle		= '';
-	    this.state.presentMobilePhone			= nameData['phoneKind1'] + ": " + nameData['number1'];
+	    //this.state.presentMobilePhone			= nameData['phoneKind1'] + ": " + nameData['number1'];
 
-	    if (nameData['phoneExt1'] == '') {
-	    	this.stat.presentMobilePhone 		+= nameData['phoneExt1']; 
-	    }
+	    console.log("namdData1: ", nameData);
 
-	    if (this.state.addPhoe === "addPhoneTrue")
-	    	this.state.presentOfficePhone			= nameData['phoneKind2'] + ": " + nameData['number2'];
+	    // if (nameData['phoneExt1'] == '') {
+	    // 	this.stat.presentMobilePhone 		+= nameData['phoneExt1']; 
+	    // }
 
-	    if (nameData['phoneExt2'] == '') {
-	    	this.stat.presentOfficePhone 		+= nameData['phoneExt2']; 
-	    }
+	    // if (this.state.addPhoe === "addPhoneTrue")
+	    // 	this.state.presentOfficePhone		= nameData['phoneKind2'] + ": " + nameData['number2'];
 
-	    this.state.phoneActive					= false;
+	    // if (nameData['phoneExt2'] == '') {
+	    // 	this.stat.presentOfficePhone 		+= nameData['phoneExt2']; 
+	    // }
+
+	    //this.state.phoneActive					= false;
+	    this.setState({ phoneActive : false });
 	    this.setStyle();
 	}
 
 	emailSave() {
+		e.preventDefault();
+
 		const nameData 							= {};
 	
 	    for (let field in this.refs) {
@@ -377,7 +397,7 @@ class CustomAccordion extends React.Component{
 	render() {
 		return (
 
-			<section className=" row accordion">
+			<section className="row accordion">
 				{
 					!this.state.active ?
 						<div className={"row panel_item" + " " + this.state.profileStyle.nameStyle}>
