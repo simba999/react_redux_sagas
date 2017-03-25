@@ -156,7 +156,7 @@ class CustomAccordion extends React.Component{
 			this.state.profileStyle.positionStyle = ''; 
 		else 
 			this.state.profileStyle.positionStyle = 'grey';
-		
+
 		if (Object.keys(this.state.firmData).length != 0) this.state.profileStyle.firmStyle = '';
 		if (Object.keys(this.state.emailData).length != 0) this.state.profileStyle.emailStyle = '';
 		if (Object.keys(this.state.phoneData).length != 0) this.state.profileStyle.phoneStyle = '';
@@ -279,8 +279,9 @@ class CustomAccordion extends React.Component{
 	    	this.state.presentName 				+= nameData[key] + " ";
 	    } 
 
-		this.state.active  = false;
+		
 		this.setStyle();
+		this.state.active  = false;
 	}
 
 	positionSave(e) {
@@ -297,10 +298,11 @@ class CustomAccordion extends React.Component{
 	    this.state.profileStyle.positionStyle 	= '';
 	    this.state.presentPosition 				= '';
 	    this.state.presentPosition 				= nameData['positionOrigin'] + " " + "Bar" + " " + nameData['positionStateOrigin'] + nameData['barNumberOrigin'];
-	    this.state.positionActive 				= false;
+	    
 
 	    console.log("Data: ", nameData);
 	    this.setStyle();
+	    this.state.positionActive 				= false;
 	}
 
 	firmSave() {
@@ -317,8 +319,9 @@ class CustomAccordion extends React.Component{
 	    this.state.profileStyle.firmStyle 		= '';
 	    this.state.presentFirm	 				= nameData['firm'];
 
-	    this.state.firmActive 					= false;
 	    this.setStyle();
+	    this.state.firmActive 					= false;
+	    
 	}
 
 	addressSave() {
@@ -369,8 +372,9 @@ class CustomAccordion extends React.Component{
 	    // }
 
 	    //this.state.phoneActive					= false;
-	    this.setState({ phoneActive : false });
+	    
 	    this.setStyle();
+	    this.setState({ phoneActive : false });
 	}
 
 	emailSave() {
@@ -389,8 +393,9 @@ class CustomAccordion extends React.Component{
 
 	    console.log("presentEmail: ", nameData);
 
-	    this.state.emailActive 					= false;
+	    
 	    this.setStyle();
+	    this.state.emailActive 					= false;
 	}
 
 
