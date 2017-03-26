@@ -60,6 +60,7 @@ body {
     }
     .header_text {
         padding: 2.5rem 1.25rem 0 1.25rem;
+        font-size: 2.875rem;
         hr {
             margin-top: 0.625rem;
         }
@@ -85,7 +86,7 @@ body {
         font-size: 0.6875rem;
     }
     .opencase_margin {
-        padding: 8.75rem 6.125rem 0 6.125rem;
+        padding: 10rem 6.125rem 0 6.125rem;
         font-size: 0.6875rem;
         width: 100%;
         height: 90%;
@@ -191,7 +192,9 @@ body {
     .index_page {
         padding: 8.75rem 5.2rem 0 5.2rem;
     }
-    .account_page {
+    .account_page .opencase_margin {
+        padding: 10rem 5.2rem 0 5.2rem;
+
         .left_panel_two {
             width: 77%;
         }
@@ -326,21 +329,28 @@ body {
         font-size: 0.6875rem;
     }
     .opencase_margin {
-        padding: 10rem 5.2rem 0 5.2rem;
+        padding: 10rem 6.125rem 0 6.125rem;
         font-size: 0.6875rem;
         width: 100%;
         height: 90%;
         margin-bottom: 0.9375rem;
         .content_text {
-            height: calc(100% - 220px);
+            height: calc(100% - 240px);
             //min-height: 385px;
         }
         .white_panel {
             //min-height: 600px;
             height: 100%;
         }
+        .header_text {
+            padding: 2.5rem 1.4rem 0 1.4rem;
+            font-size: 2.475rem;
+            hr {
+                margin-top: 0.625rem;
+            }
+        }
         .right_header_text {
-            padding-top: 3.3rem;
+            padding-top: 3.1rem;
             .btn-dark-yellow {
                 width: 13em;
                 height: 3.5em;
@@ -429,7 +439,9 @@ body {
         padding-top: 15px;
         padding-bottom: 15px;
     }
-    .account_page {
+    .account_page .opencase_margin {
+        padding: 10rem 5.2rem 0 5.2rem;
+
         .left_panel_two {
             width: 77%;
         }
@@ -494,7 +506,8 @@ body {
                     }
                 }
             }
-        }.subpanel_content {
+        }
+        .subpanel_content {
             .row {
                 padding-bottom: 0.5em;
             }
@@ -646,7 +659,7 @@ body {
         font-size: 0.6875rem;
     }
     .opencase_margin {
-        padding: 8.75rem 5.2rem 0 5.2rem;
+        padding: 8.75rem 6.125rem 0 6.125rem;
         font-size: 0.6875rem;
         height: 90%;
         //padding-bottom: 0.625rem;
@@ -655,7 +668,7 @@ body {
             font-size: 1.875rem;
         }
         .content_text {
-            height: calc(100% - 230px);
+            height: calc(100% - 220px);
             //min-height: 360px;
         }
         .white-panel {
@@ -742,7 +755,9 @@ body {
             }
         }
     }
-    .account_page {
+    .account_page .opencase_margin {
+        padding: 8.75rem 5.2rem 0 5.2rem;
+
         .content_text {
             height: calc(100% - 200px);
         }
@@ -802,6 +817,14 @@ body {
             }
         }
     }
+    .info_page .opencase_margin {
+        .close_button {
+            line-height: 1.6;
+        }
+        #yesAndNo {
+
+        }
+    }
 }
 
 
@@ -846,7 +869,7 @@ body {
         height: 90%;
         //min-height: 40rem;
         margin-bottom: 0.5rem;
-        padding: 8rem 5.2rem 0 5.2rem;
+        padding: 8rem 6.125rem 0 6.125rem;
         .white-panel {
             //min-height: 30rem;
         }
@@ -929,6 +952,8 @@ body {
         }
     }
     .account_page .opencase_margin {
+        padding: 8rem 5.2rem 0 5.2rem;
+
         .content_text {
             height: calc(100% - 200px);
         }
@@ -986,6 +1011,22 @@ body {
             }
         }
     }
+
+    .info_page .opencase_margin {
+        .header_menu {
+            li a {
+                font-size: $FONT14;
+            }
+        }
+
+        .close_button {
+            line-height: 1.6;
+        }
+
+        #yesAndNo {
+            //font-size: $FONT15;   
+        }
+    }
 }
 
 
@@ -1035,7 +1076,7 @@ body {
         height: 90%;
         //min-height: 40rem;
         margin-bottom: 0.5rem;
-        padding: 7rem 5.2rem 0 5.2rem;
+        padding: 7rem 6.125rem 0 6.125rem;
         .white-panel {
             //min-height: 30rem;
         }
@@ -1137,6 +1178,7 @@ body {
         }
     }
     .account_page .opencase_margin {
+        padding: 7rem 5.2rem 0 5.2rem;
        
         .subpanel_content {
             .row {
@@ -1188,6 +1230,14 @@ body {
                         transform: translateY(20%);
                     }
                 }
+            }
+        }
+    }
+
+    .info_page .opencase_margin {
+        .header_menu {
+            li a {
+                font-size: $FONT12;
             }
         }
     }
@@ -1437,7 +1487,7 @@ body {
         height: 90%;
         //min-height: 29rem;
         margin-bottom: 0.5rem;
-        padding: 6.05rem 5.2rem 0 5.2rem;
+        padding: 6.05rem 6.125rem 0 6.125rem;
         .white-panel {
             //min-height: 20rem;
             height: 100%;
@@ -1561,7 +1611,7 @@ body {
         }
     }
     .info_page .opencase_margin {
-        padding: 8.75rem 6.125rem 0 6.125rem;
+        padding: 6.05rem 5.2rem 0 5.2rem;
         .submenu_text {
             padding-top: 0px;
             font-size: 0.75rem;
@@ -1569,9 +1619,19 @@ body {
         .left_side_box {
             padding-left: 0px;
         }
+        .header_menu {
+            margin-top: 5px;
+        }
+        .header_menu {
+            li a {
+                font-size: $FONT10;
+            }
+        }
     }
     
     .account_page .opencase_margin {
+        padding: 6.05rem 5.2rem 0 5.2rem;
+
         .subpanel_content {
             .row {
                 padding-bottom: 0.5em;

@@ -3,10 +3,10 @@
 import React, {
   Component,
   PropTypes
-}                                 from 'react';
-import {Motion, spring, presets}  from 'react-motion';
-import { Link }                   from 'react-router';
-import ModalBox                   from '../ModalBox';
+}                                             from 'react';
+import {Motion, spring, presets}              from 'react-motion';
+import { Link, BrowserHistory }               from 'react-router';
+import ModalBox                               from '../ModalBox';
 
 class NavbarBox1 extends React.Component {
 
@@ -74,15 +74,15 @@ class NavbarBox1 extends React.Component {
               <li className="dropdown" style={{'paddingRight': '20px'}}>
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown" s>My Account</a>
                 <ul className="dropdown-menu">
-                  <li><a href="profile">Profile</a></li>
-                  <li><a href="password">Password</a></li>
-                  <li><a href="payment">Payment</a></li>
-                  <li><a href="users">Users</a></li>
-                  <li><a href="#">Sign out</a></li>
+                  <li><Link to="profile">Profile</Link></li>
+                  <li><Link to="password">Password</Link></li>
+                  <li><Link to="payment">Payment</Link></li>
+                  <li><Link to="users">Users</Link></li>
+                  <li><Link to="#">Sign out</Link></li>
                 </ul>
               </li> 
               <li style={{'paddingTop': '10px', 'color':'#ffffff'}}>&nbsp; | &nbsp;</li> 
-              <li style={{'paddingLeft': '20px'}}><a href="#" onClick={this.openContactModal.bind(this)} style={{'font-size': '15px'}}>Contact</a></li>
+              <li style={{'paddingLeft': '20px'}}><a onClick={this.openContactModal.bind(this)} style={{'font-size': '15px'}}>Contact</a></li>
             </ul>
           </div>
         </div>
@@ -110,13 +110,13 @@ class NavbarBox1 extends React.Component {
         <nav id="context-menu" className="context-menu">
           <ul className="context-menu__items">
             <li className="context-menu__item">
-              <a href="#" className="context-menu__link" data-action="View"><i className="fa fa-eye"></i> View Task</a>
+              <Link to="" className="context-menu__link" data-action="View"><i className="fa fa-eye"></i> View Task</Link>
             </li>
             <li className="context-menu__item">
-              <a href="#" className="context-menu__link" data-action="Edit"><i className="fa fa-edit"></i> Edit Task</a>
+              <Link to="" className="context-menu__link" data-action="Edit"><i className="fa fa-edit"></i> Edit Task</Link>
             </li>
             <li className="context-menu__item">
-              <a href="#" className="context-menu__link" data-action="Delete"><i className="fa fa-times"></i> Delete Task</a>
+              <Link to="" className="context-menu__link" data-action="Delete"><i className="fa fa-times"></i> Delete Task</Link>
             </li>
           </ul>
         </nav>

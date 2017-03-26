@@ -75,8 +75,9 @@ const Routes = () => {
         <Route path="/licence" component={Licence} onEnter={scrollToTop} />
         <Route path="/privacy" component={Privacy} onEnter={scrollToTop} />
         <Route path="/security" component={Security} onEnter={scrollToTop} />
-      
-        //DetailPage
+      </Route>
+
+      //DetailPage
         <Route component={UserLayout} onEnter={requireAuth}>
           <Route component={SubInfo} onEnter={scrollToTop}>
             <Route path="/user" component={ConnectedInfo} onEnter={scrollToTop} />
@@ -95,7 +96,6 @@ const Routes = () => {
         <Route path="/research" component={ConncetedResearch} />
         <Route path="/agreement" component={ConncetedAgreement} />
         <Route path="/claimreport" component={ConncetedClaimReport} />
-      </Route>
       </Route>
       
       <Route>
