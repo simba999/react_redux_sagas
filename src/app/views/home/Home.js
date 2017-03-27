@@ -16,7 +16,11 @@ class Home extends PureComponent {
     super(props, context);
 
     this.state = {
-      openModalState: false
+      openModalState    : false,
+      homeActive        : false,
+      opencaseActive    : false,
+      closeclaimActive  : false,
+      reportsActive     : false,
     }
 
     const { enterHome, clickMenu } = this.props;
@@ -27,6 +31,21 @@ class Home extends PureComponent {
     // console.log("Home: ", clickMenu);
     enterHome();
     // clickMenu();
+    var currentView = this.props.currentView;
+
+    // switch( currentView ) {
+    //   case 'home':
+    //     var currentElement         = document.getElementById('navbar_home').parentElement.setAttribute("class", 'active');
+    //     console.log("currentDFSDFS:", currentElement);
+    //     break;
+    //   case 'opencase':
+    //     var currentElement         = document.getElementById('navbar_opencase').parentElement.setAttribute("class", 'active');
+    //     console.log("currentDFSDFS:", currentElement);
+    //     break;
+    //   default:
+    //     break;
+    // }
+    console.log("CurrnetView: ", this.props.currentView);
   }
 
   componentWillUnmount() {

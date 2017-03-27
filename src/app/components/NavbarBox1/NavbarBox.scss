@@ -31,22 +31,30 @@
 }
 
 .submenu {
-    #selectElement li > a {
-        color: #b9b9b9;
-    }
-    #selectElement li.active {
-        border-bottom: 4px solid #ff9900;
-        background-color: #ffffff;
+      #selectElement li > a {
+        color: #bfbfbf;
+        font-size: 0.875rem;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin: 0 1.8em;
+        border-bottom: 4px solid #ffffff;
     }
     #selectElement li.active a {
-        color: #000000;
-    }
-    #selectElement li a:hover {
-        color: #000000;
+        color: #0d0d0d;
         border-bottom: 4px solid #ff9900;
-    }
-    .navbar-default {
         background-color: #ffffff;
+        font-family: Hind-Medium;
+    }
+   
+    #selectElement li:hover a {
+        color: #7f7f7f;
+        font-family: Hind-Medium;
+    }
+
+    #selectElement li:focus a {
+        color: #0d0d0d;
+        background-color: #ffffff;
+        border-bottom: 4px solid #ff9900;
     }
 }
 

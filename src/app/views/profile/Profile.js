@@ -2,12 +2,16 @@ import React, {
   PureComponent,
   PropTypes
 }                             from 'react';
+
+import {browserHistory}       from 'react-router';
 import {Jumbotron}            from '../../components';
 import AnimatedView           from '../../components/animatedView/AnimatedView';
 import { Link }               from 'react-router';
 import ProfileBox             from '../../components/ProfileBox';
 import RightSideBox           from '../../components/RightSideBox';
 import ModalBox               from '../../components/ModalBox';       
+
+var activeUrl                   = '';
 
 class Profile extends PureComponent {
 
@@ -16,7 +20,8 @@ class Profile extends PureComponent {
     super(props, context);
 
     this.state = {
-      openModalState: false
+      openModalState  : false,
+      returnUrl       : '/dashboard',
     }
 
     const { enterHome, clickMenu } = this.props;
@@ -25,7 +30,19 @@ class Profile extends PureComponent {
   componentDidMount() {
     const { enterHome, clickMenu } = this.props;
     // console.log("Home: ", clickMenu);
-    enterHome();
+    
+    var content                     = document.getElementById("selectElement").getElementsByTagName("li");
+    
+
+    for (var i = 0; i < content.length; i++) {
+      if( content[i].getAttribute('class') == 'active') {
+        activeUrl                   =  content[i].firstElementChild.getAttribute('href');
+      }
+    }
+    console.log("Header: ", activeUrl);
+    enterHome(activeUrl);
+
+    this.setState({ returnUrl : activeUrl });
     // clickMenu();
   }
 
@@ -50,7 +67,7 @@ class Profile extends PureComponent {
         <div className="container account_page">
           <div className="opencase_margin">
             <div className="col-sm-9 left_panel_two">
-              <ProfileBox title="Profile" content=""></ProfileBox>
+              <ProfileBox title="Profile" content="" returnUrl={this.state.returnUrl}></ProfileBox>
             </div>
             <div className="col-sm-3 right_panel_two">
               <RightSideBox></RightSideBox>

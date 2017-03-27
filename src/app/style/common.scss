@@ -105,6 +105,15 @@ label.remove_icon {
     margin-bottom: 0px;
     // margin-top: 10px;
 }
+
+label.reomove_icon:hover {
+    background: url('../images/medium_hover_remove_icon.png') left center no-repeat;
+}
+
+label.remove_icon.active {
+    background: url('../images/medium_active_remove_icon.png') left center no-repeat;
+}
+
 label.remove_icon1 {
     background: url('../images/remove_icon.png') left center no-repeat;
     width: 16px;

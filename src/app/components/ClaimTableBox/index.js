@@ -32,7 +32,7 @@ class ClaimTableBox extends React.Component {
   }
 
   componentWillUnmount() {
-    linkIndex();
+    this.linkIndex;
   }
 
   linkIndex() {

@@ -26,7 +26,19 @@ const mapStateToProps = (state) => {
  */
 const mapDispatchToProps = (dispatch) => {
   return {
-    enterHome: () => dispatch(viewsActions.enterHome()),
+    enterHome: (url) => 
+      {
+        switch(url) {
+          case 'dashboard':
+            dispatch(viewsActions.enterHome());
+            break;
+          case 'opencase':
+            dispatch(viewsActions.enterOpenCase());
+            break;
+          default:
+            break;
+        }
+      },
     leaveHome: () => dispatch(viewsActions.leaveHome()),
     clickMenu: () => dispatch(viewsActions.clickMenu())
   };

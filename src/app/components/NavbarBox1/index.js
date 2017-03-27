@@ -33,11 +33,9 @@ class NavbarBox1 extends React.Component {
   }
 
   setActive(el) {
-    console.log("INDEX: ", el.target.parentNode.parentNode.childNodes);
     var allSiblings = el.target.parentNode.parentNode.childNodes;
     var count = 0
     while ( count < allSiblings.length) {
-      console.log("TET: ", allSiblings[count].getAttribute("class"));
       if (allSiblings[count].getAttribute("class") == 'active') {
         allSiblings[count].setAttribute("class", "");
       } 
@@ -98,11 +96,11 @@ class NavbarBox1 extends React.Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse submenu" aria-expanded="false">
             <ul className="nav navbar-nav" id="selectElement">
-              <li className="active" onClick={this.setActive.bind(this)}><Link to="/user">Info</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="/agreement">Agreements</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="/research">Research</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="/review">Review</Link></li>
-              <li onClick={this.setActive.bind(this)}><Link to="/claimreport">Reports</Link></li>
+              <li className="active"><Link to="/user" onClick={this.setActive.bind(this)}>Info</Link></li>
+              <li><Link to="/agreement" onClick={this.setActive.bind(this)}>Agreements</Link></li>
+              <li><Link to="/research" onClick={this.setActive.bind(this)}>Research</Link></li>
+              <li><Link to="/review" onClick={this.setActive.bind(this)}>Review</Link></li>
+              <li><Link to="/claimreport" onClick={this.setActive.bind(this)}>Reports</Link></li>
             </ul>
             <div className="pull-right username_text">Doe, John P</div>
           </div>

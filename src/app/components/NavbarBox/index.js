@@ -7,6 +7,8 @@ import React, {
 import {Motion, spring, presets}  from 'react-motion';
 import { Link }                   from 'react-router';
 import ModalBox                   from '../ModalBox';
+import { connect }                from 'react-redux';
+import * as viewsActions          from '../../redux/modules/views';
 // import '../../../js/main.js';
 
 class NavbarBox extends React.Component {
@@ -29,6 +31,10 @@ class NavbarBox extends React.Component {
     this.setState({content : 'Lorem ipsum dolor sit amet, ne pri hinc voluptatibus.\
                               Eu eleifend eloquentiam sea. Duis soluta mei cu.\
                                Sumo consul definitiones vis at, error soleat'});
+  }
+
+  componentDidMount() {
+
   }
 
   componentWillUnmount() {
@@ -100,10 +106,10 @@ class NavbarBox extends React.Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse submenu" aria-expanded="false">
             <ul className="nav navbar-nav" id="selectElement">
-              <li className="active"><Link to="dashboard" onClick={this.setActive.bind(this)} >Home</Link></li>
-              <li><Link to="opencase" onClick={this.setActive.bind(this)}>Open Claims</Link></li>
-              <li><Link to="closeclaim" onClick={this.setActive.bind(this)}>Closed Claims</Link></li>
-              <li><Link to="reports" onClick={this.setActive.bind(this)}>Reports</Link></li>
+              <li className="active"><Link to="dashboard" id="navbar_home" onClick={this.setActive.bind(this)} >Home</Link></li>
+              <li><Link to="opencase" id="navbar_opencase" onClick={this.setActive.bind(this)}>Open Claims</Link></li>
+              <li><Link to="closeclaim" id="navbar_closeclaim" onClick={this.setActive.bind(this)}>Closed Claims</Link></li>
+              <li><Link to="reports" id="navbar_reports" onClick={this.setActive.bind(this)}>Reports</Link></li>
             </ul>
           </div>
         </div>
@@ -127,4 +133,37 @@ class NavbarBox extends React.Component {
 
 }
 
-export default NavbarBox;
+// export default NavbarBox;
+
+const mapStateToProps = (state) => {
+  return {
+    currentView:  state.views.currentView
+  };
+};
+
+// const mapDispatchToProps = (dispatch) => {
+//   return bindActionCreators(
+//     {
+//       enterHome: viewsActions.enterHome,
+//       leaveHome: viewsActions.leaveHome,
+//       clickMenu: viewsActions.clickMenu
+//     },
+//     dispatch
+//   );
+// };
+
+/*
+  without bindActionCreators:
+ */
+const mapDispatchToProps = (dispatch) => {
+  return {
+    enterHome: () => dispatch(viewsActions.enterHome()),
+    leaveHome: () => dispatch(viewsActions.leaveHome()),
+    clickMenu: () => dispatch(viewsActions.clickMenu())
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavbarBox);

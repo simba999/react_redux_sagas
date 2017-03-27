@@ -33,7 +33,8 @@ class ProfileBox extends React.Component {
   }
 
   gotoHome() {
-    browserHistory.push('dashboard');
+    let returnUrl = this.props.returnUrl;
+    browserHistory.push(returnUrl);
   }
 
   setActive(el) {
@@ -71,7 +72,8 @@ class ProfileBox extends React.Component {
 
 ProfileBox.propTypes = {
   title       : React.PropTypes.string.isRequired,
-  content     : React.PropTypes.string
+  content     : React.PropTypes.string,
+  returnUrl   : React.PropTypes.string
 }
 
 export default ProfileBox;
