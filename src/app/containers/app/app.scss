@@ -213,6 +213,7 @@ body {
             }
             label {
                 font-size: 0.75em;
+                transform: translateY(25%);
             }
         }
         .profile_panel {
@@ -348,6 +349,14 @@ body {
             hr {
                 margin-top: 0.625rem;
             }
+            .remove_icon:hover {
+                cursor: pointer;
+                background: url('../images/medium_hover_remove_icon.png') left center no-repeat;
+            }
+
+            label.remove_icon:active {
+                background: url('../images/medium_active_remove_icon.png') left center no-repeat;
+            }
         }
         .right_header_text {
             padding-top: 3.1rem;
@@ -467,6 +476,7 @@ body {
             }
             label {
                 font-size: 0.75em;
+                transform: translateY(25%);
             }
         }
         .profile_panel {
@@ -776,6 +786,7 @@ body {
             }
             label {
                 font-size: 0.75em;
+                transform: translateY(25%);
             }
         }
         .profile_panel {
@@ -879,6 +890,14 @@ body {
         .content_text {
             //min-height: 19rem;
             height: calc(100% - 210px);
+
+            tbody tr td {
+                padding: 1.15em;
+            }
+
+            thead tr th {
+                font-size: 0.9em;
+            }
         }
         .header_text {
             padding: 2.1rem 1.4rem 0 1.4rem;
@@ -1086,6 +1105,13 @@ body {
         .content_text {
             //min-height: 19rem;
             height: calc(100% - 170px);
+
+            tbody tr td {
+                padding: 1em;
+            }
+            thead tr th {
+                font-size: 0.8em;
+            }
         }
         .header_text {
             padding: 2.27rem 1.4rem 0 1.4rem;
@@ -1096,6 +1122,7 @@ body {
             .remove_icon {
                 height: 30px;
             }
+            
         }
         .padding-div-right {
             padding-top: 10px;
@@ -1196,6 +1223,7 @@ body {
             }
             label {
                 font-size: 0.75em;
+                transform: translateY(25%);
             }
         }
         .profile_panel {
@@ -1296,10 +1324,10 @@ body {
         }
         .content_text {
             // min-height: 15.5rem;
-            height: calc(100% - 210px);
+            height: calc(100% - 160px);
         }
         .header_text {
-             padding: 1.5rem 1.4rem 0 1.4rem;
+            padding: 2rem 1.4rem 0 1.4rem;
             font-size: 1.2rem;
             hr {
                 margin-top: 0.325rem;
@@ -1356,7 +1384,7 @@ body {
             height: 100%;
         }
         .header_text {
-            padding: 1.5rem 1.4rem 0 1.4rem;
+            padding: 2rem 1.4rem 0 1.4rem;
             font-size: 1.2rem;
             hr {
                 margin-top: 0.325rem;
@@ -1500,6 +1528,14 @@ body {
         .content_text {
             // min-height: 15.5rem;
             height: calc(100% - 145px);
+
+            tbody tr td {
+                padding: 0.8em;
+            }
+            thead tr th {
+                font-size: 0.675em;
+                height: 1.5em;
+            }
         }
         .header_text {
             padding: 2rem 1.4rem 0 1.4rem;
@@ -1657,6 +1693,7 @@ body {
             }
             label {
                 font-size: 0.75em;
+                transform: translateY(25%);
             }
         }
         .profile_panel {

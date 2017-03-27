@@ -11,7 +11,7 @@ import ProfileBox             from '../../components/ProfileBox';
 import RightSideBox           from '../../components/RightSideBox';
 import ModalBox               from '../../components/ModalBox';       
 
-var activeUrl                   = '';
+var activeUrl                     = '';
 
 class Profile extends PureComponent {
 
@@ -31,12 +31,12 @@ class Profile extends PureComponent {
     const { enterHome, clickMenu } = this.props;
     // console.log("Home: ", clickMenu);
     
-    var content                     = document.getElementById("selectElement").getElementsByTagName("li");
+    var content                    = document.getElementById("selectElement").getElementsByTagName("li");
     
 
     for (var i = 0; i < content.length; i++) {
       if( content[i].getAttribute('class') == 'active') {
-        activeUrl                   =  content[i].firstElementChild.getAttribute('href');
+        activeUrl                  =  content[i].firstElementChild.getAttribute('href');
       }
     }
     console.log("Header: ", activeUrl);
@@ -47,7 +47,7 @@ class Profile extends PureComponent {
   }
 
   componentWillUnmount() {
-    const { leaveHome } = this.props;
+    const { leaveHome }             = this.props;
     leaveHome();
   }
 
@@ -74,8 +74,6 @@ class Profile extends PureComponent {
             </div>
           </div>  
         </div>
-
-
     );
   }
 }

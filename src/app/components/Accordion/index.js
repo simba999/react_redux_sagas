@@ -522,7 +522,7 @@ class CustomAccordion extends React.Component{
 								</FormGroup>
 							</FormGroup>
 							<FormGroup className="row text-right subpanel_footer">
-								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(1)}>cancel</a>
+								<label className="cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(1)}>cancel</label>
 								<Button className="btn close_button" type="submit">Save</Button>
 							</FormGroup>
 						</Form>
@@ -574,7 +574,7 @@ class CustomAccordion extends React.Component{
 											<option>NV</option>
 										</FormControl>
 									</Col>
-									<Col className="text-right" sm={2}>Admit</Col>
+									<Col className="banner_label" sm={2}>Admit</Col>
 									<Col sm={4}>
 										<FormControl componentClass="select" placeholder="" ref="positionAdmitOrigin">
 											<option>12-05-85</option>
@@ -590,7 +590,7 @@ class CustomAccordion extends React.Component{
 											<FormControl type="text" className="" placeholder="Bar number" ref="barNumberAdditional" name="barNumberAdditional" value={this.state.positionData.barNumberAdditional !== undefined ? this.state.positionData.barNumberAdditional : ''} onChange={this.handleFirstChange} />
 										</Col>
 										
-										<ControlLabel className="about_link col-sm-1" onClick={() => {this.setState({ addPosition : 'addPositionFalse'})}}>Delete</ControlLabel>
+										<ControlLabel className="cancel_link col-sm-1" onClick={() => {this.setState({ addPosition : 'addPositionFalse'})}}>Delete</ControlLabel>
 									</FormGroup>
 
 									<FormGroup className="">
@@ -613,7 +613,7 @@ class CustomAccordion extends React.Component{
 								</FormGroup>
 							</FormGroup>
 							<FormGroup className="row text-right subpanel_footer">
-								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(2)}>cancel</a>
+								<label className=" cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(2)}>cancel</label>
 								<Button className="btn close_button" type="submit">Save</Button>
 							</FormGroup>
 						</Form>
@@ -643,7 +643,7 @@ class CustomAccordion extends React.Component{
 							</FormGroup>
 
 							<FormGroup className="text-right subpanel_footer">
-								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(3)}>cancel</a>
+								<label className=" cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(3)}>cancel</label>
 								<Button className="btn close_button" type="submit">Save</Button>
 							</FormGroup>
 						</Form>
@@ -703,7 +703,7 @@ class CustomAccordion extends React.Component{
 								</FormGroup>
 							</FormGroup>
 							<FormGroup className="text-right subpanel_footer">
-								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(4)}>cancel</a>
+								<label className=" cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(4)}>cancel</label>
 								<Button className="btn close_button" type="submit">Save</Button>
 							</FormGroup>
 						</Form>
@@ -758,7 +758,7 @@ class CustomAccordion extends React.Component{
 											<FormControl type="text" className="col-sm-8" placeholder="(222) 222-2222" value={this.state.phoneNumber2 !== undefined ? this.state.phoneNumber2 : '' } onChange={this.handleNumber2Change} ref="number2" name="number2" />
 										</Col>
 										<Col sm={1}>
-											<ControlLabel className="about_link" onClick={() => {this.setState({ addPhone : 'addPhoneFalse' })}}>Delete</ControlLabel>
+											<ControlLabel className="cancel_link" onClick={() => {this.setState({ addPhone : 'addPhoneFalse' })}}>Delete</ControlLabel>
 										</Col>
 									</FormGroup>
 
@@ -778,7 +778,7 @@ class CustomAccordion extends React.Component{
 								</FormGroup>
 							</FormGroup>
 							<FormGroup className="text-right subpanel_footer">
-								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(5)}>cancel</a>
+								<label className="cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(5)}>cancel</label>
 								<Button className="btn close_button" type="submit">Save</Button>
 							</FormGroup>
 						</Form>
@@ -809,7 +809,7 @@ class CustomAccordion extends React.Component{
 							</FormGroup>
 
 							<FormGroup className="text-right subpanel_footer">
-								<a className="about_link cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(6)}>cancel</a>
+								<label className="cancel_link" style={{paddingRight : '2em'}} onClick={() => this.unToggle(6)}>cancel</label>
 								<Button className="btn close_button" type="submit">Save</Button>
 							</FormGroup>
 						</Form>
