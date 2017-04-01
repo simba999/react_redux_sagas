@@ -162,120 +162,122 @@ class Signin extends PureComponent {
     return(
           <div>
            <article>
-            <div className="container allForm">
-              
-              <form  className="well form-horizontal modal-dialog" action="" method="post"  id="contact_form">
-                  <div className="form-horizontal title_header">
-                    <span className="pull-left">Sign in</span>
-                    <span className="right_end" onClick={this.goToLogin.bind(this)}><label className="remove_icon1 padding_inner_box"></label></span>
-                  </div>
-                  <hr />
-                  <section>                  
-                    <div className={this.state.class}>
-                      <label className=""></label>  
-                      <div className="col-md-12 inputGroupContainer1">
-                        <div className="">                        
-                          <input ref="emailInput" placeholder="Email" className="form-control"  type="text" onChange={this.emailChange.bind(this)} type="text"/>               
-                        </div>
+            <div className="modal-backdrop fade in"></div>
+            <div className="dev modal fade in">
+                <div className="allForm">
+                
+                  <form  className="well form-horizontal" action="" method="post"  id="contact_form">
+                      <div className="form-horizontal title_header">
+                        <span className="pull-left">Sign in</span>
+                        <span className="right_end" onClick={this.goToLogin.bind(this)}><label className="remove_icon1 padding_inner_box"></label></span>
                       </div>
-                    </div>
-                    <div className={this.state.passwordActiveClass}>
-                      <label className="col-md-12 inputGroupContainer1"> </label>  
-                      <div className="col-md-12 inputGroupContainer1">
-                        <div className="">
-                          <div>
-                            <input ref="input" placeholder="Password" className="form-control" onChange={this.passwordChange.bind(this)} type="password" />
+                      <hr />
+                      <section>                  
+                        <div className={this.state.class}>
+                          <label className=""></label>  
+                          <div className="col-md-12 inputGroupContainer1">
+                            <div className="">                        
+                              <input ref="emailInput" placeholder="Email" className="form-control"  type="text" onChange={this.emailChange.bind(this)} type="text"/>               
+                            </div>
+                          </div>
+                        </div>
+                        <div className={this.state.passwordActiveClass}>
+                          <label className="col-md-12 inputGroupContainer1"> </label>  
+                          <div className="col-md-12 inputGroupContainer1">
+                            <div className="">
+                              <div>
+                                <input ref="input" placeholder="Password" className="form-control" onChange={this.passwordChange.bind(this)} type="password" />
+                              </div>  
+                            </div>
+                          </div>
+                        </div>                   
+                        
+                        <div className="form-group">
+                          <div className="col-md-8"></div>
+                          <div className="col-md-4">
+                            <div className="begin_right">
+                                  <a href="#" className="link_soft_blue" onClick={this.handlePasswordOpen} >Password</a>
+                                  <button type="button" className={this.state.btnActive ? 'btn' : 'btn btn_grey'} disabled={!this.state.btnActive} onClick={this.handleSignin.bind(this)} > Sign in </button>
+                            </div> 
+                          </div>
+                        </div>
+                        <div className=" padding_bottom_50"></div>
+                      </section>
+                      
+                      <hr />
+
+                      <div className="form-group">
+                      {
+                        !this.state.isValid ?
+                          <div className="alert_form">
+                            <div className="col-md-2"></div>
+                            <div className="col-md-4 alert_vaild">
+                              Please complete the missing information.
+                            </div>
+                            <div className="col-md-2"></div>
                           </div>  
+                        :
+                          <div className="col-md-8 control-label"></div>
+                      }
+                        <div className="col-md-4">
+                            <div className="begin_right">
+                              <button type="button" className='btn' onClick={this.goToLogin}> Cancel </button>
+                            </div>
                         </div>
                       </div>
-                    </div>                   
-                    
-                    <div className="form-group">
-                      <div className="col-md-8"></div>
-                      <div className="col-md-4">
-                        <div className="begin_right">
-                              <a href="#" className="link_soft_blue" onClick={this.handlePasswordOpen} >Password</a>
-                              <button type="button" className={this.state.btnActive ? 'btn' : 'btn btn_grey'} disabled={!this.state.btnActive} onClick={this.handleSignin.bind(this)} > Sign in </button>
-                        </div> 
+
+                  </form>
+                
+                  <Modal
+                    show={this.state.open}
+                    onHide={this.closeModal}
+                    aria-labelledby="ModalHeader">
+
+                    <Modal.Body>
+                      <div className="header_text login_form" >
+                        <span className="pull-left">Notice</span>
+                        <span className="pull-right" onClick={this.closeModal}><i className="glyphicon glyphicon-remove"></i></span>
+                        <hr />
                       </div>
-                    </div>
-                    <div className=" padding_bottom_50"></div>
-                  </section>
-                  
-                  <hr />
+                      <div className="content_text">
+                        <div className="textModal">Your invitation code is in-correct or in-valid. If you don’t have an invitation code, or need an updated code please <a> contact </a> us so we can provide you with one.</div> 
+                      </div>
+                      <div className="footer_text">
+                        <hr />
+                        <Modal.Dismiss className='btn pull-right'>Close</Modal.Dismiss>
+                      </div>
 
-                  <div className="form-group">
-                  {
-                    !this.state.isValid ?
-                      <div className="alert_form">
-                        <div className="col-md-2"></div>
-                        <div className="col-md-4 alert_vaild">
-                          Please complete the missing information.
+                    </Modal.Body>
+                  </Modal>
+
+                  <Modal
+                    show={this.state.openPasswordDialog}
+                    onHide={this.closeModal}
+                    aria-labelledby="ModalHeader">
+
+                    <Modal.Header closeButton>
+                      <Modal.Title id='ModalHeader'>
+                        <div className="form-horizontal title_header">
+                          <span className="pull-left">Getting help signing into your account</span>                 
                         </div>
-                        <div className="col-md-2"></div>
-                      </div>  
-                    :
-                      <div className="col-md-8 control-label"></div>
-                  }
-                    <div className="col-md-4">
-                        <div className="begin_right">
-                          <button type="button" className='btn' onClick={this.goToLogin}> Cancel </button>
+                        <hr />
+                      </Modal.Title>
+                    </Modal.Header>
+
+                    <Modal.Body>
+                      <div className="modalDialogClass">
+                        <div className="textModal">
+                          <div className="paragraph">To make sure your Claimzen account is secure, we would like to verify your identity. Enter your email or mobile phone number below and we will send you a verification code.</div>   
                         </div>
-                    </div>
-                  </div>
+                        <div className="closeButton">
+                          <Modal.Dismiss className='btn pull-right'>Close</Modal.Dismiss>
+                        </div>
+                        <div className="padding_div_bottom"></div>
+                      </div>
 
-              </form>
-              
-              <Modal
-                show={this.state.open}
-                onHide={this.closeModal}
-                aria-labelledby="ModalHeader">
-
-                <Modal.Body>
-                  <div className="header_text login_form" >
-                    <span className="pull-left">Notice</span>
-                    <span className="pull-right" onClick={this.closeModal}><i className="glyphicon glyphicon-remove"></i></span>
-                    <hr />
-                  </div>
-                  <div className="content_text">
-                    <div className="textModal">Your invitation code is in-correct or in-valid. If you don’t have an invitation code, or need an updated code please <a> contact </a> us so we can provide you with one.</div> 
-                  </div>
-                  <div className="footer_text">
-                    <hr />
-                    <Modal.Dismiss className='btn pull-right'>Close</Modal.Dismiss>
-                  </div>
-
-                </Modal.Body>
-              </Modal>
-
-              <Modal
-                show={this.state.openPasswordDialog}
-                onHide={this.closeModal}
-                aria-labelledby="ModalHeader">
-
-                <Modal.Header closeButton>
-                  <Modal.Title id='ModalHeader'>
-                    <div className="form-horizontal title_header">
-                      <span className="pull-left">Getting help signing into your account</span>                 
-                    </div>
-                    <hr />
-                  </Modal.Title>
-                </Modal.Header>
-
-                <Modal.Body>
-                  <div className="modalDialogClass">
-                    <div className="textModal">
-                      <div className="paragraph">To make sure your Claimzen account is secure, we would like to verify your identity. Enter your email or mobile phone number below and we will send you a verification code.</div>   
-                    </div>
-                    <div className="closeButton">
-                      <Modal.Dismiss className='btn pull-right'>Close</Modal.Dismiss>
-                    </div>
-                    <div className="padding_div_bottom"></div>
-                  </div>
-
-                </Modal.Body>
-              </Modal>
-
+                    </Modal.Body>
+                  </Modal>
+              </div>
             </div>
           </article>
         </div>

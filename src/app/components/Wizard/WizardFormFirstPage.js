@@ -26,8 +26,11 @@ class WizardFormFirstPage extends React.Component {
   }
 
   gotoHome() {
-    browserHistory.replace('/dashboard');
-    console.log("Clicke hererererere");
+    browserHistory.push('/dashboard');
+    //window.location = '/dashboard';
+    console.log("Clicke hererererere111111111111");
+    // var wizardForm = document.getElementsByClassName('ProgressStepBox');
+    // wizardForm[0].style.display = 'none';
   }
 
   render() {
@@ -36,7 +39,7 @@ class WizardFormFirstPage extends React.Component {
       <form className="modal-dialog ProgressStepBox">
         <div className="header_text">
           <span>Open New Matter</span>
-          <span className="pull-right"><label className="remove_icon1 padding_inner_box" onClick={this.gotoHome.bind(this)}></label></span>
+          <span className="pull-right"><label className="remove_icon1 padding_inner_box" onClick={ this.gotoHome.bind(this) }></label></span>
           <hr />
         </div>
         <div className="content_text" id="wizard_content">
@@ -52,7 +55,9 @@ class WizardFormFirstPage extends React.Component {
         </div>
         <div className="footer_text wizard_form row">
           <hr />
-          <div className="col-sm-2 prev_button center_text"><button href="#" className="btn grey_background" onClick={this.gotoHome.bind(this)}>&#10092; Prev</button></div>
+          <div className="col-sm-2 prev_button center_text">
+            <button className="btn grey_background" onClick={ this.gotoHome.bind(this) }>&#10092; Prev</button>
+          </div>
           <div className="col-sm-8 progress_content">
             <div className="center_text" id="progress_box">
               <div className="progress_from_to">0%</div>
@@ -67,7 +72,7 @@ class WizardFormFirstPage extends React.Component {
             <div className="center_text">01 of 05</div>
           </div>
           
-          <div className="col-sm-2 next_button center_text"><button href="#" type="type" className="next btn blue_background" onClick={this.props.nextPage}>Next &#10093;</button></div>
+          <div className="col-sm-2 next_button center_text"><button type="type" className="next btn blue_background" onClick={ this.props.nextPage }>Next &#10093;</button></div>
                 
         </div>
       </form>

@@ -4,6 +4,7 @@ import React, {
   Component,
   PropTypes
 }                                 from 'react';
+import { browserHistory }         from 'react-router';
 import {Motion, spring, presets}  from 'react-motion';
 
 class WizardFormSecondPage extends React.Component {
@@ -25,7 +26,7 @@ class WizardFormSecondPage extends React.Component {
   }
 
   gotoHome() {
-    window.location = '/';
+    browserHistory.push('/dashboard');
   }
 
   render() {

@@ -354,7 +354,15 @@ body {
                 background: url('../images/medium_hover_remove_icon.png') left center no-repeat;
             }
 
-            label.remove_icon:active {
+            .remove_icon:active {
+                background: url('../images/medium_active_remove_icon.png') left center no-repeat;
+            }
+            .remove_icon1:hover {
+                cursor: pointer;
+                background: url('../images/medium_hover_remove_icon.png') left center no-repeat;
+            }
+
+            .remove_icon1:active {
                 background: url('../images/medium_active_remove_icon.png') left center no-repeat;
             }
         }
@@ -1121,6 +1129,7 @@ body {
             }
             .remove_icon {
                 height: 30px;
+                background-size: 12px 12px;
             }
             
         }
@@ -1144,6 +1153,10 @@ body {
         }
         .footer_text_color {
             padding-top: 0.675rem;
+            font-size: 0.6375rem;
+            a {
+                font-size: 0.6375rem;
+            }
         }
         .footer_text.payment_page {
             font-size: 13px;
